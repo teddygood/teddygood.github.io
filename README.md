@@ -1,1 +1,0 @@
-# teddygood.github.io
