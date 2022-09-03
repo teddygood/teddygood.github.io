@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "teddygood",
   tagline: "Dinosaurs are cool",
   url: "https://teddygood.github.io/",
   baseUrl: "/",
@@ -34,18 +34,29 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs',
           sidebarPath: require.resolve("./sidebars.js"),
+          // routeBasePath: '/docs',
+          sidebarCollapsed: true,
+          sidebarCollapsible: true,
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/teddygood/teddygood.github.io",
         },
         blog: {
-          showReadingTime: true,
+          showReadingTime: false,
+          blogTitle: 'Chanho Lee',
+          blogDescription: 'Hi, I\'m Chanho Lee. I\'m a software engineer.',
+          postsPerPage: 10,
+          blogSidebarCount: 10,
+          blogSidebarTitle: 'Recent Posts',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/teddygood/teddygood.github.io",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -64,13 +75,17 @@ const config = {
           src: "img/logo.svg",
         },
         items: [
-          // {
-          //   type: "doc",
-          //   docId: "intro",
-          //   position: "left",
-          //   label: "Tutorial",
-          // },
+          {
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Docs",
+          },
+
           { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog/archive", label: "Archive", position: "left" },
+          { to: "/blog/tags", label: "Tags", position: "left" },
+          // { to: "/docs", label: "TIL", position: "left" },
           {
             href: "https://github.com/facebook/docusaurus",
             label: "GitHub",
