@@ -1,13 +1,15 @@
 ---
-title: '[Study] 자바 스터디 1주차'
+title: 'Java 스터디 1주차'
 date: '2022-08-12'
 tags: ["Java"]
 draft: false
 
+description: Spring까지!
+
 sidebar_position: 1
 ---
 
-## 1. 자바
+## 자바
 
 ### 자바란?
 
@@ -57,7 +59,7 @@ Java를 실행하기 위한 가상머신이며, Java로 작성된 프로그램�
 - JIT 컴파일(just-in-time compilation), 동적 번역(dynamic translation): 프로그램을 실제 실행하는 시점에 기계어로 번역하는 컴파일 기법
 - Hotspot: desktop과 서버 컴퓨터를 위한 JVM, Java HotSpot Performance Engine
 
-## 2. 자바개발환경 구축하기
+## 자바개발환경 구축하기
 
 ### 자바 개발도구(JDK) 설치하기
 
@@ -83,7 +85,7 @@ Java를 실행하기 위한 가상머신이며, Java로 작성된 프로그램�
 
 자바에서 제공하는 클래스 라이브러리(Java API)를 잘 사용하기 위해서는 Java API 문서가 필수적이라고 저자는 설명한다. 그러나 평소에 개발 공부하는 것처럼 레퍼런스 문서를 다 외우고 볼 필요는 없다. 필요할 때마다 잘 찾아보자.
 
-## 3. 자바로 프로그램작성하기
+## 자바로 프로그램작성하기
 
 ### Hello.java
 
@@ -127,7 +129,7 @@ public class Hello {
 }
 ```
 
-## 1. 변수
+## 변수
 
 ### 변수의 선언과 초기화
 
@@ -191,7 +193,7 @@ class VarEx2 {
 
 convention은 회사에 따라 언제든지 변경될 수 있다.
 
-## 2. 변수의 타입 
+## 변수의 타입 
 
 - 기본형(primitive type)
 	- 실제 값을 저장
@@ -405,7 +407,7 @@ public void modifyBinaryToDecima(int n) {
 
 참고로 가장 왼쪽의 비트는 `MSB(Most Significant Bit)`이며 가장 오른쪽 비트는 `LSB(Least Significant Bit)`라고 한다.
 
-## 4. 기본형(primitive type)
+## 기본형(primitive type)
 
 ### 논리형 - boolean
 
@@ -453,7 +455,7 @@ Unicode는 UTF-8, UTF-16 등의 종류가 있지만 자바에서는 UTF-16을 �
 
 $$ Value = (-1)^S\times(1.mantissa)\times2^{(exponent-127)} $$
 
-## 5. 형변환
+## 형변환
 
 ### 형변환(casting)
 
@@ -479,7 +481,7 @@ $$ Value = (-1)^S\times(1.mantissa)\times2^{(exponent-127)} $$
 
 그러나 컴파일러가 자동으로 캐스팅 하는 경우도 있다. boolean을 제외한 나머지 7개 기본형은 서로 형변환이 가능하며 기본형과 참조형은 서로 형변환할 수 없다. 또한, 값의 범위가 작은 타입에서 큰 타입으로의 형변환은 생략할 수 있다.
 
-## 1. 연산자(operator)
+## 연산자(operator)
 
 ### 연산자와 피연산자
 

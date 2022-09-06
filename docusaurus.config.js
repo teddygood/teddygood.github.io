@@ -36,7 +36,8 @@ const config = {
         docs: {
           path: 'docs',
           sidebarPath: require.resolve("./sidebars.js"),
-          // routeBasePath: '/docs',
+          routeBasePath: '/docs',
+          breadcrumbs: true,
           sidebarCollapsed: true,
           sidebarCollapsible: true,
           showLastUpdateAuthor: false,
