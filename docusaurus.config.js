@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const CodeTheme = require("prism-react-renderer/themes/dracula");
+
+// const lightCodeTheme = require("prism-react-renderer/themes/github");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -34,9 +35,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs',
+          path: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: '/docs',
+          routeBasePath: "/docs",
           breadcrumbs: true,
           sidebarCollapsed: true,
           sidebarCollapsible: true,
@@ -44,20 +45,18 @@ const config = {
           showLastUpdateTime: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/teddygood/teddygood.github.io",
+          editUrl: "https://github.com/teddygood/teddygood.github.io",
         },
         blog: {
           showReadingTime: false,
-          blogTitle: 'Chanho Lee',
-          blogDescription: 'Hi, I\'m Chanho Lee. I\'m a software engineer.',
+          blogTitle: "Chanho Lee",
+          blogDescription: "Hi, I'm Chanho Lee. I'm a software engineer.",
           postsPerPage: 10,
           blogSidebarCount: 10,
-          blogSidebarTitle: 'Recent Posts',
+          blogSidebarTitle: "Recent Posts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/teddygood/teddygood.github.io",
+          editUrl: "https://github.com/teddygood/teddygood.github.io",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -72,6 +71,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: 'VI4M53X9CF',
+        apiKey: '02d52e3bd34bf1d5899ef33517482ce3',
+        indexName: 'blog',
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: 'search',
+        debug: false,
+      },
       navbar: {
         title: "My Site",
         logo: {
@@ -145,8 +153,9 @@ const config = {
       },
       */
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: CodeTheme,
+        darkTheme: CodeTheme,
+        additionalLanguages: ["java"],
       },
     }),
 };
