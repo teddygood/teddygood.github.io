@@ -1,0 +1,10 @@
+{
+    "theme.blog.archive.title": {
+        "message": "게시물 목록",
+        "description": "The page & hero title of the blog archive page"
+      },
+      "theme.blog.archive.description": {
+        "message": "특별한 경험들",
+        "description": "The page & hero description of the blog archive page"
+      }
+}
