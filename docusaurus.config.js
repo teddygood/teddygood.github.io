@@ -95,7 +95,7 @@ const config = {
         debug: false,
       },
       navbar: {
-        title: "My Site",
+        title: "Chanho Lee",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
@@ -103,7 +103,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "intro",
+            docId: "introduction",
             position: "left",
             label: "Docs",
           },
