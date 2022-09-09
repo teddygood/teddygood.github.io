@@ -81,7 +81,7 @@ const config = {
       type: 'text/css',
     },
   ],
-  
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -169,7 +169,7 @@ const config = {
       prism: {
         theme: CodeTheme,
         darkTheme: CodeTheme,
-        additionalLanguages: ["java"],
+        additionalLanguages: ["java", "kotlin", "scala"],
       },
     }),
 };
