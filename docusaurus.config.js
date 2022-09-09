@@ -5,6 +5,9 @@ const CodeTheme = require("prism-react-renderer/themes/dracula");
 
 // const lightCodeTheme = require("prism-react-renderer/themes/github");
 
+const math = require("remark-math");
+const katex = require("rehype-katex");
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "teddygood",
@@ -43,6 +46,8 @@ const config = {
           sidebarCollapsible: true,
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/teddygood/teddygood.github.io",
@@ -54,6 +59,8 @@ const config = {
           postsPerPage: 10,
           blogSidebarCount: 10,
           blogSidebarTitle: "Recent Posts",
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/teddygood/teddygood.github.io",
@@ -68,16 +75,23 @@ const config = {
     ],
   ],
 
+  stylesheets: [
+    {
+      href: '/katex/katex.min.css',
+      type: 'text/css',
+    },
+  ],
+  
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: 'VI4M53X9CF',
-        apiKey: '02d52e3bd34bf1d5899ef33517482ce3',
-        indexName: 'blog',
+        appId: "VI4M53X9CF",
+        apiKey: "02d52e3bd34bf1d5899ef33517482ce3",
+        indexName: "blog",
         contextualSearch: true,
         searchParameters: {},
-        searchPagePath: 'search',
+        searchPagePath: "search",
         debug: false,
       },
       navbar: {
