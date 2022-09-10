@@ -88,7 +88,7 @@ const config = {
       algolia: {
         appId: "VI4M53X9CF",
         apiKey: "02d52e3bd34bf1d5899ef33517482ce3",
-        indexName: "blog",
+        indexName: "my_blog",
         contextualSearch: true,
         searchParameters: {},
         searchPagePath: "search",
