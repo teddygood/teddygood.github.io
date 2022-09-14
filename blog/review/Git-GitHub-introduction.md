@@ -10,6 +10,8 @@ description: Must Have | 프로젝트 협업 시나리오로 익히는 Git&GitHu
 keywords:
   - Git
   - GitHub
+  - 깃
+  - 깃허브
 
 sidebar_position: 1
 ---
@@ -36,7 +38,7 @@ sidebar_position: 1
 이런 그룹을 운영하시는 작가님의 SNS만 보면 정말 바쁘고 열심히 사신다는 것을 느낄 수 있습니다. 정말 팬이어서 몇 달 전 베타리더도 신청했었는데 안타깝게 떨어졌습니다만, 이번에 좋은 기회로 책을 지원받아 읽어볼 수 있었습니다.
 
 
-## 책 리뷰
+## Book Review
 
 ### 시나리오
 

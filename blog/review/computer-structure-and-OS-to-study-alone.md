@@ -11,6 +11,7 @@ keywords:
   - 컴퓨터구조
   - 운영체제
   - 혼공
+  - 혼자 공부하는
 
 sidebar_position: 1
 ---
