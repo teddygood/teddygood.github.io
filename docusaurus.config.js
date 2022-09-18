@@ -77,8 +77,8 @@ const config = {
 
   stylesheets: [
     {
-      href: '/katex/katex.min.css',
-      type: 'text/css',
+      href: "/katex/katex.min.css",
+      type: "text/css",
     },
   ],
 
@@ -107,15 +107,21 @@ const config = {
             position: "left",
             label: "Docs",
           },
-
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/blog/archive", label: "Archive", position: "left" },
           { to: "/blog/tags", label: "Tags", position: "left" },
           // { to: "/docs", label: "TIL", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
-            label: "GitHub",
+            href: "https://github.com/teddygood",
             position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
+          },
+          {
+            href: "https://www.linkedin.com/in/teddygood/",
+            position: "right",
+            className: "header-linkedin-link",
+            "aria-label": "LinkedIn Account",
           },
         ],
       },
