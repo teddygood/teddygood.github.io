@@ -18,7 +18,7 @@ sidebar_position: 1
 
 ## Book Info
 
-**<center>`책 이미지를 클릭하면 교보문고 사이트로 이동합니다!`</center>**
+**<center>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</center>**
 
 [![책](../assets/review/some-death-told-life.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788965964230&orderClick=LEa&Kc=)
 
