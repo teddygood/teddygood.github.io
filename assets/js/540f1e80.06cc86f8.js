@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_blog=self.webpackChunkmy_blog||[]).push([[2373],{4001:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/\uc0bd\uc9c8\uae30\ub85d","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Hi, I\'m Chanho Lee. I\'m a software engineer.","blogTitle":"Chanho Lee"}')}}]);
