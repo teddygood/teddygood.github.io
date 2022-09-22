@@ -1,11 +1,11 @@
 ---
-title: "Tcgetpgrp Failed"
+title: "WSL2에서 Jupyter Lab 실행 문제"
 date: '2022-07-16'
 authors: teddygood
 tags: ["삽질기록"]
 draft: false
 
-description: jupyter lab 실행 오류
+description: Tcgetpgrp Failed
 keywords:
   - Jupyter
   - WSL

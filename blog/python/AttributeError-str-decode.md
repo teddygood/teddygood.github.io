@@ -1,5 +1,5 @@
 ---
-title: "AttributeError: 'str' object has no attribute 'decode'"
+title: "PyJWT 레거시 코드 수정"
 date: '2021-06-02'
 authors: teddygood
 tags: ["삽질기록"]
