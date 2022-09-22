@@ -22,7 +22,9 @@ sidebar_position: 1
 
 ## Book Info
 
-**<center>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</center>**
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
 
 [![책](../assets/review/computer-structure-and-OS-to-study-alone.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162243091&orderClick=LEa&Kc=)
 

@@ -1,19 +1,26 @@
----  
-title: "깔끔한 파이썬 탄탄한 백엔드"  
-date: 2021-08-23
-categories: ["책 리뷰"]  
-tags: ["Backend", "Flask", "Python", "Api"]
-
-summary: 지금까지 없었던 백엔드 개발자를 위한 파이썬
-
-weight: 1
-math: false
+---
+title: '깔끔한 파이썬 탄탄한 백엔드'
+date: '2021-08-23'
+authors: teddygood
+tags: ["Book Review"]
 draft: false
----  
+
+description: 지금까지 없었던 백엔드 개발자를 위한 파이썬
+
+keywords:
+  - Backend
+  - Flask
+  - Python
+  - API
+
+sidebar_position: 1
+---
 
 ## Book Info
 
-**<center>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</center>**
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
 
 [![책](../assets/review/python-backend.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791186697757&orderClick=LEa&Kc=)
 
