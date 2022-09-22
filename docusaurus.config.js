@@ -12,6 +12,7 @@ const katex = require("rehype-katex");
 const config = {
   title: "teddygood",
   tagline: "Dinosaurs are cool",
+  titleDelimiter: '@',
   url: "https://teddygood.github.io/",
   baseUrl: "/",
   onBrokenLinks: "throw",
