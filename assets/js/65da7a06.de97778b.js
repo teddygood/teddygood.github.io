@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmy_blog=self.webpackChunkmy_blog||[]).push([[1031],{2379:l=>{l.exports=JSON.parse('{"label":"Flask","permalink":"/blog/tags/flask","allTagsPath":"/blog/tags","count":1}')}}]);
