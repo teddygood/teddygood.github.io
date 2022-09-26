@@ -1,5 +1,5 @@
 ---
-title: "Build package cryptography"
+title: "Alpine Linux와 crpytography의 호환성 문제"
 date: '2021-06-02'
 authors: teddygood
 tags: ["삽질기록"]
@@ -15,7 +15,7 @@ keywords:
 sidebar_position: 1
 ---
 
-## alpine linux와 cryptography의 호환성 문제
+## Alpine Linux와 cryptography의 호환성 문제
 
 Django 블로그 프로젝트를 docker로 옮기는 도중 에러가 떴다. alpine linux와 python에서 암호화 알고리즘이 구현된 패키지인 cryptography의 호환성 문제였다. 
 

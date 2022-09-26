@@ -14,7 +14,7 @@ keywords:
 sidebar_position: 1
 ---
 
-:::note
+:::info
 골든래빗 출판사로부터 책을 제공받아 작성했습니다.
 :::
 
