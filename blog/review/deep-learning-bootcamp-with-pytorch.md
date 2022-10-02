@@ -1,6 +1,6 @@
 ---
 title: '김기현의 딥러닝 부트캠프 with 파이토치'
-date: '2022-09-11'
+date: '2022-10-02'
 authors: teddygood
 tags: ["Book Review"]
 draft: false
