@@ -1,7 +1,7 @@
 ---
 title: 'Data Engineering 스터디 20주차'
 date: '2022-01-10'
-tags: ["Data Engineering"]
+# tags: ["Data Engineering"]
 draft: false
 
 description: PseudoLab Data Science Fellowship 1기

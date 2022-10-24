@@ -2,7 +2,7 @@
 title: '깔끔한 파이썬 탄탄한 백엔드'
 date: '2021-08-23'
 authors: teddygood
-tags: ["Book Review"]
+# tags: ["Book Review"]
 draft: false
 
 description: 지금까지 없었던 백엔드 개발자를 위한 파이썬

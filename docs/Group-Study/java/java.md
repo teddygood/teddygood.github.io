@@ -1,7 +1,7 @@
 ---
 title: 'Java'
 date: '2022-09-11'
-tags: ["Java"]
+# tags: ["Java"]
 draft: false
 
 # id: data-engineering

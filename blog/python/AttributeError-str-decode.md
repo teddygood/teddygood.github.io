@@ -2,7 +2,7 @@
 title: "PyJWT 레거시 코드 수정"
 date: '2021-06-02'
 authors: teddygood
-tags: ["삽질기록"]
+# tags: ["삽질기록"]
 draft: false
 
 description: 파이썬 레거시 삽질기록

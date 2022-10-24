@@ -2,7 +2,7 @@
 title: "Alpine Linux와 crpytography의 호환성 문제"
 date: '2021-06-02'
 authors: teddygood
-tags: ["삽질기록"]
+# tags: ["삽질기록"]
 draft: false
 
 description: 호환성 문제

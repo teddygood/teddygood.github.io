@@ -110,7 +110,7 @@ const config = {
           },
           // { to: "/blog", label: "Blog", position: "left" },
           { to: "/blog/archive", label: "Archive", position: "left" },
-          { to: "/blog/tags", label: "Tags", position: "left" },
+          // { to: "/blog/tags", label: "Tags", position: "left" },
           // { to: "/docs", label: "TIL", position: "left" },
           {
             href: "https://github.com/teddygood",

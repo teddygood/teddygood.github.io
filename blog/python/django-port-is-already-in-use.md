@@ -2,7 +2,7 @@
 title: "프로세스 강제 종료하기"
 date: '2022-03-07'
 authors: teddygood
-tags: ["삽질기록"]
+# tags: ["삽질기록"]
 draft: false
 
 description: 실수 때문에 생긴 문제 해결

@@ -2,7 +2,7 @@
 title: '김기현의 딥러닝 부트캠프 with 파이토치'
 date: '2022-10-02'
 authors: teddygood
-tags: ["Book Review"]
+# tags: ["Book Review"]
 draft: false
 
 description: 소문난 명강의 | 기초부터 수식, 실습까지 담은 올인원 딥러닝 입문 교과서

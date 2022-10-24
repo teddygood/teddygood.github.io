@@ -2,7 +2,7 @@
 title: "WSL2에서 Jupyter Lab 실행 문제"
 date: '2022-07-16'
 authors: teddygood
-tags: ["삽질기록"]
+# tags: ["삽질기록"]
 draft: false
 
 description: Tcgetpgrp Failed

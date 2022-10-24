@@ -1,8 +1,8 @@
 ---
-title: "PyCharm을 정렬해준 이상한 코드"
+title: "PyCharm이 정렬해준 이상한 코드"
 date: '2021-05-23'
 authors: teddygood
-tags: ["삽질기록"]
+# tags: ["삽질기록"]
 draft: false
 
 description: IDLE를 너무 믿지는 말자...

@@ -2,7 +2,7 @@
 title: '혼자 공부하는 컴퓨터 구조+운영체제'
 date: '2022-09-11'
 authors: teddygood
-tags: ["Book Review"]
+# tags: ["Book Review"]
 draft: false
 
 description: 혼공 시리즈

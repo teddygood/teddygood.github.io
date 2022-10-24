@@ -1,7 +1,7 @@
 ---
 title: 'Data Engineering 스터디 3주차'
 date: '2021-09-05'
-tags: ["Data Engineering"]
+# tags: ["Data Engineering"]
 draft: false
 
 description: PseudoLab Data Science Fellowship 1기

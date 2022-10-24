@@ -2,7 +2,7 @@
 title: '데싸노트의 실전에서 통하는 머신러닝'
 date: '2022-09-12'
 authors: teddygood
-tags: ["Book Review"]
+# tags: ["Book Review"]
 draft: false
 
 description: Must Have | 피처 엔지니어링 + TOP 10 알고리즘 + 실무 노하우로 익히는 실무형 문제풀이 해법서

@@ -1,7 +1,7 @@
 ---
 title: 'Java 스터디 1주차'
 date: '2022-08-12'
-tags: ["Java"]
+# tags: ["Java"]
 draft: false
 
 description: Spring까지!
