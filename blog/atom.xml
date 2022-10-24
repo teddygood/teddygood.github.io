@@ -18,7 +18,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[데싸노트의 실전에서 통하는 머신러닝]]></title>
@@ -31,7 +30,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[혼자 공부하는 컴퓨터 구조+운영체제]]></title>
@@ -44,7 +42,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[WSL2에서 Jupyter Lab 실행 문제]]></title>
@@ -57,7 +54,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="삽질기록" term="삽질기록"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[프로세스 강제 종료하기]]></title>
@@ -73,7 +69,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="삽질기록" term="삽질기록"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[박미정의 깃&깃허브 입문]]></title>
@@ -86,7 +81,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[깔끔한 파이썬 탄탄한 백엔드]]></title>
@@ -99,7 +93,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[PyJWT 레거시 코드 수정]]></title>
@@ -112,7 +105,6 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="삽질기록" term="삽질기록"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Alpine Linux와 crpytography의 호환성 문제]]></title>
@@ -125,10 +117,9 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="삽질기록" term="삽질기록"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[PyCharm을 정렬해준 이상한 코드]]></title>
+        <title type="html"><![CDATA[PyCharm이 정렬해준 이상한 코드]]></title>
         <id>/python/pycharm-reformat-code</id>
         <link href="https://teddygood.github.io/blog/python/pycharm-reformat-code"/>
         <updated>2021-05-23T00:00:00.000Z</updated>
@@ -138,6 +129,5 @@
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
         </author>
-        <category label="삽질기록" term="삽질기록"/>
     </entry>
 </feed>
