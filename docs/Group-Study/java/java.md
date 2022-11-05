@@ -8,7 +8,6 @@ draft: false
 link:
   type: doc
 sidebar_label: Java
-slug: /Study/java
 
 description: Spring까지!
 

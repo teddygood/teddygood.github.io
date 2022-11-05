@@ -8,9 +8,12 @@ draft: false
 link:
   type: doc
 sidebar_label: Data Engineering
-slug: /Study/data-engineering
 
 description: PseudoLab Data Science Fellowship 1기
 
 sidebar_position: 1
 ---
+
+## PseudoLab Data Science Fellowship 1기
+
+가짜연구소에서 진행하는 프로그램에 참여하여 

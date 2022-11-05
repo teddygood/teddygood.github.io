@@ -1,5 +1,5 @@
 ---
-title: 'Group Study'
+title: 'Personal Study'
 date: '2022-10-24'
 # tags: ["Group Study"]
 draft: false
@@ -7,8 +7,8 @@ draft: false
 # id: group-study
 link:
   type: doc
-sidebar_label: Group Study
+sidebar_label: Personal Study
 
-description: Group Study
+description: Personal Study
 ---
 

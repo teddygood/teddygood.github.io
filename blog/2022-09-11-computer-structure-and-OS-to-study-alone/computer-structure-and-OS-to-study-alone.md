@@ -1,8 +1,8 @@
 ---
-title: '혼자 공부하는 컴퓨터 구조+운영체제'
+title: "혼자 공부하는 컴퓨터 구조+운영체제"
 date: '2022-09-11'
 authors: teddygood
-# tags: ["Book Review"]
+tags: ["Book Review"]
 draft: false
 
 description: 혼공 시리즈
@@ -12,8 +12,6 @@ keywords:
   - 운영체제
   - 혼공
   - 혼자 공부하는
-
-sidebar_position: 1
 ---
 
 :::info
@@ -34,6 +32,8 @@ sidebar_position: 1
 - 저자: 강민철
 - 출판사: 한빛미디어
 - 출간: 2022-08-16
+
+<!--truncate-->
 
 ## Intro
 

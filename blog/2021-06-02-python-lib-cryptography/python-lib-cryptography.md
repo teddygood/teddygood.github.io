@@ -2,20 +2,21 @@
 title: "Alpine Linux와 crpytography의 호환성 문제"
 date: '2021-06-02'
 authors: teddygood
-# tags: ["삽질기록"]
+tags: ["개발하다가 만난 문제"]
 draft: false
 
-description: 호환성 문제
+description: 호환 문제 해결
+
 keywords:
   - Python
   - Docker
   - Alpine Linux
   - cryptography
-
-sidebar_position: 1
 ---
 
-## Alpine Linux와 cryptography의 호환성 문제
+## 문제
+
+### Alpine Linux와 cryptography의 호환성 문제
 
 Django 블로그 프로젝트를 docker로 옮기는 도중 에러가 떴다. alpine linux와 python에서 암호화 알고리즘이 구현된 패키지인 cryptography의 호환성 문제였다. 
 
@@ -39,9 +40,25 @@ ERROR: No matching distribution found for cryptography==3.4.7
 
 `Dockerfile`, `docker-compose.yml`을 다 만들고 난 후에 마지막으로 위의 명령어로 빌드를 하던 중 위의 Error를 만났다. 
 
-## 첫 번째 문제 해결
+### 빌드가 오래 걸리는 문제
 
-![crypto-doc](../assets/cryptography-doc.jpg)
+![더 상세한 details](crypto-building-error.jpg)
+
+위의 명령어를 Dockerfile에 추가하고 다시 build 하니 위와 같이 에러 아닌 에러가 떴다. 이미지를 보면 알 수 있듯이 still running이 지속되는 상황이다. 대략 10분 정도 그대로 놔뒀는데도 빌드가 안 되는 상황이다.
+
+![더 상세한 details](alpine-linux-build-issue.jpg)
+
+cryptography GitHub 저장소에서 가져온 이슈 이미지다. 현재의 상황과 같길래 답변을 참고하려 했으나 내 지식으로는 이해 불가였다. 대략 요약하자면 파이썬 패키지 포맷과 관련된 답변과 alpine linux에 대해 공식 문서로 잘 정리되어 있다는 내용이다. 결론적으로는 도움이 안 됐지만, 혹시 저 답변으로 해결할 수 있는 분이 있을 수 있기에 가져와봤다.
+
+현 시점의 문제는 빌드가 오래 걸린다는 것이다. 이 문제를 해결하기 위해 다시 구글링을 하면서 도커에 대해 공부하게 됐고, 파이썬 환경에서 도커를 이용할 때 어떤 OS를 사용하는 것이 더 유리한 가에 대해 공부했다.
+
+<!--truncate-->
+
+## 해결
+
+### 첫 번째 문제 해결
+
+![crypto-doc](cryptography-doc.jpg)
 
 아무리 구글링을 해도 찾지를 못 해서 공식 문서를 보기로 결정했고 어느정도 해결책을 찾았다.
 
@@ -59,21 +76,9 @@ $ sudo apk add gcc musl-dev python3-dev libffi-dev openssl-dev cargo
 
 위의 명령어를 Dockerfile에 추가하면서 첫 번째 문제는 끝났다.
 
-## 빌드가 오래 걸리는 문제
+### 두 번째 문제 해결
 
-![더 상세한 details](../assets/crypto-building-error.jpg)
-
-위의 명령어를 Dockerfile에 추가하고 다시 build 하니 위와 같이 에러 아닌 에러가 떴다. 이미지를 보면 알 수 있듯이 still running이 지속되는 상황이다. 대략 10분 정도 그대로 놔뒀는데도 빌드가 안 되는 상황이다.
-
-![더 상세한 details](../assets/alpine-linux-build-issue.jpg)
-
-cryptography GitHub 저장소에서 가져온 이슈 이미지다. 현재의 상황과 같길래 답변을 참고하려 했으나 내 지식으로는 이해 불가였다. 대략 요약하자면 파이썬 패키지 포맷과 관련된 답변과 alpine linux에 대해 공식 문서로 잘 정리되어 있다는 내용이다. 결론적으로는 도움이 안 됐지만, 혹시 저 답변으로 해결할 수 있는 분이 있을 수 있기에 가져와봤다.
-
-현 시점의 문제는 빌드가 오래 걸린다는 것이다. 이 문제를 해결하기 위해 다시 구글링을 하면서 도커에 대해 공부하게 됐고, 파이썬 환경에서 도커를 이용할 때 어떤 OS를 사용하는 것이 더 유리한 가에 대해 공부했다.
-
-## 두 번째 문제 해결
-
-### alpine linux가 파이썬 환경에서 적절하지 않은 이유
+#### alpine linux가 파이썬 환경에서 적절하지 않은 이유
 
 대부분의 사람들이 도커를 처음 사용할 때 alpine linux로 사용하는데 그 이유는 Ubuntu linux와 비교했을 때 용량도 작고 빌드할 때 더 빠르기 때문이다. 그러나 python 환경에서는 적절하지 않다.
 
@@ -88,7 +93,7 @@ cryptography GitHub 저장소에서 가져온 이슈 이미지다. 현재의 상
 
 간단하게 요약하자면 위의 이유들이 Alpine Linux가 python 환경에서 적절하지 않은 이유이다.
 
-### 그럼 어떤 OS를 사용해야 할까?
+#### 그럼 어떤 OS를 사용해야 할까?
 
 성능에 관심 있으면 ubuntu, 가볍게 도커를 시작해보려면 alpine이 좋겠지만 현재 나는 파이썬 환경에서 도커를 사용해보려 하니 Debian buster를 기반으로 한 3.8-slim-buster를 사용한다.
 
