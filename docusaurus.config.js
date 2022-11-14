@@ -10,7 +10,7 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "teddygood",
+  title: "Chanho Lee",
   tagline: "Dinosaurs are cool",
   titleDelimiter: '@',
   url: "https://teddygood.github.io/",
@@ -55,7 +55,7 @@ const config = {
         },
         blog: {
           showReadingTime: false,
-          blogTitle: "Chanho Lee",
+          blogTitle: "블로그",
           blogDescription: "Hi, I'm Chanho Lee. I'm a software engineer.",
           postsPerPage: 5,
           blogSidebarCount: 10,

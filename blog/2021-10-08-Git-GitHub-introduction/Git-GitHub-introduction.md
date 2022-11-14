@@ -4,7 +4,7 @@ date: '2021-10-08'
 authors: teddygood
 tags: ["Book Review"]
 draft: false
-
+slug: '/Git-GitHub-introduction'
 description: Must Have | 프로젝트 협업 시나리오로 익히는 Git&GitHub 반복 학습서
 
 keywords:

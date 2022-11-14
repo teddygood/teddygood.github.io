@@ -4,7 +4,7 @@ date: '2022-07-14'
 authors: teddygood
 tags: ["Blog"]
 draft: false
-
+slug: '/change-font-in-papermod'
 description: 나눔스퀘어, D2Coding 적용하기
 
 keywords:

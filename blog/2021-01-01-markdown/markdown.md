@@ -4,7 +4,7 @@ date: '2021-01-01'
 authors: teddygood
 tags: ["Blog"]
 draft: false
-
+slug: '/markdown'
 description: 문서화에 익숙해지기 위한 Markdown 정리
 
 keywords:

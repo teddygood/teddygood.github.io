@@ -4,7 +4,7 @@ date: '2021-05-23'
 authors: teddygood
 tags: ["개발하다가 만난 문제"]
 draft: false
-
+slug: '/pycharm-reformat-code'
 description: IDLE를 너무 믿지는 말자
 
 keywords:

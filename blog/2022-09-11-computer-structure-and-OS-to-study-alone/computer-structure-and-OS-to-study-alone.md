@@ -4,7 +4,7 @@ date: '2022-09-11'
 authors: teddygood
 tags: ["Book Review"]
 draft: false
-
+slug: '/computer-structure-and-OS-to-study-alone'
 description: 혼공 시리즈
 
 keywords:
