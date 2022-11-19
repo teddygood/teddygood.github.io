@@ -2,7 +2,7 @@
 title: "PyCharm이 정렬해준 이상한 코드"
 date: '2021-05-23'
 authors: teddygood
-tags: ["개발하다가 만난 문제"]
+tags: ["Problem Solving"]
 draft: false
 slug: '/pycharm-reformat-code'
 description: IDLE를 너무 믿지는 말자

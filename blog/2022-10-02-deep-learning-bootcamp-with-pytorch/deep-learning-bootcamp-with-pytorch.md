@@ -3,7 +3,7 @@ title: "김기현의 딥러닝 부트캠프 with 파이토치"
 date: '2022-10-02'
 authors: teddygood
 tags: ["Book Review"]
-draft: false
+draft: true
 slug: '/deep-learning-bootcamp-with-pytorch'
 description: 소문난 명강의 | 기초부터 수식, 실습까지 담은 올인원 딥러닝 입문 교과서
 
@@ -27,10 +27,10 @@ keywords:
 
 [![책](../assets/review/deep-learning-bootcamp-with-pytorch.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791169210140&orderClick=LEa&Kc=)
 
-- 제목: 혼자 공부하는 컴퓨터 구조+운영체제
-- 저자: 강민철
+- 제목: 김기현의 딥러닝 부트캠프 with 파이토치
+- 저자: 김기현
 - 출판사: 한빛미디어
-- 출간: 2022-08-16
+- 출간: 2022-08-30
 
 <!--truncate-->
 

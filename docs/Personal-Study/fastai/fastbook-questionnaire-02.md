@@ -1,7 +1,7 @@
 ---
 title: "Fastbook Questionnaire 02 Solution"
 date: '2021-11-06'
-draft: false
+draft: true
 
 description: fastai와 파이토치가 만나 꽃피운 딥러닝 질문지 정리
 ---
