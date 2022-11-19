@@ -19,7 +19,7 @@ keywords:
 책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
 :::
 
-[![책](/images/review/aws-discovery-book.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956748238&orderClick=LEa&Kc=)
+[![책](../assets/review/AWS-discovery-book.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956748238&orderClick=LEa&Kc=)
 
 - 제목: 아마존 웹 서비스 AWS Discovery Book
 - 저자: 권영환

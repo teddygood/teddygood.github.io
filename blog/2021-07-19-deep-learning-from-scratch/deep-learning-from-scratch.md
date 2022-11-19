@@ -19,7 +19,7 @@ keywords:
 책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
 :::
 
-[![책](/images/review/deep-learning-from-scratch.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788968484636&orderClick=LEa&Kc=)
+[![책](../assets/review/deep-learning-from-scratch.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788968484636&orderClick=LEa&Kc=)
 
 - 제목: 밑바닥붙터 시작하는 딥러닝
 - 저자: Koki Saitoh(사이토 고키)
