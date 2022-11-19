@@ -106,7 +106,7 @@ const config = {
             type: "doc",
             docId: "introduction",
             position: "left",
-            label: "Docs",
+            label: "Wiki",
           },
           { to: "/blog", label: "Blog", position: "left" },
           { to: "/blog/archive", label: "Archive", position: "left" },
