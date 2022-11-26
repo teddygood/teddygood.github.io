@@ -3,25 +3,36 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Typewriter from 'typewriter-effect';
 
 import styles from './index.module.css';
 
-function HomepageHeader() {
+const HomepageFeatures = () => {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/introduction">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
+    <header>
+      <h2 className={styles.intro}>
+        안녕하세요.
+        <Typewriter
+          options={{
+            autoStart: true,
+            loop: true,
+          }}
+          onInit={(typewriter) => {
+            typewriter
+              .typeString('다양한 분야에 관심이 많은')
+              .pauseFor(2000)
+              .deleteAll()
+              .typeString('기록의 힘을 믿는')
+              .pauseFor(2000)
+              .deleteAll()
+              .typeString('능동적으로 살아가는')
+              .pauseFor(2000)
+              .start();
+          }}
+        />
+        개발자 <strong>이찬호</strong>입니다.
+      </h2>
     </header>
   );
 }
@@ -30,9 +41,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title={`${siteConfig.title}`}
+      description={siteConfig.tagline}>
       <main>
         <HomepageFeatures />
       </main>
