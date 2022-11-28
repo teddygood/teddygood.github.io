@@ -34,7 +34,7 @@
         <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[WSL2에서 Jupyter Lab 실행 문제]]></title>
+        <title type="html"><![CDATA[WSL2에서 Jupyter Lab 실행 문제 해결하기]]></title>
         <id>/Jupyter-lab-tcgetpgrp-failed</id>
         <link href="https://teddygood.github.io/blog/Jupyter-lab-tcgetpgrp-failed"/>
         <updated>2022-07-16T00:00:00.000Z</updated>
@@ -102,7 +102,7 @@
         <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[PyJWT 레거시 코드 수정]]></title>
+        <title type="html"><![CDATA[간단한 PyJWT 레거시 코드 수정 경험기]]></title>
         <id>/AttributeError-str-decode</id>
         <link href="https://teddygood.github.io/blog/AttributeError-str-decode"/>
         <updated>2021-06-02T00:00:00.000Z</updated>

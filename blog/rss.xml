@@ -27,7 +27,7 @@
             <category>Book Review</category>
         </item>
         <item>
-            <title><![CDATA[WSL2에서 Jupyter Lab 실행 문제]]></title>
+            <title><![CDATA[WSL2에서 Jupyter Lab 실행 문제 해결하기]]></title>
             <link>https://teddygood.github.io/blog/Jupyter-lab-tcgetpgrp-failed</link>
             <guid>/Jupyter-lab-tcgetpgrp-failed</guid>
             <pubDate>Sat, 16 Jul 2022 00:00:00 GMT</pubDate>
@@ -75,7 +75,7 @@
             <category>Book Review</category>
         </item>
         <item>
-            <title><![CDATA[PyJWT 레거시 코드 수정]]></title>
+            <title><![CDATA[간단한 PyJWT 레거시 코드 수정 경험기]]></title>
             <link>https://teddygood.github.io/blog/AttributeError-str-decode</link>
             <guid>/AttributeError-str-decode</guid>
             <pubDate>Wed, 02 Jun 2021 00:00:00 GMT</pubDate>
