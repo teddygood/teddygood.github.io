@@ -46,7 +46,7 @@ const config = {
           sidebarCollapsed: true,
           sidebarCollapsible: true,
           showLastUpdateAuthor: false,
-          showLastUpdateTime: false,
+          showLastUpdateTime: true,
           remarkPlugins: [math],
           rehypePlugins: [katex],
           // Please change this to your repo.
@@ -177,6 +177,10 @@ const config = {
         theme: CodeTheme,
         darkTheme: CodeTheme,
         additionalLanguages: ["java", "kotlin", "scala"],
+      },
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: false,
       },
     }),
 };
