@@ -1,22 +1,30 @@
 {
-    "theme.blog.archive.title": {
-        "message": "게시물 목록",
-        "description": "The page & hero title of the blog archive page"
-      },
-    "theme.blog.archive.description": {
-        "message": "특별한 경험들",
-        "description": "The page & hero description of the blog archive page"
-    },
-    "theme.blog.archive.posts": {
-      "message": "개의 글",
-      "description": "The plural name of a blog post"
-    },
-    "theme.blog.archive.post": {
-      "message": "개의 글",
-      "description": "The singular name of a blog post"
-    },
-    "theme.blog.archive.yearsuffix": {
-      "message": "년",
-      "description": "The suffix of a year in a blog archive"
-    }
+  "theme.blog.archive.title": {
+      "message": "게시물 목록",
+      "description": "The page & hero title of the blog archive page"
+  },
+  "theme.blog.archive.description": {
+      "message": "특별한 경험들",
+      "description": "The page & hero description of the blog archive page"
+  },
+  "theme.blog.archive.posts": {
+    "message": "개의 글",
+    "description": "The plural name of a blog post"
+  },
+  "theme.blog.archive.post": {
+    "message": "개의 글",
+    "description": "The singular name of a blog post"
+  },
+  "theme.blog.archive.yearsuffix": {
+    "message": "년",
+    "description": "The suffix of a year in a blog archive"
+  },
+  "theme.blog.tagTitle": {
+    "message": "\"{tagName}\"로 태그된 {nPosts}",
+    "description": "The title of the page for a blog tag"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "태그 목록",
+    "description": "The label of the link targeting the tag list page"
+  }
 }
