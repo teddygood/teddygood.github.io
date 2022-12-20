@@ -178,9 +178,11 @@ const config = {
         darkTheme: CodeTheme,
         additionalLanguages: ["java", "kotlin", "scala"],
       },
-      sidebar: {
-        hideable: true,
-        autoCollapseCategories: false,
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: false,
+        },
       },
     }),
 };
