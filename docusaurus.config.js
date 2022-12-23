@@ -46,7 +46,7 @@ const config = {
           sidebarCollapsed: true,
           sidebarCollapsible: true,
           showLastUpdateAuthor: false,
-          showLastUpdateTime: true,
+          showLastUpdateTime: false,
           remarkPlugins: [math],
           rehypePlugins: [katex],
           // Please change this to your repo.
