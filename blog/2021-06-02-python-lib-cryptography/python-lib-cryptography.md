@@ -1,5 +1,5 @@
 ---
-title: "Alpine Linux와 crpytography의 호환성 문제 해결"
+title: "🚩Alpine Linux와 crpytography의 호환성 문제 해결"
 date: '2021-06-02'
 authors: teddygood
 tags: ["Problem Solving"]
@@ -14,7 +14,7 @@ keywords:
   - cryptography
 ---
 
-## 문제
+## 🤔문제
 
 ### Alpine Linux와 cryptography의 호환성 문제
 
@@ -54,7 +54,7 @@ cryptography GitHub 저장소에서 가져온 이슈 이미지다. 현재의 상
 
 <!--truncate-->
 
-## 해결
+## 🚩해결
 
 ### 첫 번째 문제 해결
 
@@ -110,7 +110,7 @@ FROM python:3.8-slim-buster
 
 이후 다시 build 했을 때 잘 되는 모습을 확인할 수 있다.
 
-## References
+## 🌐References
 
 >- [Cryptography installation](https://cryptography.io/en/latest/installation/)
 >- [Dependencies to build on Alpine Linux?](https://github.com/pyca/cryptography/issues/5776)
