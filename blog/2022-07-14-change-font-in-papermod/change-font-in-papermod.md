@@ -1,5 +1,5 @@
 ---
-title: "Hugo PaperMod theme 폰트 변경하기"
+title: "✏️Hugo PaperMod theme 폰트 변경하기"
 date: '2022-07-14'
 authors: teddygood
 tags: ["Blog"]

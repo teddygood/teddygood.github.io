@@ -1,5 +1,5 @@
 ---
-title: "WSL2에서 Jupyter Lab 실행 문제 해결하기"
+title: "🖥️WSL2에서 Jupyter Lab 실행 문제 해결하기"
 date: '2022-07-16'
 authors: teddygood
 tags: ["Problem Solving"]
@@ -14,7 +14,7 @@ keywords:
   - Jupyter Lab
 ---
 
-## 문제
+## 🤔문제
 
 보통 주피터 노트북 또는 주피터 랩을 사용할 때 `jupyter notebook` 또는 `jupyter lab`이라는 명령어를 치고 들어간다. 보통은 브라우저와 함께 주피터가 실행되는데 브라우저가 열리지도 않고 주피터가 실행됐는지도 모르는 문제를 만났다.
 
@@ -28,7 +28,7 @@ WSL2에서 Jupyter Lab을 실행시키면 위의 에러 문장이 1초도 안 �
 
 <!--truncate-->
 
-## 해결
+## 🚩해결
 
 ### 방법 1
 
@@ -56,7 +56,7 @@ jupyter lab --no-browser
 
 그럼 위와 같이 제대로 사이트에 접속할 수 있게 된다.
 
-## Appendix
+## ✔️Appendix
 
 ![주피터 랩](github-issue-jupyter.png)
 
@@ -70,7 +70,7 @@ GitHub에 있는 [jupyter lab Repo의 issue](https://github.com/jupyterlab/jupyt
 
 어쨌든 나는 1번 방법은 귀찮으니 WSL에서 Jupyter를 사용할 경우에는 아마 2번 방법을 사용하지 않을까 싶다.
 
-## References
+## 🌐References
 
 >- [https://stackoverflow.com/questions/50882266/using-jupyter-with-windows-subsystem-for-linux](https://stackoverflow.com/questions/50882266/using-jupyter-with-windows-subsystem-for-linux)
 >- [Jupyter Lab hangs on startup and then 'tcgetpgrp failed: Not a tty' appears (in WSL2)](https://github.com/jupyterlab/jupyterlab/issues/10413)

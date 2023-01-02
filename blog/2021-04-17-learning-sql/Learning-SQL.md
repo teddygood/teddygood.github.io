@@ -19,7 +19,7 @@ keywords:
 
 ![나는 리뷰어다 2021](../assets/I-am-reviewer-2021.jpg)
 
-## Book Info
+## ℹ️Book Info
 
 :::tip
 책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
@@ -41,11 +41,11 @@ keywords:
 
 ## 📖Book Review
 
-### 🔥SQL
+### SQL
 
 이 책은 제목에서도 알 수 있듯이 SQL을 공부하는 책이다. SQL은 MySQL, ORACLE DATABASE, IBM DB2, Microsoft SQL Server, PostgreSQL 둥과 같이 좋류가 다양하다. 그중 이 책은 가장 대중적이라고 할 수 있는 MySQL을 중점으로 설명한다. 가끔 MySQL 이외의 SQL 예제들이 나오기도 하지만 SQL 문법 자체가 거의 비슷하여 큰 어려움은 없다.
 
-### 🖥️실습 환경
+### 실습 환경
 
 ![katacoda](mysql-environment-katacoda.jpg)
 
@@ -57,11 +57,11 @@ keywords:
 
 이외에도 환경을 구축할 수 있는 사람은 스스로 환경을 구축하여 책의 예제를 따라 하며 실습을 진행하면 된다. 나는 WSL2(Windows Subsystem for Linux 2)를 사용하여 MySQL 환경을 구축했다. 처음에는 Windows에서 MySQL을 사용하려 했으나 이 책은 터미널에서 쿼리를 작성하기에 나도 MySQL Workbench를 사용하지 않고 터미널에서 실습을 진행했다.
 
-### 📕입문에 그치지 않는 책
+### 입문에 그치지 않는 책
 
 단순 SQL 쿼리문만을 사용하는 것이 아니라 SQL의 배경부터 기초 문법을 설명하고 끝에는 분할, 군집화, 샤딩, 빅데이터 같이 SQL을 이용한 고급 기술을 간단하게 소개한다. 특히 2015년에 처음 등장한 오픈소스인 Apache Drill을 사용해본다. 
 
-### 📕공부하기 편한 책
+### 공부하기 편한 책
 
 이 책은 455 페이지로 꽤 두꺼운 책이지만 Chapter가 18까지 있어 조금씩 보기 좋다. 하루에 한 Chapter씩 보면 18일이면 다 읽을 수 있다. 이렇게 짧게 Chapter가 구성되어 있어 책을 읽는데 부담을 덜했다.
 
