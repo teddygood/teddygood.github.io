@@ -1,5 +1,5 @@
 ---
-title: "📖박미정의 깃&깃허브 입문"
+title: "📖 박미정의 깃&깃허브 입문"
 date: '2021-10-08'
 authors: teddygood
 tags: ["Book Review"]
@@ -10,8 +10,8 @@ description: Must Have | 프로젝트 협업 시나리오로 익히는 Git&GitHu
 keywords:
   - Git
   - GitHub
-  - 깃
-  - 깃허브
+  - 협업
+  - Must Have
 ---
 
 :::info

@@ -1,5 +1,5 @@
 ---
-title: "⌨️마크다운(Markdown) 정리"
+title: "⌨️ 마크다운(Markdown) 정리"
 date: '2021-01-01'
 authors: teddygood
 tags: ["Blog"]

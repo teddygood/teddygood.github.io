@@ -1,5 +1,5 @@
 ---
-title: "🤔PyCharm이 정렬해준 이상한 코드"
+title: "🤔 PyCharm이 정렬해준 이상한 코드"
 date: '2021-05-23'
 authors: teddygood
 tags: ["Problem Solving"]
@@ -12,7 +12,7 @@ keywords:
   - Pycharm
 ---
 
-## 🤔문제
+## 🤔 문제
 
 ![파이참 HTML 코드](pycharm-html-code.jpg)  
 
@@ -28,7 +28,7 @@ django 공부를 하던 도중 테스트 코드를 수정하게 되고 그에 �
 
 <!--truncate-->
 
-## 🚩해결
+## 🚩 해결
 
 1시간이 지난 후에야 `<a>`태그가 중간에 나눠진 것을 확인하였고 '에이, 설마'라는 생각에 가장 처음의 코드로 고쳤는데 됐다.
 

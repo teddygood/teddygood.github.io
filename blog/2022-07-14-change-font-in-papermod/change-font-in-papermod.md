@@ -1,5 +1,5 @@
 ---
-title: "✏️Hugo PaperMod theme 폰트 변경하기"
+title: "✏️ Hugo PaperMod theme 폰트 변경하기"
 date: '2022-07-14'
 authors: teddygood
 tags: ["Blog"]
@@ -104,6 +104,6 @@ code {
 
 ## References
 
->- [네이버 글꼴 모음](https://hangeul.naver.com/font)
->- [스포카 한 산스 네오](https://spoqa.github.io/spoqa-han-sans/)
->- [PaperMod FAQs](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/)
+- [네이버 글꼴 모음](https://hangeul.naver.com/font)
+- [스포카 한 산스 네오](https://spoqa.github.io/spoqa-han-sans/)
+- [PaperMod FAQs](https://adityatelange.github.io/hugo-PaperMod/posts/papermod/papermod-faq/)

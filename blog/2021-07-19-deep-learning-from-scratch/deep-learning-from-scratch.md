@@ -1,16 +1,16 @@
----
-title: "밑바닥부터 시작하는 딥러닝"
+---  
+title: "📖 밑바닥부터 시작하는 딥러닝"  
 date: '2021-07-19'
 authors: teddygood
 tags: ["Book Review"]
-draft: true
+draft: false
 slug: '/deep-learning-from-scratch'
 description: 파이썬으로 익히는 딥러닝 이론과 구현
 
 keywords:
   - 딥러닝
-  - 신경망
   - CNN
+  - 밑바닥부터
 ---
 
 ## Book Info
