@@ -126,9 +126,9 @@ const config = {
           },
         ],
       },
-      /*
       footer: {
-        style: "dark",
+        style: "light",
+        /*
         links: [
           {
             title: "Docs",
@@ -170,9 +170,9 @@ const config = {
             ],
           },
         ],
+        */
         copyright: `Copyright © ${new Date().getFullYear()} teddygood Built with Docusaurus.`,
       },
-      */
       prism: {
         theme: CodeTheme,
         darkTheme: CodeTheme,
