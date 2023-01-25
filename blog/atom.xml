@@ -8,7 +8,7 @@
     <subtitle>Chanho Lee Blog</subtitle>
     <icon>https://teddygood.github.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[데싸노트의 실전에서 통하는 머신러닝]]></title>
+        <title type="html"><![CDATA[📖 데싸노트의 실전에서 통하는 머신러닝]]></title>
         <id>/ML-in-practice</id>
         <link href="https://teddygood.github.io/blog/ML-in-practice"/>
         <updated>2022-09-12T00:00:00.000Z</updated>
@@ -21,7 +21,7 @@
         <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[혼자 공부하는 컴퓨터 구조+운영체제]]></title>
+        <title type="html"><![CDATA[📖 혼자 공부하는 컴퓨터 구조+운영체제]]></title>
         <id>/computer-structure-and-OS-to-study-alone</id>
         <link href="https://teddygood.github.io/blog/computer-structure-and-OS-to-study-alone"/>
         <updated>2022-09-11T00:00:00.000Z</updated>
