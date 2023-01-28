@@ -226,16 +226,15 @@ e.g. "## 문법이 기억나지 않거나 응용하고 싶을 때" -> "#문법�
 
 이럴 때는 Markdown과 HTML/CSS를 섞어 쓰면 된다. 예를 들어 줄바꿈이 적용이 안 된다면 `<br>` 태그를 사용하면 된다. 이외에도 글씨의 색을 바꾸거나 밑줄 등을 사용하고 싶으면 HTML과 CSS를 사용하면 된다. 
 
-## Official Documents
-
->- [Markdown](https://daringfireball.net/projects/markdown/)
 
 ## References
 
->- [위키피디아 마크다운](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
+- [Markdown](https://daringfireball.net/projects/markdown/)
 
->- [마크다운 문법 총 정리](https://ansohxxn.github.io/blog/markdown/#%EA%B8%80%EC%94%A8-%EC%83%89)
+- [위키피디아 마크다운](https://ko.wikipedia.org/wiki/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4)
 
->- [마크다운 사용법 및 예제](https://theorydb.github.io/envops/2019/05/22/envops-blog-how-to-use-md/#markdown%EC%9D%B4%EB%9E%80)
+- [마크다운 문법 총 정리](https://ansohxxn.github.io/blog/markdown/#%EA%B8%80%EC%94%A8-%EC%83%89)
 
->- [마크다운 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)
+- [마크다운 사용법 및 예제](https://theorydb.github.io/envops/2019/05/22/envops-blog-how-to-use-md/#markdown%EC%9D%B4%EB%9E%80)
+
+- [마크다운 작성법](https://gist.github.com/ihoneymon/652be052a0727ad59601)

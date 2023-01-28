@@ -2,7 +2,7 @@
 title: "🚩 간단한 PyJWT 레거시 코드 수정 경험기"
 date: '2021-06-02'
 authors: teddygood
-tags: ["Problem Solving"]
+# tags: ["Problem Solving"]
 draft: false
 slug: '/AttributeError-str-decode'
 description: 파이썬 레거시 삽질기록
@@ -44,11 +44,11 @@ return jsonify({'access_token': token})
 
 그냥 decode를 지워주면 되는 문제였다. 근데 '왜 decode가 붙어있던걸까?'라는 의문이 들었고 stackoverflow를 계속 탐험했다.
 
-![pyjwt-version-stackoverflow](pyjwt-version-stackoverflow.jpg)
+![pyjwt-version-stackoverflow](../assets/pyjwt-version-stackoverflow.jpg)
 
 대충 버전과 관련있어 보이는 답변을 발견했고, 바로 공식문서를 읽어보는 방법을 선택했다. 현재 내가 쓰고 있는 버전은 2.1.0으로 가장 최근 버전이다. 저 코드가 레거시 코드라는 예상을 해보고 PyJWT 공식 문서의 Changelog를 읽어봤다.
 
-![jwt-encode-return-type](jwt-encode-return-type.jpg)
+![jwt-encode-return-type](../assets/jwt-encode-return-type.jpg)
 
 역시나 내 예상은 맞았다. v2.0.0으로 바뀌면서 `jwt.encode(...)`의 return type이 바뀌었다는 것. 예전에는 토큰의 타입을 byte string으로 return했었던 것 같다. 현재는 str 타입으로 return되고 파이썬에서 모든 문자열은 UTF-8이므로 딱히 저걸 decode할 필요가 없다는 의미이다.
 

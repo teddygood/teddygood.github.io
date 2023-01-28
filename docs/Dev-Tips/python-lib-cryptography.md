@@ -2,7 +2,7 @@
 title: "🔍 Alpine Linux와 crpytography의 호환성 문제 해결"
 date: '2021-06-02'
 authors: teddygood
-tags: ["Problem Solving"]
+# tags: ["Problem Solving"]
 draft: false
 slug: '/python-lib-cryptography'
 description: 호환 문제 해결
@@ -42,11 +42,11 @@ ERROR: No matching distribution found for cryptography==3.4.7
 
 ### 빌드가 오래 걸리는 문제
 
-![더 상세한 details](crypto-building-error.jpg)
+![더 상세한 details](../assets/crypto-building-error.jpg)
 
 위의 명령어를 Dockerfile에 추가하고 다시 build 하니 위와 같이 에러 아닌 에러가 떴다. 이미지를 보면 알 수 있듯이 still running이 지속되는 상황이다. 대략 10분 정도 그대로 놔뒀는데도 빌드가 안 되는 상황이다.
 
-![더 상세한 details](alpine-linux-build-issue.jpg)
+![더 상세한 details](../assets/alpine-linux-build-issue.jpg)
 
 cryptography GitHub 저장소에서 가져온 이슈 이미지다. 현재의 상황과 같길래 답변을 참고하려 했으나 내 지식으로는 이해 불가였다. 대략 요약하자면 파이썬 패키지 포맷과 관련된 답변과 alpine linux에 대해 공식 문서로 잘 정리되어 있다는 내용이다. 결론적으로는 도움이 안 됐지만, 혹시 저 답변으로 해결할 수 있는 분이 있을 수 있기에 가져와봤다.
 
@@ -58,7 +58,7 @@ cryptography GitHub 저장소에서 가져온 이슈 이미지다. 현재의 상
 
 ### 첫 번째 문제 해결
 
-![crypto-doc](cryptography-doc.jpg)
+![crypto-doc](../assets/cryptography-doc.jpg)
 
 아무리 구글링을 해도 찾지를 못 해서 공식 문서를 보기로 결정했고 어느정도 해결책을 찾았다.
 

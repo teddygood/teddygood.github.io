@@ -2,7 +2,7 @@
 title: "💻 프로세스 강제 종료하기"
 date: '2022-03-07'
 authors: teddygood
-tags: ["Problem Solving"]
+# tags: ["Problem Solving"]
 draft: false
 slug: '/django-port-is-already-in-use'
 description: 실수 때문에 생긴 문제 해결
@@ -19,7 +19,7 @@ keywords:
 django를 시작하고 종료할 때 `Ctrl-C`를 사용해서 꺼야 했는데 `Ctrl-Z`를 사용했다.
 종료가 제대로 된 줄 알았지만, 프로세스가 중단된 것이었다.
 
-![port-error-image](port-error-message.jpg)  
+![port-error-image](../assets/port-error-message.jpg)  
 
 결국 위의 `Error: That port is already in use.`라는 에러가 발생했다.
 
@@ -27,7 +27,7 @@ django를 시작하고 종료할 때 `Ctrl-C`를 사용해서 꺼야 했는데 `
 
 ## 🚩 해결
 
-![ps](python-ps.jpg)  
+![ps](../assets/python-ps.jpg)  
 
 대충 프로세스를 종료하면 되지 않을까 생각했고, `ps` 명령어를 사용해봤으나 역시 어떤 PID가 장고 프로세스인지 알아볼 수 없었다.
 
