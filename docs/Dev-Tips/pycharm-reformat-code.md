@@ -1,5 +1,5 @@
 ---
-title: "🤔 PyCharm이 정렬해준 이상한 코드"
+title: "PyCharm이 정렬해준 이상한 코드"
 date: '2021-05-23'
 authors: teddygood
 # tags: ["Problem Solving"]

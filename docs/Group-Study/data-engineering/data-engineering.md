@@ -1,7 +1,7 @@
 ---
 title: 'Data Engineering'
 date: '2023-01-03'
-tags: ["Data Engineering"]
+# tags: ["Data Engineering"]
 draft: false
 
 # id: data-engineering

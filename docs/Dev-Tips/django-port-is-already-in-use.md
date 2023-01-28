@@ -1,5 +1,5 @@
 ---
-title: "💻 프로세스 강제 종료하기"
+title: "프로세스 강제 종료"
 date: '2022-03-07'
 authors: teddygood
 # tags: ["Problem Solving"]

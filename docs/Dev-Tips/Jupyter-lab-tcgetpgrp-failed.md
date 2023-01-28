@@ -1,5 +1,5 @@
 ---
-title: "🖥️ WSL2에서 Jupyter Lab 실행 문제 해결하기"
+title: "WSL2에서 Jupyter Lab 실행 문제 해결"
 date: '2022-07-16'
 authors: teddygood
 tags: ["Problem Solving"]

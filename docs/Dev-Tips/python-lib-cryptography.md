@@ -1,5 +1,5 @@
 ---
-title: "🔍 Alpine Linux와 crpytography의 호환성 문제 해결"
+title: "Alpine Linux와 crpytography의 호환성 문제 해결"
 date: '2021-06-02'
 authors: teddygood
 # tags: ["Problem Solving"]

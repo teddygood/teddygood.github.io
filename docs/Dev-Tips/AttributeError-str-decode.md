@@ -1,5 +1,5 @@
 ---
-title: "🚩 간단한 PyJWT 레거시 코드 수정 경험기"
+title: "간단한 PyJWT 레거시 코드 수정 경험"
 date: '2021-06-02'
 authors: teddygood
 # tags: ["Problem Solving"]
