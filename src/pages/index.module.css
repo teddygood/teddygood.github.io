@@ -11,15 +11,24 @@
 }
 
 .intro {
-  padding: 0 10rem;
-  font-size: 4rem;
+  font-family: var(--font-family-headline);
+  padding: 0 4rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 1.5;
   max-width: 1200px;
-  margin: 0 auto; 
-  margin-top: 100px;
+  margin: 0 auto;
   word-wrap: break-word;
   word-break: keep-all;
   user-select: none;
+  text-align: center;
+  position: relative;
+}
+
+.intro img {
+  width: 40%;
+  height: 40%;
+  vertical-align: text-bottom;
+  border-radius: 10px;
 }
 
