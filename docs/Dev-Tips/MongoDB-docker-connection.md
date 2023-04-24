@@ -9,8 +9,6 @@ description: DB URL 설정하기
 keywords:
   - docker
   - MongoDB
-  - PyJWT
-  - 깔끔한 파이썬 탄탄한 백엔드
 ---
 
 ## 🤔 문제
