@@ -93,9 +93,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: "VI4M53X9CF",
-        apiKey: "02d52e3bd34bf1d5899ef33517482ce3",
-        indexName: "my_blog",
+        appId: "3GO7VFCZS7",
+        apiKey: "23480bb28e2475827be0b837d69144b5",
+        indexName: "teddygoodio",
         contextualSearch: true,
         searchParameters: {},
         searchPagePath: "search",
