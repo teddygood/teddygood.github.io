@@ -4,7 +4,7 @@ date: '2023-05-28'
 authors: teddygood
 tags: ["Book Review"]
 draft: false
-slug: '/docs-for-developers
+slug: '/docs-for-developers'
 description: 국내 테크니컬 라이터 11인 인터뷰 수록
 
 keywords:
