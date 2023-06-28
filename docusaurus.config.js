@@ -1,21 +1,19 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const CodeTheme = require("prism-react-renderer/themes/dracula");
-
 // const lightCodeTheme = require("prism-react-renderer/themes/github");
-
+const CodeTheme = require("prism-react-renderer/themes/dracula");
 const math = require("remark-math");
 const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Chanho Lee",
-  tagline: "Dinosaurs are cool",
+  tagline: "Hi, I'm Chanho Lee. I'm a software engineer.",
   titleDelimiter: '@',
-  url: "https://teddygood.github.io/",
+  url: "https://teddygood.github.io",
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
@@ -40,8 +38,8 @@ const config = {
       ({
         docs: {
           path: "docs",
-          sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/docs",
+          sidebarPath: require.resolve("./sidebars.js"),
           breadcrumbs: true,
           sidebarCollapsed: true,
           sidebarCollapsible: true,
@@ -54,6 +52,8 @@ const config = {
           editUrl: "https://github.com/teddygood/teddygood.github.io/tree/main",
         },
         blog: {
+          path: "blog",
+          routeBasePath: "/blog",
           showReadingTime: false,
           blogTitle: "블로그",
           blogDescription: "Hi, I'm Chanho Lee. I'm a software engineer.",
@@ -73,7 +73,7 @@ const config = {
           trackingID: "G-EFT0SBFJCH",
         },
         sitemap: {
-          changefreq: 'weekly',
+          changefreq: 'daily',
           priority: 0.5,
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
@@ -90,7 +90,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
         appId: "3GO7VFCZS7",
@@ -109,15 +109,26 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "introduction",
-            position: "left",
-            label: "Wiki",
+            type: 'doc',
+            position: 'left',
+            docId: 'introduction',
+            label: 'Docs',
           },
-          { to: "/blog", label: "Blog", position: "left" },
-          { to: "/blog/archive", label: "Archive", position: "left" },
-          { to: "/blog/tags", label: "Tags", position: "left" },
-          // { to: "/docs", label: "TIL", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
+          {
+            to: "/blog/archive",
+            label: "Archive",
+            position: "left",
+          },
+          {
+            to: "/blog/tags",
+            label: "Tags",
+            position: "left",
+          },
           {
             href: "https://github.com/teddygood",
             position: "right",
@@ -177,7 +188,7 @@ const config = {
           },
         ],
         */
-        copyright: `Copyright © ${new Date().getFullYear()} teddygood Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} teddygood`,
       },
       prism: {
         theme: CodeTheme,
