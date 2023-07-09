@@ -1,8 +1,7 @@
 ---
 title: "Alpine Linux와 crpytography의 호환성 문제 해결"
-date: '2021-06-02'
+date: '2021-06-03'
 authors: teddygood
-# tags: ["Problem Solving"]
 draft: false
 slug: '/python-lib-cryptography'
 description: 호환 문제 해결

@@ -2,7 +2,6 @@
 title: "간단한 PyJWT 레거시 코드 수정 경험"
 date: '2021-06-02'
 authors: teddygood
-# tags: ["Problem Solving"]
 draft: false
 slug: '/AttributeError-str-decode'
 description: 파이썬 레거시 삽질기록
@@ -29,8 +28,6 @@ AttributeError: 'str' object has no attribute 'decode'
 ```
 
 "책의 코드와 똑같이 썼는데 뭐지?"라고 생각하면서 일단 코드를 잘못 썼을 수도 있으니 책에서 주어진 코드를 복붙했다. 그래도 에러는 다시 나타났다.
-
-<!--truncate-->
 
 ## 🚩 해결
 

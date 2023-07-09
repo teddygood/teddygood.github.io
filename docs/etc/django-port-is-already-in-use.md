@@ -2,7 +2,6 @@
 title: "프로세스 강제 종료"
 date: '2022-03-07'
 authors: teddygood
-# tags: ["Problem Solving"]
 draft: false
 slug: '/django-port-is-already-in-use'
 description: 실수 때문에 생긴 문제 해결
