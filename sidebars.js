@@ -24,15 +24,15 @@ const sidebars = {
   ],
 };
 
-// But you can create a sidebar manually
-/*
-tutorialSidebar: [
-  {
-    type: 'category',
-    label: 'Tutorial',
-    items: ['hello'],
-  },
-],
- */
+  // But you can create a sidebar manually
+  /*
+  tutorialSidebar: [
+    {
+      type: 'category',
+      label: 'Tutorial',
+      items: ['hello'],
+    },
+  ],
+   */
 
 module.exports = sidebars;
