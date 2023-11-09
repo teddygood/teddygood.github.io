@@ -13,11 +13,15 @@ keywords:
   - 취업 준비
 ---
 
+:::info
+길벗 ‘18차 개발자 리뷰어’ 활동을 위해서 책을 제공받아 작성된 서평입니다.
+:::
+
 ## Book Info
 
-**<center>길벗 ‘18차 개발자 리뷰어’ 활동을 위해서 책을 제공받아 작성된 서평입니다.</center>**
-
-**<center>`책 이미지를 클릭하면 교보문고 사이트로 이동합니다!`</center>**
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
 
 [![책](../assets/review/book-review-CS-note-for-interview.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791165219529&orderClick=LEa&Kc=)
 

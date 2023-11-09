@@ -15,6 +15,10 @@ keywords:
 
 ## Book Info
 
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/Make-your-own-neural-network.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788968483509&orderClick=LEa&Kc=)
 
 - 제목: 신경망 첫걸음

@@ -13,13 +13,18 @@ keywords:
   - 데이터 엔지니어링
 ---
 
-**<center>한빛미디어 <나는 리뷰어다> 활동을 위해서 책을 제공받아 작성된 서평입니다.</center>**
+:::info
+한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.
+:::
 
 ![나는 리뷰어다 2021](../assets/I-am-reviewer-2021.jpg)
 
 ## Book Info
 
-`책 이미지를 클릭하면 교보문고 사이트로 이동합니다!`
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/building-machine-learning-pipelines.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162244814&orderClick=LEa&Kc=)
 
 - 제목: 살아 움직이는 머신러닝 파이프라인 설계
@@ -27,6 +32,8 @@ keywords:
 - 역자: 송호연
 - 출판사: 한빛미디어
 - 출간: 2021-10-11
+
+{/* truncate */}
 
 ## 책 소개
 

@@ -5,7 +5,7 @@ authors: teddygood
 tags: ["Book Review"]
 draft: false
 slug: '/pandas-data-analysis'
-# description: 
+description: .
 
 keywords:
   - pandas
@@ -15,7 +15,10 @@ keywords:
 
 ## Book Info
 
-`책 이미지를 클릭하면 교보문고 사이트로 이동합니다!`
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/pandas-data-analysis.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956748337&orderClick=LAG&Kc=)
 
 - 제목: 파이썬 머신러닝 판다스 데이터 분석

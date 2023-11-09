@@ -31,7 +31,7 @@ keywords:
 - 출판사: 골든래빗
 - 출간: 2023-04-15
 
-<!--truncate-->
+{/* truncate */}
 
 ## Intro
 

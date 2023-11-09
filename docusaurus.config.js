@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+import {themes as prismThemes} from 'prism-react-renderer';
 
 // const lightCodeTheme = require("prism-react-renderer/themes/github");
-const CodeTheme = require("prism-react-renderer/themes/dracula");
+const CodeTheme = prismThemes.dracula
 const math = require("remark-math");
 const katex = require("rehype-katex");
 

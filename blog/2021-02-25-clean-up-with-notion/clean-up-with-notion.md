@@ -16,12 +16,18 @@ keywords:
 
 ## Book Info
 
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/How-to-clean-up-with-notion.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791190665476&orderClick=LEa&Kc=)
 
 - 제목: 업무와 일상을 정리하는 새로운 방법 노션 Notion
 - 저자: 전시진, 이해봄
 - 출판사: 제이펍
 - 출간: 2020-10-16
+
+{/* truncate */}
 
 ## 왜 읽었어요?
 

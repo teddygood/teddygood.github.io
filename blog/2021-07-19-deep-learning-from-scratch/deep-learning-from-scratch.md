@@ -27,7 +27,7 @@ keywords:
 - 출판사: 한빛미디어
 - 출간: 2017-01-03
 
-<!--truncate-->
+{/* truncate */}
 
 ## Intro
 

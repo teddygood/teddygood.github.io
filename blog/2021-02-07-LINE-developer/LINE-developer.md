@@ -16,12 +16,19 @@ keywords:
 
 ## Book Info
 
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/LINE-developer.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162242162&orderClick=LEa&Kc=)
 
 - 제목: 나는 LINE 개발자입니다
 - 저자: 강윤신, 김영환, 김재석, 김정엽, 김택주, 노승헌, 박민우, 배권한, 이서연, 이승진, 이홍규, 하태호
 - 출판사: 한빛미디어
 - 출간: 2019-08-23
+
+{/* truncate */}
+
 
 ## 왜 읽었어요?
 

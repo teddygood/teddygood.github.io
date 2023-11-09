@@ -11,14 +11,18 @@ keywords:
   - optimization
 ---
 
-**<center>한빛미디어 <나는 리뷰어다> 활동을 위해서 책을 제공받아 작성된 서평입니다.</center>**
+:::info
+한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.
+:::
 
 ![나는 리뷰어다 2021](../assets/I-am-reviewer-2021.jpg)
 
-
 ## Book Info
 
-`책 이미지를 클릭하면 교보문고 사이트로 이동합니다!`
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/mathematical-optimization.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162244661&orderClick=LEa&Kc=)
 
 - 제목: 제대로 배우는 수학적 최적화
@@ -27,7 +31,9 @@ keywords:
 - 출판사: 한빛미디어
 - 출간: 2021-09-30
 
-## 책 소개
+{/* truncate */}
+
+## Book Review
 
 ### 수학적 지식이 필요한 책
 

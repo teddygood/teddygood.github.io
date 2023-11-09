@@ -15,11 +15,17 @@ keywords:
   - 소문난 명강의
 ---
 
+:::info
+한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.
+:::
+
 ![나는 리뷰어다 2021](../assets/I-am-reviewer-2021.jpg)
 
 ## Book Info
 
-    "책을 누르면 교보문고 사이트로 연결됩니다!"
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
 
 [![책](../assets/review/conquest-sql.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162244241&orderClick=LAG&Kc=)
 
@@ -28,13 +34,13 @@ keywords:
 - 출판사: 한빛미디어
 - 출간: 2021-05-01
 
-## 이 책을 읽게 된 이유
+{/* truncate */}
 
-    "한빛미디어 <나는 리뷰어다> 활동을 위해서 책을 제공받아 작성된 서평입니다."
+## Intro
 
 이번 책은 4월 달과 마찬가지로 SQL을 공부하기 위해서 선택한 책입니다. 저번 `Learning SQL` 책은 MySQL을 기준으로 쓰여진 책이었다면 이번 책은 Oracle 기준으로 작성된 책입니다. Oracle DB는 특히 대기업에서 자주 사용되는 SQL이죠. 그래서 더 궁금했습니다. 매번 MySQL, PostgreSQL만 다뤄보던 저에게는 생소한 SQL이었거든요. 또한, MSSQL, MariaDB와의 차이점도 같이 설명해주니 다른 SQL도 입문하기에 좋다고 생각했습니다. 
 
-## 책 리뷰 
+## Book Review
 
 ### 저자
 

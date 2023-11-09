@@ -14,9 +14,17 @@ keywords:
   - 파이토치
 ---
 
+:::info
+한빛미디어 \<나는 리뷰어다\> 활동을 위해서 책을 제공받아 작성된 서평입니다.
+:::
+
 ![나는 리뷰어다 2021](../assets/I-am-reviewer-2021.jpg)
 
 ## Book Info
+
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
 
 [![책](../assets/review/Make-your-first-gan.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162243954&orderClick=LEa&Kc=)
 
@@ -26,7 +34,9 @@ keywords:
 - 출판사: 한빛미디어
 - 출간: 2021-03-10
 
-## 이 책을 읽게 된 이유
+{/* truncate */}
+
+## Intro
 
 이 책은 한빛미디어에서 진행하는 `나는 리뷰어다 2021`에 참여하게 되어 읽게 됐습니다. 이번 3월 리뷰에도 좋은 책들이 많았고, 저는 `사토시의 서`, `GAN 첫걸음`, `리팩터링 2판`을 선택했었습니다. 이번에도 다른 책들을 선택한 이유는 제외하겠습니다.
 

@@ -30,7 +30,7 @@ keywords:
 - 출판사: 골든래빗
 - 출간: 2022-07-08
 
-<!--truncate-->
+{/* truncate */}
 
 ## Intro
 

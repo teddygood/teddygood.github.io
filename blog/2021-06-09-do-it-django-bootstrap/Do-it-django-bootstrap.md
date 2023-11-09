@@ -16,6 +16,10 @@ keywords:
 
 ## Book Info
 
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/Do-it-Django-Bootstrap.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163032069&orderClick=LET&Kc=)
 
 - 제목: Do it! 장고+부트스트랩 파이썬 웹 개발의 정석
@@ -23,7 +27,10 @@ keywords:
 - 출판사: 이지스퍼블리싱
 - 출간: 2021-01-18
 
-## 이 책을 읽게 된 이유
+{/* truncate */}
+
+
+## Intro
 
 예전에 멋쟁이사자처럼에 참여하는 분들이 Django를 사용하는 모습을 보고 웹에 대한 초보자도 공부하기 쉬운 스택이구나 싶어서 공부를 시도했던 적이 있었습니다. 그 당시에는 혼자 개발 공부하는 방법을 몰라 Django를 공부하는데 실패했었습니다. 뭐랄까 누군가 가르쳐주는 사람이 있으면 좋겠다는 생각 같이 그저 떠먹여 주길 바랬던 거 같아요. 뭐 어쨌든 그 이후로 Django는 포기했고 다른 스택들을 막 공부했었습니다.
 
@@ -33,7 +40,7 @@ keywords:
 
 결국 위의 Do it! 책들 중 한 권을 읽고자 결심했고 도커를 사용하는 `Do it! 장고+부트스트랩 파이썬 웹 개발의 정석`을 선택했습니다. [점프 투 장고](https://wikidocs.net/book/4223)는 위키북스에도 있어서 참고하면서 읽었습니다.
 
-## 책 리뷰
+## Book Review
 
 ### 웹 개발, 배포, 운영
 

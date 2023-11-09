@@ -15,6 +15,10 @@ keywords:
 
 ## ℹ️ Book Info
 
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
+
 [![책](../assets/review/UNIX-history-and-memoir.jpg)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791162243282&orderClick=LEa&Kc=)
 
 - 제목: 유닉스의 탄생
@@ -22,6 +26,8 @@ keywords:
 - 역자: 하성창
 - 출판사: 한빛미디어
 - 출간: 2020-08-03
+
+{/* truncate */}
 
 ## 🎬 Intro
 

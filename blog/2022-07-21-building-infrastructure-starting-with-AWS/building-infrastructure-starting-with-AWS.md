@@ -13,11 +13,15 @@ keywords:
   - 클라우드
 ---
 
+:::info
+제이펍 \<믿고 보는 IT 전문서 리뷰어\> 활동을 위해서 책을 제공받아 작성된 서평입니다.
+:::
+
 ## Book Info
 
-**<center>제이펍 <믿고 보는 IT 전문서 리뷰어> 활동을 위해서 책을 제공받아 작성된 서평입니다.</center>**
-
-**<center>`책 이미지를 클릭하면 교보문고 사이트로 이동합니다!`</center>**
+:::tip
+책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
+:::
 
 [![책](../assets/review/building-infrastructure-starting-with-AWS.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791191600971&orderClick=LEa&Kc=)
 
@@ -26,6 +30,8 @@ keywords:
 - 역자: 김모세
 - 출판사: 제이펍
 - 출간: 2022-06-09
+
+{/* truncate */}
 
 ## Intro
 
