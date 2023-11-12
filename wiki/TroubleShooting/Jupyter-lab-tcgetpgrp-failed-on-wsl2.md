@@ -3,7 +3,7 @@ title: "WSL2에서 Jupyter Lab 실행 문제 해결"
 date: '2022-07-16'
 authors: teddygood
 draft: false
-slug: '/Jupyter-lab-tcgetpgrp-failed'
+slug: '/Jupyter-lab-tcgetpgrp-failed-on-WSL2'
 description: Tcgetpgrp Failed
 
 keywords:
@@ -59,13 +59,13 @@ jupyter lab --no-browser
 
 ![주피터 랩](../assets/github-issue-jupyter.png)
 
-GitHub에 있는 [jupyter lab Repo의 issue](https://github.com/jupyterlab/jupyterlab/issues/10413)를 확인하니 나랑 같은 문제를 접한 사람이 있었고 누군가의 답변을 확인할 수 있었다. 그의 답변을 대충 요약하면 주피터랑은 관련이 없으며 WSL과 관련이 있다고 한다. 
+GitHub에 있는 [jupyter lab Repo의 issue](https://github.com/jupyterlab/jupyterlab/issues/10413)를 확인하니 나랑 같은 문제를 접한 사람이 있었고 누군가의 답변을 확인할 수 있었다. 그의 답변을 요약하면 주피터랑은 관련이 없으며 WSL과 관련이 있다고 한다. 
 
 대략적으로 예상해보면 아마 WSL은 CLI로 이루어진 환경이라 브라우저가 없으니 거기서 브라우저를 작동시키려고 할 때 문제가 생길 수 있다고 생각한다. 
 
 더 생각해보면 WSL 자체가 애초에 가상환경이라 거기서 작동시켜 실제 환경의 브라우저를 여는 것이 문제가 있을 수도 있다고 생각이 든다. 
 
-근데 그렇기에는 WSL에서 VS Code는 너무 잘 작동이 되는데? 진짜 이유를 모르겠다.
+근데 그렇기에는 WSL에서 VS Code는 너무 잘 작동이 되는데? 이유를 모르겠다.
 
 어쨌든 나는 1번 방법은 귀찮으니 WSL에서 Jupyter를 사용할 경우에는 아마 2번 방법을 사용하지 않을까 싶다.
 

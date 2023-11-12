@@ -3,7 +3,7 @@ title: "프로세스 강제 종료"
 date: '2022-03-07'
 authors: teddygood
 draft: false
-slug: '/django-port-is-already-in-use'
+slug: '/port-is-already-in-use'
 description: 실수 때문에 생긴 문제 해결
 
 keywords:
@@ -21,8 +21,6 @@ django를 시작하고 종료할 때 `Ctrl-C`를 사용해서 꺼야 했는데 `
 ![port-error-image](../assets/port-error-message.jpg)  
 
 결국 위의 `Error: That port is already in use.`라는 에러가 발생했다.
-
-<!--truncate-->
 
 ## 🚩 해결
 
@@ -50,7 +48,7 @@ sudo lsof -t -i tcp:8000 | xargs kill -9
 
 ## 🌐 References
 
-- [jango Server Error: port is already in use - stackoverflow](https://stackoverflow.com/questions/20239232/django-server-error-port-is-already-in-use) 
+- [Django Server Error: port is already in use - stackoverflow](https://stackoverflow.com/questions/20239232/django-server-error-port-is-already-in-use) 
 - [Ubuntu 프로세스 강제 종료시키기](https://ghostweb.tistory.com/828)
 - [lsof 명령어 사용법](https://dev.plusblog.co.kr/44)
 - [xargs 명령 & 파이프 와 차이점 완벽 정리 (표준입력 / 인자 차이)](https://inpa.tistory.com/entry/LINUX-%F0%9F%93%9A-xargs-%EB%AA%85%EB%A0%B9-%ED%8C%8C%EC%9D%B4%ED%94%84-%EC%99%80-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%A6%AC-%ED%91%9C%EC%A4%80%EC%9E%85%EB%A0%A5-%EC%9D%B8%EC%9E%90-%EC%B0%A8%EC%9D%B4#top)
