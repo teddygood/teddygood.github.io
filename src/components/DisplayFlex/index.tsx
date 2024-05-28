@@ -7,9 +7,9 @@ type Props = {
 
 const DisplayFlex = (props: Props) => {
   return (
-    <div className={styles.displayFlex}>
-      {props.children}
-    </div>
+    <figure>
+      <div className={styles.displayFlex}>{props.children}</div>
+    </figure>
   )
 }
 
