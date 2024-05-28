@@ -4,7 +4,7 @@ date: '2024-05-26'
 authors: teddygood
 draft: false
 slug: '/MIG-devices'
-description: 파이썬 레거시 삽질기록
+description: A100 GPU 메모리 분할 기술
 
 keywords:
   - GPU 메모리
