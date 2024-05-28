@@ -66,7 +66,7 @@ const config = {
           editUrl: 'https://github.com/teddygood/teddygood.github.io/tree/main',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: ['./src/css/custom.css'],
         },
         gtag: {
           trackingID: 'G-EFT0SBFJCH',
