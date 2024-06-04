@@ -19,7 +19,7 @@ keywords:
 책 이미지를 클릭하면 교보문고 사이트로 이동합니다!
 :::
 
-[![책](../assets/Developing-AI-services-with-LangChain.png)](https://product.kyobobook.co.kr/detail/S000212568407)
+[![책](../assets/review/Developing-AI-services-with-LangChain.png)](https://product.kyobobook.co.kr/detail/S000212568407)
 
 - 제목: 랭체인으로 LLM 기반의 AI 서비스 개발하기
 - 저자: 서지영
