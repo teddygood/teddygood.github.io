@@ -2,11 +2,41 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://teddygood.github.io/en/blog</id>
     <title>Chanho Lee Blog</title>
-    <updated>2024-05-23T00:00:00.000Z</updated>
+    <updated>2024-06-03T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://teddygood.github.io/en/blog"/>
     <subtitle>Chanho Lee Blog</subtitle>
     <icon>https://teddygood.github.io/en/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[📖 랭체인으로 LLM 기반의 AI 서비스 개발하기]]></title>
+        <id>https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain</id>
+        <link href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain"/>
+        <updated>2024-06-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[현직 AI Specialist에게 배우는 RAG! | 랭체인, 오픈AI API, 스트림릿으로 8가지 서비스 구현까지]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#book-info" class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
+<p><a href="https://product.kyobobook.co.kr/detail/S000212568407" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/Developing-AI-services-with-LangChain-173d2428e7b79e963833a6603bd7f1fe.png" width="458" height="589" class="centered_bfhO img_ev3q"></a></p>
+<ul>
+<li>제목: 랭체인으로 LLM 기반의 AI 서비스 개발하기</li>
+<li>저자: 서지영</li>
+<li>출판사: 길벗</li>
+<li>출간: 2024-02-27</li>
+</ul>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro">​</a></h2>
+<p>요즘 LLM(Large Language Model)이 너무 인기가 많아 나도 시험기간이지만 잠깐 시간을 내어서 공부해 봤다. 사실 인공지능을 공부하는 사람이니 LLM이 무엇인지도 알고, 어떻게 사용할지도 대충은 알고 있다. 그러나 책을 읽는 이유는 다시 한번 더 복습을 위해서이기도 하고, 무엇보다도 이 책이 엄청 얇았기 때문이다. 거기다 마이크로소프트 직원이 쓰셨으니 무언가 더 특별한 팁이 없지 않을까 생각한 점도 있었다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="머신러닝-직군이-아닌-개발자에게-좋은-책">머신러닝 직군이 아닌 개발자에게 좋은 책<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%A7%81%EA%B5%B0%EC%9D%B4-%EC%95%84%EB%8B%8C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C-%EC%A2%8B%EC%9D%80-%EC%B1%85" class="hash-link" aria-label="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" title="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책">​</a></h3>
+<p>머신러닝을 공부하지 않은 개발자에게 도움이 되는 책이라 생각한다. 전반적인 인공지능 개념이 담겨 있으며, 코드가 그렇게 많지 않은 편이다. 즉, 가볍게 읽기 좋았던 책이다. 콘다 설치부터 OpenAI API key를 받는 것, 그리고 허깅페이스 토큰까지 얻는 과정이 상세히 나와 있으니 기초 개념서로 충분히 좋은 책이라 생각한다.</p>
+<p>나는 RAG에 대한 부분을 복습할 수 있어서 도움이 됐고, 랭체인도 처음 써봤는데 은근 나쁘지 않았다. 끝부분에는 랭체인으로 할 수 있는 프로젝트들이 소개되어 있으니 참고하면 좋을 것 같다. 나도 내 프로젝트에 랭체인과 LLM을 어떻게 써볼지 고민했던 좋은 계기가 된 책이다. 곧 랭체인으로 프로젝트를 하나 해봐야겠다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90" class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자">​</a></h2>
+<p>LLM이 인기가 많아 한 번쯤 공부해 보고 싶은 분들께 이 책을 추천한다.</p>]]></content>
+        <author>
+            <name>Chanho Lee</name>
+            <uri>https://github.com/teddygood</uri>
+        </author>
+        <category label="Book Review" term="Book Review"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[📖 더 나은 프로그래머 되는 법]]></title>
         <id>https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer</id>
@@ -763,41 +793,6 @@
 <p>마지막에는 지금까지 배운 내용을 활용하여 간단하게 블로그를 만들어보는 미니 프로젝트를 진행합니다. 점검 차원에서 매우 도움이 됐습니다. 조금 아쉬운 점은 또 다른 주제의 프로젝트도 있었다면 복습하는 데 도움이 됐을 것 같습니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a href="https://teddygood.github.io/en/blog/first-met-react#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90" class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자">​</a></h2>
 <p>리액트에 입문하시는 분께 추천합니다. 또한, 프론트엔드 개발자를 목표로 하시는 분들께 추천합니다. 개발자와 함께 일하시는 분들께도 추천합니다. 특히 비개발자인 기획자, 디자이너분들께도 큰 도움이 될 것 같습니다.</p>]]></content>
-        <author>
-            <name>Chanho Lee</name>
-            <uri>https://github.com/teddygood</uri>
-        </author>
-        <category label="Book Review" term="Book Review"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[📖 쏙쏙 들어오는 함수형 코딩]]></title>
-        <id>https://teddygood.github.io/en/blog/grokking-simplicity</id>
-        <link href="https://teddygood.github.io/en/blog/grokking-simplicity"/>
-        <updated>2022-05-08T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[심플한 코드로 복잡한 소프트웨어 길들이기]]></summary>
-        <content type="html"><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>제이펍 &lt;믿고 보는 IT 전문서 리뷰어&gt; 활동을 위해서 책을 제공받아 작성된 서평입니다.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a href="https://teddygood.github.io/en/blog/grokking-simplicity#book-info" class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info">​</a></h2>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
-<p><a href="https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791191600759&amp;orderClick=LEa&amp;Kc=" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/grokking-simplicity-e33a4f3bc587021e73d486999e23b1f9.jpg" width="799" height="1042" class="centered_bfhO img_ev3q"></a></p>
-<ul>
-<li>제목: 쏙쏙 들어오는 함수형 코딩</li>
-<li>저자: Eric Normand</li>
-<li>역자: 김은민</li>
-<li>출판사: 제이펍</li>
-<li>출간: 2022-04-22</li>
-</ul>
-<!-- -->
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a href="https://teddygood.github.io/en/blog/grokking-simplicity#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro">​</a></h2>
-<p>최근 들어 함수형 프로그래밍은 이슈였죠. 그에 따라 점점 명령형 언어에는 함수형 프로그래밍의 개념들이 들어가기 시작했습니다. 예를 들어 대표적으로 쓰이는 람다 함수나 제너레이터가 있겠네요. 어쨌든 전 그런 이슈도 있었지만 함수형 프로그래밍에 대해 관심이 생긴 건 다른 이유가 있었습니다. 데이터 엔지니어링 공부를 하다 보니 <em>Spark</em>라는 프레임워크를 공부해야 했고, 그에 맞게 <em>Scala</em>라는 언어도 공부해야 했죠. 그 스칼라라는 언어가 함수형 프로그래밍을 잘 지원하는 언어입니다. 그렇게 함수형 프로그래밍에 대해 관심이 생기게 됐고 이 책을 선택하게 됐습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/grokking-simplicity#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="뛰어난-예제-상세한-설명">뛰어난 예제, 상세한 설명<a href="https://teddygood.github.io/en/blog/grokking-simplicity#%EB%9B%B0%EC%96%B4%EB%82%9C-%EC%98%88%EC%A0%9C-%EC%83%81%EC%84%B8%ED%95%9C-%EC%84%A4%EB%AA%85" class="hash-link" aria-label="Direct link to 뛰어난 예제, 상세한 설명" title="Direct link to 뛰어난 예제, 상세한 설명">​</a></h3>
-<p>이 책은 함수형 프로그래밍을 직접 사용해본 프로그래머가 경험한 내용을 바탕으로 실용적인 내용을 다룹니다. 그렇기에 실제로 일어날 법한 예제를 가져와 함수형 프로그래밍을 적용해봅니다. 예제를 설명하고 후에 함수형 프로그래밍을 하기 위한 사고를 설명하는 형식입니다. 또한, 간단하게 생각할 거리도 주어지면서 연습문제도 풀어볼 수 있도록 되어 있습니다. 이 점이 상당히 인상 깊었습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="아키텍처-좋은-코드-등을-생각하게-만드는-책">아키텍처, 좋은 코드 등을 생각하게 만드는 책<a href="https://teddygood.github.io/en/blog/grokking-simplicity#%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98-%EC%A2%8B%EC%9D%80-%EC%BD%94%EB%93%9C-%EB%93%B1%EC%9D%84-%EC%83%9D%EA%B0%81%ED%95%98%EA%B2%8C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%B1%85" class="hash-link" aria-label="Direct link to 아키텍처, 좋은 코드 등을 생각하게 만드는 책" title="Direct link to 아키텍처, 좋은 코드 등을 생각하게 만드는 책">​</a></h3>
-<p>아키텍처를 설계하고 좋은 코드를 작성하는 데도 도움이 된다고 생각하는 책입니다. 더 좋은 코드를 작성하기 위한 생각, 소프트웨어를 설계한다는 관점 등을 설명하는 부분에서 <em>클린 코드</em>, <em>클린 아키텍처</em>와 같은 책들과 결이 비슷하다고 느꼈습니다. 이 책은 저런 책들에서 함수형 프로그래밍을 공부했던 것보다 더 자세히 공부해보고 싶은 사람들에게 추천할 수 있겠습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="독자를-신경-쓴-책">독자를 신경 쓴 책<a href="https://teddygood.github.io/en/blog/grokking-simplicity#%EB%8F%85%EC%9E%90%EB%A5%BC-%EC%8B%A0%EA%B2%BD-%EC%93%B4-%EC%B1%85" class="hash-link" aria-label="Direct link to 독자를 신경 쓴 책" title="Direct link to 독자를 신경 쓴 책">​</a></h3>
-<p>책을 읽으며 저자가 독자를 얼마나 신경을 많이 썼는지 알 수 있었습니다. 책을 읽다가 궁금할 수 있는 부분을 거의 모두 질문과 답의 형식으로 <em>쉬는 시간</em>이라는 부분을 따로 만들어 설명합니다. 또한, 코드가 어떻게 변화되었는지 비교를 하며 보여주기도 하고, 독자가 열심히 공부했는지 확인하는 연습 문제도 주어집니다. 연습 문제 이외에도 생각할 거리를 많이 주어지니 읽는데 속도는 느리더라도 확실하게 개념을 공부해볼 수 있었습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a href="https://teddygood.github.io/en/blog/grokking-simplicity#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90" class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자">​</a></h2>
-<p>한 번이라도 함수형 프로그래밍에 대해 공부해본 경험이 있으시고, 웹에 대한 이해가 어느 정도 있으신 분들께 추천합니다. 이 책은 자바스크립트를 기준으로 설명하기 때문에 웹 개발자는 읽는데 큰 어려움이 없을 거라 생각합니다. 위에서도 언급한 <em>클린 코드</em>라는 책을 읽어보고도 함수형 프로그래밍을 더 자세히 공부해보고 싶다고 느낀 분들에게도 추천해 드립니다.</p>]]></content>
         <author>
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
