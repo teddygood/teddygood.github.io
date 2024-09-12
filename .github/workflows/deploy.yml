@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run Python script
-        run: python3 utils/extract-think.py
-
       - name: Build website
         run: yarn build
 
