@@ -1,10 +1,7 @@
 ---
 title: "2024-08-18"
 date: '2024-08-18'
-authors: teddygood
 draft: false
-slug: '/2024-08-18'
-description: pycharm gateway jupyter notebook 문제
 ---
 
 ## 🤔 문제

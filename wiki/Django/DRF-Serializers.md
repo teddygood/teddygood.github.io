@@ -1,15 +1,7 @@
 ---
 title: "DRF Serializers"
 date: '2024-05-28'
-authors: teddygood
 draft: false
-slug: '/DRF-Serializers'
-description: DRF Serializers 간단하게 알아보기
-
-keywords:
-  - Django
-  - Django REST Framework
-  - DRF 
 ---
 
 ## Serializer

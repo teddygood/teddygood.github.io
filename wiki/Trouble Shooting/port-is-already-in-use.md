@@ -1,16 +1,7 @@
 ---
 title: "프로세스 강제 종료"
 date: '2022-03-07'
-authors: teddygood
 draft: false
-slug: '/port-is-already-in-use'
-description: 실수 때문에 생긴 문제 해결
-
-keywords:
-  - Django
-  - port
-  - 프로세스 강제 종료
-  - 깔끔한 파이썬 탄탄한 백엔드
 ---
 
 ## 🤔 실수 때문에 생긴 에러

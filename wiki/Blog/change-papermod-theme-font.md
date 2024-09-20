@@ -1,15 +1,7 @@
 ---
 title: "Hugo PaperMod theme 폰트 변경"
 date: '2022-07-14'
-authors: teddygood
 draft: false
-slug: '/change-font-in-papermod'
-description: 나눔스퀘어, D2Coding 적용하기
-
-keywords:
-  - PaperMod
-  - Hugo
-  - 블로그
 ---
 
 ## Theme 커스텀

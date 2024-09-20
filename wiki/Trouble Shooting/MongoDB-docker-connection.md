@@ -1,14 +1,7 @@
 ---
 title: "Docker를 사용할 때 DB URL 설정하기"
 date: '2023-04-24'
-authors: teddygood
 draft: false
-slug: '/MongoDB-docker-connection'
-description: DB URL 설정하기
-
-keywords:
-  - docker
-  - MongoDB
 ---
 
 ## 🤔 문제

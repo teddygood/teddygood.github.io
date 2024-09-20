@@ -2,8 +2,6 @@
 title: "Fastbook Questionnaire 01 Solution"
 date: '2021-10-26'
 draft: true
-
-description: fastai와 파이토치가 만나 꽃피운 딥러닝 질문지 정리
 ---
 
 ## Chapter 1. 딥러닝으로 떠나는 여행

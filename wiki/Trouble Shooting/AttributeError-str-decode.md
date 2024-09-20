@@ -1,16 +1,7 @@
 ---
 title: "간단한 PyJWT 레거시 코드 수정 경험"
 date: '2021-06-02'
-authors: teddygood
 draft: false
-slug: '/AttributeError-str-decode'
-description: 파이썬 레거시 삽질기록
-
-keywords:
-  - 레거시
-  - 파이썬
-  - PyJWT
-  - 깔끔한 파이썬 탄탄한 백엔드
 ---
 
 ## 🤔 문제

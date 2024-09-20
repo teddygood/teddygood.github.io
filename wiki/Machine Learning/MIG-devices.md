@@ -1,15 +1,7 @@
 ---
 title: "MIG devices"
 date: '2024-05-26'
-authors: teddygood
 draft: false
-slug: '/MIG-devices'
-description: A100 GPU 메모리 분할 기술
-
-keywords:
-  - GPU 메모리
-  - 파이썬
-  - MIG devices
 ---
 
 ## 데스크탑과 서버의 nvidia-smi 비교

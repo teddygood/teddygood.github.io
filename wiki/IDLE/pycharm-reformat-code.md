@@ -1,14 +1,7 @@
 ---
 title: "PyCharm이 정렬해준 코드"
 date: '2021-05-23'
-authors: teddygood
 draft: false
-slug: '/pycharm-reformat-code'
-description: IDLE를 너무 믿지 말자
-
-keywords:
-  - Python
-  - Pycharm
 ---
 
 ## 🤔 문제

@@ -1,16 +1,7 @@
 ---
 title: "Alpine Linux와 cryptography의 호환성 문제 해결"
 date: '2021-06-03'
-authors: teddygood
 draft: false
-slug: '/python-lib-cryptography'
-description: 호환 문제 해결
-
-keywords:
-  - Python
-  - Docker
-  - Alpine Linux
-  - cryptography
 ---
 
 ## 🤔 문제
