@@ -2,7 +2,7 @@
 title: "🏍️ 5월 우아한테크세미나"
 date: '2022-07-24'
 authors: teddygood
-tags: ["Book Review"]
+tags: ["Insight"]
 draft: false
 slug: '/may-woowahan-tech-seminar'
 description: 우아한형제들 개발자는 어떻게 공부하고 성장할까?
