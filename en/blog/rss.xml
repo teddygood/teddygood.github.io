@@ -4,10 +4,51 @@
         <title>Chanho Lee Blog</title>
         <link>https://teddygood.github.io/en/blog</link>
         <description>Chanho Lee Blog</description>
-        <lastBuildDate>Sat, 05 Oct 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 27 Oct 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[📖 오픈]]></title>
+            <link>https://teddygood.github.io/en/blog/open</link>
+            <guid>https://teddygood.github.io/en/blog/open</guid>
+            <pubDate>Sun, 27 Oct 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[비즈니스 패권의 열쇠]]></description>
+            <content:encoded><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>한빛미디어 &lt;나는 리뷰어다&gt; 활동을 위해서 책을 제공받아 작성된 서평입니다.</p></div></div>
+<p><img decoding="async" loading="lazy" alt="나는 리뷰어다 2024" src="https://teddygood.github.io/en/assets/images/I-am-reviewer-2024-39f793fe4c301151536071685230425d.jpg" width="820" height="312" class="centered_bfhO img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info" href="https://teddygood.github.io/en/blog/open#book-info">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
+<p><a href="https://product.kyobobook.co.kr/detail/S000214413027" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/open-d59d3240d9501c4ae22e30d9910a398a.png" width="458" height="668" class="centered_bfhO img_ev3q"></a></p>
+<ul>
+<li>제목: 오픈</li>
+<li>저자: 박수홍</li>
+<li>출판사: 한빛미디어</li>
+<li>출간: 2024-09-30</li>
+</ul>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/open#intro">​</a></h2>
+<p>오픈 소스를 처음 알게 된 날이 언제였을까 생각을 해보면 그때였다. 중학생 때 단순히 프로그래머가 되겠다는 마음을 먹고 한빛미디어에서 출간한 **<a href="https://product.kyobobook.co.kr/detail/S000001223874" target="_blank" rel="noopener noreferrer">프로그래머로 사는 법</a>**을 읽었을 때. 그 책에는 리누스 토르발스, 리차드 스톨만 등 정말 대단하신 선배 프로그래머 분들의 얘기가 나오는데 그때 <strong>오픈 소스</strong>라는 용어를 처음 알게 됐던 것 같다. 별도의 얘기지만 기회가 된다면 읽어보는 걸 추천한다. 자바, C++을 만든 사람부터 이메일 만든 사람, 애플 컴퓨터 만든 사람 등 이 업계에 몸 담고 있으면 알 수 있는 전설들의 인터뷰가 담겨 있다. 책 읽을 당시에는 아무것도 모르는 학생이었기에 별 관심 없었지만, 컴퓨터공학과를 진학하면서 모를 수가 없는 단어가 됐다. 오픈 소스에 기여를 해보는 것을 목표로 하는 전공 과목도 들은 적도 있었다. 그리고 지금도 여전히 다양한 커뮤니티, 소셜 미디어를 통해 오픈 소스의 좋고 안 좋은 소식들을 듣기도 한다. 그래서 그런지 이 책에서 과연 어떤 내용을 다루는지 궁금했고, 리뷰어로 신청하게 됐다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/open#book-review">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="프롤로그">프롤로그<a class="hash-link" aria-label="Direct link to 프롤로그" title="Direct link to 프롤로그" href="https://teddygood.github.io/en/blog/open#%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8">​</a></h3>
+<p>이 책은 전반부터 재밌게 프롤로그로 시작된다.</p>
+<blockquote>
+<p>오픈은 속셈이 있다.</p>
+</blockquote>
+<p>정말 생각이 많이 들게 하는 문장이다. 최근 몇 년 동안 IT 트렌드를 알기 위해 각종 소셜 미디어와 커뮤니티를 보면서 다양한 내용들을 접했다. 그중에는 당연히 오픈 소스와 관련된 내용도 많았다. 내가 처음 오픈 소스에 대해 알게 될 때는 자신의 재능과 지식을 공유하고, 누구나 접근 가능하며, 투명하다는 장점만 알고 있었다. 그러나 오픈 소스에 대해 공부할수록 이면이 존재한다는 걸 깨달았다. 이 책을 읽으면서 그런 내용들을 다시 한 번 상기시킬 수 있었다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="전반적인-책-리뷰">전반적인 책 리뷰<a class="hash-link" aria-label="Direct link to 전반적인 책 리뷰" title="Direct link to 전반적인 책 리뷰" href="https://teddygood.github.io/en/blog/open#%EC%A0%84%EB%B0%98%EC%A0%81%EC%9D%B8-%EC%B1%85-%EB%A6%AC%EB%B7%B0">​</a></h3>
+<p>이 책은 총 5장으로 이루어져 있으며 짧은 에세이가 여러 개 모여있는 형태로 구성되어 있다. 큰 주제는 있으나 연속적으로 이어진 이야기가 아니라서 매일마다 몇 장의 에세이를 조금씩 읽으면서 즐길 수 있는 책이다. 기술적으로 깊이 있는 설명보다는, 오픈 소스에 대한 이해를 높이기에 좋은 책이라고 생각한다.</p>
+<p>1장에서는 '오픈'이라는 개념의 모습들을 다양하게 설명한다. 오픈은 평등하지만 공평하지 않다는 것을 상기시키고 책을 시작하는 느낌이었다. 1장에서는 오픈의 모습에 대해 이야기를 한다면, 2장에서는 오픈의 케이스들을 설명하면서 오픈의 이유에 대해 알려준다.</p>
+<p>3장에서는 오픈이 왜 강한가에 대해 얘기를 하며, 4장에서는 오픈 소스가 단순히 순수하지 않다는 것을 말한다. 개인적으로 4장이 가장 인상 깊었다. 마이크로소프트와 리눅스, 삼성과 인텔의 IoT 오픈 소스, 내가 지원해보고 싶었던 GSoC(Google Summer of Code) 등 다양한 사례들이 나와서 재미있게 읽었다. 테크 직군에 있으신 분들이라면 정말 재밌게 읽을 수 있는 파트라고 생각한다.</p>
+<p>마지막 5장에서는 오픈 소스의 시대에서 어떻게 대처해야 할지 생각하게 만든다. 특히 오픈 소스 개발자 채용에 대한 내용이 인상 깊었다. 정말 오픈 소스에 열정적이고 재능이 있다면 몇 번의 메시지만으로 채용이 될 수도 있다는 내용이 정말 신기했다. 또한, 내부 채용 프로세스는 기업마다 다양하겠지만, 행사가 끝난 후 채용 게시판에 JD가 적혀 있는 것이 아닌 '오픈 소스 개발자를 채용합니다' 문구 하나만 적힌 포스트잇으로 채용 프로세스를 시작한다는 점도 재밌었다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="오픈-소스의-이면에-대한-통찰">오픈 소스의 이면에 대한 통찰<a class="hash-link" aria-label="Direct link to 오픈 소스의 이면에 대한 통찰" title="Direct link to 오픈 소스의 이면에 대한 통찰" href="https://teddygood.github.io/en/blog/open#%EC%98%A4%ED%94%88-%EC%86%8C%EC%8A%A4%EC%9D%98-%EC%9D%B4%EB%A9%B4%EC%97%90-%EB%8C%80%ED%95%9C-%ED%86%B5%EC%B0%B0">​</a></h3>
+<p>이 책은 오픈 소스의 긍정적인 면뿐 아니라 그 이면 또한 다루며, 대기업이 오픈 소스를 어떻게 이용하고 있는지 전략적 관점에서도 보여준다. 이는 오픈 소스를 단순한 코드 공유와 접근성으로만 이해했던 사람들이 ‘공유’와 ‘자유’와 같은 낭만적인 개념을 넘어, 오픈 소스가 실제 비즈니스 전략으로 어떻게 활용하고 있는지에 대한 인사이트를 제공한다. 특히 오픈 소스 생태계가 단순히 기술적인 실험장이 아닌, 글로벌 기업들이 기술적 우위를 점하기 위한 전략적 도구로 변하고 있음을 보여주는 부분은 이 책의 큰 장점이라고 생각한다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="삼성전자">삼성전자<a class="hash-link" aria-label="Direct link to 삼성전자" title="Direct link to 삼성전자" href="https://teddygood.github.io/en/blog/open#%EC%82%BC%EC%84%B1%EC%A0%84%EC%9E%90">​</a></h3>
+<p>나는 솔직히 이 책을 읽으면서 정말 놀라웠던 것은 오픈 소스의 이면보다는 삼성전자었다. 위에서도 언급했듯이 오픈 소스의 이면에 대해서는 소셜 미디어, 커뮤니티를 통해 이미 알고 있었다. 나는 취업 준비생의 입장에서 삼성전자는 엄청난 기업이라고 생각하지만 다른 테크 기업에 비해서는 아직 보수적인 기업이라고 생각했다. 그런데 이 책을 읽으면서 삼성전자라는 기업이 오픈 소스에 대해 어떻게 생각하고 있는지 알 수 있었고, 조금이나마 보수적이라는 생각을 벗을 수 있었다.</p>
+<p>삼성이 IoT에서 오픈 소스를 어떻게 활용하고 있는지, 그리고 어떤 프로젝트를 진행하고 있는지 대략적으로 알 수 있었으며, 저자와 같은 대단한 사람이 삼성에 있다는 것만으로도 그 그룹에 정말 들어가서 함께 일을 경험해보고 싶은 기업이라는 생각이 들 정도였다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/open#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<p>단순히 오픈 소스에 관심이 있는 사람뿐만 아니라 그 생태계를 이해해보고 싶은 사람에게 추천하는 책이다. 위에서도 설명했듯이 저자의 경험을 풀어 설명하는 부분은 정말 재밌었고 인상적이었다. 오픈 소스에 대한 사전 지식이 있으면 읽는데 더욱 편하겠지만, 큰 부담 없이 접근할 수 있으며, 오픈 소스가 단순히 기술적인 도구가 아니라 강력한 전략이라는 것을 깨달을 수 있을 것이다.</p>]]></content:encoded>
+            <category>Book Review</category>
+        </item>
         <item>
             <title><![CDATA[🎬 처음이자 마지막 글또 시작]]></title>
             <link>https://teddygood.github.io/en/blog/starting-geulddo</link>
@@ -154,7 +195,7 @@
 <blockquote>
 <p>가치의 원천이 '코딩'인 적은 한 번도 없었다. 그러니 사람들을 코딩에 너무 집착하지 말아야 한다. 문제를 해결하는 것이야말로 핵심 기술이다. 전통적인 프로그래밍이 요구하는 규율과 정확성은 계속 소중한 가치로 남아 있겠지만, 그런 것들은 더 이상 진입장벽 역할을 하진 않을 것이다. 나는 인공지능이 나보다 더 뛰어난 프로그래머라면 인공지능을 관리하는 일을 즐겁게 할 수 있을 것 같다.</p>
 </blockquote>
-<p>개발자는 결국 문제를 해결하는 직군이다. 국요즘 각 기업의 JD(Job Description)을 읽으면서 나도 체감하고 있다. 기업들도 결국 문제를 잘 해결할 줄 알고 그런 경험을 해본 사람을 원한다.</p>
+<p>개발자는 결국 문제를 해결하는 직군이다. 요즘 각 기업의 JD(Job Description)을 읽으면서 나도 체감하고 있다. 기업들도 결국 문제를 잘 해결할 줄 알고 그런 경험을 해본 사람을 원한다.</p>
 <p>어쨌든 이제 코딩은 아무나 할 수 있는 시대가 됐다. 인터넷에는 좋은 문서, 강의 등이 정말 많고, 그만큼 코딩을 할 수 있는 사람도 많아지고 있다. 예전에는 코딩이라는 것을 아무나 할 수 있는 게 아니었겠지만 현재는 누구나 공부만 하면 할 수 있는 시대가 됐다. 원래 책 리뷰를 적으면서 책 내용을 인용하지는 않지만 진짜 마지막으로 책의 문장을 또 인용해보겠다. 정말 인상 깊었던 문장이다.</p>
 <blockquote>
 <p>코딩에 집착하지 말라. 자기가 사용하는 기술에 매달리지 말라. 인공지능의 도움을 받는 것을 즐겁게 생각해야 한다. 인공지능의 도움을 받아 문제를 해결하는 것이야말로 진정한 가치에 해당하기 때문이다. <strong>진짜 가치는 문제를 해결하는 것이다.</strong> 코딩이 아니다.</p>
@@ -215,7 +256,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="머신러닝-직군이-아닌-개발자에게-좋은-책">머신러닝 직군이 아닌 개발자에게 좋은 책<a class="hash-link" aria-label="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" title="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%A7%81%EA%B5%B0%EC%9D%B4-%EC%95%84%EB%8B%8C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C-%EC%A2%8B%EC%9D%80-%EC%B1%85">​</a></h3>
 <p>머신러닝을 공부하지 않은 개발자에게 도움이 되는 책이라 생각한다. 전반적인 인공지능 개념이 담겨 있으며, 코드가 그렇게 많지 않은 편이다. 즉, 가볍게 읽기 좋았던 책이다. 콘다 설치부터 OpenAI API key를 받는 것, 그리고 허깅페이스 토큰까지 얻는 과정이 상세히 나와 있으니 기초 개념서로 충분히 좋은 책이라 생각한다.</p>
 <p>나는 RAG에 대한 부분을 복습할 수 있어서 도움이 됐고, 랭체인도 처음 써봤는데 은근 나쁘지 않았다. 끝부분에는 랭체인으로 할 수 있는 프로젝트들이 소개되어 있으니 참고하면 좋을 것 같다. 나도 내 프로젝트에 랭체인과 LLM을 어떻게 써볼지 고민했던 좋은 계기가 된 책이다. 곧 랭체인으로 프로젝트를 하나 해봐야겠다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EF%BF%BD%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>LLM이 인기가 많아 한 번쯤 공부해 보고 싶은 분들께 이 책을 추천한다.</p>]]></content:encoded>
             <category>Book Review</category>
         </item>
@@ -691,7 +732,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="5월-리뷰">5월 리뷰<a class="hash-link" aria-label="Direct link to 5월 리뷰" title="Direct link to 5월 리뷰" href="https://teddygood.github.io/en/blog/may-woowahan-tech-seminar#5%EC%9B%94-%EB%A6%AC%EB%B7%B0">​</a></h3>
 <p>우아한Tech 채널에서는 매달 우아한테크세미나가 진행된다. 몇 달 전에도 <a href="https://www.youtube.com/watch?v=ssDMIcPBqUE" target="_blank" rel="noopener noreferrer">지속가능한 SW 개발을 위한 코드리뷰 :: 4월 우아한테크세미나</a>를 꽤 재밌게 봤다. 상당히 도움이 되는 내용이 많았다고 생각하지만, 대학생보다는 오히려 주니어 개발자에게 더 어울리는 내용이었어서 리뷰는 생략했다.</p>
 <p>5월 우아한테크세미나는 <strong>"공부하고 성장하는 노하우"</strong> 에 대해 이야기를 한다. 나는 항상 <strong>“내가 하고 있는 공부가 맞는 건가?”</strong> 를 생각하며 자기 자신을 점검하는 습관을 갖고 있어 매우 흥미가 가는 주제였다. 또한, 개발자를 목표로 하는 대학생의 입장으로서 <strong>“우아한형제들 개발자는 어떻게 공부하고 성장했을까?”</strong> 라는 궁금증이 생겨 나와 비교할 겸 이 영상을 리뷰하게 됐다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="순서">순서<a class="hash-link" aria-label="Direct link to 순서" title="Direct link to 순서" href="https://teddygood.github.io/en/blog/may-woowahan-tech-seminar#%EC%88%9C%EC%84%9C">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="순서">순서<a class="hash-link" aria-label="Direct link to 순서" title="Direct link to 순��서" href="https://teddygood.github.io/en/blog/may-woowahan-tech-seminar#%EC%88%9C%EC%84%9C">​</a></h2>
 <p>이 영상은 1부와 2부로 나누어진다. 1부에서는 우아한형제들의 DevRel팀이 우형 개발자들의 성장과 공부를 위해 어떤 노력을 했었는지 소개를 하고, 2부에서는 우형 개발자 세 분과 함께 패널 토크를 진행한다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="review">Review<a class="hash-link" aria-label="Direct link to Review" title="Direct link to Review" href="https://teddygood.github.io/en/blog/may-woowahan-tech-seminar#review">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="devrel">DevRel?<a class="hash-link" aria-label="Direct link to DevRel?" title="Direct link to DevRel?" href="https://teddygood.github.io/en/blog/may-woowahan-tech-seminar#devrel">​</a></h3>
@@ -787,39 +828,6 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="후기">후기<a class="hash-link" aria-label="Direct link to 후기" title="Direct link to 후기" href="https://teddygood.github.io/en/blog/may-woowahan-tech-seminar#%ED%9B%84%EA%B8%B0">​</a></h2>
 <p>위의 내용은 영상을 간단하게 요약 해서 적은 것이며, 개인적인 생각도 적혀 있기에 원본 영상을 꼭 보는 것을 추천한다. 지금까지 좋은 개발자, 계속 성장하는 개발자가 되기 위해 책들도 많이 읽었었지만, 이번 영상을 통해서 다시 복습할 수 있어 좋았다. 다시 한 번 정말 많은 생각들을 하게 되는 영상이었고, 개발자를 목표로 하는 학생이나 성장에 대한 고민을 갖고 있는 주니어 개발자들이 기회가 된다면 봤으면 좋겠다.</p>]]></content:encoded>
             <category>Insight</category>
-        </item>
-        <item>
-            <title><![CDATA[📖 AWS로 시작하는 인프라 구축의 정석]]></title>
-            <link>https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS</link>
-            <guid>https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS</guid>
-            <pubDate>Thu, 21 Jul 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[견고한 엔터프라이즈 프로덕션 환경을 만들고 지키는 법 | I♥Cloud 제이펍의 클라우드 시리즈 23]]></description>
-            <content:encoded><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>제이펍 &lt;믿고 보는 IT 전문서 리뷰어&gt; 활동을 위해서 책을 제공받아 작성된 서평입니다.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#book-info">​</a></h2>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
-<p><a href="https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791191600971&amp;orderClick=LEa&amp;Kc=" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/building-infrastructure-starting-with-AWS-65f38e36cdad1a02c93ef1ea5db4dd6d.jpg" width="690" height="899" class="centered_bfhO img_ev3q"></a></p>
-<ul>
-<li>제목: AWS로 시작하는 인프라 구축의 정석</li>
-<li>저자: Kenji Nakagaki(나카가키 겐지)</li>
-<li>역자: 김모세</li>
-<li>출판사: 제이펍</li>
-<li>출간: 2022-06-09</li>
-</ul>
-<!-- -->
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#intro">​</a></h2>
-<p>요즘은 어쩌다 아마존 웹 서비스에서 메일을 받고 있어 다양한 교육들을 들어보라고 홍보 메일들이 저에게 옵니다. 전 이런 메일을 통해 aws에서 클라우드 기초 교육을 진행한다는 것을 알게 됐습니다. 아마 이런 교육들이 있었다는 사실을 알고 있었더라면, 굳이 책을 읽지 않았을지도 모르겠습니다.</p>
-<p>전 저런 교육들이 아마존 웹 서비스에 관심이 있지 않다면 접하기 힘들다고 생각합니다. 저는 aws를 생활코딩에서 처음 공부하게 됐고, 다른 책들을 통해 웹 서비스 배포를 공부하며 조금씩 접했었습니다. 물론 생활코딩에서도 잘 알려주지만, 더 자세히 공부하기 위해서 책을 읽어보게 됐습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#book-review">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="단순히-aws-서비스를-공부하는-것이-아닌">단순히 aws 서비스를 공부하는 것이 아닌<a class="hash-link" aria-label="Direct link to 단순히 aws 서비스를 공부하는 것이 아닌" title="Direct link to 단순히 aws 서비스를 공부하는 것이 아닌" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#%EB%8B%A8%EC%88%9C%ED%9E%88-aws-%EC%84%9C%EB%B9%84%EC%8A%A4%EB%A5%BC-%EA%B3%B5%EB%B6%80%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%95%84%EB%8B%8C">​</a></h3>
-<p>단순히 aws 서비스에 관련된 내용이 아니라 좀 더 CS 지식 관점으로 쓰여져 있어 CS 지식이 꽤 부족한 사람도 편하게 읽을 수 있습니다. 제가 그랬습니다. 전 전공자로서 네트워크 수업을 들었지만, 이 책을 읽으며 제가 네트워크 지식이 엄청 부족했다는 사실을 깨닫게 됐습니다. 컴퓨터 전공자라면 큰 어려움 없이 이 책을 읽으실 수 있을 것 같습니다.</p>
-<p>또한, 책 제목과 알맞게 단순히 aws 서비스를 하나하나 배우는 것이 아닌, 점프 서버, 캐시 서버 등을 배우며 말 그대로 인프라 구축에 관점을 둔 책입니다. aws 서비스를 점차적으로 추가해보면서 공부해보고 싶은 분들께 도움이 많이 될 것이라 생각합니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="리소스-이미지">리소스 이미지<a class="hash-link" aria-label="Direct link to 리소스 이미지" title="Direct link to 리소스 이미지" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#%EB%A6%AC%EC%86%8C%EC%8A%A4-%EC%9D%B4%EB%AF%B8%EC%A7%80">​</a></h3>
-<p>제가 이 책을 읽으면서 가장 좋게 본 부분입니다. 한 chapter마다 읽을 때마다 리소스가 추가 되는데 시각적으로 무엇이 달라졌는지 알  수 있어서 책을 읽는데 도움이 됐습니다. 이 밖에도 그림을 통해 어려운 내용을 쉽게 시각적으로 보여줬다는 점에서 너무 읽기 편했습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="부록">부록<a class="hash-link" aria-label="Direct link to 부록" title="Direct link to 부록" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#%EB%B6%80%EB%A1%9D">​</a></h3>
-<p>부록에서는 이 책에서 쓴 리소스 정보들과 리소스 삭제 방법 등을 소개합니다. 이 부분도 마음에 들었던 게 리소스 삭제 방법을 몰라서 삭제를 못하시는 분들도 많은데 이렇게 따로 삭제 방법을 간단하게나마 알려준다는 것이 큰 도움이 될 것 같았습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상독자">대상독자<a class="hash-link" aria-label="Direct link to 대상독자" title="Direct link to 대상독��자" href="https://teddygood.github.io/en/blog/building-infrastructure-starting-with-AWS#%EB%8C%80%EC%83%81%EB%8F%85%EC%9E%90">​</a></h2>
-<p>인프라 구축에 관심이 많으며 네트워크를 한 번쯤 공부해보신 분들이 읽으시는 걸 추천합니다. 또한, 리눅스 명령어 사용 경험이 있어야 합니다. 책에서 간단하게 설명은 해주지만, 그래도 어느정도 사용할 수 있어야 책 읽는데 불편함이 없을 것 같습니다. 이 책의 기준 환경은 Windows10이지만 다른 OS에 익숙하신 분들이 읽어보셔도 큰 어려움은 없을 것 같습니다.</p>]]></content:encoded>
-            <category>Book Review</category>
         </item>
     </channel>
 </rss>
