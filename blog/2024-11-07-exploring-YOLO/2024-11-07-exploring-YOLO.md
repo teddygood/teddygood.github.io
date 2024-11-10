@@ -5,7 +5,7 @@ authors: teddygood
 tags: ["Paper Review"]
 draft: true
 slug: '/exploring-YOLO'
-description: 
+description: You Only Live Once 아님
 keywords:
   - YOLO
   - You Only Look Once
@@ -24,9 +24,13 @@ YOLO의 개발자인 Joseph Redmon은 YOLOv3까지 개발 후 윤리적 이유�
 
 ## Object Detection
 
-Object Detection은 이미지나 비디오에서 특정 객체의 위치를 찾고 해당 객체가 무엇인지 분류하는 기술이다.
+Object Detection은 이미지나 비디오에서 특정 객체의 존재 여부를 확인하고, 그 위치와 종류를 식별하는 컴퓨터 비전의 한 분야라고 할 수 있다. 조금 더 자세히 설명하면 다양한 크기와 위치에 있는 여러 개의 객체를 인식하고, 바운딩 박스로 표시하여 객체의 위치와 어떤 종류의 객체인지 알려주는 기술이다.
 
-YOLO는 Object Detection 분야에서 많이 사용되는 모델 중 하나이며 Object Detection 분야에는 YOLO 이외에도 다양한 모델들이 있다.
+이 글에서 Object Detection 자체를 자세히 다루지는 않는다. 궁금하다면 아래의 논문들을 참고해보길 바란다.
+
+![img.png](../assets/paper/object-detection-paper-list.png)
+
+위의 이미지는 [deep_learning_object_detection](https://github.com/hoya012/deep_learning_object_detection)에서 가져왔다. 몇 년 전 한창 비전 분야가 활발했을 때 [텐서플로우코리아(현 AGI-KR)](https://www.facebook.com/groups/agikr/)에 돌아다녔던 기억이 난다. 오래된 정보라 출처를 못 찾을 줄 알았는데 다행히 찾을 수 있었다. 빨간색은 당시 이 레포를 만든 분이 필수로 읽어야 한다고 생각하는 논문이고, 다른 논문들도 중요하지만 시간이 된다면 읽어보는 걸 추천하셨다. 참고로 큰 글씨가 논문 또는 모델 이름이고, 작은 글씨는 학회와 논문이 출간된 연도이다.
 
 ### YOLOv1
 
