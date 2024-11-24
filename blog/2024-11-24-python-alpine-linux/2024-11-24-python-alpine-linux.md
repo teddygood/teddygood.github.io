@@ -1,5 +1,5 @@
 ---
-title: "🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피하는 이유"
+title: "🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피해야 하는 이유"
 date: '2024-11-24'
 authors: teddygood
 tags: ["Troubleshooting"]
