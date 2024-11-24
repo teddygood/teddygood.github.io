@@ -3,7 +3,7 @@ title: "🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시
 date: '2024-11-24'
 authors: teddygood
 tags: ["Troubleshooting"]
-draft: true
+draft: false
 slug: '/python-alpine-linux'
 description: 파이썬 백엔드 도커로 배포하려다가 발생한 문제 해결
 keywords:
