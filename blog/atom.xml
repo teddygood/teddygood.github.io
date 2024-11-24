@@ -8,7 +8,7 @@
     <subtitle>Chanho Lee Blog</subtitle>
     <icon>https://teddygood.github.io/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피하는 이유]]></title>
+        <title type="html"><![CDATA[🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피해야 하는 이유]]></title>
         <id>https://teddygood.github.io/blog/python-alpine-linux</id>
         <link href="https://teddygood.github.io/blog/python-alpine-linux"/>
         <updated>2024-11-24T00:00:00.000Z</updated>
@@ -107,7 +107,7 @@
 <p>이렇게 3권의 책을 읽었다. 책 읽으면서 반성이 되기도 하고, 내가 지금 너무 많은 것을 하려고 있는가에 대해 또 다시 생각하게 되면서 지금 나에게 당장 필요 없다고 생각하는 부분들은 없애고 있다.</p>
 <p>자기 1시간 전에 독서하는 것도 목표였는데 이것도 첫 주는 잘 됐다. 근데 자기 전에 졸려 죽겠는데 인증까지 하는 것이 너무 귀찮아서 관두게 됐다. 지금은 책을 읽고 싶을 때나 여유롭다고 판단되는 주말 아침에 조금씩 읽고 있다.</p>
 <p>현재 읽고 있는 책은 <a href="https://product.kyobobook.co.kr/detail/S000214576874" target="_blank" rel="noopener noreferrer">소프트웨어 엔지니어 가이드북</a>이다. 이 책을 다 읽고 여유가 된다면 다음 책으로는 한강 작가님의 <a href="https://product.kyobobook.co.kr/detail/S000000781116" target="_blank" rel="noopener noreferrer">작별하지 않는다</a>를 읽어 보고 싶다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="스터디">스터디<a class="hash-link" aria-label="스터디에 대한 직��접 링크" title="스터디에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EC%8A%A4%ED%84%B0%EB%94%94">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="스터디">스터디<a class="hash-link" aria-label="스터디에 대��한 직접 링크" title="스터디에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EC%8A%A4%ED%84%B0%EB%94%94">​</a></h2>
 <ul>
 <li>ETL 스터디(<a href="https://product.kyobobook.co.kr/detail/S000061353994" target="_blank" rel="noopener noreferrer">러닝 스파크</a>): 데이터 엔지니어, 소프트웨어 엔지니어 분들과 함께 공부했던 스터디라 실제 현업에서의 내용도 들을 수 있었고, 배울 점이 정말 많았던 스터디였다. 한 가지 아쉬운 점은 책을 다 읽고 프로젝트를 하는 것까지 목표였는데, 졸업 작품이 마무리가 되어 가다 보니 바빠져서 집중할 시간이 없다고 판단하여 그만두었다.</li>
 <li>알고리즘 스터디(<a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="noopener noreferrer">Coursera Stanford Algorithms</a>): 이 강의는 알고리즘을 수학적으로 접근하는 부분들이 많아 좀 많이 어려웠다. 그렇지만 또 다시 알고리즘을 개념적으로 접근하여 공부하니 시간 복잡도 계산이 훨씬 수월해졌고, 알고리즘 문제를 푸는데도 도움이 됐다.</li>
@@ -132,7 +132,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="강북에도사람있또">강북에도사람있또<a class="hash-link" aria-label="강북에도사람있또에 대한 직접 링크" title="강북에도사람있또에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EA%B0%95%EB%B6%81%EC%97%90%EB%8F%84%EC%82%AC%EB%9E%8C%EC%9E%88%EB%98%90">​</a></h3>
 <p>글또에 <strong>강북에도사람있또</strong> 모임에 한 번 참여했다. 노원에서 만날 줄 알았는데 의외로 충무로에서 모임을 진행했고, 오랜만에 꽤 멀리 놀러 가서 좋았다. 또, 개발이나 대학원 얘기 그리고 이것저것 다양한 주제의 얘기들도 할 수 있고, 들을 수 있어서 좋은 시간이었다. 이 모임을 통해 내 고민도 어느 정도 해결이 됐다. 그때 가장 큰 고민은 '어떤 분야로 앞으로 나아가야 할지 잘 모르겠다' 였는데 범용성을 생각하거나 완전히 하나의 분야만 파거나 둘 중 하나를 선택하라고 하신 조언이 나에게 엄청 와닿았다.</p>
 <p>어색함 반, 재미 반이었지만 새로운 사람들과 만나서 얘기하는 건 언제나 재밌다. 특히 내 고민을 쉽게 얘기할 수 있다는 것도 너무 좋고, 다른 분들의 고민이나 경험을 들어볼 수 있다는 게 너무 큰 재미라고 생각한다. 동기부여도 되고, 평소 못 나누던 얘기들도 할 수 있기도 했다. 역시 커뮤니티가 주는 힘은 크다고 생각한다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="당근-테크-밋업">당근 테크 밋업<a class="hash-link" aria-label="당근 테크 밋업에 대한 직접 링크" title="당근 테크 밋업에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EB%8B%B9%EA%B7%BC-%ED%85%8C%ED%81%AC-%EB%B0%8B%EC%97%85">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="당근-테크-밋업">당근 테크 밋업<a class="hash-link" aria-label="당근 테크 밋업에 대한 직접 링크" title="당근 테크 밋업에 대한 직접 링��크" href="https://teddygood.github.io/blog/Oct-Recap#%EB%8B%B9%EA%B7%BC-%ED%85%8C%ED%81%AC-%EB%B0%8B%EC%97%85">​</a></h3>
 <p>당근 테크 밋업에 운 좋게 참여할 수 있었다. 난 Data/ML 쪽에서 강연을 들었고, 또 운 좋게 다양한 당근 팀들과 네트워킹을 할 수 있었다. 당근 팀들과 네트워킹을 하는 것은 선착순이었다. 정말 빠른 속도로 네트워킹이 마감되었는데 채용 팀과의 네트워킹은 못 한 것이 매우 아쉬웠다.</p>
 <p>다녀와서 내린 결론이 하나 있었다. 지금은 MLOps 직무는 아예 고려하지 않기로, 그리고 데이터 엔지니어링도 역시 생각하지 않기로 했다. 이런 직군은 보통 다 이직을 통해 되거나 직장에서 시켜서 일을 하게 되는 직무인 걸 알고 있음에도 '혹시나 신입에게 기회가 있지 않을까'라는 생각에 고려하고 있었는데 깔끔하게 놓아주기로 했다. 이건 데이터 엔지니어링 스터디를 진행하면서도 생각하게 된 결과이다.</p>
 <p>그리고 만약에 MLE가 되고 싶다면 ML 기본기와 코딩 테스트는 잘 준비해야 한다. 유저 서비스 경험도 있으면 좋지만 신입에게 그것까지 바라지는 않는다고 하셨다. 그리고 프로젝트 경험은 역시나 캐글을 추천하셨다.</p>
@@ -222,7 +222,7 @@
 <p>스스로 아직 전문성이 부족하다고 생각하여 커피챗은 아직 조금 두렵기도 하다. 과연 내가 1:1로 대화를 하거나 여러 사람을 만났을 때, 과연 어떤 이야기를 나눌 수 있을지 고민이 된다. 다른 분들은 대부분 직장인이시기 때문에 나의 지식이나 경험이 부족하여 대화가 원활하게 안 이뤄질 수도 있지 않을까 걱정도 된다.</p>
 <p>하지만 이런 고민은 항상 새로운 사람들을 만날 때마다 반복된다고 느낀다. 그렇기에 이번 글또를 잘 활용하여 이를 극복하고, 조금 더 적극적으로 소통해보려고 한다. 전문성에 대한 부담 내려놓고, 완벽하지 않아도 괜찮다는 마음으로 활동해보려고 한다. 어차피 난 아직 대학생이고, 직장인도 아니기에 나에게 큰 기대가 없을 것이다. 그러니 너무 걱정하지 말고, 이 시간을 충분히 즐기자.</p>
 <p>그리고 어쩌면 내가 가진 작은 지식이나 경험도 누군가에게 큰 도움이 될 수도 있지 않을까? 나도 상대방의 이야기를 듣고 배우고, 나 또한 내 이야기도 해보면서 서로가 더 성장할 수 있는 그런 인연을 만들어 보고 싶다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="어떤-글을-쓸-것인가">어떤 글을 쓸 것인가<a class="hash-link" aria-label="어떤 글을 쓸 것인가에 대한 직접 링크" title="어떤 글을 쓸 것인가에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EC%96%B4%EB%96%A4-%EA%B8%80%EC%9D%84-%EC%93%B8-%EA%B2%83%EC%9D%B8%EA%B0%80">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="어떤-글을-쓸-것인가">어떤 글을 쓸 것인가<a class="hash-link" aria-label="어떤 글을 쓸 것인�가에 대한 직접 링크" title="어떤 글을 쓸 것인가에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EC%96%B4%EB%96%A4-%EA%B8%80%EC%9D%84-%EC%93%B8-%EA%B2%83%EC%9D%B8%EA%B0%80">​</a></h3>
 <p>난 블로그와 위키를 따로 운영하고 있다. 예전부터 위키에는 CS 지식이나 간단한 인사이트를 담고 싶었고, 블로그에는 단순히 지식을 전달하는 글이 아니라 나의 생각과 경험이 담긴 글을 적어보고 싶었다. 그리고 읽기 쉬우면서도 짧은 글이 아닌 조금 긴 글을 쓰고 싶었다.</p>
 <p><img decoding="async" loading="lazy" alt="post-planning.png" src="https://teddygood.github.io/assets/images/post-planning-8ec76c18d58c7a4b65f12cc6a2d67bcd.png" width="930" height="550" class="centered_bfhO img_ev3q"></p>
 <p>지금까지 생각한 주제는 위와 같다. 대략적으로 이런 내용들의 글을 쓰지 않을까 싶다. ML과 관련된 멋진 글을 써보고 싶기도 한데 아직까지는 어떤 주제로 글을 쓰게 될지 모르겠다. 활동하다 보면 좋은 글이 떠오르지 않을까 싶다.</p>
@@ -419,7 +419,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="머신러닝-직군이-아닌-개발자에게-좋은-책">머신러닝 직군이 아닌 개발자에게 좋은 책<a class="hash-link" aria-label="머신러닝 직군이 아닌 개발자에게 좋은 책에 대한 직접 링크" title="머신러닝 직군이 아닌 개발자에게 좋은 책에 대한 직접 링크" href="https://teddygood.github.io/blog/Developing-AI-services-with-LangChain#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%A7%81%EA%B5%B0%EC%9D%B4-%EC%95%84%EB%8B%8C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C-%EC%A2%8B%EC%9D%80-%EC%B1%85">​</a></h3>
 <p>머신러닝을 공부하지 않은 개발자에게 도움이 되는 책이라 생각한다. 전반적인 인공지능 개념이 담겨 있으며, 코드가 그렇게 많지 않은 편이다. 즉, 가볍게 읽기 좋았던 책이다. 콘다 설치부터 OpenAI API key를 받는 것, 그리고 허깅페이스 토큰까지 얻는 과정이 상세히 나와 있으니 기초 개념서로 충분히 좋은 책이라 생각한다.</p>
 <p>나는 RAG에 대한 부분을 복습할 수 있어서 도움이 됐고, 랭체인도 처음 써봤는데 은근 나쁘지 않았다. 끝부분에는 랭체인으로 할 수 있는 프로젝트들이 소개되어 있으니 참고하면 좋을 것 같다. 나도 내 프로젝트에 랭체인과 LLM을 어떻게 써볼지 고민했던 좋은 계기가 된 책이다. 곧 랭체인으로 프로젝트를 하나 해봐야겠다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/Developing-AI-services-with-LangChain#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링�크" href="https://teddygood.github.io/blog/Developing-AI-services-with-LangChain#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>LLM이 인기가 많아 한 번쯤 공부해 보고 싶은 분들께 이 책을 추천한다.</p>]]></content>
         <author>
             <name>Chanho Lee</name>
@@ -664,7 +664,7 @@
 <li>출간: 2023-04-15</li>
 </ul>
 <!-- -->
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Intro에 대한 직접 ��링크" title="Intro에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#intro">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Intro에 대한 ��직접 링크" title="Intro에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#intro">​</a></h2>
 <p>최근 Django, FastAPI로 무언가 만들어 보려고 노력 중이었는데 수많은 채용 공고들을 읽어보니 파이썬 백엔드 개발로는 취업에 한계가 있을 거라 생각하게 됐다. 굳이 한 기술만 팔 필요도 없고 다른 기술들도 공부해 보고 싶다고 생각하여 예전에 경험해봤던 Node.js를 선택하게 됐다. "Node.js 개발자가 되기 위해서는 어떤 것들을 공부해야 할까?" 라는 생각에 채용 공고들을 읽어봤는데 가끔 NestJS가 적혀있는 걸 볼 수 있었다. NestJS는 스프링과 비슷한 느낌의 프레임워크라고 많이 말하던데 궁금해서 이 기술도 공부해 보고 싶었다. 그러던 중 최근 핫한 IT 출판사인 골든래빗에서 이 책을 출간하게 되어 북스포일러를 모집하고 있었다. Node.js 백엔드 개발자가 되기 위해 필요한 기술들을 한 권에 담고 있다고 해서 지원했고 당첨되어 책을 받게 되었다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Book Review에 대한 직접 링크" title="Book Review에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#book-review">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="올인원-책">올인원 책<a class="hash-link" aria-label="올인원 책에 대한 직접 링크" title="올인원 책에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%EC%98%AC%EC%9D%B8%EC%9B%90-%EC%B1%85">​</a></h3>
@@ -675,7 +675,7 @@
 <p>또한, 리눅스 명령어에 익숙하지 않은 독자를 위해서 부록으로 명령어도 기술되어 있다. 정말 올인원 책 중 이렇게 자세하게 설명해 주는 책은 처음이었다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="키워드-제시">키워드 제시<a class="hash-link" aria-label="키워드 제시에 대한 직접 링크" title="키워드 제시에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%ED%82%A4%EC%9B%8C%EB%93%9C-%EC%A0%9C%EC%8B%9C">​</a></h3>
 <p>이 책 또한 후에 어떤 것을 더 공부하면 좋을지 키워드를 제시해 준다. 저자분께서 올리신 <a href="https://www.inflearn.com/course/%EC%B4%88%EB%B3%B4-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%A1%9C%EB%93%9C%EB%A7%B5" target="_blank" rel="noopener noreferrer">강의</a>도 참고하는 것을 추천한다. 이 책을 읽으면서 더 공부해야 할 것들을 더 명확하게 알 수 있어서 좋았다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="트렌디한-책">트렌디한 책<a class="hash-link" aria-label="트렌디한 책에 대한 직접 링크" title="트렌디한 책에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%ED%8A%B8%EB%A0%8C%EB%94%94%ED%95%9C-%EC%B1%85">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="트렌디한-책">트렌디한 책<a class="hash-link" aria-label="트렌디한 책에 대한 직접 링크" title="트렌디한 책에 대한 직접 �링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%ED%8A%B8%EB%A0%8C%EB%94%94%ED%95%9C-%EC%B1%85">​</a></h3>
 <p>이 책은 최근 핫한 기술인 NestJS를 사용한다는 점 때문에 트렌디한 책이다. 현재 한국어로 출간된 NestJS 책은 이 책이 아마 두 번째일 것이다. 공식 문서를 읽는 것보다 책으로 공부하는 것이 더 익숙한 독자에게는 정말 도움이 많이 되는 책이라 생각한다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>이 책은 Node.js 백엔드 개발자가 되기 위한 기술들을 공부하고 싶은 사람들을 위한 책이다. 사전 지식으로 자바스크립트를 알고 있으면 이 책을 읽는 데 도움이 많이 될 것이다.</p>]]></content>

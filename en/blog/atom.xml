@@ -8,7 +8,7 @@
     <subtitle>Chanho Lee Blog</subtitle>
     <icon>https://teddygood.github.io/en/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피하는 이유]]></title>
+        <title type="html"><![CDATA[🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피해야 하는 이유]]></title>
         <id>https://teddygood.github.io/en/blog/python-alpine-linux</id>
         <link href="https://teddygood.github.io/en/blog/python-alpine-linux"/>
         <updated>2024-11-24T00:00:00.000Z</updated>
@@ -107,14 +107,14 @@
 <p>이렇게 3권의 책을 읽었다. 책 읽으면서 반성이 되기도 하고, 내가 지금 너무 많은 것을 하려고 있는가에 대해 또 다시 생각하게 되면서 지금 나에게 당장 필요 없다고 생각하는 부분들은 없애고 있다.</p>
 <p>자기 1시간 전에 독서하는 것도 목표였는데 이것도 첫 주는 잘 됐다. 근데 자기 전에 졸려 죽겠는데 인증까지 하는 것이 너무 귀찮아서 관두게 됐다. 지금은 책을 읽고 싶을 때나 여유롭다고 판단되는 주말 아침에 조금씩 읽고 있다.</p>
 <p>현재 읽고 있는 책은 <a href="https://product.kyobobook.co.kr/detail/S000214576874" target="_blank" rel="noopener noreferrer">소프트웨어 엔지니어 가이드북</a>이다. 이 책을 다 읽고 여유가 된다면 다음 책으로는 한강 작가님의 <a href="https://product.kyobobook.co.kr/detail/S000000781116" target="_blank" rel="noopener noreferrer">작별하지 않는다</a>를 읽어 보고 싶다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="스터디">스터디<a class="hash-link" aria-label="Direct link to 스터디" title="Direct link to ��스터디" href="https://teddygood.github.io/en/blog/Oct-Recap#%EC%8A%A4%ED%84%B0%EB%94%94">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="스터디">스터디<a class="hash-link" aria-label="Direct link to 스터디" title="Direct link to 스터디" href="https://teddygood.github.io/en/blog/Oct-Recap#%EC%8A%A4%ED%84%B0%EB%94%94">​</a></h2>
 <ul>
 <li>ETL 스터디(<a href="https://product.kyobobook.co.kr/detail/S000061353994" target="_blank" rel="noopener noreferrer">러닝 스파크</a>): 데이터 엔지니어, 소프트웨어 엔지니어 분들과 함께 공부했던 스터디라 실제 현업에서의 내용도 들을 수 있었고, 배울 점이 정말 많았던 스터디였다. 한 가지 아쉬운 점은 책을 다 읽고 프로젝트를 하는 것까지 목표였는데, 졸업 작품이 마무리가 되어 가다 보니 바빠져서 집중할 시간이 없다고 판단하여 그만두었다.</li>
 <li>알고리즘 스터디(<a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="noopener noreferrer">Coursera Stanford Algorithms</a>): 이 강의는 알고리즘을 수학적으로 접근하는 부분들이 많아 좀 많이 어려웠다. 그렇지만 또 다시 알고리즘을 개념적으로 접근하여 공부하니 시간 복잡도 계산이 훨씬 수월해졌고, 알고리즘 문제를 푸는데도 도움이 됐다.</li>
 <li>DDIA 스터디(<a href="https://product.kyobobook.co.kr/detail/S000001766328" target="_blank" rel="noopener noreferrer">데이터 중심 애플리케이션 설계</a>): 이 스터디에도 DE, SWE 분들이 대부분이었어서 많은 걸 배울 수 있던 스터디였으나 지금의 나에게는 너무 어려운 내용이기도 하고, 마찬가지로 졸업 작품 때문에 너무 바빠져 그만두었다.</li>
 </ul>
 <p>적다 보니 다 그만둔 내용 밖에 없는 것 같다. 아무래도 졸업 작품 마무리가 곧 다가오다 보니 그쪽에 더 신경을 쓸 수 밖에 없었다. 데이터 중심 애플리케이션 설계 책 같은 경우에는 나중에 바쁘지 않을 때 스터디를 다시 해야 할 것 같다. 책이 어렵기도 하고, 다른 분들과 함께 경험을 위주로 얘기하면서 공부하면 더 도움이 될 책이라 생각한다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="개�인-공부">개인 공부<a class="hash-link" aria-label="Direct link to 개인 공부" title="Direct link to 개인 공부" href="https://teddygood.github.io/en/blog/Oct-Recap#%EA%B0%9C%EC%9D%B8-%EA%B3%B5%EB%B6%80">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="개인-공부">개인 공부<a class="hash-link" aria-label="Direct link to 개인 공부" title="Direct link to 개인 공부" href="https://teddygood.github.io/en/blog/Oct-Recap#%EA%B0%9C%EC%9D%B8-%EA%B3%B5%EB%B6%80">​</a></h2>
 <p>인과추론: 첫 주에 열심히 하다가 그만두었다. 정말 공부해보고 싶었던 분야지만 현재 내가 해야 할 공부는 아니라 판단했다. 지금은 취업 준비를 위한 공부가 더 우선이라 생각했다.</p>
 <p>자바스크립트: <a href="https://product.kyobobook.co.kr/detail/S000001766397" target="_blank" rel="noopener noreferrer">코어 자바스크립트</a> 책을 다 읽었다. 정말 유익한 책이라 생각한다. 핵심만 들어가 있고, 책의 두께가 두껍지 않아 편하게 읽을 수 있었다. 이것도 사실 내가 프론트엔드로 취직할 것도 아니고 꼭 필요한 것은 아니지만 그래도 책이 얇아 읽어볼 수 있었다.</p>
 <p>학교 수학 강의: 선형대수학, 확률 및 통계 그리고 고등학교에서 공부했던 수학에 약간의 정보 이론이 추가된 교양 강의다. 많은 분야를 한 번에 다루고 예전에 공부했던 것들이라 큰 어려움은 없었다.</p>
@@ -177,7 +177,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/open#intro">​</a></h2>
 <p>오픈 소스를 처음 알게 된 날이 언제였을까 생각을 해보면 그때였다. 중학생 때 단순히 프로그래머가 되겠다는 마음을 먹고 한빛미디어에서 출간한 **<a href="https://product.kyobobook.co.kr/detail/S000001223874" target="_blank" rel="noopener noreferrer">프로그래머로 사는 법</a>**을 읽었을 때. 그 책에는 리누스 토르발스, 리차드 스톨만 등 정말 대단하신 선배 프로그래머 분들의 얘기가 나오는데 그때 <strong>오픈 소스</strong>라는 용어를 처음 알게 됐던 것 같다. 별도의 얘기지만 기회가 된다면 읽어보는 걸 추천한다. 자바, C++을 만든 사람부터 이메일 만든 사람, 애플 컴퓨터 만든 사람 등 이 업계에 몸 담고 있으면 알 수 있는 전설들의 인터뷰가 담겨 있다. 책 읽을 당시에는 아무것도 모르는 학생이었기에 별 관심 없었지만, 컴퓨터공학과를 진학하면서 모를 수가 없는 단어가 됐다. 오픈 소스에 기여를 해보는 것을 목표로 하는 전공 과목도 들은 적도 있었다. 그리고 지금도 여전히 다양한 커뮤니티, 소셜 미디어를 통해 오픈 소스의 좋고 안 좋은 소식들을 듣기도 한다. 그래서 그런지 이 책에서 과연 어떤 내용을 다루는지 궁금했고, 리뷰어로 신청하게 됐다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/open#book-review">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="프롤로그">프롤로그<a class="hash-link" aria-label="Direct link to 프롤로그" title="Direct link to 프��롤로그" href="https://teddygood.github.io/en/blog/open#%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="프롤로그">프롤로그<a class="hash-link" aria-label="Direct link to 프롤로그" title="Direct link to 프롤로그" href="https://teddygood.github.io/en/blog/open#%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8">​</a></h3>
 <p>이 책은 전반부터 재밌게 프롤로그로 시작된다.</p>
 <blockquote>
 <p>오픈은 속셈이 있다.</p>
@@ -419,7 +419,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="머신러닝-직군이-아닌-개발자에게-좋은-책">머신러닝 직군이 아닌 개발자에게 좋은 책<a class="hash-link" aria-label="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" title="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%A7%81%EA%B5%B0%EC%9D%B4-%EC%95%84%EB%8B%8C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C-%EC%A2%8B%EC%9D%80-%EC%B1%85">​</a></h3>
 <p>머신러닝을 공부하지 않은 개발자에게 도움이 되는 책이라 생각한다. 전반적인 인공지능 개념이 담겨 있으며, 코드가 그렇게 많지 않은 편이다. 즉, 가볍게 읽기 좋았던 책이다. 콘다 설치부터 OpenAI API key를 받는 것, 그리고 허깅페이스 토큰까지 얻는 과정이 상세히 나와 있으니 기초 개념서로 충분히 좋은 책이라 생각한다.</p>
 <p>나는 RAG에 대한 부분을 복습할 수 있어서 도움이 됐고, 랭체인도 처음 써봤는데 은근 나쁘지 않았다. 끝부분에는 랭체인으로 할 수 있는 프로젝트들이 소개되어 있으니 참고하면 좋을 것 같다. 나도 내 프로젝트에 랭체인과 LLM을 어떻게 써볼지 고민했던 좋은 계기가 된 책이다. 곧 랭체인으로 프로젝트를 하나 해봐야겠다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EF%BF%BD%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>LLM이 인기가 많아 한 번쯤 공부해 보고 싶은 분들께 이 책을 추천한다.</p>]]></content>
         <author>
             <name>Chanho Lee</name>
