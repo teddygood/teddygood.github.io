@@ -4,10 +4,70 @@
         <title>Chanho Lee Blog</title>
         <link>https://teddygood.github.io/en/blog</link>
         <description>Chanho Lee Blog</description>
-        <lastBuildDate>Sat, 09 Nov 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 24 Nov 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피하는 이유]]></title>
+            <link>https://teddygood.github.io/en/blog/python-alpine-linux</link>
+            <guid>https://teddygood.github.io/en/blog/python-alpine-linux</guid>
+            <pubDate>Sun, 24 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[파이썬 백엔드 도커로 배포하려다가 발생한 문제 해결]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" href="https://teddygood.github.io/en/blog/python-alpine-linux#introduction">​</a></h2>
+<p>Django를 활용하여 블로그를 만들어보는 프로젝트를 진행하다가 docker로 환경을 옮기는 도중 여러 에러들을 만났다. 이 글은 문제를 해결하면서 얻은 지식을 공유하고자 작성한 글이다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="첫-번째-문제">첫 번째 문제<a class="hash-link" aria-label="Direct link to 첫 번째 문제" title="Direct link to 첫 번째 문제" href="https://teddygood.github.io/en/blog/python-alpine-linux#%EC%B2%AB-%EB%B2%88%EC%A7%B8-%EB%AC%B8%EC%A0%9C">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="alpine-linux와-cryptography의-호환성-문제">Alpine Linux와 cryptography의 호환성 문제<a class="hash-link" aria-label="Direct link to Alpine Linux와 cryptography의 호환성 문제" title="Direct link to Alpine Linux와 cryptography의 호환성 문제" href="https://teddygood.github.io/en/blog/python-alpine-linux#alpine-linux%EC%99%80-cryptography%EC%9D%98-%ED%98%B8%ED%99%98%EC%84%B1-%EB%AC%B8%EC%A0%9C">​</a></h3>
+<p><code>Dockerfile</code>, <code>docker-compose.yml</code> 파일을 작성 후 마지막으로 빌드를 하던 중 아래의 에러를 만났다.</p>
+<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">ERROR: No matching distribution found for cryptography==3.4.7</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>현재 Dockerfile에서 사용하는 image 버전과 requirements.txt에 적힌 cryptography 버전은 아래와 같다. 이렇게 설정해두고 <code>docker-compose</code>로 빌드를 하려고 했는데 에러가 발생한 것이다.</p>
+<div class="language-Dockerfile language-dockerfile codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-dockerfile codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">FROM python:3.8-alpine</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">cryptography==3.4.7</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="해결">해결<a class="hash-link" aria-label="Direct link to 해결" title="Direct link to 해결" href="https://teddygood.github.io/en/blog/python-alpine-linux#%ED%95%B4%EA%B2%B0">​</a></h3>
+<p>alpine linux와 python에서 암호화 알고리즘이 구현된 패키지인 cryptography의 호환성 문제라고 생각했고, cryptography의 공식 문서를 참고하여 해결책을 찾아보았다.</p>
+<p><img decoding="async" loading="lazy" alt="crypto-doc" src="https://teddygood.github.io/en/assets/images/cryptography-doc-7920a97dd96ca33edacacfbb8e6f2c1b.jpg" width="748" height="503" class="centered_bfhO img_ev3q"></p>
+<p>대략 요약하면 cryptography 패키지는 Rust를 빌드할 때 사용한다. 즉, Rust의 패키지 관리자이자 빌드 도구인 <strong>cargo</strong>를 같이 설치해야지 돌아간다는 것이다.</p>
+<div class="language-shell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-shell codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">$ sudo apk add gcc musl-dev python3-dev libffi-dev openssl-dev cargo</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>위의 코드를 Dockerfile에 추가하면서 첫 번째 문제는 잘 해결할 수 있었다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="두-번째-문제">두 번째 문제<a class="hash-link" aria-label="Direct link to 두 번째 문제" title="Direct link to 두 번째 문제" href="https://teddygood.github.io/en/blog/python-alpine-linux#%EB%91%90-%EB%B2%88%EC%A7%B8-%EB%AC%B8%EC%A0%9C">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="빌드가-오래-걸리다가-안-되는-문제">빌드가 오래 걸리다가 안 되는 문제<a class="hash-link" aria-label="Direct link to 빌드가 오래 걸리다가 안 되는 문제" title="Direct link to 빌드가 오래 걸리다가 안 되는 문제" href="https://teddygood.github.io/en/blog/python-alpine-linux#%EB%B9%8C%EB%93%9C%EA%B0%80-%EC%98%A4%EB%9E%98-%EA%B1%B8%EB%A6%AC%EB%8B%A4%EA%B0%80-%EC%95%88-%EB%90%98%EB%8A%94-%EB%AC%B8%EC%A0%9C">​</a></h3>
+<p>위의 명령어를 Dockerfile에 추가하고 다시 build 하면 당연히 잘 작동될 거라 생각했으나 아래와 같이 다시 한 번 에러가 발생했다. 이미지를 보면 알 수 있듯이 still running이 지속되는 상황이다. 대략 10분 정도 그대로 놔뒀는데도 빌드가 안 되고 계속 진행하다가 종료가 된다.</p>
+<p><img decoding="async" loading="lazy" alt="더 상세한 details" src="https://teddygood.github.io/en/assets/images/crypto-building-error-d1fd632da6ad156fe5b2992ae3ad5b27.jpg" width="727" height="109" class="centered_bfhO img_ev3q"></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="해결-1">해결<a class="hash-link" aria-label="Direct link to 해결" title="Direct link to 해결" href="https://teddygood.github.io/en/blog/python-alpine-linux#%ED%95%B4%EA%B2%B0-1">​</a></h3>
+<p>계속 구글링을 하면서 이 문제를 해결하려 했으며, cryptography 라이브러리와의 문제일 수도 있다고 생각하여 공식 문서도 다시 다 읽어보고, 라이브러리의 GitHub 이슈도 찾아보았다.</p>
+<p><img decoding="async" loading="lazy" alt="더 상세한 details" src="https://teddygood.github.io/en/assets/images/alpine-linux-build-issue-18101324b11176113bb1b45925f4cb06.jpg" width="1019" height="833" class="centered_bfhO img_ev3q"></p>
+<p>대략적으로 비슷한 이슈를 찾을 수 있었다. 위의 이미지는 cryptography GitHub 저장소에서 가져온 한 이슈 이미지다. 현재의 상황과 비슷하여 답변을 참고할 수 있었다.</p>
+<p>대략 요약하자면 아래와 같다.</p>
+<ol>
+<li>Alpine Linux에서 Python 패키지를 빌드하는 작업이 느리며, 특히 CI/CD 환경에서 매번 빌드해야 하는 경우 비효율적이다.</li>
+<li>Python의 pip 및 휠 패키징과 관련하여 Alpine과 호환 가능한 휠을 업로드하는 작업이 필요하지만, 이는 pip/wheel/packaging 및 관련 PEP 논의가 필요하다.</li>
+<li>최신 Alpine 환경에서 Python 패키지를 제대로 설치하려면 최신 Rust 컴파일러가 필요하다.</li>
+<li>Alpine에서 발생하는 이와 같은 문제는 문서화되어 있고, 현재로서는 개선 사항이 없으므로 추가적인 문제가 있다면 새로운 이슈를 열거나 PR(Pull Request)을 제출해야 한다.</li>
+</ol>
+<p>이 답변에서의 핵심은 결국 1번과 2번이었다. 즉, Alpine 리눅스가 문제였고, 아래와 같이 이미지만 바꿈으로서 문제를 해결할 수 있었다.</p>
+<div class="language-Dockerfile language-dockerfile codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-dockerfile codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">FROM python:3.8-slim-buster</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>근데 문제만 해결하면 끝일까? 그건 아니다. 이유를 알아보자.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="alpine-linux가-파이썬-환경에서-적절하지-않은-이유">Alpine Linux가 파이썬 환경에서 적절하지 않은 이유<a class="hash-link" aria-label="Direct link to Alpine Linux가 파이썬 환경에서 적절하지 않은 이유" title="Direct link to Alpine Linux가 파이썬 환경에서 적절하지 않은 이유" href="https://teddygood.github.io/en/blog/python-alpine-linux#alpine-linux%EA%B0%80-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-%EC%A0%81%EC%A0%88%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%9D%B4%EC%9C%A0">​</a></h2>
+<p>내가 alpine linux를 사용한 이유는 Ubuntu linux와 비교했을 때 용량도 작고 빌드할 때 더 빠르기 때문이다. 즉, 경량화가 잘 되어 있기 때문이다. 그러나 이 이미지는 python 환경에서는 적절하지 않다.</p>
+<p>그 이유는 사용하는 라이브러리의 차이에서 시작된다. 대부분의 리눅스 배포판은 파이썬을 포함한 모든 C언어 프로그램에 필요한 C언어 표준 라이브러리인 GNU 라이브러리(glibc)를 사용한다. 그러나 Alpine Linux는 좀 더 경량화하기 위하여 GNU 라이브러리를 사용하는 것이 아니라 musl 라이브러리를 사용한다. 이 musl 라이브러리는 GNU 라이브러리로 컴파일 된 <code>Wheel 바이너리</code>를 지원하지 않는다. 그렇기 때문에 <code>.whl</code> 확장자를 갖는 패키지를 다운 받는 것이 아니라 <code>.tar.gz</code> 확장자 파일을 다운 받게 된다. 즉, alpine linux를 사용하는 경우 사용하는 모든 파이썬 패키지의 C 코드를 컴파일 해야 하므로 빌드 시간도 오래 걸리며 용량도 커진다는 것이다.</p>
+<p>최근 대부분의 파이썬 패키지에는 PyPI의 Wheel 바이너리가 포함되어 있어 설치 시간이 빠르다. Wheel은 사실 .whl 확장자와 특별한 형식의 파일 이름으로 이루어진 ZIP 형식을 아카이브한 것이다. 쉽게 말하면 확장자만 바꾼 것이다.</p>
+<ol>
+<li>빌드가 느리다.</li>
+<li>이미지 용량이 커진다.</li>
+<li>시간이 많이 낭비된다.(빌드하는 과정)</li>
+<li>런타임 버그들을 만날 수 있다.</li>
+</ol>
+<p>위의 이유들로 인해, Python 환경에서는 Alpine Linux보다는 Debian 기반의 slim 이미지나 Ubuntu 기반 이미지를 사용하는 것이 더 적합하다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="references">🌐References<a class="hash-link" aria-label="Direct link to 🌐References" title="Direct link to 🌐References" href="https://teddygood.github.io/en/blog/python-alpine-linux#references">​</a></h2>
+<ul>
+<li><a href="https://cryptography.io/en/latest/installation/" target="_blank" rel="noopener noreferrer">Cryptography installation</a></li>
+<li><a href="https://github.com/pyca/cryptography/issues/5776" target="_blank" rel="noopener noreferrer">Dependencies to build on Alpine Linux?</a></li>
+<li><a href="https://jonnung.dev/docker/2020/04/08/optimizing-docker-images/" target="_blank" rel="noopener noreferrer">도커 이미지 잘 만드는 방법</a></li>
+<li><a href="https://pythonspeed.com/articles/alpine-docker-python/" target="_blank" rel="noopener noreferrer">Using Alpine can make Python Docker builds 50x slower</a></li>
+<li><a href="https://pythonspeed.com/articles/base-image-python-docker-images/" target="_blank" rel="noopener noreferrer">The best Dockeer base image for Python application</a></li>
+</ul>]]></content:encoded>
+            <category>Troubleshooting</category>
+        </item>
         <item>
             <title><![CDATA[✨10월 회고]]></title>
             <link>https://teddygood.github.io/en/blog/Oct-Recap</link>
@@ -44,14 +104,14 @@
 <p>이렇게 3권의 책을 읽었다. 책 읽으면서 반성이 되기도 하고, 내가 지금 너무 많은 것을 하려고 있는가에 대해 또 다시 생각하게 되면서 지금 나에게 당장 필요 없다고 생각하는 부분들은 없애고 있다.</p>
 <p>자기 1시간 전에 독서하는 것도 목표였는데 이것도 첫 주는 잘 됐다. 근데 자기 전에 졸려 죽겠는데 인증까지 하는 것이 너무 귀찮아서 관두게 됐다. 지금은 책을 읽고 싶을 때나 여유롭다고 판단되는 주말 아침에 조금씩 읽고 있다.</p>
 <p>현재 읽고 있는 책은 <a href="https://product.kyobobook.co.kr/detail/S000214576874" target="_blank" rel="noopener noreferrer">소프트웨어 엔지니어 가이드북</a>이다. 이 책을 다 읽고 여유가 된다면 다음 책으로는 한강 작가님의 <a href="https://product.kyobobook.co.kr/detail/S000000781116" target="_blank" rel="noopener noreferrer">작별하지 않는다</a>를 읽어 보고 싶다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="스터디">스터디<a class="hash-link" aria-label="Direct link to 스터디" title="Direct link to 스터디" href="https://teddygood.github.io/en/blog/Oct-Recap#%EC%8A%A4%ED%84%B0%EB%94%94">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="스터디">스터디<a class="hash-link" aria-label="Direct link to 스터디" title="Direct link to ��스터디" href="https://teddygood.github.io/en/blog/Oct-Recap#%EC%8A%A4%ED%84%B0%EB%94%94">​</a></h2>
 <ul>
 <li>ETL 스터디(<a href="https://product.kyobobook.co.kr/detail/S000061353994" target="_blank" rel="noopener noreferrer">러닝 스파크</a>): 데이터 엔지니어, 소프트웨어 엔지니어 분들과 함께 공부했던 스터디라 실제 현업에서의 내용도 들을 수 있었고, 배울 점이 정말 많았던 스터디였다. 한 가지 아쉬운 점은 책을 다 읽고 프로젝트를 하는 것까지 목표였는데, 졸업 작품이 마무리가 되어 가다 보니 바빠져서 집중할 시간이 없다고 판단하여 그만두었다.</li>
 <li>알고리즘 스터디(<a href="https://www.coursera.org/specializations/algorithms" target="_blank" rel="noopener noreferrer">Coursera Stanford Algorithms</a>): 이 강의는 알고리즘을 수학적으로 접근하는 부분들이 많아 좀 많이 어려웠다. 그렇지만 또 다시 알고리즘을 개념적으로 접근하여 공부하니 시간 복잡도 계산이 훨씬 수월해졌고, 알고리즘 문제를 푸는데도 도움이 됐다.</li>
 <li>DDIA 스터디(<a href="https://product.kyobobook.co.kr/detail/S000001766328" target="_blank" rel="noopener noreferrer">데이터 중심 애플리케이션 설계</a>): 이 스터디에도 DE, SWE 분들이 대부분이었어서 많은 걸 배울 수 있던 스터디였으나 지금의 나에게는 너무 어려운 내용이기도 하고, 마찬가지로 졸업 작품 때문에 너무 바빠져 그만두었다.</li>
 </ul>
 <p>적다 보니 다 그만둔 내용 밖에 없는 것 같다. 아무래도 졸업 작품 마무리가 곧 다가오다 보니 그쪽에 더 신경을 쓸 수 밖에 없었다. 데이터 중심 애플리케이션 설계 책 같은 경우에는 나중에 바쁘지 않을 때 스터디를 다시 해야 할 것 같다. 책이 어렵기도 하고, 다른 분들과 함께 경험을 위주로 얘기하면서 공부하면 더 도움이 될 책이라 생각한다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="개인-공부">개인 공부<a class="hash-link" aria-label="Direct link to 개인 공부" title="Direct link to 개인 공부" href="https://teddygood.github.io/en/blog/Oct-Recap#%EA%B0%9C%EC%9D%B8-%EA%B3%B5%EB%B6%80">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="개�인-공부">개인 공부<a class="hash-link" aria-label="Direct link to 개인 공부" title="Direct link to 개인 공부" href="https://teddygood.github.io/en/blog/Oct-Recap#%EA%B0%9C%EC%9D%B8-%EA%B3%B5%EB%B6%80">​</a></h2>
 <p>인과추론: 첫 주에 열심히 하다가 그만두었다. 정말 공부해보고 싶었던 분야지만 현재 내가 해야 할 공부는 아니라 판단했다. 지금은 취업 준비를 위한 공부가 더 우선이라 생각했다.</p>
 <p>자바스크립트: <a href="https://product.kyobobook.co.kr/detail/S000001766397" target="_blank" rel="noopener noreferrer">코어 자바스크립트</a> 책을 다 읽었다. 정말 유익한 책이라 생각한다. 핵심만 들어가 있고, 책의 두께가 두껍지 않아 편하게 읽을 수 있었다. 이것도 사실 내가 프론트엔드로 취직할 것도 아니고 꼭 필요한 것은 아니지만 그래도 책이 얇아 읽어볼 수 있었다.</p>
 <p>학교 수학 강의: 선형대수학, 확률 및 통계 그리고 고등학교에서 공부했던 수학에 약간의 정보 이론이 추가된 교양 강의다. 많은 분야를 한 번에 다루고 예전에 공부했던 것들이라 큰 어려움은 없었다.</p>
@@ -110,7 +170,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/open#intro">​</a></h2>
 <p>오픈 소스를 처음 알게 된 날이 언제였을까 생각을 해보면 그때였다. 중학생 때 단순히 프로그래머가 되겠다는 마음을 먹고 한빛미디어에서 출간한 **<a href="https://product.kyobobook.co.kr/detail/S000001223874" target="_blank" rel="noopener noreferrer">프로그래머로 사는 법</a>**을 읽었을 때. 그 책에는 리누스 토르발스, 리차드 스톨만 등 정말 대단하신 선배 프로그래머 분들의 얘기가 나오는데 그때 <strong>오픈 소스</strong>라는 용어를 처음 알게 됐던 것 같다. 별도의 얘기지만 기회가 된다면 읽어보는 걸 추천한다. 자바, C++을 만든 사람부터 이메일 만든 사람, 애플 컴퓨터 만든 사람 등 이 업계에 몸 담고 있으면 알 수 있는 전설들의 인터뷰가 담겨 있다. 책 읽을 당시에는 아무것도 모르는 학생이었기에 별 관심 없었지만, 컴퓨터공학과를 진학하면서 모를 수가 없는 단어가 됐다. 오픈 소스에 기여를 해보는 것을 목표로 하는 전공 과목도 들은 적도 있었다. 그리고 지금도 여전히 다양한 커뮤니티, 소셜 미디어를 통해 오픈 소스의 좋고 안 좋은 소식들을 듣기도 한다. 그래서 그런지 이 책에서 과연 어떤 내용을 다루는지 궁금했고, 리뷰어로 신청하게 됐다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/open#book-review">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="프롤로그">프롤로그<a class="hash-link" aria-label="Direct link to 프롤로그" title="Direct link to 프롤로그" href="https://teddygood.github.io/en/blog/open#%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="프롤로그">프롤로그<a class="hash-link" aria-label="Direct link to 프롤로그" title="Direct link to 프��롤로그" href="https://teddygood.github.io/en/blog/open#%ED%94%84%EB%A1%A4%EB%A1%9C%EA%B7%B8">​</a></h3>
 <p>이 책은 전반부터 재밌게 프롤로그로 시작된다.</p>
 <blockquote>
 <p>오픈은 속셈이 있다.</p>
@@ -136,7 +196,7 @@
             <guid>https://teddygood.github.io/en/blog/starting-geulddo</guid>
             <pubDate>Sat, 05 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[정말 멋지고 따뜻한 커뮤니티]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="글또-10기">글또 10기<a class="hash-link" aria-label="Direct link to 글또 10기" title="Direct link to 글�또 10기" href="https://teddygood.github.io/en/blog/starting-geulddo#%EA%B8%80%EB%98%90-10%EA%B8%B0">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="글또-10기">글또 10기<a class="hash-link" aria-label="Direct link to 글또 10기" title="Direct link to 글또 10기" href="https://teddygood.github.io/en/blog/starting-geulddo#%EA%B8%80%EB%98%90-10%EA%B8%B0">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="지원">지원<a class="hash-link" aria-label="Direct link to 지원" title="Direct link to 지원" href="https://teddygood.github.io/en/blog/starting-geulddo#%EC%A7%80%EC%9B%90">​</a></h3>
 <p>이번에 글또 커뮤니티에 들어갈 수 있는 기회가 생겼다. 매 기수마다 참여하고 싶은 마음이 있었지만, 바쁘거나 체크를 안 해둬서 놓치는 경우도 있었고, 지원서를 작성하면서 '나' 자신을 되돌아 보는 것이 부담스러웠을 때도 있었다. 사실 이번에도 지원서를 작성하는 게 쉽지 않았지만, 이렇게라도 지금까지의 내가 뭘 했고, 어떻게 살았는지 다시 한 번 알아볼 수 있어서 정말 좋은 경험이었다. 그리고 무엇보다 이번이 글또의 마지막이기에 꼭 활동해보고 싶었다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="글또에서-이루고-싶은-목표">글또에서 이루고 싶은 목표<a class="hash-link" aria-label="Direct link to 글또에서 이루고 싶은 목표" title="Direct link to 글또에서 이루고 싶은 목표" href="https://teddygood.github.io/en/blog/starting-geulddo#%EA%B8%80%EB%98%90%EC%97%90%EC%84%9C-%EC%9D%B4%EB%A3%A8%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EB%AA%A9%ED%91%9C">​</a></h3>
@@ -364,7 +424,7 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#book-review">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="반성하게-되는-책">반성하게 되는 책<a class="hash-link" aria-label="Direct link to 반성하게 되는 책" title="Direct link to 반성하게 되는 책" href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#%EB%B0%98%EC%84%B1%ED%95%98%EA%B2%8C-%EB%90%98%EB%8A%94-%EC%B1%85">​</a></h3>
 <p>이 책은 프로그래머로서 어떻게 성장해야 하는지에 대해 다루고 있다. 책을 읽으면서 나는 이런 부분을 놓쳤구나, 이런 부분을 더 신경 써야겠다는 생각이 들었다. 책을 읽으면서 반성하게 되는 부분이 많았다. '나는 코드에 신경을 쓰고 있는가?', '내가 쓴 코드를 다시 보는가?', '테스트 코드를 작성하는 것이 중요한가?' 등. 이런 부분들을 다시 한 번 생각해보게 되었다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="선배가-알려주는-책">선배가 알려주는 책<a class="hash-link" aria-label="Direct link to 선배가 알려주는 책" title="Direct link to 선�배가 알려주는 책" href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#%EC%84%A0%EB%B0%B0%EA%B0%80-%EC%95%8C%EB%A0%A4%EC%A3%BC%EB%8A%94-%EC%B1%85">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="선배가-알려주는-책">선배가 알려주는 책<a class="hash-link" aria-label="Direct link to 선배가 알려주는 책" title="Direct link to 선배가 알려주는 책" href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#%EC%84%A0%EB%B0%B0%EA%B0%80-%EC%95%8C%EB%A0%A4%EC%A3%BC%EB%8A%94-%EC%B1%85">​</a></h3>
 <p>책을 읽으면서 선배 프로그래머가 하나하나 알려주는 느낌이 들었다. 프로그래머로서 어떻게 생각하고 행동해야 하는지 등의 노하우. 그런 노하우를 배운 느낌이 들었다. 나는 분명히 지금 회사에 다니고 있지도 않고 선배도 없는데 선배가 생긴 듯한 느낌. 책에서도 '마치며' 부분에 '생각해보기'가 있는데 거기에 적힌 질문 외에도 생각해볼 만한 것들이 많았다. 나중에 기회가 된다면 다른 사람들과 이 책으로 간단하게 스터디를 해보고 싶을 정도이다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>프로그래머로서 성장하고 싶은 사람이라면 읽어보면 좋을 것 같다. 특히 신입, 주니어가 읽으면 좋은 책이지 않을까 싶다. 학생도 좋다. 나도 학생이니까. 이 책을 읽으면서 반성하고 더 나은 프로그래머로 성장하고 싶은 사람이라면 추천한다.</p>]]></content:encoded>
@@ -403,7 +463,7 @@
 <p>이 책을 읽다 보면 페이지에 각주가 많이 보일 것이다. 이게 다른 책들과 비교되는 부분이라 생각된다. 중요한 머신러닝 개념이 나올 때마다 어떤 논문에서 그 개념이 나와 있는지 각주로 표시되어 있다. 애초에 책 자체가 논문의 내용을 바탕으로 저자가 이해한 내용을 책으로 옮긴 느낌이다. 그래서 TMI 같은 내용도 있었고, 어려운 설명들도 많았지만 논문 읽는 기분이라 나쁘지 않았다. 왜 제목이 '딥러닝의 정석'인지 알 것 같았다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="파이토치">파이토치<a class="hash-link" aria-label="Direct link to 파이토치" title="Direct link to 파이토치" href="https://teddygood.github.io/en/blog/Fundamentals-of-DL#%ED%8C%8C%EC%9D%B4%ED%86%A0%EC%B9%98">​</a></h3>
 <p>파이토치는 5장부터 시작한다. 이전에는 딥러닝의 기본 지식을 알려준다. 파이토치에 대해서 엄청 자세히 알려주는 느낌은 아니다. 필요한 부분이 있으면 각자 알아서 내용을 더 찾아봐야 한다. 그렇기도 한 게 이 책은 파이토치를 알려주는 책이 아니기 때문이다. 그렇기에 파이토치도 미리 공부하고 읽기를 바란다. <a href="https://tutorials.pytorch.kr/" target="_blank" rel="noopener noreferrer">파이토치 한국어 튜토리얼</a>이라도 간단하게 한 번 읽고 전체적인 구조를 알게 되면 읽기 수월할 것이다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="다양한-범위">다양한 범위<a class="hash-link" aria-label="Direct link to 다양한 범위" title="Direct link to 다양�한 범위" href="https://teddygood.github.io/en/blog/Fundamentals-of-DL#%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B2%94%EC%9C%84">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="다양한-범위">다양한 범위<a class="hash-link" aria-label="Direct link to 다양한 범위" title="Direct link to 다양한 범위" href="https://teddygood.github.io/en/blog/Fundamentals-of-DL#%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B2%94%EC%9C%84">​</a></h3>
 <p>CNN, RNN, 강화학습, 생성 모델, XAI 그리고 NTM이라고 불리는 Neural Turing Machines까지 다 언급하고 간단하게라도 다뤄본다. CNN, RNN, 강화학습에 비하면 지엽적이기에 XAI, NTM 부분은 개인적으로 너무 어려웠다. 그러나 이런 분야가 있다는 걸 알게 되어서 흥미로웠던 부분이기도 했다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Fundamentals-of-DL#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>초심자에게는 어려운 책이라 생각되기에 추천하고 싶지 않다. 그러나 어느 정도 딥러닝의 흐름을 알고 있다면 이 책을 괜찮게 읽을 수 있을 것이다. 딥러닝을 말로 설명이 잘 되어 있는 책으로 복습하고 싶다면 이 책을 추천한다.</p>]]></content:encoded>
@@ -768,36 +828,6 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/computer-structure-and-OS-to-study-alone#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>컴퓨터 구조와 운영체제 수업을 선행 학습해보고 싶은 2학년 전공생에게 추천합니다. 제가 컴퓨터구조, 운영체제 수업을 들을 때 이 책이 왜 없었는지 아쉽기만 합니다. 그때로 돌아간다면 수업보다 이 책으로 먼저 공부를 시작했을 것입니다.</p>
 <p>또한, 요즘 많은 비전공자들이 국비 학원 또는 다양한 교육 프로그램을 통해 개발을 공부하고 있는 걸로 알고 있습니다. 그러나 그런 프로그램에서는 CS 공부를 정말 간단하게 하는 경우가 많은 것 같습니다. 솔직히 저는 그 정도의 공부로는 부족하다고 생각하는 사람으로서 프로그램의 수업을 듣되, 꼭 책도 읽어보라고 권합니다. 나중에 다시 책 추천할 일이 있더라면 이 책으로 컴퓨터구조와 운영체제를 공부해보라고 할 것 같습니다.</p>]]></content:encoded>
-            <category>Book Review</category>
-        </item>
-        <item>
-            <title><![CDATA[📖 면접을 위한 CS 전공지식 노트]]></title>
-            <link>https://teddygood.github.io/en/blog/CS-note-for-interview</link>
-            <guid>https://teddygood.github.io/en/blog/CS-note-for-interview</guid>
-            <pubDate>Fri, 05 Aug 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[디자인 패턴, 운영체제, 데이터베이스, 자료 구조, 네트워크, 개발자 면접]]></description>
-            <content:encoded><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>길벗 ‘18차 개발자 리뷰어’ 활동을 위해서 책을 제공받아 작성된 서평입니다.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info" href="https://teddygood.github.io/en/blog/CS-note-for-interview#book-info">​</a></h2>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
-<p><a href="https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791165219529&amp;orderClick=LEa&amp;Kc=" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/book-review-CS-note-for-interview-81aa11bc7c15fdb2d85cc729149c72da.jpg" width="690" height="886" class="centered_bfhO img_ev3q"></a></p>
-<ul>
-<li>제목: 면접을 위한 CS 전공지식 노트</li>
-<li>저자: 주홍철</li>
-<li>출판사: 길벗</li>
-<li>출간: 2022-04-28</li>
-</ul>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/CS-note-for-interview#intro">​</a></h2>
-<p>신입으로 취업을 준비하는 학생에게 가장 중요한 건 코딩 테스트와 면접 준비라고 생각합니다. 전 취준생으로서 코딩 테스트는 지금도 열심히 공부하고 있지만, 문제는 면접 준비였습니다. 어느정도 대답은 할 수 있겠지만, 아직 부족하다고 생각했습니다.</p>
-<p>보통 면접에서는 프로젝트 관련해서도 지원자에게 묻지만 Computer Science 전공 지식을 묻는 경우도 있습니다. 그렇기에 CS 전공을 다시 복습할 필요가 있었고, 전 "어떻게 CS 전공을 다시 복습하지?"라는 고민을 하게 됐습니다. 운영체제, 네트워크, 자료구조, 데이터베이스, 컴퓨터 구조 등의 전공은 모두 책 하나하나가 엄청 두껍기에 다시 볼 생각에 막막했습니다. 이런 고민을 하고 있을 때 이 책을 만나게 됐고, 이번 개발자 리뷰어에 신청을 하여 읽어볼 수 있게 됐습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="디자인-패턴">디자인 패턴<a class="hash-link" aria-label="Direct link to 디자인 패턴" title="Direct link to 디자인 패턴" href="https://teddygood.github.io/en/blog/CS-note-for-interview#%EB%94%94%EC%9E%90%EC%9D%B8-%ED%8C%A8%ED%84%B4">​</a></h3>
-<p>저는 이 부분이 가장 어려우면서 가장 유용했던 부분이었습니다. 솔직히 전 백엔드를 엄청 깊게 공부한 것이 아니라 디자인 패턴에 대해 간략하게는 알고 있었으나, 예를 들어 "싱글톤 패턴"에 대해 자세히 설명해보라고 하면 못할 수준이었습니다. 이 책을 읽으면서 다양한 디자인 패턴을 공부해볼 수 있어 도움이 됐습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="정말-필수적인-지식">정말 필수적인 지식<a class="hash-link" aria-label="Direct link to 정말 필수적인 지식" title="Direct link to 정말 필수적인 지식" href="https://teddygood.github.io/en/blog/CS-note-for-interview#%EC%A0%95%EB%A7%90-%ED%95%84%EC%88%98%EC%A0%81%EC%9D%B8-%EC%A7%80%EC%8B%9D">​</a></h3>
-<p>정말 각 전공 과목에서 필수적인 지식만 간단하게 엄청 잘 요약되어 있습니다. 중간중간 이미지 삽화로 설명하는 부분도 좋았고, 진짜 복습용으로 공부하기 좋은 책이라고 생각합니다.</p>
-<p>이 책을 보면서 각종 문서들을 참고하면서 공부했지만, 이 책에서 설명하는 것이 가장 깔끔했습니다. 또한, 책에 기술되어 있는 것들만 내가 제대로 알고, 설명할 수 있으면 적어도 면접에서 마이너스는 되지 않겠다고 생각했기에 이 책을 믿고 공부했습니다. 딥하게는 아니지만 간단하게라도 이 책을 통해서 전반적인 디자인 패턴을 공부할 수 있게 되어 너무 유익했습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="마지막-면접-팁">마지막 면접 팁<a class="hash-link" aria-label="Direct link to 마지막 면접 팁" title="Direct link to 마지막 면접 팁" href="https://teddygood.github.io/en/blog/CS-note-for-interview#%EB%A7%88%EC%A7%80%EB%A7%89-%EB%A9%B4%EC%A0%91-%ED%8C%81">​</a></h3>
-<p>저자의 개인적인 포트폴리오 작성 방법, 면접 노하우 등을 설명합니다. 또한, 면접에서 나올 수 있는 예상 질문에 대해 설명합니다. 저자께서 직접 경험하시고 대답하신 내용들이 담겨져 있어 면접에서 어떻게 대답을 해야 할지 참고할 수 있었습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/CS-note-for-interview#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
-<p>면접 전에 급하게 공부해야 할 때 보기 좋을 것 같습니다. 그러나 꼬리 물기 질문을 어디까지 할지 저희는 예측할 수 없으니 책에 적힌 내용으로도 부족할 수 있습니다. 부제에 기술되어 있는 전공 과목에 대해 공부해보시지 않으셨다면 상당히 어려울 수 있습니다. 그럴 때는 다른 문서들과 함께 읽으시면서 공부하시는 걸 추천합니다.</p>]]></content:encoded>
             <category>Book Review</category>
         </item>
     </channel>
