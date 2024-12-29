@@ -1,6 +1,6 @@
 ---
 title: "📖 무엇이 1등 팀을 만드는가"
-date: '2024-11-26'
+date: '2024-12-29'
 authors: teddygood
 tags: ["Book Review"]
 draft: false
