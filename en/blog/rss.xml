@@ -40,6 +40,40 @@
             <category>Book Review</category>
         </item>
         <item>
+            <title><![CDATA[📖 무엇이 1등 팀을 만드는가]]></title>
+            <link>https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams</link>
+            <guid>https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams</guid>
+            <pubDate>Tue, 26 Nov 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Chrome 리더의 리딩 노하우와 구글 모범 사례 수록]]></description>
+            <content:encoded><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>한빛미디어 &lt;나는 리뷰어다&gt; 활동을 위해서 책을 제공받아 작성된 서평입니다.</p></div></div>
+<p><img decoding="async" loading="lazy" alt="나는 리뷰어다 2024" src="https://teddygood.github.io/en/assets/images/I-am-reviewer-2024-39f793fe4c301151536071685230425d.jpg" width="820" height="312" class="centered_bfhO img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info" href="https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams#book-info">​</a></h2>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
+<p><a href="https://product.kyobobook.co.kr/detail/S000214882947" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/Leading-Effective-Engineering-Teams-d628fc9e86e805e4e9b70d636d5814ce.png" width="458" height="668" class="centered_bfhO img_ev3q"></a></p>
+<ul>
+<li>제목: 무엇이 1등 팀을 만드는가</li>
+<li>저자: 애디 오스마니</li>
+<li>역자: LINE SQE 팀</li>
+<li>출판사: 한빛미디어</li>
+<li>출간: 2024-12-05</li>
+</ul>
+<!-- -->
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams#intro">​</a></h2>
+<p>최근 인턴 적응을 하는데 시간을 많이 쓰고 있다. 지금까지 내가 원하던 일이 이런 거였구나 생각을 하면서 정말 하루하루 재밌게 보내고 있다. 이번 책 또한 한 번에 읽지 않고 최대한 비는 시간을 활용해서 짧게 짧게 읽었다. 처음에는 이 책도 저번 책인 소프트웨어 엔지니어 가이드북처럼 제목만 봐서는 내가 읽을 책은 아니라고 생각했으나 미래 리더가 되고 싶은 사람으로서 미리 읽어보는 것도 재밌을 것 같아 읽게 됐다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams#book-review">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="전반적인-책-리뷰">전반적인 책 리뷰<a class="hash-link" aria-label="Direct link to 전반적인 책 리뷰" title="Direct link to 전반적인 책 리뷰" href="https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams#%EC%A0%84%EB%B0%98%EC%A0%81%EC%9D%B8-%EC%B1%85-%EB%A6%AC%EB%B7%B0">​</a></h3>
+<p>Chapter 1에서는 구글에서 진행한 아리스토텔레스 프로젝트 연구를 언급하면서 무엇이 효과적인 팀을 만드는지에 대해 설명한다. 어떻게 보면 효과적인 팀을 만들기 위해 당연한 내용들을 설명하는 것처럼 보이지만, 읽으면서 저자의 경험이 보여서 당연한 내용도 당연하지 않고 너무 새롭고 배울점이 많았다. 매니저마다 당연히 사례와 생각이 다르겠지만, 전반적으로 구글의 좋은 사례들을 보고 배울 수 있는 부분이었다.</p>
+<p>Chapter 2에서는 효율성, 효과성, 생산성에 대해 설명하는데 이 글을 작성하고 있는 나도 아직 용어가 헷갈린다. 하지만 간단하게 표로 어떤 개념인지 설명하고, 예시가 있어 차이를 이해하는데 도움이 됐다. 또한, 결과물과 성과에 대한 얘기도 나오는데 이 부분도 읽으면서 무슨 얘기인지 잠깐 멈칫 했다. 얼핏 보면 정말 헷갈릴 수 있으니 이 chapter는 여러 번 읽어보는 걸 추천한다.</p>
+<p>Chapter 3에서는 3E 모델에 대해 알려준다. 처음 보는 개념이라 읽는데 약간의 어려움이 있었다. 이 chapter는 실제로 적용할 수 있는 내용에 대해 설명한다. 다양한 모델 또한 설명하기에 어려움이 있을 수 있으나 잘 적용할 수만 있다면 리더십을 기르는 데 도움이 될 거라 생각이 들었다.</p>
+<p>Chapter 4에서는 구글에서 진행한 옥시젠 프로젝트에서 밝현낸 엔지니어링 매니저의 핵심 행동 목록을 소개하고 이런 행동을 어떻게 자신에게 적용할 수 있는지에 대해 설명한다. "무엇이 구글의 매니저를 훌륭하게 만드는가?"라는 질문에서 시작한 프로젝트라고 한다. 이 책만 읽어 보면 구글이 얼마나 매니징을 중요하게 생각하는지 알 수 있다. 이 책을 보면서 전반적으로 뛰어난 매니저가 되기 위한 내용을 많이 배웠다.</p>
+<p>Chapter 5에서는 효율성에 대한 안티패턴을 설명한다. 정말 다양한 유형을 설명하니 이 책을 읽으며 나와 비슷한 부분이 있다면 어떻게 더 개선해야 할지 생각해보는 것도 재밌을 것이다.</p>
+<p>Chapter 6에서는 어떻게 좋은, 효과적인 매니저가 될 수 있을지에 대해 실용적인 조언을 해준다. 팀을 리딩하고, 프로젝트와 시간을 관리하는 등의 내용이 나오니 이 책을 읽으면서 생각해보고, 적용하는 과정을 거치면 좋은 매니저가 될 수 있지 않을까 생각한다.</p>
+<p>Chapter 7에서는 전반적인 리더십에 관한 내용이 나온다. 이 부분에서는 예시도 꽤 인상 깊었고, 생각할 부분들이 정말 많다. 그러니 꼭 이 책을 한 번에 읽을 생각하지 말고 적어도 매일 Chapter 1개를 읽는 등의 방법을 사용하면 도움이 될 것이다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Leading-Effective-Engineering-Teams#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<p>대상 독자는 확실히 나 같은 인턴, 주니어보다는 매니저 직급과 가까운 사람들이 읽는 것을 추천한다. 낮은 직급 보다는 매니저 직급에서 생각할 부분들이 정말 많다고 느꼈다. 미래에 매니저, 팀 리더가 되고 싶은 사람에게도 추천은 한다. 그러나 지금은 너무 딥하게 읽을 필요는 없다고 생각이 든다.</p>]]></content:encoded>
+            <category>Book Review</category>
+        </item>
+        <item>
             <title><![CDATA[🐋 Python 프로젝트를 위한 Docker 베이스 이미지 선택 시 Alpine Linux를 피해야 하는 이유]]></title>
             <link>https://teddygood.github.io/en/blog/python-alpine-linux</link>
             <guid>https://teddygood.github.io/en/blog/python-alpine-linux</guid>
@@ -360,7 +394,7 @@
             <guid>https://teddygood.github.io/en/blog/Life-Map</guid>
             <pubDate>Sun, 22 Sep 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[글또 10기 지원서 작성을 위한 삶의 지도]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="삶의-지도">삶의 지도<a class="hash-link" aria-label="Direct link to 삶의 지도" title="Direct link to 삶의 지도" href="https://teddygood.github.io/en/blog/Life-Map#%EC%82%B6%EC%9D%98-%EC%A7%80%EB%8F%84">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="삶의-��지도">삶의 지도<a class="hash-link" aria-label="Direct link to 삶의 지도" title="Direct link to 삶의 지도" href="https://teddygood.github.io/en/blog/Life-Map#%EC%82%B6%EC%9D%98-%EC%A7%80%EB%8F%84">​</a></h2>
 <p>이번에 글또를 지원하면서 지나온 시간들을 되돌아 보게 되는 기회를 얻게 됐다. 그동안 많은 일들이 있었고, 그 과정에서 저 자신이 어떻게 변해왔는지 돌아볼 수 있었다. 매번 짧은 기간의 회고만 했지, 이렇게 삶 전체를 회고해보는 건 몇 번 안 되는 귀중한 경험인 것 같다. 이 글에서는 지금까지 어떻게 성장했는지 전체적으로 정리해보려 한다. 이 글을 쓸 수 있게 되어 글또에게 감사하고, 별 거 아닌 나의 삶을 궁금하여 이 글을 읽으시는 분들에게도 감사하다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="그저-컴퓨터를-좋아하던-나">그저 컴퓨터를 좋아하던 나<a class="hash-link" aria-label="Direct link to 그저 컴퓨터를 좋아하던 나" title="Direct link to 그저 컴퓨터를 좋아하던 나" href="https://teddygood.github.io/en/blog/Life-Map#%EA%B7%B8%EC%A0%80-%EC%BB%B4%ED%93%A8%ED%84%B0%EB%A5%BC-%EC%A2%8B%EC%95%84%ED%95%98%EB%8D%98-%EB%82%98">​</a></h3>
 <p>어렸을 때부터 나는 컴퓨터를 좋아하던 아이였다. 방과 후 수업을 신청하여 컴퓨터실에서 파워포인트, 엑셀, 인터넷, 워드프로세서 자격증을 준비했고, 자연스럽게 컴퓨터와 친해질 수 있었다. 점차 게임에도 관심이 생겼지만, 게임을 잘 하지는 못 해서 게임을 플레이 하는 플레이어가 아닌 게임을 만드는 프로그래머가 되고 싶었다. 아니면 해킹을 막는 화이트 해커가 되고 싶었다. 단순히 재밌을 것 같고 멋있다는 이유였다.</p>
@@ -405,7 +439,7 @@
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="머신러닝-직군이-아닌-개발자에게-좋은-책">머신러닝 직군이 아닌 개발자에게 좋은 책<a class="hash-link" aria-label="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" title="Direct link to 머신러닝 직군이 아닌 개발자에게 좋은 책" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%A7%81%EA%B5%B0%EC%9D%B4-%EC%95%84%EB%8B%8C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EC%97%90%EA%B2%8C-%EC%A2%8B%EC%9D%80-%EC%B1%85">​</a></h3>
 <p>머신러닝을 공부하지 않은 개발자에게 도움이 되는 책이라 생각한다. 전반적인 인공지능 개념이 담겨 있으며, 코드가 그렇게 많지 않은 편이다. 즉, 가볍게 읽기 좋았던 책이다. 콘다 설치부터 OpenAI API key를 받는 것, 그리고 허깅페이스 토큰까지 얻는 과정이 상세히 나와 있으니 기초 개념서로 충분히 좋은 책이라 생각한다.</p>
 <p>나는 RAG에 대한 부분을 복습할 수 있어서 도움이 됐고, 랭체인도 처음 써봤는데 은근 나쁘지 않았다. 끝부분에는 랭체인으로 할 수 있는 프로젝트들이 소개되어 있으니 참고하면 좋을 것 같다. 나도 내 프로젝트에 랭체인과 LLM을 어떻게 써볼지 고민했던 좋은 계기가 된 책이다. 곧 랭체인으로 프로젝트를 하나 해봐야겠다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EF%BF%BD%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>LLM이 인기가 많아 한 번쯤 공부해 보고 싶은 분들께 이 책을 추천한다.</p>]]></content:encoded>
             <category>Book Review</category>
         </item>
@@ -770,38 +804,6 @@
 <p>각 Chapter마다 <em>마치며</em>라는 부분에서 저자의 조언과 그다음에는 어떤 걸 공부하면 좋을지, 요약 등을 설명합니다. 개인적으로 이렇게 매 Chapter마다 깔끔하게 정리하는 부분도 좋았습니다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/deep-learning-bootcamp-with-pytorch#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>저는 이 책으로 딥러닝을 처음 공부하셔도 무방하다고 생각합니다. 또한, 딥러닝을 알고 있지만 주피터 노트북만 경험해보신 분들께도 추천합니다. 요즘 나오는 거의 모든 머신러닝, 딥러닝 책들이 주피터 노트북에서 실습하지만, 이 책은 가장 기초 단계에서 머신러닝 프로젝트를 간접적으로 경험시켜 줄 수 있는 책이었습니다. 그렇기에 기초가 부족한 독자에게도 적절하다고 생각합니다.</p>]]></content:encoded>
-            <category>Book Review</category>
-        </item>
-        <item>
-            <title><![CDATA[📖 데싸노트의 실전에서 통하는 머신러닝]]></title>
-            <link>https://teddygood.github.io/en/blog/ML-in-practice</link>
-            <guid>https://teddygood.github.io/en/blog/ML-in-practice</guid>
-            <pubDate>Mon, 12 Sep 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Must Have | 피처 엔지니어링 + TOP 10 알고리즘 + 실무 노하우로 익히는 실무형 문제풀이 해법서]]></description>
-            <content:encoded><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>골든래빗 출판사로부터 책을 제공받아 작성했습니다.</p></div></div>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a class="hash-link" aria-label="Direct link to Book Info" title="Direct link to Book Info" href="https://teddygood.github.io/en/blog/ML-in-practice#book-info">​</a></h2>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
-<p><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791191905014&amp;orderClick=LEa&amp;Kc=" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/en/assets/images/ML-in-practice-013e6fc2568d6d7abfaf2cf65bb1bde3.jpg" width="690" height="886" class="centered_bfhO img_ev3q"></a></p>
-<ul>
-<li>제목: 데싸노트의 실전에서 통하는 머신러닝</li>
-<li>저자: 권시현</li>
-<li>출판사: 골든래빗</li>
-<li>출간: 2022-07-08</li>
-</ul>
-<!-- -->
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/ML-in-practice#intro">​</a></h2>
-<p>메일함을 생각 없이 읽다가 골든래빗 출판사에서 북스포일러를 모집한다는 메일을 보게 됐습니다. 처음 책 제목을 접했을 때는 <strong>"아, 또 머신러닝 책 나오는구나"</strong> 라는 생각이었습니다. 그러나 책의 구성을 보고 생각이 조금 바뀌었습니다. 지금까지 제가 읽던 머신러닝 책과는 다르다는 느낌을 받았으며 읽어보고 싶다고 생각했기에 북스포일러에 도전했습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/ML-in-practice#book-review">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="머신러닝에-재밌게-접근하기-좋은-책">머신러닝에 재밌게 접근하기 좋은 책<a class="hash-link" aria-label="Direct link to 머신러닝에 재밌게 접근하기 좋은 책" title="Direct link to 머신러닝에 재밌게 접근하기 좋은 책" href="https://teddygood.github.io/en/blog/ML-in-practice#%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D%EC%97%90-%EC%9E%AC%EB%B0%8C%EA%B2%8C-%EC%A0%91%EA%B7%BC%ED%95%98%EA%B8%B0-%EC%A2%8B%EC%9D%80-%EC%B1%85">​</a></h3>
-<p>문제를 해결하는 걸 좋아하는 사람이라면 좋아할 수밖에 없는 책 구성입니다. 각 Chapter마다 대략 머신러닝 알고리즘을 소개하고, 머신러닝 문제를 정의하여 그 문제를 풀어가는 과정을 보여줍니다. 이런 과정에서 머신러닝 알고리즘의 부가적인 내용을 더 알려주는 구성입니다. 머신러닝의 전체적인 과정을 체험해볼 수 있고, 실전 문제를 풀어보는 느낌이라 정말 재밌게 읽었습니다.</p>
-<p>일반적인 머신러닝 책이라면 알고리즘과 모델에 대해 수학적으로 한참 설명하는데 이 책은 달랐습니다. 수학적인 부분은 최소화하여 설명합니다. 그런 점에서 읽기 편했습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="최신-머신러닝-알고리즘">최신 머신러닝 알고리즘<a class="hash-link" aria-label="Direct link to 최신 머신러닝 알고리즘" title="Direct link to 최신 머신러닝 알고리즘" href="https://teddygood.github.io/en/blog/ML-in-practice#%EC%B5%9C%EC%8B%A0-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">​</a></h3>
-<p>이 책은 머신러닝에서 꽤 자주 사용되는 10가지 알고리즘을 각각 한 Chapter에 걸쳐 설명합니다. 전 다른 8개의 알고리즘은 그래도 유명하기에 알고 있었으나 최근 캐글에서 핫하다는 XGBoost 같은 알고리즘은 대략 보기만 했고 공부해본 적은 없기에 이 책이 궁금했습니다. 책의 구성도 시중에 나온 다른 책과 달랐지만, XGBoost나 LightGBM 같은 꽤 최근 알고리즘까지 다룬다는 점에서 이 책을 읽어볼 가치가 있었습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="아쉬운-오탈자">아쉬운 오탈자<a class="hash-link" aria-label="Direct link to 아쉬운 오탈자" title="Direct link to 아쉬운 오탈자" href="https://teddygood.github.io/en/blog/ML-in-practice#%EC%95%84%EC%89%AC%EC%9A%B4-%EC%98%A4%ED%83%88%EC%9E%90">​</a></h3>
-<p>읽으면서 은근히 오탈자가 눈에 보였습니다. 책을 만드는 것이 항상 완벽할 수는 없지만, 독자로서는 아쉬움이 큰 부분이었습니다. 얼른 더 많이 팔려서 2쇄에는 오탈자가 수정되기를 바랍니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/ML-in-practice#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
-<p>머신러닝에 입문하는 초보자를 대상으로 수학 또는 통계적인 지식보다는 그림을 사용하는 저자의 노력이 책에서 보였으나 개념을 처음부터 자세히 알려주는 방식이 아니고, 진행하면서 알고리즘을 설명하는 방식은 머신러닝을 처음 공부하는 사람에게는 어려울 수 있을 거라 생각합니다. 그러나 머신러닝에 경험이 있으신 분이라면 재밌게 읽으실 수 있을 것 같습니다.</p>
-<p>머신러닝 알고리즘만 다루는 것이 아닌 머신러닝의 전체적인 과정이 궁금하신 분께 추천합니다. 저는 머신러닝에서 알고리즘도 중요하다고 생각하지만, 가장 중요한 건 학습하기 전 데이터 전처리 과정이라 생각합니다. 이 책은 알고리즘만 설명하는 것이 아니라 데이터 클리닝, 피처 엔지니어링, 시각화 등도 다룹니다. 이런 과정에서 정말 좋은 꿀팁을 얻을 수 있어 좋았습니다.</p>]]></content:encoded>
             <category>Book Review</category>
         </item>
     </channel>
