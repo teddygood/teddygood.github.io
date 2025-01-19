@@ -2,11 +2,58 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://teddygood.github.io/blog</id>
     <title>Chanho Lee Blog</title>
-    <updated>2024-12-29T00:00:00.000Z</updated>
+    <updated>2025-01-18T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://teddygood.github.io/blog"/>
     <subtitle>Chanho Lee Blog</subtitle>
     <icon>https://teddygood.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[✨2024 회고]]></title>
+        <id>https://teddygood.github.io/blog/2024-Recap</id>
+        <link href="https://teddygood.github.io/blog/2024-Recap"/>
+        <updated>2025-01-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2024년을 되돌아보며]]></summary>
+        <content type="html"><![CDATA[<p>벌써 시간이 이렇게 지나 갔다는 게 믿기지가 않는다. 시간이 정말 빠르게 흘러가는 것 같다. 올해는 나에게 많은 변화와 성장이 있었다. 이번 글에서는 2024년을 되돌아보며 나에게 있었던 변화와 성장을 되짚어보고자 한다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="졸업-작품">졸업 작품<a class="hash-link" aria-label="졸업 작품에 대한 직접 링크" title="졸업 작품에 대한 직접 링크" href="https://teddygood.github.io/blog/2024-Recap#%EC%A1%B8%EC%97%85-%EC%9E%91%ED%92%88">​</a></h2>
+<p>예전부터 ML 공부를 하면서 논문을 읽는 훈련을 조금씩 해왔는데, 지금 생각해보면 모두 이번 졸업 작품을 위해서였던 것 같다. 올해만큼 논문을 많이 읽었던 적은 없던 것 같다. 비록 최신 논문까지 follow-up 하지는 않았지만, 그래도 GAN, NeRF 등 Computer Vision 분야에서 대표적인 논문은 거의 읽어봤다.</p>
+<p>그럼에도 불구하고, 나는 리서처의 길을 선택하지 않았다. 매번 새로운 기술을 공부해보는 것은 재미있었지만, 무언가 창의적인 아이디어로 세상에 영향을 끼칠 논문을 쓰는 것은 어려울 것이라 판단했다. 거기다 대학원에 뜻이 있다면 나중에 직장을 다니다 야간 대학원을 하거나 해외로 나가서 대학원을 다니는 것도 좋은 선택지가 될 것이라 생각했다. 그래서 나는 엔지니어의 길을 선택했다. 엔지니어로서 기술을 공부하고, 구현하며, 가치를 만들어내는 길을 선택한 것이다.</p>
+<p>연구실 인턴은 아니었지만, 졸업 작품을 진행하며 간접적으로 연구실 인턴 생활을 할 수 있게 해준 BCML에 감사함을 느낀다. 교수님이 정말 신경을 많이 써주셨다고 생각한다. 매번 영어로 미팅을 진행했는데 색다른 경험이었다. 또한, 명절, 시험 등과 같은 특수한 상황을 제외하고는 거의 매번 Weekly로 미팅을 진행해주셨다. 솔직히 교수님께서 연구실 인턴이 아님에도 그렇게 지도를 해주실 줄은 예상하지 못 했다. 물론 우리의 졸업 작품 성과가 연구실의 성과가 되기 때문에 도와주신 것도 있겠지만, 그래도 우리를 위해 계속 시간을 써주시고, 방향성을 잡아주셔서 감사했다. 조교님들에게도 감사함을 전하고 싶다. 우리와 매주 미팅을 진행해주셨고, 어떻게 세부적으로 졸업 작품을 구현할지, 진행해야 할지에 대해 도움을 많이 받았다. 또, 데이터를 얻기 위한 실험을 할 때 도구, 환경 등을 구성해준 점도 너무 감사했다.</p>
+<p>결국 우리 팀도 그렇게 도와주시는 만큼 열심히 했고, 매주 유의미한 성과를 만들어 내려고 노력했다. 우리 팀에게도 이 글을 통해 감사 인사를 전하고 싶다. 다들 책임감을 갖고 거의 1년동안 프로젝트를 끝까지 진행했다. 대학에서 진행한 최고의 팀원과 프로젝트였다. 이런 과정이 계속 반복되고 결국은 졸업 작품 전시회에서 수상을 할 수 있었다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="gdsc">GDSC<a class="hash-link" aria-label="GDSC에 대한 직접 링크" title="GDSC에 대한 직접 링크" href="https://teddygood.github.io/blog/2024-Recap#gdsc">​</a></h2>
+<p>정말 아쉬움이 많이 남는 커뮤니티이다. 이번 1기가 첫 시작이었는데 2기로 이어지지 않고 끝이 되었다. 나는 ML Member로 활동하였고, Solution Challenge에도 참여를 했었다. LangChain과 약간의 GCP를 사용한 챗봇 프로젝트를 해볼 수 있었다.</p>
+<p>ML 파트에서 논문 읽고 발표하는 스터디가 중단된 것도 아쉬웠다. 좀 더 이어졌다면 내 발표 능력을 더 성장하는데 도움이 많이 됐을 것이다. 그래도 매달 진행하는 세미나에서 다른 사람들 앞에서 처음으로 발표를 해보는 기회를 통해 한 단계 더 성장할 수 있었다고 느낀다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="글또">글또<a class="hash-link" aria-label="글또에 대한 직접 링크" title="글또에 대한 직접 링크" href="https://teddygood.github.io/blog/2024-Recap#%EA%B8%80%EB%98%90">​</a></h2>
+<p>글또를 하면서 이번 년도에는 작년보다 블로그에 더 많은 글을 작성할 수 있게 됐다. 원래 공부를 하면서 글을 작성하는 습관은 있었지만, 매번 블로그에 글을 올리지 않았다. 그 이유는 첫 번째로 남들과 같은 글을 쓰고 싶지 않았다. 내 경험이 담긴 나만의, 고유의 글을 쓰고 싶었다. 그런 게 아니라면 위키나 다른 사람들의 블로그와 다른 게 없다고 생각했다. 이 문제는 여전히 쉽지 않지만 계속 다른 글을 쓰려고 노력하고 있다.</p>
+<p>두 번째로 나를 위한 글은 나 혼자 이해하기 쉽게, 간단하게 적혀 있지만, 블로그에 올리는 글은 다른 사람을 위한 글을 써야 한다고 생각하기에 글의 범위를 잡는 것이 쉽지 않았다. 예를 들어 기술 글을 작성할 때 다른 사람이 내 글을 쉽게 읽었으면 좋겠다는 마음이 있다. 그렇게 타인을 생각하며 글을 작성하다 보면 글이 점점 길어진다. 이 문제에 대해서는 이제 너무 큰 부담은 느끼지 않으려고 노력 중이다. 항상 모든 사람을 만족시킬 수는 없는 법이다.</p>
+<p>번외로 글또의 '4_' 채널인 게임해또에서 꽤 많은 시간을 보냈다. 취업 준비, 졸업 작품 등 다양한 곳에서 스트레스를 받았는데, 일주일에 한 번 글또 사람들과 롤을 한 게 스트레스 푸는데 도움이 많이 됐다고 느낀다. 이밖에도 T1 베이스캠프에 가서 오프라인으로 롤을 하기도 했고, 정말 재밌었다.</p>
+<p>거기다 백엔드-인프라 반상회에 간 것도 어쩌다 보니 도움이 됐다. 당시는 이미 기업에 인턴으로 합격을 한 상태였지만, 이대로 일을 시작하기에는 부족함을 많다고 느끼고 있었다. '어떤 걸 준비해서 가야 할까?'라는 고민이 많았던 때였다. 그때 우연히 참여하게 된 반상회에서 만난 분이 내가 합격한 회사에 재직 중이신 분들과 커피챗을 할 예정이며, 나한테도 와도 된다고 제안해주셔서 새로운 인연을 만들 수 있었다. 정말 이 제안을 해주신 분께도 감사함을 느낀다. 이 인연을 통해 내 고민을 해결할 수 있었다. 이렇게 인연을 만들 수 있게 해준 글또에게 또 감사 인사를 전하고 싶다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="nipa-google-ml-부트캠프-협력-실무-프로젝트">NIPA-Google ML 부트캠프 협력 실무 프로젝트<a class="hash-link" aria-label="NIPA-Google ML 부트캠프 협력 실무 프로젝트에 대한 직접 링크" title="NIPA-Google ML 부트캠프 협력 실무 프로젝트에 대한 직접 링크" href="https://teddygood.github.io/blog/2024-Recap#nipa-google-ml-%EB%B6%80%ED%8A%B8%EC%BA%A0%ED%94%84-%ED%98%91%EB%A0%A5-%EC%8B%A4%EB%AC%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">​</a></h2>
+<p>방학 동안 왕복 3시간을 투자하며 NIPA와 구글 머신러닝 부트캠프가 협력으로 진행하는 실무 프로젝트에 참여했었다. 다양한 이유로 중간에 그만둘까 생각을 많이 했지만, 그래도 계속 버티면 무언가라도 얻게 되겠지 라는 생각에 꾸준히 참여했다. 결과적으로는 내 이력서에 작성할만한 챗봇 프로젝트가 하나 완성됐고, 5명이라는 다수의 인원과 협업을 하는 경험도 쌓을 수 있었다. 이 과정에서 중간에 구글 코리아도 방문하여 구글러와 대화를 해볼 수 있는 기회가 생겼고, 나는 개인적으로 궁금했던 점을 다 물어봤었다. 당시 나만 질문을 엄청 많이 했던 것이 기억에 남는다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="취업-준비">취업 준비<a class="hash-link" aria-label="취업 준비에 대한 직접 링크" title="취업 준비에 대한 직접 링크" href="https://teddygood.github.io/blog/2024-Recap#%EC%B7%A8%EC%97%85-%EC%A4%80%EB%B9%84">​</a></h2>
+<p>9월부터 본격적으로 취업 준비를 시작했다. 먼저 내가 그동안 했던 프로젝트들을 정리하고, 지원하려는 회사, 직무의 JD에 맞게 이력서를 작성했다. 내 기준에는 만족스럽지 않은 프로젝트였지만, 그래도 최대한 JD에 맞춰 어떤 기술을 사용하여 구현했는지 기술했다. 나는 이 기업에 내 모든 것을 투자했었다. 지원한 곳도 여기 한 곳이었고, 준비 기간도 꽤 길었다. 정말 이력서만 만드는 게 한 달이 걸렸다. 과연 '내가 다른 사람들보다 어떻게 돋보일 수 있을까' 고민하면서 작성을 했던 기억이 있다.</p>
+<p>이 과정에서 또 감사 인사를 드리고 싶은 분이 있다. 5월 쯤에 학교에 다양한 기업의 재직자들을 초대했던 적이 있었는데 이때 우리 학교 선배님이자, 내가 지금 다니고 있는 회사의 재직자분께서 강연을 하러 오신 적이 있었다. 그때 난 기회를 놓치지 않고, 강연을 들었고, 마지막에 명함을 받아 갔었다. 그리고 시간이 지나 10월에 혼자 Resume를 모두 작성하고, 그 선배님께 콜드메일을 보내 피드백을 요청드렸다. 정말 감사하게도 그 선배님께서 흔쾌히 피드백을 해주셨고, 그 피드백을 바탕으로 수정 후 나는 서류 합격을 할 수 있었다.</p>
+<p>번외로 내가 넣었던 기업이 외국계라 합격 결과가 매우 늦게 나올 줄 알았는데 의외로 프로세스가 정말 빨랐었다. 예전에 구글 인턴에 지원했을 때는 프로세스가 정말 늦었던 기억이 있어 더 빨랐다고 느껴지는 걸 수도 있다. 한 프로세스마다 결과가 바로 다음 날에 나오거나 이틀 정도 걸려서 나왔다.</p>
+<p>서류 합격이 되고 난 이후가 이번 년도에서 가장 힘들었던 때다. 졸업 작품 전시회 준비를 하면서 채용 과정을 진행했기에 전시회 포스터 제작, 전시회에 교수님께 보여드릴 영상 준비, 테크 인터뷰 준비, 루프 인터뷰 준비 등을 동시에 진행했기에 정말 바쁜 시간이었다. 테크 인터뷰 때는 지금까지 내가 공부했던 CS 지식들 모두 정리하고 외우고, 루프 인터뷰 때는 내가 했던 활동들을 정리해보고, STAR format으로 써보고 말로도 계속 연습했다. 결과적으로 졸업 작품 전시회가 끝나고 루프 인터뷰까지 마친 후 나는 클라우드 기업에 채용연계형 인턴으로 합격을 할 수 있게 됐다. 정말 운이 좋았다고 생각한다.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="독서">독서<a class="hash-link" aria-label="독서에 대한 직접 링크" title="독서에 대한 직접 링크" href="https://teddygood.github.io/blog/2024-Recap#%EB%8F%85%EC%84%9C">​</a></h2>
+<ul>
+<li>딥러닝의 정석</li>
+<li>더 나은 프로그래머 되는 법</li>
+<li>랭체인으로 LLM 기반의 AI 서비스 개발하기</li>
+<li>AI 트루스</li>
+<li>몰입의 즐거움</li>
+<li>원씽</li>
+<li>오픈</li>
+<li>소프트웨어 엔지니어 가이드북</li>
+<li>무엇이 1등 팀을 만드는가</li>
+</ul>
+<p>총 9권의 책을 읽었다. 직접 공부해보고 싶어 읽은 책 1권, 읽고 싶어서 읽은 자기계발서 2권, 나머지는 모두 한빛미디어에서 제공받아 읽게 된 책이다. 2021년도부터 내 성장에 큰 기여를 해주는 출판사이다. 이 회고를 통해 한빛미디어께도 감사함을 전하고 싶다. 내년에도 '나는 리뷰어다' 활동을 할 수 있었으면 좋겠다.</p>
+<p>내년에도 인턴으로서 매우 바쁠 예정이지만 책을 더 읽어보려고 한다. 소설도 읽어볼 예정이다.</p>]]></content>
+        <author>
+            <name>Chanho Lee</name>
+            <uri>https://github.com/teddygood</uri>
+        </author>
+        <category label="Recap" term="Recap"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[📖 무엇이 1등 팀을 만드는가]]></title>
         <id>https://teddygood.github.io/blog/Leading-Effective-Engineering-Teams</id>
@@ -181,7 +228,7 @@
 <p>지금까지 학교에서 진행했던 프로젝트를 아직 정리하고 있는 상태이다. 2000줄이 넘는 프로젝트도 있고, 했던 일들이 너무 많아 정리하기가 쉽지 않았다. 주석도 영문으로 바꾸고, 전체적으로 어떻게 작동되는지 구조를 파악하면서 공부 중이다. 특히 이력서에 적었던 프로젝트를 중심으로 정리하고 있다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="알고리즘">알고리즘<a class="hash-link" aria-label="알고리즘에 대한 직접 링크" title="알고리즘에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98">​</a></h3>
 <p>원래 목표는 매일 세 문제씩 푸는 것였지만 현재는 한 문제로 푸는 것으로 변경했다. 그 이유는 시간 때문이다.난 매일 아침에 일정 시간 내에만 알고리즘을 풀고 있따. 주어진 시간 내에 문제를 풀고, 해설을 보면서 내가 작성한 코드와 비교하고, 다시 생각하다 보면 시간이 확 가버려서 한 문제만 풀게 됐다. 리트코드 기준으로 easy, medium 문제를 풀면서 어떻게 접근해야 하는지 등을 중심으로 생각하면서 풀고 있다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="네트워킹">네트워킹<a class="hash-link" aria-label="네트워킹에 대한 직접 링크" title="네트워킹에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="네트워�킹">네트워킹<a class="hash-link" aria-label="네트워킹에 대한 직접 링크" title="네트워킹에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="강북에도사람있또">강북에도사람있또<a class="hash-link" aria-label="강북에도사람있또에 대한 직접 링크" title="강북에도사람있또에 대한 직접 링크" href="https://teddygood.github.io/blog/Oct-Recap#%EA%B0%95%EB%B6%81%EC%97%90%EB%8F%84%EC%82%AC%EB%9E%8C%EC%9E%88%EB%98%90">​</a></h3>
 <p>글또에 <strong>강북에도사람있또</strong> 모임에 한 번 참여했다. 노원에서 만날 줄 알았는데 의외로 충무로에서 모임을 진행했고, 오랜만에 꽤 멀리 놀러 가서 좋았다. 또, 개발이나 대학원 얘기 그리고 이것저것 다양한 주제의 얘기들도 할 수 있고, 들을 수 있어서 좋은 시간이었다. 이 모임을 통해 내 고민도 어느 정도 해결이 됐다. 그때 가장 큰 고민은 '어떤 분야로 앞으로 나아가야 할지 잘 모르겠다' 였는데 범용성을 생각하거나 완전히 하나의 분야만 파거나 둘 중 하나를 선택하라고 하신 조언이 나에게 엄청 와닿았다.</p>
 <p>어색함 반, 재미 반이었지만 새로운 사람들과 만나서 얘기하는 건 언제나 재밌다. 특히 내 고민을 쉽게 얘기할 수 있다는 것도 너무 좋고, 다른 분들의 고민이나 경험을 들어볼 수 있다는 게 너무 큰 재미라고 생각한다. 동기부여도 되고, 평소 못 나누던 얘기들도 할 수 있기도 했다. 역시 커뮤니티가 주는 힘은 크다고 생각한다.</p>
@@ -258,7 +305,7 @@
         <link href="https://teddygood.github.io/blog/starting-geulddo"/>
         <updated>2024-10-05T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[정말 멋지고 따뜻한 커뮤니티]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="글또-10�기">글또 10기<a class="hash-link" aria-label="글또 10기에 대한 직접 링크" title="글또 10기에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EA%B8%80%EB%98%90-10%EA%B8%B0">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="글또-10기">글또 10기<a class="hash-link" aria-label="글또 10기에 대한 직접 링크" title="글또 10기에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EA%B8%80%EB%98%90-10%EA%B8%B0">​</a></h2>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="지원">지원<a class="hash-link" aria-label="지원에 대한 직접 링크" title="지원에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EC%A7%80%EC%9B%90">​</a></h3>
 <p>이번에 글또 커뮤니티에 들어갈 수 있는 기회가 생겼다. 매 기수마다 참여하고 싶은 마음이 있었지만, 바쁘거나 체크를 안 해둬서 놓치는 경우도 있었고, 지원서를 작성하면서 '나' 자신을 되돌아 보는 것이 부담스러웠을 때도 있었다. 사실 이번에도 지원서를 작성하는 게 쉽지 않았지만, 이렇게라도 지금까지의 내가 뭘 했고, 어떻게 살았는지 다시 한 번 알아볼 수 있어서 정말 좋은 경험이었다. 그리고 무엇보다 이번이 글또의 마지막이기에 꼭 활동해보고 싶었다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="글또에서-이루고-싶은-목표">글또에서 이루고 싶은 목표<a class="hash-link" aria-label="글또에서 이루고 싶은 목표에 대한 직접 링크" title="글또에서 이루고 싶은 목표에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EA%B8%80%EB%98%90%EC%97%90%EC%84%9C-%EC%9D%B4%EB%A3%A8%EA%B3%A0-%EC%8B%B6%EC%9D%80-%EB%AA%A9%ED%91%9C">​</a></h3>
@@ -273,7 +320,7 @@
 <p>스스로 아직 전문성이 부족하다고 생각하여 커피챗은 아직 조금 두렵기도 하다. 과연 내가 1:1로 대화를 하거나 여러 사람을 만났을 때, 과연 어떤 이야기를 나눌 수 있을지 고민이 된다. 다른 분들은 대부분 직장인이시기 때문에 나의 지식이나 경험이 부족하여 대화가 원활하게 안 이뤄질 수도 있지 않을까 걱정도 된다.</p>
 <p>하지만 이런 고민은 항상 새로운 사람들을 만날 때마다 반복된다고 느낀다. 그렇기에 이번 글또를 잘 활용하여 이를 극복하고, 조금 더 적극적으로 소통해보려고 한다. 전문성에 대한 부담 내려놓고, 완벽하지 않아도 괜찮다는 마음으로 활동해보려고 한다. 어차피 난 아직 대학생이고, 직장인도 아니기에 나에게 큰 기대가 없을 것이다. 그러니 너무 걱정하지 말고, 이 시간을 충분히 즐기자.</p>
 <p>그리고 어쩌면 내가 가진 작은 지식이나 경험도 누군가에게 큰 도움이 될 수도 있지 않을까? 나도 상대방의 이야기를 듣고 배우고, 나 또한 내 이야기도 해보면서 서로가 더 성장할 수 있는 그런 인연을 만들어 보고 싶다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="어떤-글을-쓸-것인가">어떤 글을 쓸 것인가<a class="hash-link" aria-label="어떤 글을 쓸 것인가에 대한 직접 링크" title="어떤 글을 쓸 것인가에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EC%96%B4%EB%96%A4-%EA%B8%80%EC%9D%84-%EC%93%B8-%EA%B2%83%EC%9D%B8%EA%B0%80">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="어떤-글을-쓸-것인가">어떤 글을 쓸 것인가<a class="hash-link" aria-label="어떤 글을 쓸 것인가에 대�한 직접 링크" title="어떤 글을 쓸 것인가에 대한 직접 링크" href="https://teddygood.github.io/blog/starting-geulddo#%EC%96%B4%EB%96%A4-%EA%B8%80%EC%9D%84-%EC%93%B8-%EA%B2%83%EC%9D%B8%EA%B0%80">​</a></h3>
 <p>난 블로그와 위키를 따로 운영하고 있다. 예전부터 위키에는 CS 지식이나 간단한 인사이트를 담고 싶었고, 블로그에는 단순히 지식을 전달하는 글이 아니라 나의 생각과 경험이 담긴 글을 적어보고 싶었다. 그리고 읽기 쉬우면서도 짧은 글이 아닌 조금 긴 글을 쓰고 싶었다.</p>
 <p><img decoding="async" loading="lazy" alt="post-planning.png" src="https://teddygood.github.io/assets/images/post-planning-8ec76c18d58c7a4b65f12cc6a2d67bcd.png" width="930" height="550" class="centered_bfhO img_ev3q"></p>
 <p>지금까지 생각한 주제는 위와 같다. 대략적으로 이런 내용들의 글을 쓰지 않을까 싶다. ML과 관련된 멋진 글을 써보고 싶기도 한데 아직까지는 어떤 주제로 글을 쓰게 될지 모르겠다. 활동하다 보면 좋은 글이 떠오르지 않을까 싶다.</p>
@@ -421,7 +468,7 @@
         <link href="https://teddygood.github.io/blog/Life-Map"/>
         <updated>2024-09-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[글또 10기 지원서 작성을 위한 삶의 지도]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="삶의-지도">삶의 지도<a class="hash-link" aria-label="삶의 지도에 대한 직접 링크" title="삶의 지도에 대한 직접 링크" href="https://teddygood.github.io/blog/Life-Map#%EC%82%B6%EC%9D%98-%EC%A7%80%EB%8F%84">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="삶의-지도">삶의 지도<a class="hash-link" aria-label="삶의 지도�에 대한 직접 링크" title="삶의 지도에 대한 직접 링크" href="https://teddygood.github.io/blog/Life-Map#%EC%82%B6%EC%9D%98-%EC%A7%80%EB%8F%84">​</a></h2>
 <p>이번에 글또를 지원하면서 지나온 시간들을 되돌아 보게 되는 기회를 얻게 됐다. 그동안 많은 일들이 있었고, 그 과정에서 저 자신이 어떻게 변해왔는지 돌아볼 수 있었다. 매번 짧은 기간의 회고만 했지, 이렇게 삶 전체를 회고해보는 건 몇 번 안 되는 귀중한 경험인 것 같다. 이 글에서는 지금까지 어떻게 성장했는지 전체적으로 정리해보려 한다. 이 글을 쓸 수 있게 되어 글또에게 감사하고, 별 거 아닌 나의 삶을 궁금하여 이 글을 읽으시는 분들에게도 감사하다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="그저-컴퓨터를-좋아하던-나">그저 컴퓨터를 좋아하던 나<a class="hash-link" aria-label="그저 컴퓨터를 좋아하던 나에 대한 직접 링크" title="그저 컴퓨터를 좋아하던 나에 대한 직접 링크" href="https://teddygood.github.io/blog/Life-Map#%EA%B7%B8%EC%A0%80-%EC%BB%B4%ED%93%A8%ED%84%B0%EB%A5%BC-%EC%A2%8B%EC%95%84%ED%95%98%EB%8D%98-%EB%82%98">​</a></h3>
 <p>어렸을 때부터 나는 컴퓨터를 좋아하던 아이였다. 방과 후 수업을 신청하여 컴퓨터실에서 파워포인트, 엑셀, 인터넷, 워드프로세서 자격증을 준비했고, 자연스럽게 컴퓨터와 친해질 수 있었다. 점차 게임에도 관심이 생겼지만, 게임을 잘 하지는 못 해서 게임을 플레이 하는 플레이어가 아닌 게임을 만드는 프로그래머가 되고 싶었다. 아니면 해킹을 막는 화이트 해커가 되고 싶었다. 단순히 재밌을 것 같고 멋있다는 이유였다.</p>
@@ -583,7 +630,7 @@
 <p>저자가 많은 신경을 쓴 책이라 생각한다. AI 분야 중에서도 생성 AI는 정말 어려운 분야라고 느낀다. 그래서 이 책을 읽기 전에는 뭐랄까 예전에 GAN을 공부했던 기억이 떠오르면서 엄청 어려울 것 같았다. 그러나 저자가 충분히 이해할 수 있도록 예시를 들기도 하고 그림 삽화가 매우 적절하게 있어 책을 편하게 읽을 수 있었다. 그림들도 거의 직접 논문에서 발췌한 것이었다. 수많은 논문들을 읽는 대신 이 책을 편하게 읽을 수 있었다. 영어가 어렵고, 논문을 읽기 힘드신 분들께는 도움이 되지 않을까 싶다. 또한, 믿을 수 있는 역자님께서 번역하셨기에 번역에 큰 의심은 하지 않고 읽어도 됐다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="특히-좋았던-부분">특히 좋았던 부분<a class="hash-link" aria-label="특히 좋았던 부분에 대한 직접 링크" title="특히 좋았던 부분에 대한 직접 링크" href="https://teddygood.github.io/blog/Generative-Deep-Learning#%ED%8A%B9%ED%9E%88-%EC%A2%8B%EC%95%98%EB%8D%98-%EB%B6%80%EB%B6%84">​</a></h3>
 <p>아무래도 가장 좋았던 부분은 이 책의 마지막 부분이었다. 꽤 최신 기술인 DALL·E 2와 스테이블 디퓨전 구조를 조금이나마 공부해 볼 수 있다는 것 또한 이 책의 장점이라 생각한다. 또 좋았던 부분은 마지막에 생성 AI의 타임라인이 나오는데 지금까지 어떤 모델들이 있었고 어떻게 발전하고 있는지 알아볼 수 있어서 좋았다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/Generative-Deep-Learning#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 ��직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/Generative-Deep-Learning#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>생성 AI를 전혀 몰라도 읽을 수 있는 책이지만 그래도 기본적인 딥러닝 개념을 알고 최신 딥러닝 기술들에 대해서도 관심 있고 공부하신 분이 읽으면 도움이 될 것이라 생각한다. 또한, 생성 AI에 대해 더 깊게 공부하고 싶은 분들께도 추천한다.</p>]]></content>
         <author>
             <name>Chanho Lee</name>
@@ -726,7 +773,7 @@
 <p>또한, 리눅스 명령어에 익숙하지 않은 독자를 위해서 부록으로 명령어도 기술되어 있다. 정말 올인원 책 중 이렇게 자세하게 설명해 주는 책은 처음이었다.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="키워드-제시">키워드 제시<a class="hash-link" aria-label="키워드 제시에 대한 직접 링크" title="키워드 제시에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%ED%82%A4%EC%9B%8C%EB%93%9C-%EC%A0%9C%EC%8B%9C">​</a></h3>
 <p>이 책 또한 후에 어떤 것을 더 공부하면 좋을지 키워드를 제시해 준다. 저자분께서 올리신 <a href="https://www.inflearn.com/course/%EC%B4%88%EB%B3%B4-%EB%B0%B1%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EB%A1%9C%EB%93%9C%EB%A7%B5" target="_blank" rel="noopener noreferrer">강의</a>도 참고하는 것을 추천한다. 이 책을 읽으면서 더 공부해야 할 것들을 더 명확하게 알 수 있어서 좋았다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="트렌디한-책">트렌디한 책<a class="hash-link" aria-label="트렌디한 책에 대한 직접 링크" title="트��렌디한 책에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%ED%8A%B8%EB%A0%8C%EB%94%94%ED%95%9C-%EC%B1%85">​</a></h3>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="트렌디한-책">트렌디한 책<a class="hash-link" aria-label="트렌디한 책에 대한 직접 링크" title="트렌디한 책에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%ED%8A%B8%EB%A0%8C%EB%94%94%ED%95%9C-%EC%B1%85">​</a></h3>
 <p>이 책은 최근 핫한 기술인 NestJS를 사용한다는 점 때문에 트렌디한 책이다. 현재 한국어로 출간된 NestJS 책은 이 책이 아마 두 번째일 것이다. 공식 문서를 읽는 것보다 책으로 공부하는 것이 더 익숙한 독자에게는 정말 도움이 많이 되는 책이라 생각한다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/become-a-node-js-engineer#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>이 책은 Node.js 백엔드 개발자가 되기 위한 기술들을 공부하고 싶은 사람들을 위한 책이다. 사전 지식으로 자바스크립트를 알고 있으면 이 책을 읽는 데 도움이 많이 될 것이다.</p>]]></content>
@@ -843,42 +890,6 @@
 <p>두 번째 이유로 컴퓨터 과학과 관련된 다양한 주제를 다루면서 설명도 꽤 자세하다. 프로그래밍 언어뿐만이 아니라 자료구조, 컴파일러, 동시성, 논리 회로 등이 책에서 나온다. 그렇기에 전반적인 CS 지식이 있다면 읽기 더욱 쉬울 것이라 생각한다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/SICP-JavaScript#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>함수형 프로그래밍과 전반적인 CS 지식을 공부하고 싶은 사람에게 이 책을 추천하고 싶다. 또한, 꾸준히 공부 습관을 길러보고 싶은 분들께도 추천한다. 이 책은 무려 약 800쪽의 두꺼운 책이다. 그렇기에 실제로 이 책을 읽다가 포기하신 분들도 많다고 알고 있다. 완독을 목표로 한다면 다른 선수 지식은 다 필요 없고 인내심을 갖고 천천히 읽는 것을 추천한다.</p>]]></content>
-        <author>
-            <name>Chanho Lee</name>
-            <uri>https://github.com/teddygood</uri>
-        </author>
-        <category label="Book Review" term="Book Review"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[📖 김기현의 딥러닝 부트캠프 with 파이토치]]></title>
-        <id>https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch</id>
-        <link href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch"/>
-        <updated>2022-10-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[소문난 명강의 | 기초부터 수식, 실습까지 담은 올인원 딥러닝 입문 교과서]]></summary>
-        <content type="html"><![CDATA[<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>정보</div><div class="admonitionContent_BuS1"><p>한빛미디어 &lt;나는 리뷰어다&gt; 활동을 위해서 책을 제공받아 작성된 서평입니다.</p></div></div>
-<p><img decoding="async" loading="lazy" alt="나는 리뷰어다 2022" src="https://teddygood.github.io/assets/images/I-am-reviewer-2022-daee015480820f3227f5632212af6cb3.jpg" width="820" height="312" class="centered_bfhO img_ev3q"></p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-info">Book Info<a class="hash-link" aria-label="Book Info에 대한 직접 링크" title="Book Info에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#book-info">​</a></h2>
-<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>팁</div><div class="admonitionContent_BuS1"><p>책 이미지를 클릭하면 교보문고 사이트로 이동합니다!</p></div></div>
-<p><a href="https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791169210140&amp;orderClick=LEa&amp;Kc=" target="_blank" rel="noopener noreferrer"><img decoding="async" loading="lazy" alt="책" src="https://teddygood.github.io/assets/images/deep-learning-bootcamp-with-pytorch-a909b372f0ababccbf7af9c457769ff4.jpg" width="690" height="877" class="centered_bfhO img_ev3q"></a></p>
-<ul>
-<li>제목: 김기현의 딥러닝 부트캠프 with 파이토치</li>
-<li>저자: 김기현</li>
-<li>출판사: 한빛미디어</li>
-<li>출간: 2022-08-30</li>
-</ul>
-<!-- -->
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Intro에 대한 직접 링크" title="Intro에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#intro">​</a></h2>
-<p>요즘은 딥러닝을 다룬 책이 정말 많이 증가했습니다. 그런 책들은 단순히 주피터 노트북으로 구성되고, 실무적인 부분에서 설명이 부족한 경우가 많다고 느꼈습니다. 그러나 이 책은 실무에 밀접하게 딥러닝을 경험해볼 수 있다는 점이 다른 책들과 차이점이라고 생각하여 읽어보게 됐습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Book Review에 대한 직접 링크" title="Book Review에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#book-review">​</a></h2>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="저자의-생각과-실무-경험이-담긴-책">저자의 생각과 실무 경험이 담긴 책<a class="hash-link" aria-label="저자의 생각과 실무 경험이 담긴 책에 대한 직접 링크" title="저자의 생각과 실무 경험이 담긴 책에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#%EC%A0%80%EC%9E%90%EC%9D%98-%EC%83%9D%EA%B0%81%EA%B3%BC-%EC%8B%A4%EB%AC%B4-%EA%B2%BD%ED%97%98%EC%9D%B4-%EB%8B%B4%EA%B8%B4-%EC%B1%85">​</a></h3>
-<p>보통 딥러닝 또는 머신러닝 책들은 개념적인 부분만 설명하기 바쁩니다. 그러나 이 책은 개념 설명도 어느정도 가져 가면서 저자의 생각이 한방울 첨가됐습니다. 선생님 또는 강사님이 설명해주시는 느낌으로 친절하게 설명이 되어 있습니다. 또한, 저자의 실무 경험이 담겨 있습니다. 이 책은 그런 부가적인 내용을 알기 위해서라도 읽어보는 가치가 있다고 생각합니다. 기본 개념만 공부하면서 실무를 미리 경험해보고 싶은 분들은 간단히 복습하는 느낌으로 읽어보는 것도 좋습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="코드">코드<a class="hash-link" aria-label="코드에 대한 직접 링크" title="코드에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#%EC%BD%94%EB%93%9C">​</a></h3>
-<p>이렇게 따로 헤더를 추가해서 적는 이유는 제공된 코드에 대해 아쉬움이 조금 있었기 때문입니다. Chpater 05부터는 주피터 노트북의 chapter 번호가 다르게 적혀 있습니다. 한 칸 밀려 있죠. 책 읽는 부분에서
-이 책의 코드는 주피터 노트북으로 제공됩니다. 아쉬웠던 점은 코드의 간단한 설명들이 영어로 적혀 있었던 점과 책의 코드와는 살짝 다른 부분들도 있기에 기본적인 파이썬 문법들을 모른다면 어려울 수 있겠다고 느꼈습니다.</p>
-<h3 class="anchor anchorWithStickyNavbar_LWe7" id="그다음-공부">그다음 공부<a class="hash-link" aria-label="그다음 공부에 대한 직접 링크" title="그다음 공부에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#%EA%B7%B8%EB%8B%A4%EC%9D%8C-%EA%B3%B5%EB%B6%80">​</a></h3>
-<p>각 Chapter마다 <em>마치며</em>라는 부분에서 저자의 조언과 그다음에는 어떤 걸 공부하면 좋을지, 요약 등을 설명합니다. 개인적으로 이렇게 매 Chapter마다 깔끔하게 정리하는 부분도 좋았습니다.</p>
-<h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="대상 독자에 대한 직접 링크" title="대상 독자에 대한 직접 링크" href="https://teddygood.github.io/blog/deep-learning-bootcamp-with-pytorch#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
-<p>저는 이 책으로 딥러닝을 처음 공부하셔도 무방하다고 생각합니다. 또한, 딥러닝을 알고 있지만 주피터 노트북만 경험해보신 분들께도 추천합니다. 요즘 나오는 거의 모든 머신러닝, 딥러닝 책들이 주피터 노트북에서 실습하지만, 이 책은 가장 기초 단계에서 머신러닝 프로젝트를 간접적으로 경험시켜 줄 수 있는 책이었습니다. 그렇기에 기초가 부족한 독자에게도 적절하다고 생각합니다.</p>]]></content>
         <author>
             <name>Chanho Lee</name>
             <uri>https://github.com/teddygood</uri>
