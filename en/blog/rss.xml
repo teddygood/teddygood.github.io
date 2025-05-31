@@ -29,6 +29,25 @@
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="intro">Intro<a class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#intro">​</a></h2>
 <p>오랜만에 다시 서평을 신청했다. 이제 곧 인턴이 끝나가기도 해서 다음 스탭을 준비해야 하나 고민하고 있었는데, 마침 기술 면접에 대한 책이 나와서 신청하게 됐다. 이 책은 카카오에서 20년 차 면접관이 쓴 책으로, 빅테크 기업 취업/이직 가이드라고 할 수 있다. 이 책을 읽으면서 기술 면접에 대한 전반적인 내용과 준비 방법을 알 수 있었다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="book-review">Book Review<a class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#book-review">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="인턴-개발자가-읽어본-기술-면접-가이드북">인턴 개발자가 읽어본 기술 면접 가이드북<a class="hash-link" aria-label="Direct link to 인턴 개발자가 읽어본 기술 면접 가이드북" title="Direct link to 인턴 개발자가 읽어본 기술 면접 가이드북" href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#%EC%9D%B8%ED%84%B4-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EC%9D%BD%EC%96%B4%EB%B3%B8-%EA%B8%B0%EC%88%A0-%EB%A9%B4%EC%A0%91-%EA%B0%80%EC%9D%B4%EB%93%9C%EB%B6%81">​</a></h3>
+<p>요즘 개발자 시장 분위기가 녹록지 않다는 이야기를 많이 듣는다.
+나도 지금 인턴으로 일하고 있는데, 앞으로 정규직 전환을 노리든, 다른 회사로 지원을 하든 결국은 코딩 테스트랑 기술 면접 준비는 피할 수 없겠구나 싶었다.</p>
+<p>실무는 조금씩 익히고 있지만, 막상 이력서를 어떻게 써야 하는지, 기술 면접은 뭘 공부해야 하는지는 막막했다. 그러던 중 이 책을 알게 됐고, 생각보다 굉장히 현실적인 가이드북이라는 느낌을 받았다.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="막연했던-취업-준비-방향을-잡을-수-있었다">막연했던 취업 준비, 방향을 잡을 수 있었다<a class="hash-link" aria-label="Direct link to 막연했던 취업 준비, 방향을 잡을 수 있었다" title="Direct link to 막연했던 취업 준비, 방향을 잡을 수 있었다" href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#%EB%A7%89%EC%97%B0%ED%96%88%EB%8D%98-%EC%B7%A8%EC%97%85-%EC%A4%80%EB%B9%84-%EB%B0%A9%ED%96%A5%EC%9D%84-%EC%9E%A1%EC%9D%84-%EC%88%98-%EC%9E%88%EC%97%88%EB%8B%A4">​</a></h3>
+<p>책은 서류 준비 → 코딩 테스트/기술 면접 → 면접 후 과정까지 흐름이 잘 정리되어 있다.
+단순히 알고리즘 문제 풀이 책이 아니라, 채용 공고 분석법, 이력서 작성 팁, 기술 면접에서 자주 나오는 질문들까지 친절하게 설명해준다.</p>
+<p>특히 좋았던 부분은 아래와 같다.</p>
+<ul>
+<li>채용 공고 분석법 덕분에 단순히 공고를 보는 걸 넘어서, 내가 어떤 스킬을 보완해야 하는지 파악할 수 있었다.</li>
+<li>탈락하는 이력서 사례를 보면서 내가 이력서를 쓸 때 주의해야 할 점을 배울 수 있었다.</li>
+<li>기술 면접 준비 파트에서는 DB, OS, 네트워크, 아키텍처 등 어떤 내용을 공부해야 할지 방향을 잡을 수 있었다.</li>
+<li>스터디와 성장 마인드셋의 중요성도 강조하는데, 앞으로 어떻게 커리어를 쌓아야 할지 고민하는 데 많은 도움이 됐다.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="인턴이더라도-미리-준비하는-게-중요하다는-걸-느꼈다">인턴이더라도 미리 준비하는 게 중요하다는 걸 느꼈다<a class="hash-link" aria-label="Direct link to 인턴이더라도 미리 준비하는 게 중요하다는 걸 느꼈다" title="Direct link to 인턴이더라도 미리 준비하는 게 중요하다는 걸 느꼈다" href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#%EC%9D%B8%ED%84%B4%EC%9D%B4%EB%8D%94%EB%9D%BC%EB%8F%84-%EB%AF%B8%EB%A6%AC-%EC%A4%80%EB%B9%84%ED%95%98%EB%8A%94-%EA%B2%8C-%EC%A4%91%EC%9A%94%ED%95%98%EB%8B%A4%EB%8A%94-%EA%B1%B8-%EB%8A%90%EA%BC%88%EB%8B%A4">​</a></h3>
+<p>인턴을 하다 보면 실무 따라가기도 바쁘고, 정규직 전환 준비도 급하게 느껴진다.
+하지만 이 책을 읽으면서 지금부터라도 차근차근 준비해두면 나중에 훨씬 덜 막막하겠다는 생각이 들었다.</p>
+<p>기술 면접 준비는 생각보다 넓고 깊은 영역을 다뤄야 한다. 실무와 병행해서 준비하는 건 쉽지 않겠지만, 최소한 공부 방향을 잡아두는 것만으로도 마음이 든든해졌다.</p>
+<p>무엇보다 이 책은 단순히 기술적인 부분뿐만 아니라, 어떤 자세로 일하고 성장해야 하는지에 대한 내용까지 담고 있어서 더 좋았다. 장기적인 커리어 관점에서 많은 인사이트를 얻을 수 있었다.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="대상-독자">대상 독자<a class="hash-link" aria-label="Direct link to 대상 독자" title="Direct link to 대상 독자" href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#%EB%8C%80%EC%83%81-%EB%8F%85%EC%9E%90">​</a></h2>
 <p>주니어라면 무조건 읽는 걸 추천한다. 사실 시니어 정도의 연차가 아닌 사람들께는 모두 추천하는 책이다. 이력서부터 시작하여 포트폴리오, 기술 면접, 기술 면접이 아닌 면접까지 채용 과정에 대해 전반적으로 다양한 팁을 알려준다.</p>]]></content:encoded>
             <category>Book Review</category>
