@@ -1,0 +1,42 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.sidebar.category.Journals": {
+    "message": "Journals",
+    "description": "The label for category Journals in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Algorithm": {
+    "message": "Algorithm",
+    "description": "The label for category Algorithm in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Blog": {
+    "message": "Blog",
+    "description": "The label for category Blog in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Django": {
+    "message": "Django",
+    "description": "The label for category Django in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Flask": {
+    "message": "Flask",
+    "description": "The label for category Flask in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.IDLE": {
+    "message": "IDLE",
+    "description": "The label for category IDLE in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Machine Learning": {
+    "message": "Machine Learning",
+    "description": "The label for category Machine Learning in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Trouble Shooting": {
+    "message": "Trouble Shooting",
+    "description": "The label for category Trouble Shooting in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.fastai": {
+    "message": "fastai",
+    "description": "The label for category fastai in sidebar sidebar"
+  }
+}

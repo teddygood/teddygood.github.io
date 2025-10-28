@@ -1,8 +1,8 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import remarkKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
-import {type Config} from '@docusaurus/types';
-import {type Preset, type ThemeConfig} from '@docusaurus/preset-classic';
+import { type Config } from '@docusaurus/types';
+import { type Preset, type ThemeConfig } from '@docusaurus/preset-classic';
 
 const CodeTheme = prismThemes.dracula;
 
@@ -31,9 +31,21 @@ const config: Config = {
     localeConfigs: {
       ko: {
         label: '한국어',
-        direction: 'ltr'
-      }
-    }
+        direction: 'ltr',
+        htmlLang: 'ko-KR',
+        url: 'https://teddygood.github.io',
+        baseUrl: '/',
+        translate: false,
+      },
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en',
+        url: 'https://teddygood.github.io',
+        baseUrl: '/en/',
+        translate: true,
+      },
+    },
   },
 
   presets: [
@@ -91,70 +103,73 @@ const config: Config = {
     },
   ],
 
-  themeConfig:
-    {
-      algolia: {
-        appId: '3GO7VFCZS7',
-        apiKey: '23480bb28e2475827be0b837d69144b5',
-        indexName: 'teddygoodio',
-        contextualSearch: true,
-        searchParameters: {},
-        searchPagePath: 'search',
-        debug: false,
+  themeConfig: {
+    algolia: {
+      appId: '3GO7VFCZS7',
+      apiKey: '23480bb28e2475827be0b837d69144b5',
+      indexName: 'teddygoodio',
+      contextualSearch: true,
+      searchParameters: {},
+      searchPagePath: 'search',
+      debug: false,
+    },
+    navbar: {
+      title: 'Chanho Lee',
+      logo: {
+        alt: 'My Site Logo',
+        src: 'img/logo.jpg',
       },
-      navbar: {
-        title: 'Chanho Lee',
-        logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.jpg',
+      items: [
+        {
+          type: 'doc',
+          position: 'left',
+          docId: 'introduction',
+          label: 'Wiki',
         },
-        items: [
-          {
-            type: 'doc',
-            position: 'left',
-            docId: 'introduction',
-            label: 'Wiki',
-          },
-          {
-            to: '/blog',
-            label: 'Blog',
-            position: 'left',
-          },
-          {
-            to: '/blog/archive',
-            label: 'Archive',
-            position: 'left',
-          },
-          {
-            href: 'https://github.com/teddygood',
-            position: 'right',
-            className: 'header-github-link',
-            'aria-label': 'GitHub repository',
-          },
-          {
-            href: 'https://www.linkedin.com/in/teddygood/',
-            position: 'right',
-            className: 'header-linkedin-link',
-            'aria-label': 'LinkedIn Account',
-          },
-        ],
-      },
-      footer: {
-        style: 'light',
-        copyright: `Copyright © ${new Date().getFullYear()} teddygood`,
-      },
-      prism: {
-        theme: CodeTheme,
-        darkTheme: CodeTheme,
-        additionalLanguages: ['java', 'kotlin', 'scala'],
-      },
-      docs: {
-        sidebar: {
-          hideable: true,
-          autoCollapseCategories: false,
+        {
+          to: '/blog',
+          label: 'Blog',
+          position: 'left',
         },
+        {
+          to: '/blog/archive',
+          label: 'Archive',
+          position: 'left',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right', // 또는 'left' 등 위치 지정
+        },
+        {
+          href: 'https://github.com/teddygood',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
+        },
+        {
+          href: 'https://www.linkedin.com/in/teddygood/',
+          position: 'right',
+          className: 'header-linkedin-link',
+          'aria-label': 'LinkedIn Account',
+        },
+      ],
+    },
+    footer: {
+      style: 'light',
+      copyright: `Copyright © ${new Date().getFullYear()} teddygood`,
+    },
+    prism: {
+      theme: CodeTheme,
+      darkTheme: CodeTheme,
+      additionalLanguages: ['java', 'kotlin', 'scala'],
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: false,
       },
-    } satisfies ThemeConfig,
+    },
+  } satisfies ThemeConfig,
 };
 
 export default config;
