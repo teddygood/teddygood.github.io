@@ -1,7 +1,6 @@
 ---
 title: "LeetCode 26"
 date: '2024-09-21'
-draft: false
 ---
 
 ## [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description)
@@ -9,6 +8,57 @@ draft: false
 :::tip
 Clicking the heading will take you to the LeetCode problem.
 :::
+
+## Problem
+
+Given an integer array `nums` sorted in **non-decreasing order**, remove the duplicates [**in-place**](https://en.wikipedia.org/wiki/In-place_algorithm) such that each unique element appears only **once**. The **relative order** of the elements should be kept the **same**. Then return _the number of unique elements in_ `nums`.
+
+Consider the number of unique elements of `nums` to be `k`, to get accepted, you need to do the following things:
+
+- Change the array `nums` such that the first `k` elements of `nums` contain the unique elements in the order they were present in `nums` initially. The remaining elements of `nums` are not important as well as the size of `nums`.
+- Return `k`.
+
+**Custom Judge:**
+
+The judge will test your solution with the following code:
+
+```
+int[] nums = [...]; // Input array
+int[] expectedNums = [...]; // The expected answer with correct length
+
+int k = removeDuplicates(nums); // Calls your implementation
+
+assert k == expectedNums.length;
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+```
+
+If all assertions pass, then your solution will be **accepted**.
+
+**Example 1:**
+
+```
+**Input:** nums = [1,1,2]
+**Output:** 2, nums = [1,2,_]
+**Explanation:** Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+```
+
+**Example 2:**
+
+```
+**Input:** nums = [0,0,1,1,1,2,2,3,3,4]
+**Output:** 5, nums = [0,1,2,3,4,_,_,_,_,_]
+**Explanation:** Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
+```
+
+**Constraints:**
+
+- `1 <= nums.length <= 3 * 104`
+- `-100 <= nums[i] <= 100`
+- `nums` is sorted in **non-decreasing** order.
 
 ## Solution
 
@@ -31,4 +81,8 @@ class Solution:
         return i + 1    
 ```
 
-The time complexity is $O(n)$ because it iterates through the length of the array. Since the operation is performed in-place, no additional space is required. Therefore, the space complexity is $O(1)$.
+
+### Time and Space Complexity
+
+- **Time complexity**: `O(n)`, where `n` is the length of the input array
+- **Space complexity**: `O(1)`, since only a fixed number of pointers (`i`, `j`) and no extra data structures are used (in-place modification)
