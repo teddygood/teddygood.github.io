@@ -1,14 +1,12 @@
-// @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
+import {type Config} from '@docusaurus/types';
+import {type Preset, type ThemeConfig} from '@docusaurus/preset-classic';
 
-// const lightCodeTheme = require("prism-react-renderer/themes/github");
-const CodeTheme = prismThemes.dracula
-const remarkMath = require("remark-math");
-const remarkKatex = require("rehype-katex");
+const CodeTheme = prismThemes.dracula;
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: 'Chanho Lee',
   tagline: 'Hi, I am Chanho Lee. I am a software engineer.',
   titleDelimiter: '@',
@@ -41,8 +39,7 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           path: 'wiki',
           routeBasePath: '/wiki',
@@ -83,7 +80,7 @@ const config = {
           ignorePatterns: ['/tags/**'],
           filename: 'sitemap.xml',
         },
-      }),
+      } satisfies Preset.Options,
     ],
   ],
 
@@ -95,8 +92,7 @@ const config = {
   ],
 
   themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       algolia: {
         appId: '3GO7VFCZS7',
         apiKey: '23480bb28e2475827be0b837d69144b5',
@@ -158,7 +154,7 @@ const config = {
           autoCollapseCategories: false,
         },
       },
-    }),
+    } satisfies ThemeConfig,
 };
 
-module.exports = config;
+export default config;
