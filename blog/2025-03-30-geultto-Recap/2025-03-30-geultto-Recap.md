@@ -1,6 +1,6 @@
 ---
 title: "🎬 처음이자 마지막 글또 끝"
-date: '2024-10-05'
+date: '2025-03-30'
 authors: teddygood
 tags: ["Recap"]
 draft: false
