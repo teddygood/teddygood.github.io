@@ -2,11 +2,13 @@
 title: "Linked List"
 date: '2025-11-14 16:11'
 ---
-## Python
+## 파이썬에서 링크드리스트를 잘 사용하지 않는 이유
 
-파이썬에서는 사실 Linked List를 잘 사용하지 않는데 그 이유는 파이썬 list가 사실 Dynamic Array이기 때문이다. 실제로 C array와 거의 유사하며, 구조적으로 C++의 `std::vector`와 비슷하다.
+파이썬에서는 사실 Linked List를 잘 사용하지 않는데 그 이유는 파이썬 list가 사실 Dynamic Array이기 때문이다. 즉, 파이썬 list가 Linked List의 장점을 이미 대부분 커버한다. 
 
-아래는 `cpython/Include/cpython/listobject.h` 코드이다. 여기서 봐야할 건 `PyObject **ob_item`이다. 이 배열에 파이썬 객체의 포인터를 저장하는 구조로 되어 있다고 할 수 있다. 즉, `vector<int>`처럼 연속된 배열이다.
+실제로 C의 array와 거의 유사하며, 구조적으로 C++의 `std::vector`와 비슷하다.
+
+아래는 `cpython/Include/cpython/listobject.h` 코드이다. 여기서 봐야할 건 `PyObject **ob_item`이다. 이 배열에 파이썬 객체의 포인터를 저장하는 구조로 되어 있다고 할 수 있다. 즉, `vector<int>`처럼 연속저긍로 저장되는 배열이다.
 
 ```cpp
 typedef struct {
@@ -30,11 +32,13 @@ typedef struct {
 
 ```
 
-여기서 `ob_item` 배열은 c의 malloc을 쓴다.
+여기서 `ob_item` 배열은 C의 `malloc`을 쓴다. 그러니 메모리에 연속적으로 할당이 된다.
 
-- cpython/Objects/lisobject.c
+- `cpython/Objects/lisobject.c`
 ```cpp
-    items = PyMem_New(PyObject*, size);
+...
+items = PyMem_New(PyObject*, size);
+...
 ```
 
 - `cpython/include/pymem.h`
@@ -43,7 +47,6 @@ typedef struct {
   ( ((size_t)(n) > PY_SSIZE_T_MAX / sizeof(type)) ? NULL :      \
         ( (type *) PyMem_Malloc((n) * sizeof(type)) ) )
 ```
-
 
 - `cpython/Objects/obmalloc.c`
 ```cpp
@@ -61,6 +64,29 @@ PyMem_Malloc(size_t size)
 }
 ```
 
+그러니 비슷하게 적어보면 아래와 같은 형태인 것이다.
+
+```c
+int arr[] = {1, 2, 3}
+```
+
+```
+list = [1, 2, 3]
+```
+
+```
+ob_item  ───────┐
+                ▼
+     ┌─────────────────────────────┐
+     │  ptr0 │  ptr1 │  ptr2 │ ... │   ← 연속된 메모리 (C 배열)
+     └─────────────────────────────┘
+        │        │        │
+        ▼        ▼        ▼
+      PyObj    PyObj    PyObj
+       (1)      (2)      (3)
+```
+
+## Python
 
 ```python
 Class Node:
