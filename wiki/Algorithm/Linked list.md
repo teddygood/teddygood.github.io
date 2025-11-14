@@ -4,6 +4,11 @@ date: '2025-11-14 16:11'
 ---
 ## Python
 
+파이썬에서는 사실 Linked List를 잘 사용하지 않는데 그 이유는 파이썬 list가 사실 Dynamic Array이기 때문이다. 실제로 C array와 거의 유사하며, 구조적으로 C++의 `std::vector`와 비슷하다.
+
+Linke
+
+
 ```python
 Class Node:
     def __init__(self, val):
@@ -69,7 +74,7 @@ public:
     
     // 맨 앞에 삽입
     void insert_front(int val) {
-        Node* node = nex Node(val);
+        Node* node = new Node(val);
         node->next = head;
         head = node;
     }
