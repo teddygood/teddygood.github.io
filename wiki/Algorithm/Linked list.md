@@ -527,3 +527,4 @@ int main() {
 - [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 - [Approximate cost to access various caches and main memory - Stack Overflow](https://stackoverflow.com/questions/4087280/approximate-cost-to-access-various-caches-and-main-memory)
 - [redis](https://github.com/redis/redis/)
+- [linux](https://github.com/torvalds/linux)
