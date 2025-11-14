@@ -238,22 +238,6 @@ dq.popleft()        # 왼쪽에서 제거: [1, 2, 3]
 print(dq[0])        # 1
 ```
 
-### 정리
-
-처음에는 파이썬에서 코딩 테스트 때 링크드 리스트를 잘 쓰지 않는 이유로 시작했다가 여기까지 왔다. 결론은 deque 쓰면 좋다는 것이고 아래에 다시 한 번 시간 복잡도를 정리했다.
-
-| 연산     | list           | deque | 직접 구현한 링크드 리스트 |
-| ------ | -------------- | ----- | -------------- |
-| 끝에 추가  | O(1) amortized | O(1)  | O(n) - 끝 찾기    |
-| 앞에 추가  | O(n)           | O(1)  | O(1)           |
-| 끝에서 제거 | O(1)           | O(1)  | O(n) - 끝 찾기    |
-| 앞에서 제거 | O(n)           | O(1)  | O(1)           |
-| 인덱스 접근 | O(1)           | O(1)  | O(n)           |
-| 메모리 효율 | 높음             | 중간    | 낮음             |
-| 캐시 효율  | 높음             | 중간    | 낮음             |
-
-결론적으로 파이썬에서는 list와 deque만으로 거의 모든 상황을 커버할 수 있으며, 링크드 리스트를 직접 구현할 필요는 거의 없다.
-
 ### 그럼에도 링크드 리스트를 쓰는 경우
 
 하지만 이렇게 그냥 넘어가면 재미가 없으니까 링크드 리스트를 쓰는 경우도 알아보자.
@@ -283,7 +267,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo):
     root[:] = [root, root, None, None]     # initialize by pointing to self
 ```
 
-sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트가 비었을 때의 예외 처리를 단순화할 수 있다. 캐시는 딕셔너리와 연결 리스트를 함께 사용한다. 딕셔너리는 `{key: link}` 형태로 $O(1)$ 조회를 제공하고, 연결 리스트는 사용 순서를 관리한다. 새 항목을 캐시에 추가할 때는 root 바로 다음에 링크를 삽입하고, 기존 항목에 접근하면 해당 링크를 찾아서 제거한 뒤 다시 root 다음으로 이동시킨다. 이게 $O(1)$인 이유는 딕셔너리로 링크의 위치를 이미 알고 있어서 포인터 4개(링크의 prev/next, 이웃 노드들의 prev/next)만 업데이트하면 되기 때문이다. 캐시가 꽉 차면 root의 prev(가장 오래된 항목)를 O(1)에 제거한다. 이 구조 덕분에 파이썬의 lru_cache 데코레이터는 함수 호출 결과를 효율적으로 캐싱할 수 있다.
+sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트가 비었을 때의 예외 처리를 단순화할 수 있다. 캐시는 딕셔너리와 연결 리스트를 함께 사용한다. 딕셔너리는 `{key: link}` 형태로 $O(1)$ 조회를 제공하고, 연결 리스트는 사용 순서를 관리한다. 새 항목을 캐시에 추가할 때는 root 바로 다음에 링크를 삽입하고, 기존 항목에 접근하면 해당 링크를 찾아서 제거한 뒤 다시 root 다음으로 이동시킨다. 이게 $O(1)$인 이유는 딕셔너리로 링크의 위치를 이미 알고 있어서 포인터 4개(링크의 prev/next, 이웃 노드들의 prev/next)만 업데이트하면 되기 때문이다. 캐시가 꽉 차면 root의 prev(가장 오래된 항목)를 $O(1)$에 제거한다. 이 구조 덕분에 파이썬의 lru_cache 데코레이터는 함수 호출 결과를 효율적으로 캐싱할 수 있다.
 
 #### Python OrderedDict의 이중 연결 리스트
 
@@ -291,22 +275,34 @@ sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트
 
 핵심 구조체는 두 가지다
 ```c
+/* PyODictObject */
+struct _odictobject {
+    PyDictObject od_dict;        /* the underlying dict */
+    _ODictNode *od_first;        /* first node in the linked list, if any */
+    _ODictNode *od_last;         /* last node in the linked list, if any */
+    /* od_fast_nodes, od_fast_nodes_size and od_resize_sentinel are managed
+     * by _odict_resize().
+     * Note that we rely on implementation details of dict for both. */
+    _ODictNode **od_fast_nodes;  /* hash table that mirrors the dict table */
+    Py_ssize_t od_fast_nodes_size;
+    void *od_resize_sentinel;    /* changes if odict should be resized */
+
+    size_t od_state;             /* incremented whenever the LL changes */
+    PyObject *od_inst_dict;      /* OrderedDict().__dict__ */
+    PyObject *od_weakreflist;    /* holds weakrefs to the odict */
+};
+
+...
+
 struct _odictnode {
     PyObject *key;
     Py_hash_t hash;
     _ODictNode *next;
     _ODictNode *prev;
 };
-struct _odictobject {
-    PyDictObject od_dict;          /* 기반이 되는 일반 딕셔너리 */
-    _ODictNode *od_first;          /* 연결 리스트의 첫 노드 */
-    _ODictNode *od_last;           /* 연결 리스트의 마지막 노드 */
-    _ODictNode **od_fast_nodes;    /* dict의 dk_entries를 미러링하는 해시 테이블 */
-    Py_ssize_t od_fast_nodes_size;
-    /* ... 기타 필드 ... */
 ```
 
-여기서 중요한 건 `od_fast_nodes`다. 단순히 연결 리스트만 쓰면 특정 키의 노드를 찾는 게 O(n)이 걸린다. 그래서 OrderedDict는 "dict의 키 순서를 노드 포인터 배열로 미러링"해서 O(1) 조회를 유지한다. 노드를 추가할 때는 `_odict_add_tail()` 함수가 리스트 끝에 연결한다:
+여기서 중요한 건 `od_fast_nodes`다. 단순히 연결 리스트만 쓰면 특정 키의 노드를 찾는 게 $O(n)$이 걸린다. 그래서 OrderedDict는 "dict의 키 순서를 노드 포인터 배열로 미러링"해서 $O(1)$ 조회를 유지한다. 노드를 추가할 때는 `_odict_add_tail()` 함수가 리스트 끝에 연결한다:
 
 ```c
 static void
@@ -323,21 +319,23 @@ _odict_add_tail(PyODictObject *od, _ODictNode *node)
 }
 ```
 
-삭제할 때는 `_odict_remove_node()`가 앞뒤 포인터를 재연결한다. 이렇게 딕셔너리의 O(1) 조회 성능을 유지하면서도 삽입 순서를 추적할 수 있다.
+삭제할 때는 `_odict_remove_node()`가 앞뒤 포인터를 재연결한다. 이렇게 딕셔너리의 $O(1)$ 조회 성능을 유지하면서도 삽입 순서를 추적할 수 있다.
 
 #### Redis의 Skiplist와 이중 연결 리스트
 
 Redis는 Sorted Set(정렬된 집합)을 구현할 때 skiplist를 사용하는데, 이 skiplist는 레벨 1에서만 backward 포인터를 가진 이중 연결 리스트다. `redis/src/t_zset.c`를 보면 Redis는 William Pugh의 원래 skiplist 알고리즘을 세 가지 변경해서 사용한다고 나와 있다. 첫째, 중복된 점수(score)를 허용한다. 둘째, 점수뿐만 아니라 satellite data까지 비교한다. 셋째, "there is a back pointer, so it's a doubly linked list with the back pointers being only at level 1"이라고 명시돼 있다.
 
-이 backward 포인터는 왜 필요할까? Redis는 `ZREVRANGE` 같은 역순 범위 조회 명령을 지원한다. skiplist의 여러 레벨 중 가장 하위 레벨(level 1)에만 backward 포인터를 두면, 정방향으로는 skiplist의 O(log N) 탐색 효율을 유지하면서도 역방향으로는 연결 리스트처럼 순차 탐색할 수 있다. 코드를 보면:
+이 backward 포인터는 왜 필요할까? Redis는 `ZREVRANGE` 같은 역순 범위 조회 명령을 지원한다. skiplist의 여러 레벨 중 가장 하위 레벨(level 1)에만 backward 포인터를 두면, 정방향으로는 skiplist의 $O(log N)$ 탐색 효율을 유지하면서도 역방향으로는 연결 리스트처럼 순차 탐색할 수 있다. 코드를 보면:
 
 ```c
+...
 x->backward = (update[0] == zsl->header) ? NULL : update[0];
 if (x->level[0].forward)
     x->level[0].forward->backward = x;
+...
 ```
 
-각 노드가 자신의 이전 노드를 가리키는 backward 포인터를 유지한다. Redis는 이 skiplist를 해시 테이블과 함께 사용한다. 해시 테이블은 멤버로 O(1) 조회를 제공하고, skiplist는 점수 기준 O(log N) 범위 쿼리를 제공한다. 작은 데이터셋에는 listpack을 쓰다가 크기가 커지면 skiplist+dict로 전환한다. 이런 설계 덕분에 Redis는 정렬된 집합 연산을 효율적으로 처리할 수 있다.
+각 노드가 자신의 이전 노드를 가리키는 backward 포인터를 유지한다. Redis는 이 skiplist를 해시 테이블과 함께 사용한다. 해시 테이블은 멤버로 $O(1)$ 조회를 제공하고, skiplist는 점수 기준 $O(log N)$ 범위 쿼리를 제공한다. 작은 데이터셋에는 listpack을 쓰다가 크기가 커지면 skiplist+dict로 전환한다. 이런 설계 덕분에 Redis는 정렬된 집합 연산을 효율적으로 처리할 수 있다.
 
 #### Linux Kernel의 범용 연결 리스트
 
@@ -355,17 +353,32 @@ struct list_head {
 
 C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠르지만, 몇 가지 예외가 있다. 첫째는 iterator 안정성이다. `std::vector`는 용량이 부족하면 더 큰 메모리를 할당하고 모든 요소를 복사하는데, 이때 기존 iterator, 포인터, 참조가 모두 무효화된다. 예를 들어 `capacity`가 3인 vector에 4번째 요소를 추가하면 재할당이 일어나서 기존 iterator를 사용하면 undefined behavior가 발생한다. 반면 `std::list`는 각 노드가 독립적으로 힙에 할당되기 때문에 새 노드를 추가해도 기존 노드들의 주소는 변하지 않는다. 삭제된 노드의 iterator만 무효화되고 나머지는 유효하다. 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서는 이게 중요하다.
 
-둘째는 splice 연산이다. `std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 O(1) 또는 O(k)에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 O(n)이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
+둘째는 splice 연산이다. `std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 $O(1)$ 또는 $O(k)$에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 $O(n)$이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
 
 셋째는 운영체제의 메모리 할당자다. malloc/free가 빈 메모리 블록을 관리할 때 free list라는 연결 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
 
 마지막으로 해시 테이블 체이닝이 있다. 같은 해시 값을 가진 요소들을 연결 리스트로 연결하면 충돌 시 O(1)에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다. 물론 C++11의 `std::unordered_map`은 더 최적화된 구조를 쓰지만, 개념적으로는 체이닝 방식이다.
 
-핵심은 링크드 리스트가 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 O(1)이라는 점이다. 위치를 찾는 과정이 필요하면 O(n)이 걸려서 배열만 못하지만, 위치를 알고 있다면 링크드 리스트가 압도적으로 유리하다. 파이썬의 lru_cache나 OrderedDict가 딕셔너리로 노드 위치를 추적하는 이유도 바로 이것이다.
+핵심은 링크드 리스트가 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 $O(1)$이라는 점이다. 위치를 찾는 과정이 필요하면 $O(n)$이 걸려서 배열만 못하지만, 위치를 알고 있다면 링크드 리스트가 압도적으로 유리하다. 파이썬의 lru_cache나 OrderedDict가 딕셔너리로 노드 위치를 추적하는 이유도 바로 이것이다.
+
+## 정리
+
+처음에는 파이썬에서 코딩 테스트 때 링크드 리스트를 잘 쓰지 않는 이유로 시작했다가 여기까지 왔다. 좀 야크 털을 많이 깎은 걸지도. '코딩 테스트 때 링크드 리스트를 잘 쓰지 않는 이유'에 집중했어야 했는데, 어쩌다 보니 이상하게 됐다. 어쨌든 결론은 진짜 링크드 리스트를 구현하라고 문제가 나오지 않는 이상 코딩 테스트에서 링크드 리스트를 직접 구현해서 쓸 일은 거의 없지 않을까 싶다.
+
+아래 시간 복잡도와 C++과 Python으로 구현한 예시를 끝으로 이 글을 마친다.
+
+| 연산     | list           | deque | 직접 구현한 링크드 리스트 |
+| ------ | -------------- | ----- | -------------- |
+| 끝에 추가  | O(1) amortized | O(1)  | O(n) - 끝 찾기    |
+| 앞에 추가  | O(n)           | O(1)  | O(1)           |
+| 끝에서 제거 | O(1)           | O(1)  | O(n) - 끝 찾기    |
+| 앞에서 제거 | O(n)           | O(1)  | O(1)           |
+| 인덱스 접근 | O(1)           | O(1)  | O(n)           |
+| 메모리 효율 | 높음             | 중간    | 낮음             |
+| 캐시 효율  | 높음             | 중간    | 낮음             |
 
 ## 구현 예제
 
-그러나 거의 사용하지는 않지만 구현은 할 수 있다.
 ### Python
 
 ```python
@@ -513,3 +526,4 @@ int main() {
 - [cpython](https://github.com/python/cpython)
 - [Latency Numbers Every Programmer Should Know](https://gist.github.com/jboner/2841832)
 - [Approximate cost to access various caches and main memory - Stack Overflow](https://stackoverflow.com/questions/4087280/approximate-cost-to-access-various-caches-and-main-memory)
+- [redis](https://github.com/redis/redis/)
