@@ -256,108 +256,104 @@ print(dq[0])        # 1
 
 ### 그럼에도 링크드 리스트를 쓰는 경우
 
-하지만 이렇게 그냥 넘어가면 재미가 없으니까 링크드 리스트를 쓰는 경우도 알아보자.
+지금까지 캐시 지역성 문제와 메모리 오버헤드 때문에 링크드 리스트가 비효율적이라고 했지만, 실제로는 여전히 링크드 리스트가 필수적으로 사용되는 경우들이 있다. 중요한 건 이게 단순히 이론적인 이야기가 아니라는 점이다. 파이썬 표준 라이브러리, Redis 같은 유명한 프로젝트, 그리고 Linux 커널에서도 링크드 리스트를 직접 사용하고 있다. 왜 이런 곳에서 링크드 리스트를 사용하는지 실제 코드를 통해 알아보자.
 
-위에서 캐시 지역성 문제와 메모리 오버헤드 때문에 링크드 리스트가 비효율적이라고 했지만, 여전히 링크드 리스트가 유용한 특수한 경우들이 있기는 하다.
+#### Python functools.lru_cache의 이중 연결 리스트
 
-**파이썬에서:**
+파이썬 표준 라이브러리의 `functools.lru_cache`는 LRU(Least Recently Used) 캐시를 구현할 때 이중 연결 리스트를 사용한다. LRU Cache는 가장 오래 사용되지 않은 항목을 제거하는 캐싱 알고리즘인데, 딕셔너리만으로는 "어떤 데이터가 최근에 사용됐는지" 순서를 추적할 수 없다. 배열로 순서를 관리하면 중간 삽입/삭제가 O(n)이 걸려서 효율적이지 않다.
 
-1. **LRU Cache 구현**
+`cpython/Lib/functools.py`를 보면 원형 이중 연결 리스트(circular doubly linked list)를 사용한다. 각 링크는 `[previous_link, next_link, key, cached_result]` 형태의 리스트다. 코드에서는 이렇게 정의돼 있다:
 
-LRU(Least Recently Used) Cache는 가장 최근에 사용되지 않은 데이터를 제거하는 캐싱 알고리즘이다. 해시 맵(딕셔너리) 단독으로는 "어떤 데이터가 최근에 사용됐는지" 순서를 추적할 수 없다. 배열로 순서를 관리하면 중간 삽입/삭제가 O(n)이 걸린다.
+```python
+PREV, NEXT, KEY, RESULT = 0, 1, 2, 3
 
-여기서 이중 연결 리스트가 필요하다. 해시 맵은 key에서 노드로의 O(1) 조회를 제공하고, 이중 연결 리스트는 사용 순서를 관리한다(head가 가장 최근, tail이 가장 오래된 항목).
-
-데이터 접근 시 해시 맵으로 노드를 O(1)에 찾고, 해당 노드를 리스트에서 제거한 뒤 head로 이동시킨다. 이게 O(1)인 이유는 "노드의 위치를 이미 알고 있기 때문"이다. 캐시가 꽉 차면 tail 노드를 O(1)에 제거한다.
-
-이중 연결 리스트여야 하는 이유는 노드 삭제 시 이전 노드를 O(1)에 찾아야 하기 때문이다. Python의 `OrderedDict`도 내부적으로 이 구조를 사용한다.
-
-2. **브라우저 히스토리**
-
-웹 브라우저의 뒤로 가기/앞으로 가기 버튼은 이중 연결 리스트로 구현된다. 각 웹페이지 방문 기록을 노드로 저장하면 뒤로 가기는 `prev` 포인터로, 앞으로 가기는 `next` 포인터로 O(1) 이동이 가능하다. 새 페이지를 방문하면 현재 노드 뒤에 추가하고 forward 히스토리를 제거한다.
-
-배열로 구현하면 뒤로/앞으로 가기는 인덱스 이동으로 가능하지만, 중간에서 forward 히스토리를 제거할 때 O(n)이 걸린다. LeetCode 문제 #1472 "Design Browser History"가 이를 다룬다.
-
-3. **Undo/Redo 기능**
-
-텍스트 에디터의 실행 취소/다시 실행 기능도 브라우저 히스토리와 동일한 원리다. 현재 상태에서 `prev`로 undo, `next`로 redo를 O(1)에 수행하고, 새 액션 수행 시 이후 히스토리를 제거한다.
-
-**C++에서:**
-
-C++의 `std::list`는 거의 사용하지 않지만, 다음과 같은 특수한 경우에 유용하다:
-
-1. **Iterator 안정성 (Iterator Stability)**
-
-`std::vector`는 용량이 부족하면 더 큰 메모리를 새로 할당하고 모든 요소를 복사한다. 이때 기존 메모리 주소가 바뀌기 때문에 모든 iterator, 포인터, 참조가 무효화(invalidation)된다. 예를 들어 `capacity`가 10인 vector에 11번째 요소를 추가하면 더 큰 배열로 재할당이 일어난다.
-
-```cpp
-std::vector<int> vec = {1, 2, 3};
-vec.reserve(3); // capacity = 3
-auto it = vec.begin() + 1; // it는 2를 가리킴
-
-vec.push_back(4); // 재할당 발생! it는 무효화됨
-// *it를 사용하면 undefined behavior
+# 원형 이중 연결 리스트 초기화
+root = []
+root[:] = [root, root, None, None]  # 자기 자신을 가리키는 sentinel 노드
 ```
 
-반면 `std::list`는 각 노드가 독립적으로 힙에 할당된다. 새 노드를 추가해도 기존 노드들의 메모리 주소는 변하지 않는다. 삭제된 노드를 가리키는 iterator만 무효화되고 나머지는 모두 유효하다. 이는 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서 중요하다.
+sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트가 비었을 때의 예외 처리를 단순화할 수 있다. 캐시는 딕셔너리와 연결 리스트를 함께 사용한다. 딕셔너리는 `{key: link}` 형태로 O(1) 조회를 제공하고, 연결 리스트는 사용 순서를 관리한다. 새 항목을 캐시에 추가할 때는 root 바로 다음에 링크를 삽입하고, 기존 항목에 접근하면 해당 링크를 찾아서 제거한 뒤 다시 root 다음으로 이동시킨다. 이게 O(1)인 이유는 딕셔너리로 링크의 위치를 이미 알고 있어서 포인터 4개(링크의 prev/next, 이웃 노드들의 prev/next)만 업데이트하면 되기 때문이다. 캐시가 꽉 차면 root의 prev(가장 오래된 항목)를 O(1)에 제거한다. 이 구조 덕분에 파이썬의 lru_cache 데코레이터는 함수 호출 결과를 효율적으로 캐싱할 수 있다.
 
-```cpp
-std::list<int> mylist = {1, 2, 3, 4, 5};
-auto it = mylist.begin();
-++it; // it는 2를 가리킴
+#### Python OrderedDict의 이중 연결 리스트
 
-mylist.push_back(6);  // 새 노드 추가
-mylist.push_front(0); // 앞에도 추가
-// it는 여전히 유효하고 2를 가리킴
-```
+파이썬 3.7 이전에는 일반 딕셔너리가 삽입 순서를 보장하지 않았기 때문에 `OrderedDict`가 필요했다(3.7 이후에는 일반 dict도 순서를 보장하지만, OrderedDict는 여전히 순서 관련 메서드를 제공한다). CPython의 C 구현(`cpython/Objects/odictobject.c`)을 보면 이중 연결 리스트로 순서를 유지한다는 걸 알 수 있다.
 
-2. **리스트 분할/병합 (Splice Operations)**
+핵심 구조체는 두 가지다:
 
-`std::list::splice`는 한 리스트의 요소를 다른 리스트로 "이동"할 때 실제로 요소를 복사하지 않고 포인터만 재연결한다. 이는 요소가 수백만 개여도 O(1) 또는 O(k)(k개 요소 이동 시)에 완료된다.
+```c
+struct _odictnode {
+    PyObject *key;
+    Py_hash_t hash;
+    _ODictNode *next;
+    _ODictNode *prev;
+};
 
-```cpp
-std::list<int> list1 = {1, 2, 3};
-std::list<int> list2 = {4, 5, 6};
-
-// list2의 모든 요소를 list1 끝에 이동 (복사 없음!)
-list1.splice(list1.end(), list2);
-// list1: {1, 2, 3, 4, 5, 6}
-// list2: {} (비어있음)
-```
-
-만약 `std::vector`로 이를 구현하면 `list2`의 모든 요소를 `list1`에 복사해야 하므로 O(n)이 걸린다. 요소가 복잡한 객체라면 각 요소의 복사 생성자가 호출되어 더 비싸진다. 링크드 리스트는 그냥 마지막 노드의 `next` 포인터를 두 번째 리스트의 첫 노드에 연결하기만 하면 된다.
-
-이는 정렬 알고리즘(merge sort)이나 두 리스트를 병합하는 작업에서 유용하다.
-
-3. **OS 메모리 관리 (Memory Allocator Free Lists)**
-
-운영체제의 메모리 할당자(malloc/free)는 빈 메모리 블록을 관리할 때 링크드 리스트(free list)를 사용한다. 메모리 블록의 크기가 가변적이고, 블록을 할당(제거)하거나 해제(삽입)할 때 포인터만 조작하면 되기 때문이다.
-
-중요한 점은 이 free list가 별도의 메모리를 차지하지 않는다는 것이다. 빈 메모리 블록 자체의 첫 몇 바이트에 `next` 포인터를 저장한다. 예를 들어 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록의 주소로 사용하고, 나머지 992바이트는 그대로 둔다.
-
-```
-Free Block 1 (1000 bytes)     Free Block 2 (500 bytes)
-[next ptr | unused space] --> [next ptr | unused space] --> NULL
-```
-
-배열로는 이런 구조를 만들 수 없다. 블록의 크기가 제각각이고 메모리 주소도 연속적이지 않기 때문이다.
-
-4. **해시 테이블 체이닝 (Hash Table Separate Chaining)**
-
-해시 테이블에서 충돌(collision)을 처리하는 방법 중 하나가 체이닝이다. 같은 해시 값을 가진 요소들을 링크드 리스트로 연결한다.
-
-```cpp
-// 간단한 해시 테이블 구조
-struct HashTable {
-    std::list<std::pair<Key, Value>> buckets[BUCKET_SIZE];
+struct _odictobject {
+    PyDictObject od_dict;          /* 기반이 되는 일반 딕셔너리 */
+    _ODictNode *od_first;          /* 연결 리스트의 첫 노드 */
+    _ODictNode *od_last;           /* 연결 리스트의 마지막 노드 */
+    _ODictNode **od_fast_nodes;    /* dict의 dk_entries를 미러링하는 해시 테이블 */
+    Py_ssize_t od_fast_nodes_size;
+    /* ... 기타 필드 ... */
 };
 ```
 
-왜 링크드 리스트를 쓸까? 충돌이 발생했을 때 해당 버킷에 새 요소를 O(1)에 추가할 수 있기 때문이다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고, 재할당 오버헤드가 발생한다. 링크드 리스트는 충돌이 적을 때(평균 체인 길이가 짧을 때) 효율적이다.
+여기서 중요한 건 `od_fast_nodes`다. 단순히 연결 리스트만 쓰면 특정 키의 노드를 찾는 게 O(n)이 걸린다. 그래서 OrderedDict는 "dict의 키 순서를 노드 포인터 배열로 미러링"해서 O(1) 조회를 유지한다. 노드를 추가할 때는 `_odict_add_tail()` 함수가 리스트 끝에 연결한다:
 
-물론 C++11 이후의 `std::unordered_map`은 실제로는 더 최적화된 구조를 쓰지만, 개념적으로는 체이닝 방식이다.
+```c
+static void
+_odict_add_tail(PyODictObject *od, _ODictNode *node)
+{
+    _odictnode_PREV(node) = _odict_LAST(od);
+    _odictnode_NEXT(node) = NULL;
+    if (_odict_LAST(od) == NULL)
+        _odict_FIRST(od) = node;
+    else
+        _odictnode_NEXT(_odict_LAST(od)) = node;
+    _odict_LAST(od) = node;
+    od->od_state++;
+}
+```
 
-**핵심**: 링크드 리스트는 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 O(1)이라는 게 장점이다. 반면 위치를 찾는 과정이 필요하면 O(n)이 걸려서 배열만 못하다.
+삭제할 때는 `_odict_remove_node()`가 앞뒤 포인터를 재연결한다. 이렇게 딕셔너리의 O(1) 조회 성능을 유지하면서도 삽입 순서를 추적할 수 있다.
+
+#### Redis의 Skiplist와 이중 연결 리스트
+
+Redis는 Sorted Set(정렬된 집합)을 구현할 때 skiplist를 사용하는데, 이 skiplist는 레벨 1에서만 backward 포인터를 가진 이중 연결 리스트다. `redis/src/t_zset.c`를 보면 Redis는 William Pugh의 원래 skiplist 알고리즘을 세 가지 변경해서 사용한다고 나와 있다. 첫째, 중복된 점수(score)를 허용한다. 둘째, 점수뿐만 아니라 satellite data까지 비교한다. 셋째, "there is a back pointer, so it's a doubly linked list with the back pointers being only at level 1"이라고 명시돼 있다.
+
+이 backward 포인터는 왜 필요할까? Redis는 `ZREVRANGE` 같은 역순 범위 조회 명령을 지원한다. skiplist의 여러 레벨 중 가장 하위 레벨(level 1)에만 backward 포인터를 두면, 정방향으로는 skiplist의 O(log N) 탐색 효율을 유지하면서도 역방향으로는 연결 리스트처럼 순차 탐색할 수 있다. 코드를 보면:
+
+```c
+x->backward = (update[0] == zsl->header) ? NULL : update[0];
+if (x->level[0].forward)
+    x->level[0].forward->backward = x;
+```
+
+각 노드가 자신의 이전 노드를 가리키는 backward 포인터를 유지한다. Redis는 이 skiplist를 해시 테이블과 함께 사용한다. 해시 테이블은 멤버로 O(1) 조회를 제공하고, skiplist는 점수 기준 O(log N) 범위 쿼리를 제공한다. 작은 데이터셋에는 listpack을 쓰다가 크기가 커지면 skiplist+dict로 전환한다. 이런 설계 덕분에 Redis는 정렬된 집합 연산을 효율적으로 처리할 수 있다.
+
+#### Linux Kernel의 범용 연결 리스트
+
+Linux 커널은 `include/linux/list.h`에 범용 이중 연결 리스트 구조를 제공한다. 커널 곳곳에서 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등에 사용된다. 특이한 점은 "intrusive list" 설계를 쓴다는 거다. 일반적인 연결 리스트는 노드가 데이터를 포함하지만, Linux 커널의 리스트는 반대로 데이터 구조체에 `struct list_head` 필드를 포함시킨다:
+
+```c
+struct list_head {
+    struct list_head *next, *prev;
+};
+```
+
+어떤 구조체든 `struct list_head` 필드만 추가하면 연결 리스트에 넣을 수 있다. 커널은 `container_of` 매크로로 `list_head`의 주소에서 실제 데이터 구조체의 주소를 역산한다. 이 방식의 장점은 같은 리스트 조작 코드를 모든 데이터 타입에 재사용할 수 있다는 점이다. 실제로 커널의 태스크 구조체(`task_struct`)는 여러 개의 `list_head` 필드를 가져서 동시에 여러 리스트에 속할 수 있다(예: run queue, wait queue 등). 배열로는 이런 유연성을 구현하기 어렵다.
+
+#### C++에서 링크드 리스트가 필요한 경우
+
+C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠르지만, 몇 가지 예외가 있다. 첫째는 iterator 안정성이다. `std::vector`는 용량이 부족하면 더 큰 메모리를 할당하고 모든 요소를 복사하는데, 이때 기존 iterator, 포인터, 참조가 모두 무효화된다. 예를 들어 `capacity`가 3인 vector에 4번째 요소를 추가하면 재할당이 일어나서 기존 iterator를 사용하면 undefined behavior가 발생한다. 반면 `std::list`는 각 노드가 독립적으로 힙에 할당되기 때문에 새 노드를 추가해도 기존 노드들의 주소는 변하지 않는다. 삭제된 노드의 iterator만 무효화되고 나머지는 유효하다. 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서는 이게 중요하다.
+
+둘째는 splice 연산이다. `std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 O(1) 또는 O(k)에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 O(n)이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
+
+셋째는 운영체제의 메모리 할당자다. malloc/free가 빈 메모리 블록을 관리할 때 free list라는 연결 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
+
+마지막으로 해시 테이블 체이닝이 있다. 같은 해시 값을 가진 요소들을 연결 리스트로 연결하면 충돌 시 O(1)에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다. 물론 C++11의 `std::unordered_map`은 더 최적화된 구조를 쓰지만, 개념적으로는 체이닝 방식이다.
+
+핵심은 링크드 리스트가 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 O(1)이라는 점이다. 위치를 찾는 과정이 필요하면 O(n)이 걸려서 배열만 못하지만, 위치를 알고 있다면 링크드 리스트가 압도적으로 유리하다. 파이썬의 lru_cache나 OrderedDict가 딕셔너리로 노드 위치를 추적하는 이유도 바로 이것이다.
 
 ## 구현 예제
 
