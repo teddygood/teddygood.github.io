@@ -273,12 +273,17 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo):
     make_key = _make_key         # build a key from the function arguments
     PREV, NEXT, KEY, RESULT = 0, 1, 2, 3   # names for the link fields
 
-# 원형 이중 연결 리스트 초기화
-root = []
-root[:] = [root, root, None, None]  # 자기 자신을 가리키는 sentinel 노드
+    cache = {}
+    hits = misses = 0
+    full = False
+    cache_get = cache.get    # bound method to lookup a key or return None
+    cache_len = cache.__len__  # get cache size without calling len()
+    lock = RLock()           # because linkedlist updates aren't threadsafe
+    root = []                # root of the circular doubly linked list -> Sentinel 노드
+    root[:] = [root, root, None, None]     # initialize by pointing to self
 ```
 
-sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트가 비었을 때의 예외 처리를 단순화할 수 있다. 캐시는 딕셔너리와 연결 리스트를 함께 사용한다. 딕셔너리는 `{key: link}` 형태로 O(1) 조회를 제공하고, 연결 리스트는 사용 순서를 관리한다. 새 항목을 캐시에 추가할 때는 root 바로 다음에 링크를 삽입하고, 기존 항목에 접근하면 해당 링크를 찾아서 제거한 뒤 다시 root 다음으로 이동시킨다. 이게 O(1)인 이유는 딕셔너리로 링크의 위치를 이미 알고 있어서 포인터 4개(링크의 prev/next, 이웃 노드들의 prev/next)만 업데이트하면 되기 때문이다. 캐시가 꽉 차면 root의 prev(가장 오래된 항목)를 O(1)에 제거한다. 이 구조 덕분에 파이썬의 lru_cache 데코레이터는 함수 호출 결과를 효율적으로 캐싱할 수 있다.
+sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트가 비었을 때의 예외 처리를 단순화할 수 있다. 캐시는 딕셔너리와 연결 리스트를 함께 사용한다. 딕셔너리는 `{key: link}` 형태로 $O(1)$ 조회를 제공하고, 연결 리스트는 사용 순서를 관리한다. 새 항목을 캐시에 추가할 때는 root 바로 다음에 링크를 삽입하고, 기존 항목에 접근하면 해당 링크를 찾아서 제거한 뒤 다시 root 다음으로 이동시킨다. 이게 $O(1)$인 이유는 딕셔너리로 링크의 위치를 이미 알고 있어서 포인터 4개(링크의 prev/next, 이웃 노드들의 prev/next)만 업데이트하면 되기 때문이다. 캐시가 꽉 차면 root의 prev(가장 오래된 항목)를 O(1)에 제거한다. 이 구조 덕분에 파이썬의 lru_cache 데코레이터는 함수 호출 결과를 효율적으로 캐싱할 수 있다.
 
 #### Python OrderedDict의 이중 연결 리스트
 
