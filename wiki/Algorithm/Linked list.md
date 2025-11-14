@@ -6,7 +6,60 @@ date: '2025-11-14 16:11'
 
 파이썬에서는 사실 Linked List를 잘 사용하지 않는데 그 이유는 파이썬 list가 사실 Dynamic Array이기 때문이다. 실제로 C array와 거의 유사하며, 구조적으로 C++의 `std::vector`와 비슷하다.
 
-Linke
+아래는 `cpython/Include/cpython/listobject.h` 코드이다. 여기서 봐야할 건 `PyObject **ob_item`이다. 이 배열에 파이썬 객체의 포인터를 저장하는 구조로 되어 있다고 할 수 있다. 즉, `vector<int>`처럼 연속된 배열이다.
+
+```cpp
+typedef struct {
+    PyObject_VAR_HEAD
+    /* Vector of pointers to list elements.  list[0] is ob_item[0], etc. */
+    PyObject **ob_item;
+
+    /* ob_item contains space for 'allocated' elements.  The number
+     * currently in use is ob_size.
+     * Invariants:
+     *     0 <= ob_size <= allocated
+     *     len(list) == ob_size
+     *     ob_item == NULL implies ob_size == allocated == 0
+     * list.sort() temporarily sets allocated to -1 to detect mutations.
+     *
+     * Items must normally not be NULL, except during construction when
+     * the list is not yet visible outside the function that builds it.
+     */
+    Py_ssize_t allocated;
+} PyListObject;
+
+```
+
+여기서 `ob_item` 배열은 c의 malloc을 쓴다.
+
+- cpython/Objects/lisobject.c
+```cpp
+    items = PyMem_New(PyObject*, size);
+```
+
+- `cpython/include/pymem.h`
+```cpp
+#define PyMem_New(type, n) \
+  ( ((size_t)(n) > PY_SSIZE_T_MAX / sizeof(type)) ? NULL :      \
+        ( (type *) PyMem_Malloc((n) * sizeof(type)) ) )
+```
+
+
+- `cpython/Objects/obmalloc.c`
+```cpp
+void *
+PyMem_Malloc(size_t size)
+{
+    /* see PyMem_RawMalloc() */
+    if (size > (size_t)PY_SSIZE_T_MAX)
+        return NULL;
+    OBJECT_STAT_INC_COND(allocations512, size < 512);
+    OBJECT_STAT_INC_COND(allocations4k, size >= 512 && size < 4094);
+    OBJECT_STAT_INC_COND(allocations_big, size >= 4094);
+    OBJECT_STAT_INC(allocations);
+    return _PyMem.malloc(_PyMem.ctx, size);
+}
+```
 
 
 ```python
