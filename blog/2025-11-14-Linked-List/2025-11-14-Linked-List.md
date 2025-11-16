@@ -361,7 +361,7 @@ C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠�
 
 Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/linked_list.h](https://github.com/adobe/chromium/blob/master/base/linked_list.h)의 주석에는 다음과 같이 설명되어 있다:
 
-> "Erasing an element of type T* from base::LinkedList<T> is an **O(1) operation**. Whereas for std::list<T*> it is **O(n)**."
+> "Erasing an element of type `T*` from `base::LinkedList<T>` is an **O(1) operation**. Whereas for `std::list<T*>` it is **O(n)**."
 
 ```cpp
 // Chromium의 침입형 링크드 리스트 구현
