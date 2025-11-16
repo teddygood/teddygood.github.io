@@ -171,7 +171,7 @@ class Node:
 node = Node(1)
 ```
 
-이것의 결과를 알기 위해서는 **파이썬은 객체의 속성(attribute)을 어떻게 저장하는가?** 를 알아야 한다. 
+이것의 결과를 알기 위해서는 **'파이썬은 객체의 속성(attribute)을 어떻게 저장하는가?'** 를 알아야 한다. 
 
 C++에서는 구조체의 멤버 변수(`val`, `next`)가 구조체 내부에 직접 저장된다. 하지만 파이썬은 다르다. 파이썬 객체의 속성은 `__dict__`라는 **딕셔너리**에 저장된다. 위의 예시를 아래와 같이 사용해보면 알 수 있다(절대 cpython을 다시 까기 귀찮은 게 아니다).
 
@@ -253,7 +253,7 @@ print(dq[0])        # 1
 #### Python functools.lru_cache의 이중 연결 리스트
 파이썬 표준 라이브러리의 `functools.lru_cache`는 LRU(Least Recently Used) 캐시를 구현할 때 이중 연결 리스트를 사용한다. LRU Cache는 가장 오래 사용되지 않은 항목을 제거하는 캐싱 알고리즘인데, 딕셔너리만으로는 "어떤 데이터가 최근에 사용됐는지" 순서를 추적할 수 없다. 배열로 순서를 관리하면 중간 삽입/삭제가 O(n)이 걸려서 효율적이지 않다.
 
-`cpython/Lib/functools.py`를 보면 원형 이중 연결 리스트(circular doubly linked list)를 사용한다. 각 링크는 `[previous_link, next_link, key, cached_result]` 형태의 리스트다. 코드에서는 이렇게 정의돼 있다:
+`cpython/Lib/functools.py`를 보면 원형 이중 연결 리스트(circular doubly linked list)를 사용한다. 각 링크는 `[previous_link, next_link, key, cached_result]` 형태의 리스트다. 코드에서는 이렇게 정의돼 있다.
 
 ```python
 def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo):
