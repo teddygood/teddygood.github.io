@@ -359,7 +359,7 @@ C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠�
 
 **실제 사용 예시 - Chromium base::LinkedList**
 
-Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/linked_list.h](https://github.com/adobe/chromium/blob/master/base/linked_list.h)의 주석에는 다음과 같이 설명되어 있다:
+Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/containers/linked_list.h](https://github.com/chromium/chromium/blob/main/base/containers/linked_list.h)의 주석에는 다음과 같이 설명되어 있다:
 
 > "Erasing an element of type `T*` from `base::LinkedList<T>` is an **O(1) operation**. Whereas for `std::list<T*>` it is **O(n)**."
 
@@ -368,15 +368,30 @@ Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`�
 template <typename T>
 class LinkedList {
  public:
+  // The "root" node is self-referential, and forms the basis of a circular
+  // list (root_.next() will point back to the start of the list,
+  // and root_->previous() wraps around to the end of the list).
   LinkedList() { root_.set(&root_, &root_); }
-
-  void Append(LinkNode<T>* e) {
-    e->InsertBefore(&root_);
+  LinkedList(const LinkedList&) = delete;
+  LinkedList& operator=(const LinkedList&) = delete;
+  
+  // Use move constructor with care. Returning a LinkedList from a function may
+  // be unsafe if the nodes are allocated on the stack. This operation is O(1)
+  // as only head and tail nodes are modified. `other` is left empty.
+  LinkedList(LinkedList&& other) : root_(std::move(other.root_)) {
+    other.root_.MakeSelfReferencing();
   }
 
-  LinkNode<T>* head() const {
-    return root_.next();
-  }
+  // Appends |e| to the end of the linked list.
+  void Append(LinkNode<T>* e) { e->InsertBefore(&root_); }
+
+  LinkNode<T>* head() const { return root_.next(); }
+
+  LinkNode<T>* tail() const { return root_.previous(); }
+
+  const LinkNode<T>* end() const { return &root_; }
+
+  bool empty() const { return head() == end(); }
 
  private:
   LinkNode<T> root_;
