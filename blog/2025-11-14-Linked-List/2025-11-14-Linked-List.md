@@ -352,15 +352,199 @@ struct list_head {
 어떤 구조체든 `struct list_head` 필드만 추가하면 연결 리스트에 넣을 수 있다. 커널은 `container_of` 매크로로 `list_head`의 주소에서 실제 데이터 구조체의 주소를 역산한다. 이 방식의 장점은 같은 리스트 조작 코드를 모든 데이터 타입에 재사용할 수 있다는 점이다. 실제로 커널의 태스크 구조체(`task_struct`)는 여러 개의 `list_head` 필드를 가져서 동시에 여러 리스트에 속할 수 있다(예: run queue, wait queue 등). 배열로는 이런 유연성을 구현하기 어렵다.
 
 #### C++에서 링크드 리스트가 필요한 경우
-C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠르지만, 몇 가지 예외가 있다. 첫째는 iterator 안정성이다. `std::vector`는 용량이 부족하면 더 큰 메모리를 할당하고 모든 요소를 복사하는데, 이때 기존 iterator, 포인터, 참조가 모두 무효화된다. 예를 들어 `capacity`가 3인 vector에 4번째 요소를 추가하면 재할당이 일어나서 기존 iterator를 사용하면 undefined behavior가 발생한다. 반면 `std::list`는 각 노드가 독립적으로 힙에 할당되기 때문에 새 노드를 추가해도 기존 노드들의 주소는 변하지 않는다. 삭제된 노드의 iterator만 무효화되고 나머지는 유효하다. 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서는 이게 중요하다.
+C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠르지만, 몇 가지 예외가 있다.
 
-둘째는 splice 연산이다. `std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 $O(1)$ 또는 $O(k)$에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 $O(n)$이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
+##### 1. Iterator 안정성
+`std::vector`는 용량이 부족하면 더 큰 메모리를 할당하고 모든 요소를 복사하는데, 이때 기존 iterator, 포인터, 참조가 모두 무효화된다. 예를 들어 `capacity`가 3인 vector에 4번째 요소를 추가하면 재할당이 일어나서 기존 iterator를 사용하면 undefined behavior가 발생한다. 반면 `std::list`는 각 노드가 독립적으로 힙에 할당되기 때문에 새 노드를 추가해도 기존 노드들의 주소는 변하지 않는다. 삭제된 노드의 iterator만 무효화되고 나머지는 유효하다. 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서는 이게 중요하다.
 
-셋째는 운영체제의 메모리 할당자다. malloc/free가 빈 메모리 블록을 관리할 때 free list라는 연결 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
+**실제 사용 예시 - Chromium base::LinkedList**
 
-마지막으로 해시 테이블 체이닝이 있다. 같은 해시 값을 가진 요소들을 연결 리스트로 연결하면 충돌 시 `O(1)`에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다. 물론 C++11의 `std::unordered_map`은 더 최적화된 구조를 쓰지만, 개념적으로는 체이닝 방식이다.
+Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/linked_list.h](https://github.com/adobe/chromium/blob/master/base/linked_list.h)의 주석에는 다음과 같이 설명되어 있다:
 
-핵심은 링크드 리스트가 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 $O(1)$이라는 점이다. 위치를 찾는 과정이 필요하면 $O(n)$이 걸려서 배열만 못하지만, 위치를 알고 있다면 링크드 리스트가 압도적으로 유리하다. 파이썬의 lru_cache나 OrderedDict가 딕셔너리로 노드 위치를 추적하는 이유도 바로 이것이다.
+> "Erasing an element of type T* from base::LinkedList<T> is an **O(1) operation**. Whereas for std::list<T*> it is **O(n)**."
+
+```cpp
+// Chromium의 침입형 링크드 리스트 구현
+template <typename T>
+class LinkedList {
+ public:
+  LinkedList() { root_.set(&root_, &root_); }
+
+  void Append(LinkNode<T>* e) {
+    e->InsertBefore(&root_);
+  }
+
+  LinkNode<T>* head() const {
+    return root_.next();
+  }
+
+ private:
+  LinkNode<T> root_;
+};
+```
+
+`std::list`는 값으로 삭제 시 먼저 요소를 찾아야 하지만(`O(n)`), Chromium의 구현은 객체가 자신의 노드를 직접 포함하므로 즉시 제거 가능하다.
+
+##### 2. Splice 연산
+`std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 $O(1)$ 또는 $O(k)$에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 $O(n)$이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
+
+**실제 사용 예시 - LRU Cache 구현**
+
+LRU Cache는 `std::list::splice`의 대표적인 활용 사례다. [nextptr.com의 구현](https://www.nextptr.com/tutorial/ta1576645374/stdlist-splice-for-implementing-lru-cache)을 보자:
+
+```cpp
+template<typename K, typename V, size_t Capacity>
+class LRUCache {
+private:
+    std::list<std::pair<K,V>> items;
+    std::unordered_map<K, typename std::list<std::pair<K,V>>::iterator> index;
+
+public:
+    std::optional<V> get(const K& k) {
+        auto itr = index.find(k);
+        if(itr == index.end()) {
+            return {};
+        }
+
+        // splice로 O(1)에 최근 사용 위치로 이동
+        // 요소 복사 없이 포인터만 재연결
+        items.splice(items.begin(), items, itr->second);
+
+        return itr->second->second;
+    }
+
+    bool put(const K& k, const V& v) {
+        auto itr = index.find(k);
+        if(itr != index.end()) {
+            items.splice(items.begin(), items, itr->second);
+            itr->second->second = v;
+            return true;
+        }
+
+        if(items.size() >= Capacity) {
+            index.erase(items.back().first);
+            items.pop_back();  // LRU 제거
+        }
+
+        items.emplace_front(k, v);
+        index[k] = items.begin();
+        return true;
+    }
+};
+```
+
+`splice()`는 요소를 복사하지 않고 포인터만 재연결하여 무거운 객체도 `O(1)`에 이동시킨다. iterator도 유효하게 유지된다.
+
+##### 3. 메모리 할당자의 Free List
+malloc/free가 빈 메모리 블록을 관리할 때 free list라는 연결 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
+
+**실제 사용 예시 - glibc malloc 구현**
+
+[glibc/malloc/malloc.c](https://github.com/bminor/glibc/blob/master/malloc/malloc.c)의 실제 구현을 보면:
+
+```c
+// 빈 메모리 블록을 연결 리스트로 관리
+struct malloc_chunk {
+  INTERNAL_SIZE_T mchunk_prev_size;  /* 이전 청크 크기 */
+  INTERNAL_SIZE_T mchunk_size;       /* 현재 청크 크기 */
+  struct malloc_chunk* fd;           /* forward link - 다음 빈 블록 */
+  struct malloc_chunk* bk;           /* backward link - 이전 빈 블록 */
+  struct malloc_chunk* fd_nextsize;  /* 큰 청크용 다음 크기 */
+  struct malloc_chunk* bk_nextsize;  /* 큰 청크용 이전 크기 */
+};
+
+// Free chunk를 리스트에서 제거 - O(1) 연산
+static void
+unlink_chunk (mstate av, mchunkptr p)
+{
+  mchunkptr fd = p->fd;  // 포인터 재연결만으로
+  mchunkptr bk = p->bk;  // O(1)에 제거 완료
+  fd->bk = bk;
+  bk->fd = fd;
+}
+```
+
+해제된 메모리 블록 자체의 메모리 공간에 `fd`/`bk` 포인터를 저장하여 별도 메모리 할당 없이 free list를 구성한다.
+
+##### 4. 해시 테이블 체이닝
+같은 해시 값을 가진 요소들을 연결 리스트로 연결하면 충돌 시 `O(1)`에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다.
+
+**실제 사용 예시 - libstdc++ unordered_map**
+
+C++ 표준 라이브러리의 `std::unordered_map` 구현은 실제로 체이닝을 사용한다. [gcc/libstdc++-v3/include/bits/hashtable_policy.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/hashtable_policy.h)를 보면:
+
+```cpp
+// 단일 연결 리스트로 충돌 해결
+struct _Hash_node_base {
+  _Hash_node_base* _M_nxt;  // 다음 노드 포인터
+
+  _Hash_node_base() noexcept : _M_nxt() { }
+  _Hash_node_base(_Hash_node_base* __next) noexcept : _M_nxt(__next) { }
+};
+
+// 실제 값을 저장하는 노드
+template<typename _Value, bool _Cache_hash_code>
+struct _Hash_node : _Hash_node_base,
+                    _Hash_node_value<_Value, _Cache_hash_code> {
+  _Hash_node* _M_next() const noexcept {
+    return static_cast<_Hash_node*>(this->_M_nxt);
+  }
+};
+```
+
+[blog.ilvokhin.com](https://blog.ilvokhin.com/libstdc++-std-unordered-map/)의 분석에 따르면:
+
+> "The `_Hashtable` class itself is a combination of `std::forward_list<_Hash_node>` containing the elements and `std::vector<std::forward_list<_Hash_node>::iterator>` representing the buckets."
+
+각 버킷은 해시 충돌이 발생한 요소들을 단일 연결 리스트로 체이닝하여 `O(1)` 삽입을 보장한다.
+
+##### 5. Linux Kernel의 범용 연결 리스트
+Linux 커널은 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등 커널 전체에서 침입형 이중 연결 리스트를 사용한다.
+
+**실제 사용 예시 - Linux Kernel list.h**
+
+[linux/include/linux/list.h](https://github.com/torvalds/linux/blob/master/include/linux/list.h)의 구현:
+
+```c
+// 범용 침입형 이중 연결 리스트
+struct list_head {
+    struct list_head *next;
+    struct list_head *prev;
+};
+
+// 초기화 - 자기 자신을 가리킴
+#define LIST_HEAD_INIT(name) { &(name), &(name) }
+
+static inline void INIT_LIST_HEAD(struct list_head *list) {
+    WRITE_ONCE(list->next, list);
+    WRITE_ONCE(list->prev, list);
+}
+
+// O(1) 삽입
+static inline void __list_add(struct list_head *new,
+                struct list_head *prev,
+                struct list_head *next) {
+    next->prev = new;
+    new->next = next;
+    new->prev = prev;
+    WRITE_ONCE(prev->next, new);
+}
+```
+
+Linux 5.2 기준으로 `struct list_head` 검색 시 **10,000개 이상의 결과**가 나올 정도로 커널 전체에서 광범위하게 사용된다. 프로세스 스케줄링에서는 다음과 같이 활용된다:
+
+```c
+struct task_struct {
+    // ... 다른 필드들 ...
+    struct list_head tasks;      // 모든 태스크의 리스트
+    struct list_head children;   // 자식 프로세스 리스트
+    // ...
+};
+```
+
+어떤 구조체든 `struct list_head` 필드만 추가하면 연결 리스트에 넣을 수 있다. 커널은 `container_of` 매크로로 `list_head`의 주소에서 실제 데이터 구조체의 주소를 역산한다.
+
+**핵심**: 링크드 리스트가 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 $O(1)$이라는 점이다. 위치를 찾는 과정이 필요하면 $O(n)$이 걸려서 배열만 못하지만, 위치를 알고 있다면 링크드 리스트가 압도적으로 유리하다. 파이썬의 lru_cache나 OrderedDict가 딕셔너리로 노드 위치를 추적하는 이유도 바로 이것이다.
 
 ## 정리
 
