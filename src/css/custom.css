@@ -167,8 +167,28 @@ figcaption {
 
 .navbar {
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   background: none;
   background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Avoid iOS clipping the mobile sidebar when backdrop blur is active */
+.navbar.navbar-sidebar--show {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+@media screen and (max-width: 996px) {
+  /* Mobile browsers (iOS/Android) can hide the sidebar content when blur is on */
+  .navbar {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .navbar.navbar-sidebar--show {
+    background-color: var(--ifm-background-surface-color);
+  }
 }
 
 .theme-code-block code {
