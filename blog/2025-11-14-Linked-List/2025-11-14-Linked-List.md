@@ -251,7 +251,7 @@ print(dq[0])        # 1
 위에서 캐시 지역성 문제와 메모리 오버헤드 때문에 링크드 리스트가 비효율적이라고 했지만, 여전히 링크드 리스트가 유용한 특수한 경우들이 있기는 하다.
 
 #### Python functools.lru_cache의 이중 연결 리스트
-파이썬 표준 라이브러리의 `functools.lru_cache`는 LRU(Least Recently Used) 캐시를 구현할 때 이중 연결 리스트를 사용한다. LRU Cache는 가장 오래 사용되지 않은 항목을 제거하는 캐싱 알고리즘인데, 딕셔너리만으로는 "어떤 데이터가 최근에 사용됐는지" 순서를 추적할 수 없다. 배열로 순서를 관리하면 중간 삽입/삭제가 O(n)이 걸려서 효율적이지 않다.
+파이썬 표준 라이브러리의 `functools.lru_cache`는 LRU(Least Recently Used) 캐시를 구현할 때 이중 링크드 리스트를 사용한다. LRU Cache는 가장 오래 사용되지 않은 항목을 제거하는 캐싱 알고리즘인데, 딕셔너리만으로는 "어떤 데이터가 최근에 사용됐는지" 순서를 추적할 수 없다. 배열로 순서를 관리하면 중간 삽입/삭제가 $O(n)$이 걸려서 효율적이지 않다.
 
 `cpython/Lib/functools.py`를 보면 원형 이중 연결 리스트(circular doubly linked list)를 사용한다. 각 링크는 `[previous_link, next_link, key, cached_result]` 형태의 리스트다. 코드에서는 이렇게 정의돼 있다.
 
@@ -277,7 +277,7 @@ sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트
 #### Python OrderedDict의 이중 연결 리스트
 파이썬 3.7 이전에는 일반 딕셔너리가 삽입 순서를 보장하지 않았기 때문에 `OrderedDict`가 필요했다(3.7 이후에는 일반 dict도 순서를 보장하지만, OrderedDict는 여전히 순서 관련 메서드를 제공한다). CPython의 C 구현(`cpython/Objects/odictobject.c`)을 보면 이중 연결 리스트로 순서를 유지한다는 걸 알 수 있다.
 
-핵심 구조체는 두 가지다
+핵심 구조체는 두 가지다.
 ```c
 /* PyODictObject */
 struct _odictobject {
@@ -326,9 +326,35 @@ _odict_add_tail(PyODictObject *od, _ODictNode *node)
 삭제할 때는 `_odict_remove_node()`가 앞뒤 포인터를 재연결한다. 이렇게 딕셔너리의 $O(1)$ 조회 성능을 유지하면서도 삽입 순서를 추적할 수 있다.
 
 #### Redis의 Skiplist와 이중 연결 리스트
-Redis는 Sorted Set(정렬된 집합)을 구현할 때 skiplist를 사용하는데, 이 skiplist는 레벨 1에서만 backward 포인터를 가진 이중 연결 리스트다. `redis/src/t_zset.c`를 보면 Redis는 William Pugh의 원래 skiplist 알고리즘을 세 가지 변경해서 사용한다고 나와 있다. 첫째, 중복된 점수(score)를 허용한다. 둘째, 점수뿐만 아니라 satellite data까지 비교한다. 셋째, "there is a back pointer, so it's a doubly linked list with the back pointers being only at level 1"이라고 명시돼 있다.
+Redis는 Sorted Set(정렬된 집합)을 구현할 때 skiplist를 사용하는데, 이 **skiplist는 레벨 1에서만 backward 포인터를 가진 이중 연결 리스트다.** `redis/src/t_zset.c`를 보면 Redis는 William Pugh의 원래 skiplist 알고리즘을 세 가지 변경해서 사용한다고 나와 있다. 첫째, 중복된 점수(score)를 허용한다. 둘째, 점수뿐만 아니라 satellite data까지 비교한다. 셋째, "there is a back pointer, so it's a doubly linked list with the back pointers being only at level 1"이라고 명시돼 있다.
 
-이 backward 포인터는 왜 필요할까? Redis는 `ZREVRANGE` 같은 역순 범위 조회 명령을 지원한다. skiplist의 여러 레벨 중 가장 하위 레벨(level 1)에만 backward 포인터를 두면, 정방향으로는 skiplist의 $O(log N)$ 탐색 효율을 유지하면서도 역방향으로는 연결 리스트처럼 순차 탐색할 수 있다. 코드를 보면:
+```cpp
+/* ZSETs are ordered sets using two data structures to hold the same elements
+ * in order to get O(log(N)) INSERT and REMOVE operations into a sorted
+ * data structure.
+ *
+ * The elements are added to a hash table mapping Redis objects to scores.
+ * At the same time the elements are added to a skip list mapping scores
+ * to Redis objects (so objects are sorted by scores in this "view").
+ *
+ * Note that the SDS string representing the element is the same in both
+ * the hash table and skiplist in order to save memory. What we do in order
+ * to manage the shared SDS string more easily is to free the SDS string
+ * only in zslFreeNode(). The dictionary has no value free method set.
+ * So we should always remove an element from the dictionary, and later from
+ * the skiplist.
+ *
+ * This skiplist implementation is almost a C translation of the original
+ * algorithm described by William Pugh in "Skip Lists: A Probabilistic
+ * Alternative to Balanced Trees", modified in three ways:
+ * a) this implementation allows for repeated scores.
+ * b) the comparison is not just by key (our 'score') but by satellite data.
+ * c) there is a back pointer, so it's a doubly linked list with the back
+ * pointers being only at "level 1". This allows to traverse the list
+ * from tail to head, useful for ZREVRANGE. */
+```
+
+이 backward 포인터는 왜 필요할까? Redis는 `ZREVRANGE` 같이 정렬된 집합에서 점수 순서를 높은 점수부터 낮은 점수로 즉, 역순으로 특정 범위의 요소들을 가져오는 커맨드를 지원한다. skiplist의 여러 레벨 중 가장 하위 레벨(level 1)에만 backward 포인터를 두면, 정방향으로는 skiplist의 $O(log N)$ 탐색 효율을 유지하면서도 역방향으로는 연결 리스트처럼 순차적으로 탐색할 수 있다. 코드를 보자.
 
 ```c
 ...
@@ -338,10 +364,12 @@ if (x->level[0].forward)
 ...
 ```
 
-각 노드가 자신의 이전 노드를 가리키는 backward 포인터를 유지한다. Redis는 이 skiplist를 해시 테이블과 함께 사용한다. 해시 테이블은 멤버로 $O(1)$ 조회를 제공하고, skiplist는 점수 기준 $O(log N)$ 범위 쿼리를 제공한다. 작은 데이터셋에는 listpack을 쓰다가 크기가 커지면 skiplist+dict로 전환한다. 이런 설계 덕분에 Redis는 정렬된 집합 연산을 효율적으로 처리할 수 있다.
+각 노드가 자신의 이전 노드를 가리키는 backward 포인터를 유지한다. Redis는 이 skiplist를 해시 테이블과 함께 사용한다. 해시 테이블은 멤버로 $O(1)$ 조회를 제공하고, skiplist는 점수 기준 $O(log N)$ 범위 쿼리를 제공한다. 작은 데이터셋에는 listpack을 쓰다가 크기가 커지면 skiplist+dict로 전환한다. listpack은 모든 요소를 하나의 메모리 블록에 연속적으로 저장하는 압축된 데이터 구조이다. 이런 설계 덕분에 Redis는 정렬된 집합 연산을 효율적으로 처리할 수 있다.
 
-#### Linux Kernel의 범용 연결 리스트
-Linux 커널은 `include/linux/list.h`에 범용 이중 연결 리스트 구조를 제공한다. 커널 곳곳에서 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등에 사용된다. 특이한 점은 "intrusive list" 설계를 쓴다는 거다. 일반적인 연결 리스트는 노드가 데이터를 포함하지만, Linux 커널의 리스트는 반대로 데이터 구조체에 `struct list_head` 필드를 포함시킨다:
+#### Linux Kernel의 연결 리스트
+Linux 커널은 `include/linux/list.h`에 이중 연결 리스트 구조를 제공한다. 특이한 점은 "intrusive list" 설계를 쓴다는 거다.
+
+**Intrusive list란?** 일반적인 연결 리스트는 노드가 데이터를 포함하지만(`struct Node { int data; Node* next; }`), intrusive list는 반대로 데이터 구조체 안에 리스트 포인터를 포함시키는 방식이다.
 
 ```c
 struct list_head {
@@ -546,20 +574,7 @@ static inline void __list_add(struct list_head *new,
 }
 ```
 
-Linux 5.2 기준으로 `struct list_head` 검색 시 **10,000개 이상의 결과**가 나올 정도로 커널 전체에서 광범위하게 사용된다. 프로세스 스케줄링에서는 다음과 같이 활용된다:
-
-```c
-struct task_struct {
-    // ... 다른 필드들 ...
-    struct list_head tasks;      // 모든 태스크의 리스트
-    struct list_head children;   // 자식 프로세스 리스트
-    // ...
-};
-```
-
-어떤 구조체든 `struct list_head` 필드만 추가하면 연결 리스트에 넣을 수 있다. 커널은 `container_of` 매크로로 `list_head`의 주소에서 실제 데이터 구조체의 주소를 역산한다.
-
-**핵심**: 링크드 리스트가 "이미 노드의 위치(포인터/iterator)를 알고 있을 때" 그 위치에서의 삽입/삭제가 $O(1)$이라는 점이다. 위치를 찾는 과정이 필요하면 $O(n)$이 걸려서 배열만 못하지만, 위치를 알고 있다면 링크드 리스트가 압도적으로 유리하다. 파이썬의 lru_cache나 OrderedDict가 딕셔너리로 노드 위치를 추적하는 이유도 바로 이것이다.
+이 방식의 장점은 같은 리스트 조작 코드(`list_add`, `list_del`, `list_for_each` 등)를 모든 데이터 타입에 재사용할 수 있다는 점이다. 하나의 구조체가 여러 개의 `list_head` 필드를 가져서 동시에 여러 리스트에 속할 수도 있어서, 배열로는 구현하기 어려운 유연성을 제공한다.
 
 ## 정리
 
