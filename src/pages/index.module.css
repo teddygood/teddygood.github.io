@@ -1,34 +1,215 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-@media screen and (max-width: 996px) {
-  .intro {
-    padding: 0 1rem;
-    font-size: 1.5rem;
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.intro {
-  font-family: var(--font-family-headline);
-  padding: 0 4rem;
-  font-size: 2rem;
-  font-weight: normal;
-  line-height: 1.5;
-  max-width: 1200px;
+@keyframes card-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.page {
+  padding: 1.5rem 1.5rem 1rem;
+  max-width: 1140px;
   margin: 0 auto;
-  word-wrap: break-word;
-  word-break: keep-all;
-  user-select: none;
-  text-align: center;
+  min-height: calc(100vh - var(--ifm-navbar-height) - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.2fr) minmax(260px, 0.9fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.kicker {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ifm-color-primary);
+  margin: 0;
+}
+
+.title {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.lead {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.summary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.summary li {
   position: relative;
+  padding-left: 1.2rem;
 }
 
-.intro img {
-  width: 40%;
-  height: 40%;
-  vertical-align: text-bottom;
-  border-radius: 10px;
+.summary li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.2rem;
+  align-items: center;
+}
+
+.ghostButton {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ghostButton:hover {
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.heroImage {
+  text-align: center;
+}
+
+.heroImage img {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.caption {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+}
+
+.card {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.9rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cardReveal {
+  animation: card-reveal 0.8s ease forwards;
+  opacity: 0;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.cardTitle {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.cardDesc {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.45;
+  font-size: 0.95rem;
+}
+
+.section {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  margin: 0;
+}
+
+.sectionLink {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 30%;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slideUp {
+  animation: slide-up 0.8s ease forwards;
+  opacity: 0;
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding-top: 1rem;
+    gap: 1.5rem;
+  }
+
+  .page {
+    padding: 0 1rem 2rem;
+    min-height: auto;
+  }
+}
