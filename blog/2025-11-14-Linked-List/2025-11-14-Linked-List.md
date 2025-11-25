@@ -282,30 +282,112 @@ sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트
 ### Python weakref의 링크드 리스트
 파이썬의 `weakref` 모듈은 약한 참조(weak reference)를 관리할 때 링크드 리스트를 사용한다. 약한 참조는 객체를 가리키지만 참조 카운트를 증가시키지 않는 참조 방식이다. 객체가 삭제될 때 모든 약한 참조를 무효화해야 하는데, 이때 링크드 리스트가 유용하다.
 
-CPython(main 브랜치 기준)의 `Include/cpython/weakrefobject.h`에 약한 참조 객체가 정의되어 있다(`Include/weakrefobject.h`에서 이 파일을 include한다).
+`cpython/Include/cpython/weakrefobject.h`에 약한 참조 객체가 정의되어 있다. 참고로`cpython/Include/weakrefobject.h`에서 이 파일을 include한다.
 
 ```c
+/* PyWeakReference is the base struct for the Python ReferenceType, ProxyType,
+ * and CallableProxyType.
+ */
 struct _PyWeakReference {
     PyObject_HEAD
-    PyObject *wr_object;   /* 참조하는 객체(stealth ref, refcnt 올리지 않음) */
-    PyObject *wr_callback; /* 객체가 삭제될 때 호출할 콜백 또는 NULL */
-    Py_hash_t hash;        /* 캐시된 해시, 미계산 시 -1 */
-    /* wr_object를 가리키는 약한 참조들을 잇는 이중 연결 리스트 */
+
+    /* The object to which this is a weak reference, or Py_None if none.
+     * Note that this is a stealth reference:  wr_object's refcount is
+     * not incremented to reflect this pointer.
+     */
+    PyObject *wr_object;
+
+    /* A callable to invoke when wr_object dies, or NULL if none. */
+    PyObject *wr_callback;
+
+    /* A cache for wr_object's hash code.  As usual for hashes, this is -1
+     * if the hash code isn't known yet.
+     */
+    Py_hash_t hash;
+
+    /* If wr_object is weakly referenced, wr_object has a doubly-linked NULL-
+     * terminated list of weak references to it.  These are the list pointers.
+     * If wr_object goes away, wr_object is set to Py_None, and these pointers
+     * have no meaning then.
+     */
     PyWeakReference *wr_prev;
     PyWeakReference *wr_next;
     vectorcallfunc vectorcall;
+
 #ifdef Py_GIL_DISABLED
+    /* Pointer to the lock used when clearing in free-threaded builds.
+     * Normally this can be derived from wr_object, but in some cases we need
+     * to lock after wr_object has been set to Py_None.
+     */
     PyMutex *weakrefs_lock;
 #endif
 };
 ```
 
-약한 참조 대상 객체는 `weakreflist` 포인터를 통해 자신을 가리키는 약한 참조들을 이중 연결 리스트로 유지한다. 객체가 삭제될 때 이 리스트를 순회하면서 모든 약한 참조를 무효화하고 콜백을 호출한다. 배열로 관리하면 중간 제거 시마다 재할당이 필요하지만, 링크드 리스트는 포인터만 재연결하면 되므로 $O(1)$에 처리할 수 있다.
+약한 참조 대상 객체는 `weakreflist` 포인터를 통해 자신을 가리키는 약한 참조들을 이중 연결 리스트로 유지한다. 객체가 삭제될 때 이 리스트를 순회하면서 모든 약한 참조를 무효화하고 콜백을 호출한다. 배열로 관리하면 중간 제거할 때마다 재할당이 필요하지만, 링크드 리스트는 포인터만 재연결하면 되므로 $O(1)$에 처리할 수 있다.
 
 ### Python asyncio의 이벤트 루프
+약한 참조처럼 런타임 레벨에서도 링크드 리스트가 등장한다. 이 섹션에서 보는 구조는 "즉시 실행 대기열"인 `_ready`가 `collections.deque`로 구성된 부분이다. deque는 큐 인터페이스를 주지만, CPython 구현은 고정 크기 배열 블록을 이중으로 연결한 "블록들의 연결 리스트"라 양끝 연산이 O(1)이다(`cpython/Modules/_collectionsmodule.c`). 반대로 시간순 정렬이 필요한 `_scheduled`는 `heapq`가 사용하는 동적 배열(list)이다. 앞쪽만 빼고 뒤쪽만 넣는 `_ready` 특성상 `pop(0)`을 해야 하는 일반 리스트보다 deque가 맞다. 아래 `cpython/Lib/asyncio/base_events.py`의 BaseEventLoop 초기화에서 `_ready`가 deque로 배치된 것을 볼 수 있다. 
+```python
+class BaseEventLoop(events.AbstractEventLoop):
+    def __init__(self):
+        self._ready = collections.deque()  # 실행 준비된 콜백들
+        self._scheduled = []  # 시간순으로 정렬된 힙
+        # ...
 
-`asyncio`의 이벤트 루프는 예약된 콜백들을 관리할 때 내부적으로 힙(heap)과 링크드 리스트 구조를 함께 사용한다. `cpython/Lib/asyncio/events.py`의 `Handle` 클래스를 보면 아래와 같다.
+    def call_soon(self, callback, *args, context=None):
+        """Arrange for a callback to be called as soon as possible.
 
+        This operates as a FIFO queue: callbacks are called in the
+        order in which they are registered.  Each callback will be
+        called exactly once.
+
+        Any positional arguments after the callback will be passed to
+        the callback when it is called.
+        """
+        self._check_closed()
+        if self._debug:
+            self._check_thread()
+            self._check_callback(callback, 'call_soon')
+        handle = self._call_soon(callback, args, context)
+        if handle._source_traceback:
+            del handle._source_traceback[-1]
+        return handle
+
+    def _call_soon(self, callback, args, context):
+        handle = events.Handle(callback, args, self, context)
+        if handle._source_traceback:
+            del handle._source_traceback[-1]
+        self._ready.append(handle)  # deque에 O(1)로 추가
+        return handle
+
+    def _run_once(self):
+        """Run one full iteration of the event loop.
+
+        This calls all currently ready callbacks, polls for I/O,
+        schedules the resulting callbacks, and finally schedules
+        'call_later' callbacks.
+        """
+        # 시간이 된 예약 콜백을 힙에서 꺼내 ready로 옮긴다.
+        ready = self._ready
+        self._ready = collections.deque()
+        end_time = self.time()
+        while self._scheduled:
+            handle = self._scheduled[0]
+            if handle._when > end_time:
+                break
+            handle = heapq.heappop(self._scheduled)
+            ready.append(handle)
+
+        # ready는 양 끝만 사용하므로 deque가 효율적이다.
+        ntodo = len(ready)
+        for _ in range(ntodo):
+            handle = ready.popleft()
+            if not handle._cancelled:
+                handle._run()
+```
+
+ready/scheduled에 담기는 항목은 콜백과 인자를 들고 있는 `Handle` 객체다. 어떤 필드를 담고 있는지 보여주기 위해 아래 정의를 덧붙였다. `__slots__`만 가진 경량 구조라 큐 오버헤드가 덜하다.
 ```python
 class Handle:
     """Object returned by callback registration methods."""
@@ -331,26 +413,18 @@ class Handle:
         # ...
 ```
 
-이벤트 루프의 `_ready` 큐는 `collections.deque`를 사용하는데, 이는 내부적으로 블록 단위 링크드 리스트다.
-```python
-# cpython/Lib/asyncio/base_events.py
-class BaseEventLoop(events.AbstractEventLoop):
-    def __init__(self):
-        self._ready = collections.deque()  # 실행 준비된 콜백들
-        self._scheduled = []  # 시간순으로 정렬된 힙
-        # ...
+정렬이 필요한 `_scheduled`에는 배열 기반 힙이, 앞에서 꺼내고 뒤에 넣기만 하는 `_ready`에는 고정 크기 블록을 이은 deque(블록 연결 리스트)가 들어간다. 이전에 살펴본 "동적 배열 vs 링크드 리스트" 선택 기준이 이벤트 루프 안에서도 그대로 반복되는 셈이다.
 
-    def call_soon(self, callback, *args, context=None):
-        handle = self._call_soon(callback, args, context)
-        return handle
+참고로 deque의 내부 블록 구조는 다음과 같이 정의돼 있다(`cpython/Modules/_collectionsmodule.c`). 한 블록이 64칸짜리 배열을 들고, 좌우 블록과 링크로 이어진다.
+```c
+#define BLOCKLEN 64
 
-    def _call_soon(self, callback, args, context):
-        handle = events.Handle(callback, args, self, context)
-        self._ready.append(handle)  # deque에 O(1)로 추가
-        return handle
+typedef struct BLOCK {
+    struct BLOCK *leftlink;
+    PyObject *data[BLOCKLEN];
+    struct BLOCK *rightlink;
+} block;
 ```
-
-`_ready` 큐는 즉시 실행할 콜백들을 저장하는데, 앞에서 꺼내고(`popleft()`) 뒤에 추가하는(`append()`) 작업이 빈번하게 일어난다. 일반 리스트로는 `pop(0)`이 $O(n)$이지만, `deque`는 양쪽 끝에서 $O(1)$로 동작한다. 이벤트 루프가 한 번 돌 때마다 `_ready`에서 모든 핸들을 꺼내서 실행하고, 새로운 콜백이 등록되면 다시 추가하는 패턴이 반복되기 때문에 링크드 리스트 기반의 deque가 적합하다.
 
 ## 이밖에 링크드 리스트를 쓰는 경우
 ### Python OrderedDict의 이중 링크드 리스트
