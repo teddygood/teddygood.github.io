@@ -7,16 +7,16 @@ draft: false
 slug: '/Linked-List'
 description: 링크드 리스트 공부하다가 궁금해서 알아본 것
 ---
-## 링크드 리스트를 잘 사용하지 않는 것 같은 이유
+## Introduction
+자료구조와 알고리즘을 공부하다 보면 한 번쯤은 링크드 리스트(Linked List)를 배운다. 그런데 지금까지 막상 개발을 하거나 실제 문제를 풀 때 링크드 리스트를 직접 구현해서 사용한 경험은 거의 없다. 나 역시 예전에 기본 개념을 공부한 뒤로는 실질적인 사용 사례가 거의 없었고, 최근 코딩 테스트 준비를 하면서도 링크드 리스트를 사용하는 문제는 거의 만나지 못했다. 있어도 대부분은 파이썬의 `deque`로 해결했고, “파이썬에서는 링크드 리스트가 비효율적이다”라는 정도의 단편적인 지식만 갖고 넘어가고 있었다.
+
+그래서 이번에 다시 링크드 리스트를 공부하면서, "왜 링크드 리스트를 잘 사용하지 않는 걸까?”라는 근본적인 질문이 생겼다. 단순히 “파이썬에서 비효율적이니까”라고 치부하기엔 뭔가 부족했고, 실제로 어떤 이유들이 존재하는지 정리해보고 싶었다. 이번 글은 그 과정에서 조사하고 생각한 내용을 정리한 것이다.
+
+## 파이썬에서 링크드 리스트를 잘 사용하지 않는 것 같은 이유
 
 :::caution
 절대 제가 사용하는 케이스를 보지 못해서 '사용하지 않는 이유' -> '사용하지 않는 것 같은 이유'로 고친 게 아닙니다. 
 :::
-
-### Introduction
-자료구조와 알고리즘을 공부하다 보면 한 번쯤은 링크드 리스트(Linked List)를 배운다. 그런데 지금까지 막상 개발을 하거나 실제 문제를 풀 때 링크드 리스트를 직접 구현해서 사용한 경험은 거의 없다. 나 역시 예전에 기본 개념을 공부한 뒤로는 실질적인 사용 사례가 거의 없었고, 최근 코딩 테스트 준비를 하면서도 링크드 리스트를 사용하는 문제는 거의 만나지 못했다. 있어도 대부분은 파이썬의 `deque`로 해결했고, “파이썬에서는 링크드 리스트가 비효율적이다”라는 정도의 단편적인 지식만 갖고 넘어가고 있었다.
-
-그래서 이번에 다시 링크드 리스트를 공부하면서, "왜 링크드 리스트를 잘 사용하지 않는 걸까?”라는 근본적인 질문이 생겼다. 단순히 “파이썬에서 비효율적이니까”라고 치부하기엔 뭔가 부족했고, 실제로 어떤 이유들이 존재하는지 정리해보고 싶었다. 이번 글은 그 과정에서 조사하고 생각한 내용을 정리한 것이다.
 
 ### 동적 배열 (Dynamic Array)
 파이썬에서는 사실 Linked List를 잘 사용하지 않는데 그 이유는 파이썬 list가 사실 Dynamic Array이기 때문이다. 즉, 파이썬 list가 Linked List의 장점을 이미 대부분 커버한다. 
@@ -35,7 +35,7 @@ description: 링크드 리스트 공부하다가 궁금해서 알아본 것
 
 실제로 C의 array와 거의 유사하며, 구조적으로 C++의 `std::vector`와 비슷하다.
 
-아래는 `cpython/Include/cpython/listobject.h` 코드이다. 여기서 봐야할 건 `PyObject **ob_item`이다. 이 배열에 파이썬 객체의 포인터를 저장하는 구조로 되어 있다고 할 수 있다. 즉, `vector<int>`처럼 연속저긍로 저장되는 배열이다.
+아래는 `cpython/Include/cpython/listobject.h` 코드이다. 여기서 봐야할 건 `PyObject **ob_item`이다. 이 배열에 파이썬 객체의 포인터를 저장하는 구조로 되어 있다고 할 수 있다. 즉, `vector<int>`처럼 연속적으로 저장되는 배열이다.
 
 ```cpp
 typedef struct {
@@ -188,9 +188,8 @@ print(sys.getsizeof(node.__dict__)) # 속성 딕셔너리 -> 64 바이트
 # 총 112 바이트
 ```
 
-즉, 메모리적으로도 엄청난 손해다.
+즉, 메모리적으로도 엄청난 손해다. 그러면 무엇을 쓰냐?
 
-### 그러면 무엇을 쓰냐?
 파이썬에서 양쪽 끝에서의 삽입/삭제가 필요하다면 `collections.deque`를 사용하면 된다. deque는 double-ended-queue의 줄임말로 양방향에서 데이터를 처리할 수 있는 queue형 자료구조이다. 내부적으로 블록 단위 링크드 리스트로 구현되어 있는데, 링크드 리스트와 배열의 하이브리드 구조라고 생각하면 된다.
 
 아래는 `cpython/Modules/_collectionsmodule.c`의 deque 구조체 정의다. 블록(block)이 이중 연결 리스트로 연결되어 있고, 각 블록은 고정 크기 배열을 가진다는 걸 알 수 있다.
@@ -245,12 +244,12 @@ dq.popleft()        # 왼쪽에서 제거: [1, 2, 3]
 print(dq[0])        # 1
 ```
 
-### 그럼에도 링크드 리스트를 쓰는 경우
-하지만 이렇게 그냥 넘어가면 재미가 없으니까 링크드 리스트를 쓰는 경우도 알아보자.
+## 그럼에도 링크드 리스트를 쓰는 경우
+하지만 이렇게 그냥 넘어가면 재미가 없으니까 링크드 리스트를 쓰는 경우도 알아보자. 파이썬에서의 경우만 찾아보려다가 이것저것 더 추가했다.
 
 위에서 캐시 지역성 문제와 메모리 오버헤드 때문에 링크드 리스트가 비효율적이라고 했지만, 여전히 링크드 리스트가 유용한 특수한 경우들이 있기는 하다.
 
-#### Python functools.lru_cache의 이중 연결 리스트
+### Python functools.lru_cache의 이중 연결 리스트
 파이썬 표준 라이브러리의 `functools.lru_cache`는 LRU(Least Recently Used) 캐시를 구현할 때 이중 링크드 리스트를 사용한다. LRU Cache는 가장 오래 사용되지 않은 항목을 제거하는 캐싱 알고리즘인데, 딕셔너리만으로는 "어떤 데이터가 최근에 사용됐는지" 순서를 추적할 수 없다. 배열로 순서를 관리하면 중간 삽입/삭제가 $O(n)$이 걸려서 효율적이지 않다.
 
 `cpython/Lib/functools.py`를 보면 원형 이중 연결 리스트(circular doubly linked list)를 사용한다. 각 링크는 `[previous_link, next_link, key, cached_result]` 형태의 리스트다. 코드에서는 이렇게 정의돼 있다.
@@ -274,7 +273,7 @@ def _lru_cache_wrapper(user_function, maxsize, typed, _CacheInfo):
 
 sentinel 노드(root)가 자기 자신을 가리키게 초기화하면 리스트가 비었을 때의 예외 처리를 단순화할 수 있다. 캐시는 딕셔너리와 연결 리스트를 함께 사용한다. 딕셔너리는 `{key: link}` 형태로 $O(1)$ 조회를 제공하고, 연결 리스트는 사용 순서를 관리한다. 새 항목을 캐시에 추가할 때는 root 바로 다음에 링크를 삽입하고, 기존 항목에 접근하면 해당 링크를 찾아서 제거한 뒤 다시 root 다음으로 이동시킨다. 이게 $O(1)$인 이유는 딕셔너리로 링크의 위치를 이미 알고 있어서 포인터 4개(링크의 prev/next, 이웃 노드들의 prev/next)만 업데이트하면 되기 때문이다. 캐시가 꽉 차면 root의 prev(가장 오래된 항목)를 $O(1)$에 제거한다. 이 구조 덕분에 파이썬의 lru_cache 데코레이터는 함수 호출 결과를 효율적으로 캐싱할 수 있다.
 
-#### Python OrderedDict의 이중 연결 리스트
+### Python OrderedDict의 이중 연결 리스트
 파이썬 3.7 이전에는 일반 딕셔너리가 삽입 순서를 보장하지 않았기 때문에 `OrderedDict`가 필요했다(3.7 이후에는 일반 dict도 순서를 보장하지만, OrderedDict는 여전히 순서 관련 메서드를 제공한다). CPython의 C 구현(`cpython/Objects/odictobject.c`)을 보면 이중 연결 리스트로 순서를 유지한다는 걸 알 수 있다.
 
 핵심 구조체는 두 가지다.
@@ -325,7 +324,7 @@ _odict_add_tail(PyODictObject *od, _ODictNode *node)
 
 삭제할 때는 `_odict_remove_node()`가 앞뒤 포인터를 재연결한다. 이렇게 딕셔너리의 $O(1)$ 조회 성능을 유지하면서도 삽입 순서를 추적할 수 있다.
 
-#### Redis의 Skiplist와 이중 연결 리스트
+### Redis의 Skiplist와 이중 연결 리스트
 Redis는 Sorted Set(정렬된 집합)을 구현할 때 skiplist를 사용하는데, 이 **skiplist는 레벨 1에서만 backward 포인터를 가진 이중 연결 리스트다.** `redis/src/t_zset.c`를 보면 Redis는 William Pugh의 원래 skiplist 알고리즘을 세 가지 변경해서 사용한다고 나와 있다. 첫째, 중복된 점수(score)를 허용한다. 둘째, 점수뿐만 아니라 satellite data까지 비교한다. 셋째, "there is a back pointer, so it's a doubly linked list with the back pointers being only at level 1"이라고 명시돼 있다.
 
 ```cpp
@@ -366,26 +365,9 @@ if (x->level[0].forward)
 
 각 노드가 자신의 이전 노드를 가리키는 backward 포인터를 유지한다. Redis는 이 skiplist를 해시 테이블과 함께 사용한다. 해시 테이블은 멤버로 $O(1)$ 조회를 제공하고, skiplist는 점수 기준 $O(log N)$ 범위 쿼리를 제공한다. 작은 데이터셋에는 listpack을 쓰다가 크기가 커지면 skiplist+dict로 전환한다. listpack은 모든 요소를 하나의 메모리 블록에 연속적으로 저장하는 압축된 데이터 구조이다. 이런 설계 덕분에 Redis는 정렬된 집합 연산을 효율적으로 처리할 수 있다.
 
-#### Linux Kernel의 연결 리스트
-Linux 커널은 `include/linux/list.h`에 이중 연결 리스트 구조를 제공한다. 특이한 점은 "intrusive list" 설계를 쓴다는 거다.
+### Chromium base::LinkedList의 침입형 연결 리스트
 
-**Intrusive list란?** 일반적인 연결 리스트는 노드가 데이터를 포함하지만(`struct Node { int data; Node* next; }`), intrusive list는 반대로 데이터 구조체 안에 리스트 포인터를 포함시키는 방식이다.
-
-```c
-struct list_head {
-    struct list_head *next, *prev;
-};
-```
-
-어떤 구조체든 `struct list_head` 필드만 추가하면 연결 리스트에 넣을 수 있다. 커널은 `container_of` 매크로로 `list_head`의 주소에서 실제 데이터 구조체의 주소를 역산한다. 이 방식의 장점은 같은 리스트 조작 코드를 모든 데이터 타입에 재사용할 수 있다는 점이다. 실제로 커널의 태스크 구조체(`task_struct`)는 여러 개의 `list_head` 필드를 가져서 동시에 여러 리스트에 속할 수 있다(예: run queue, wait queue 등). 배열로는 이런 유연성을 구현하기 어렵다.
-
-#### C++에서 링크드 리스트가 필요한 경우
-C++에서는 `std::vector`가 거의 모든 상황에서 `std::list`보다 빠르지만, 몇 가지 예외가 있다.
-
-##### 1. Iterator 안정성
 `std::vector`는 용량이 부족하면 더 큰 메모리를 할당하고 모든 요소를 복사하는데, 이때 기존 iterator, 포인터, 참조가 모두 무효화된다. 예를 들어 `capacity`가 3인 vector에 4번째 요소를 추가하면 재할당이 일어나서 기존 iterator를 사용하면 undefined behavior가 발생한다. 반면 `std::list`는 각 노드가 독립적으로 힙에 할당되기 때문에 새 노드를 추가해도 기존 노드들의 주소는 변하지 않는다. 삭제된 노드의 iterator만 무효화되고 나머지는 유효하다. 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서는 이게 중요하다.
-
-**실제 사용 예시 - Chromium base::LinkedList**
 
 Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/containers/linked_list.h](https://github.com/chromium/chromium/blob/main/base/containers/linked_list.h)의 주석에는 다음과 같이 설명되어 있다:
 
@@ -428,10 +410,9 @@ class LinkedList {
 
 `std::list`는 값으로 삭제 시 먼저 요소를 찾아야 하지만(`O(n)`), Chromium의 구현은 객체가 자신의 노드를 직접 포함하므로 즉시 제거 가능하다.
 
-##### 2. Splice 연산
-`std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 $O(1)$ 또는 $O(k)$에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 $O(n)$이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
+#### C++ LRU Cache의 이중 연결 리스트
 
-**실제 사용 예시 - LRU Cache 구현**
+`std::list::splice`는 한 리스트의 일부를 다른 리스트로 이동할 때 요소를 복사하지 않고 포인터만 재연결한다. 요소가 수백만 개여도 $O(1)$ 또는 $O(k)$에 완료된다. `std::vector`로 같은 일을 하려면 모든 요소를 복사해야 하므로 $O(n)$이고, 요소가 복잡한 객체라면 각 요소의 복사 생성자 비용도 추가된다. merge sort 같은 알고리즘이나 두 리스트를 병합할 때 이 차이가 크게 나타난다.
 
 LRU Cache는 `std::list::splice`의 대표적인 활용 사례다. [nextptr.com의 구현](https://www.nextptr.com/tutorial/ta1576645374/stdlist-splice-for-implementing-lru-cache)을 보자:
 
@@ -478,10 +459,9 @@ public:
 
 `splice()`는 요소를 복사하지 않고 포인터만 재연결하여 무거운 객체도 `O(1)`에 이동시킨다. iterator도 유효하게 유지된다.
 
-##### 3. 메모리 할당자의 Free List
-malloc/free가 빈 메모리 블록을 관리할 때 free list라는 연결 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
+#### glibc malloc의 Free List
 
-**실제 사용 예시 - glibc malloc 구현**
+malloc/free가 빈 메모리 블록을 관리할 때 free list라는 연결 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
 
 [glibc/malloc/malloc.c](https://github.com/bminor/glibc/blob/master/malloc/malloc.c)의 실제 구현을 보면:
 
@@ -509,10 +489,9 @@ unlink_chunk (mstate av, mchunkptr p)
 
 해제된 메모리 블록 자체의 메모리 공간에 `fd`/`bk` 포인터를 저장하여 별도 메모리 할당 없이 free list를 구성한다.
 
-##### 4. 해시 테이블 체이닝
-같은 해시 값을 가진 요소들을 연결 리스트로 연결하면 충돌 시 `O(1)`에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다.
+#### libstdc++ unordered_map의 체이닝
 
-**실제 사용 예시 - libstdc++ unordered_map**
+같은 해시 값을 가진 요소들을 연결 리스트로 연결하면 충돌 시 `O(1)`에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다.
 
 C++ 표준 라이브러리의 `std::unordered_map` 구현은 실제로 체이닝을 사용한다. [gcc/libstdc++-v3/include/bits/hashtable_policy.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/hashtable_policy.h)를 보면:
 
@@ -541,18 +520,17 @@ struct _Hash_node : _Hash_node_base,
 
 각 버킷은 해시 충돌이 발생한 요소들을 단일 연결 리스트로 체이닝하여 `O(1)` 삽입을 보장한다.
 
-##### 5. Linux Kernel의 범용 연결 리스트
-Linux 커널은 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등 커널 전체에서 침입형 이중 연결 리스트를 사용한다.
+#### Linux Kernel의 침입형 이중 연결 리스트
 
-**실제 사용 예시 - Linux Kernel list.h**
+Linux 커널은 `include/linux/list.h`에 이중 연결 리스트 구조를 제공한다. 특이한 점은 "intrusive list" 설계를 쓴다는 거다.
 
-[linux/include/linux/list.h](https://github.com/torvalds/linux/blob/master/include/linux/list.h)의 구현:
+**Intrusive list란?** 일반적인 연결 리스트는 노드가 데이터를 포함하지만(`struct Node { int data; Node* next; }`), intrusive list는 반대로 데이터 구조체 안에 리스트 포인터를 포함시키는 방식이다.
+
+Linux 커널은 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등 커널 전체에서 이 침입형 이중 연결 리스트를 사용한다. [linux/include/linux/list.h](https://github.com/torvalds/linux/blob/master/include/linux/list.h)의 구현을 보면:
 
 ```c
-// 범용 침입형 이중 연결 리스트
 struct list_head {
-    struct list_head *next;
-    struct list_head *prev;
+    struct list_head *next, *prev;
 };
 
 // 초기화 - 자기 자신을 가리킴
@@ -574,7 +552,7 @@ static inline void __list_add(struct list_head *new,
 }
 ```
 
-이 방식의 장점은 같은 리스트 조작 코드(`list_add`, `list_del`, `list_for_each` 등)를 모든 데이터 타입에 재사용할 수 있다는 점이다. 하나의 구조체가 여러 개의 `list_head` 필드를 가져서 동시에 여러 리스트에 속할 수도 있어서, 배열로는 구현하기 어려운 유연성을 제공한다.
+어떤 구조체든 `struct list_head` 필드만 추가하면 연결 리스트에 넣을 수 있다. 커널은 `container_of` 매크로로 `list_head`의 주소에서 실제 데이터 구조체의 주소를 역산한다. 이 방식의 장점은 같은 리스트 조작 코드(`list_add`, `list_del`, `list_for_each` 등)를 모든 데이터 타입에 재사용할 수 있다는 점이다. 실제로 커널의 태스크 구조체(`task_struct`)는 여러 개의 `list_head` 필드를 가져서 동시에 여러 리스트에 속할 수 있다(예: run queue, wait queue 등). 배열로는 이런 유연성을 구현하기 어렵다.
 
 ## 정리
 
