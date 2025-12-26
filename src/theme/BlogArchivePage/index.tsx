@@ -68,10 +68,10 @@ function YearsSection({years}: {years: YearProp[]}) {
 }
 
 function listPostsByYears(blogPosts: readonly ArchiveBlogPost[]): YearProp[] {
-  const postsByYear = blogPosts.reduceRight((posts, post) => {
+  const postsByYear = blogPosts.reduce((posts, post) => {
     const year = post.metadata.date.split('-')[0]!;
     const yearPosts = posts.get(year) ?? [];
-    return posts.set(year, [post, ...yearPosts]);
+    return posts.set(year, [...yearPosts, post]);
   }, new Map<string, ArchiveBlogPost[]>());
 
   return Array.from(postsByYear, ([year, posts]) => ({
