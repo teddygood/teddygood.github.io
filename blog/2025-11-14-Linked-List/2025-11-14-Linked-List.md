@@ -182,7 +182,7 @@ C++에서는 구조체의 멤버 변수(`val`, `next`)가 구조체 내부에 �
 print(node.__dict__)  # {'val': 1, 'next': None}
 ```
 
-즉, 파이썬 객체는 객체 자체 (PyObject 구조)와 `__dict__` 딕셔너리 (속성을 저장하는 별도 객체)로 나뉘어 있다. 따라서 실제 메모리 사용량을 알려면 둘 다 측정해야 한다:
+즉, 파이썬 객체는 객체 자체 (PyObject 구조)와 `__dict__` 딕셔너리 (속성을 저장하는 별도 객체)로 나뉘어 있다. 따라서 실제 메모리 사용량을 알려면 둘 다 측정해야 한다.
 
 ```python
 import sys
@@ -223,7 +223,7 @@ struct dequeobject {
 구조를 그림으로 나타내면 다음과 같다.
 
 ```
-deque 내부 구조:
+deque 내부 구조
 Block 1     <-->    Block 2     <-->    Block 3
 [64개 요소]  <-->   [64개 요소]   <-->   [64개 요소]
 ```
@@ -459,7 +459,7 @@ struct _odictnode {
 };
 ```
 
-여기서 중요한 건 `od_fast_nodes`다. 단순히 링크드 리스트만 쓰면 특정 키의 노드를 찾는 게 $O(n)$이 걸린다. 그래서 OrderedDict는 "dict의 키 순서를 노드 포인터 배열로 미러링"해서 $O(1)$ 조회를 유지한다. 노드를 추가할 때는 `_odict_add_tail()` 함수가 리스트 끝에 연결한다:
+여기서 중요한 건 `od_fast_nodes`다. 단순히 링크드 리스트만 쓰면 특정 키의 노드를 찾는 게 $O(n)$이 걸린다. 그래서 OrderedDict는 "dict의 키 순서를 노드 포인터 배열로 미러링"해서 $O(1)$ 조회를 유지한다. 노드를 추가할 때는 `_odict_add_tail()` 함수가 리스트 끝에 연결한다.
 
 ```c
 static void
@@ -522,7 +522,7 @@ if (x->level[0].forward)
 ### glibc malloc의 Free List
 malloc/free가 빈 메모리 블록을 관리할 때 free list라는 링크드 리스트를 사용한다. 중요한 건 별도 메모리를 쓰지 않는다는 점이다. 빈 블록 자체의 첫 몇 바이트에 next 포인터를 저장한다. 1000바이트 빈 블록이 있으면 첫 8바이트를 다음 빈 블록 주소로 쓰고, 나머지 992바이트는 그대로 둔다. 블록 크기가 제각각이고 주소가 연속적이지 않아서 배열로는 불가능한 구조다.
 
-[glibc/malloc/malloc.c](https://github.com/bminor/glibc/blob/master/malloc/malloc.c)의 실제 구현을 보면:
+[glibc/malloc/malloc.c](https://github.com/bminor/glibc/blob/master/malloc/malloc.c)의 실제 구현을 보면 다음과 같다.
 
 ```c
 // 빈 메모리 블록을 링크드 리스트로 관리
@@ -551,7 +551,7 @@ unlink_chunk (mstate av, mchunkptr p)
 ### libstdc++ unordered_map의 체이닝
 같은 해시 값을 가진 요소들을 링크드 리스트로 연결하면 충돌 시 `O(1)`에 추가할 수 있다. 배열이었다면 버킷마다 동적 배열을 관리해야 하고 재할당 오버헤드가 발생한다.
 
-C++ 표준 라이브러리의 `std::unordered_map` 구현은 실제로 체이닝을 사용한다. [gcc/libstdc++-v3/include/bits/hashtable_policy.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/hashtable_policy.h)를 보면:
+C++ 표준 라이브러리의 `std::unordered_map` 구현은 실제로 체이닝을 사용한다. [gcc/libstdc++-v3/include/bits/hashtable_policy.h](https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/hashtable_policy.h)를 보면 다음과 같다.
 
 ```cpp
 // 단일 링크드 리스트로 충돌 해결
@@ -572,7 +572,7 @@ struct _Hash_node : _Hash_node_base,
 };
 ```
 
-[blog.ilvokhin.com](https://blog.ilvokhin.com/libstdc++-std-unordered-map/)의 분석에 따르면:
+[blog.ilvokhin.com](https://blog.ilvokhin.com/libstdc++-std-unordered-map/)의 분석에 따르면 아래와 같다.
 
 > "The `_Hashtable` class itself is a combination of `std::forward_list<_Hash_node>` containing the elements and `std::vector<std::forward_list<_Hash_node>::iterator>` representing the buckets."
 
@@ -583,7 +583,7 @@ Linux 커널은 `include/linux/list.h`에 이중 링크드 리스트 구조를 �
 
 **Intrusive list란?** 일반적인 링크드 리스트는 노드가 데이터를 포함하지만(`struct Node { int data; Node* next; }`), intrusive list는 반대로 데이터 구조체 안에 리스트 포인터를 포함시키는 방식이다.
 
-Linux 커널은 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등 커널 전체에서 이 intrusive doubly linked list를 사용한다. [linux/include/linux/list.h](https://github.com/torvalds/linux/blob/master/include/linux/list.h)의 구현을 보면:
+Linux 커널은 프로세스 스케줄링, 메모리 관리, 디바이스 드라이버 등 커널 전체에서 이 intrusive doubly linked list를 사용한다. [linux/include/linux/list.h](https://github.com/torvalds/linux/blob/master/include/linux/list.h)의 구현을 보면 다음과 같다.
 
 ```c
 struct list_head {
@@ -614,7 +614,7 @@ static inline void __list_add(struct list_head *new,
 ### Chromium base::LinkedList의 Intrusive List
 `std::vector`는 용량이 부족하면 더 큰 메모리를 할당하고 모든 요소를 복사하는데, 이때 기존 iterator, 포인터, 참조가 모두 무효화된다. 예를 들어 `capacity`가 3인 vector에 4번째 요소를 추가하면 재할당이 일어나서 기존 iterator를 사용하면 undefined behavior가 발생한다. 반면 `std::list`는 각 노드가 독립적으로 힙에 할당되기 때문에 새 노드를 추가해도 기존 노드들의 주소는 변하지 않는다. 삭제된 노드의 iterator만 무효화되고 나머지는 유효하다. 여러 iterator를 동시에 유지하면서 컨테이너를 수정해야 하는 복잡한 자료구조에서는 이게 중요하다.
 
-Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/containers/linked_list.h](https://github.com/chromium/chromium/blob/main/base/containers/linked_list.h)의 주석에는 다음과 같이 설명되어 있다:
+Chromium 프로젝트는 `std::list` 대신 자체 구현한 `base::LinkedList`를 사용한다. [chromium/base/containers/linked_list.h](https://github.com/chromium/chromium/blob/main/base/containers/linked_list.h)의 주석에는 다음과 같이 설명되어 있다.
 
 > "Erasing an element of type `T*` from `base::LinkedList&lt;T&gt;` is an O(1) operation. Whereas for `std::list&lt;T*&gt;` it is O(n). That is because with std::list&lt;T*&gt; you must obtain an iterator to the T* element before you can call erase(iterator)."
 
