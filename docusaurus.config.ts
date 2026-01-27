@@ -130,11 +130,8 @@ const config: Config = {
           docId: 'introduction',
           label: 'Wiki',
         },
-        {
-          to: '/blog',
-          label: 'Blog',
-          position: 'left',
-        },
+
+
         {
           to: '/blog/archive',
           label: 'Archive',
@@ -158,10 +155,7 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'light',
-      copyright: `Copyright © ${new Date().getFullYear()} teddygood`,
-    },
+
     prism: {
       theme: CodeTheme,
       darkTheme: CodeTheme,
