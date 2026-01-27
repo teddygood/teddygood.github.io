@@ -1,0 +1,45 @@
+yarn run v1.22.19
+warning ..\package.json: No license field
+$ docusaurus build
+[INFO] Website will be built for all these locales: 
+- ko
+- en
+[INFO] [ko] Creating an optimized production build...
+
+[ERROR] Error: Unable to build website for locale ko.
+    at tryToBuildLocale (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\commands\build\build.js:83:15)
+    at async D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\commands\build\build.js:35:9
+    at async mapAsyncSequential (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\utils\lib\jsUtils.js:21:24)
+    at async Command.build (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\commands\build\build.js:34:5)
+    at async Promise.all (index 0)
+    at async runCLI (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\commands\cli.js:56:5)
+    at async file:///D:/code/personal-obsidian/40.%20Blog/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+  [cause]: Error: Processing of blog source file path=keti.md failed.
+      at doProcessBlogSourceFile (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\blogUtils.js:271:19)
+      at async Promise.all (index 0)
+      at async generateBlogPosts (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\blogUtils.js:274:24)
+      at async Object.loadContent (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\index.js:155:29)
+      at async D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\server\plugins\plugins.js:40:23
+      at async Promise.all (index 8)
+      at async D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\server\plugins\plugins.js:146:25
+      at async loadSite (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\server\site.js:155:45)
+      at async buildLocale (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\commands\build\buildLocale.js:33:18)
+      at async runBuildLocaleTask (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\core\lib\commands\build\build.js:98:5) {
+    [cause]: Error: Can't reference blog post authors by a key (such as 'teddygood') because no authors map file could be loaded.
+    Please double-check your blog plugin config (in particular 'authorsMapPath'), ensure the file exists at the configured path, is not empty, and is valid!
+        at getAuthorsMapAuthor (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\authors.js:82:23)
+        at toAuthor (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\authors.js:100:16)
+        at Array.map (<anonymous>)
+        at getFrontMatterAuthors (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\authors.js:58:42)
+        at getBlogPostAuthors (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\authors.js:114:21)
+        at processBlogSourceFile (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\blogUtils.js:215:54)
+[INFO] Docusaurus version: 3.9.2
+Node version: v20.9.0
+        at async doProcessBlogSourceFile (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\blogUtils.js:268:20)
+        at async Promise.all (index 0)
+        at async generateBlogPosts (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\blogUtils.js:274:24)
+        at async Object.loadContent (D:\code\personal-obsidian\40. Blog\node_modules\@docusaurus\plugin-content-blog\lib\index.js:155:29)
+  }
+}
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -100,6 +100,27 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'projects',
+        routeBasePath: 'projects',
+        path: 'projects',
+        blogListComponent: '@site/src/components/ProjectListPage',
+        blogPostComponent: '@site/src/components/ProjectPostPage',
+        postsPerPage: 'ALL',
+        blogSidebarCount: 0,
+        showReadingTime: false,
+        feedOptions: {
+          type: 'all',
+          title: 'Chanho Lee Projects',
+          description: 'A showcase of my projects',
+        },
+      },
+    ],
+  ],
+
   stylesheets: [
     {
       href: '/katex/katex.min.css',
