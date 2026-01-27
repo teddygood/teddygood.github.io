@@ -32,7 +32,7 @@ Click the book image to go to the Kyobobook website!
 - Publisher: **Golden Rabbit**  
 - Release Date: **September 13, 2021**  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## 🎬Intro  
 

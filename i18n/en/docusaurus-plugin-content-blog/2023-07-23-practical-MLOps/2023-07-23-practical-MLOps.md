@@ -34,7 +34,7 @@ Click the book image to visit the Kyobobook store!
 - **Publisher**: Hanbit Media  
 - **Release Date**: May 24, 2023  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro
 

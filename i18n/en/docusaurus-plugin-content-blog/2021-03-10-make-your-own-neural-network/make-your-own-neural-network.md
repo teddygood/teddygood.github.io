@@ -16,6 +16,9 @@ tags:
 title: "\U0001F4D6First Steps in Neural Networks"
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

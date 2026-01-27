@@ -20,6 +20,9 @@ title: "\U0001F40BWhy Alpine Linux Should Be Avoided When Choosing a Docker Base
   for Python Projects"
 ---
 
+<!-- truncate -->
+
+
 ## Introduction
 
 I encountered several errors while moving a Django blog project to Docker. This post shares the knowledge I gained while resolving these issues.

@@ -13,6 +13,9 @@ tags:
 title: "\U0001F4D6Why Do the Best Teams Stick to the Basics?"
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

@@ -18,6 +18,9 @@ tags:
 title: "\U0001F4D6Python machine learning pandas data analysis"
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

@@ -21,6 +21,9 @@ title: "\U0001F4C4\"YOLO So Far\"  \n\n(Note: The original Korean phrase \"ì§€ê¸
   So Far\"**"
 ---
 
+<!-- truncate -->
+
+
 ## You Only Look Once
 
 YOLO is commonly known to people as "You Only Live Once." However, in Computer Vision, it's called **You Only Look Once**. YOLO is a model renowned for its speed and outstanding performance in the Object Detection field, supporting real-time object detection. As of now, YOLO has reached version 11, and this article will cover YOLO models from v1 to the present.

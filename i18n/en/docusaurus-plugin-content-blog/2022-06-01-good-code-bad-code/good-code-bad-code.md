@@ -35,7 +35,7 @@ Click the book cover to visit the Kyobobook store!
 - Publisher: Jpub  
 - Release Date: May 26, 2022  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro
 

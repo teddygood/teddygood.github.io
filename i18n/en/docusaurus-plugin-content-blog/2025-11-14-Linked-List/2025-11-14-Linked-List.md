@@ -19,6 +19,9 @@ title: "\U0001F914Linked lists are used in scenarios where frequent insertions o
   operations compared to arrays."
 ---
 
+<!-- truncate -->
+
+
 ## Introduction
 When studying data structures and algorithms, one inevitably learns about linked lists. However, in my development experience or when solving practical problems, I rarely had to implement or use linked lists directly. After learning the basic concepts long ago, I had almost no practical use cases for them. Even while preparing for coding tests recently, I rarely encountered problems that required linked lists. When I did, I mostly solved them using Python's `deque`, and my understanding was limited to the superficial knowledge that "linked lists are inefficient in Python."
 

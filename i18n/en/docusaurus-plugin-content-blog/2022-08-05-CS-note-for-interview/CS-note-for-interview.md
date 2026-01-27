@@ -14,6 +14,9 @@ tags:
 title: "\U0001F4D6CS Major Knowledge Notes for Interviews"
 ---
 
+<!-- truncate -->
+
+
 :::info  
 This review was written after receiving the book as part of the "18th Developer Reviewer" activity by Gilbut.  
 :::

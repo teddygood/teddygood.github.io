@@ -34,7 +34,7 @@ Click the book cover to visit the Kyobobook store!
 - **Publisher**: Hanbit Media  
 - **Publication Date**: February 2, 2024  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro  
 

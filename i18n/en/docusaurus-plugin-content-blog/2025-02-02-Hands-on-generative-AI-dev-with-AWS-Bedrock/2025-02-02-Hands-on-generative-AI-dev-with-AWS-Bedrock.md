@@ -27,7 +27,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Digital Books  
 - Release Date: 2025-01-10  
 
-{/* truncate */}  
+<!-- truncate -->  
 
 ## Intro  
 

@@ -35,7 +35,7 @@ Click the book cover to visit the [Kyobobook](https://product.kyobobook.co.kr/de
 - **Publisher**: Hanbit Media  
 - **Release Date**: April 30, 2024  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro  
 

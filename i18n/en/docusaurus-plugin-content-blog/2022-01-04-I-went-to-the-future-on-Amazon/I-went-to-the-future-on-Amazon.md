@@ -26,6 +26,9 @@ title: "\U0001F4D6I worked at Amazon in the future.  \n\n(Note: The original Kor
   attending or commuting to a place, not experiencing it.)"
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

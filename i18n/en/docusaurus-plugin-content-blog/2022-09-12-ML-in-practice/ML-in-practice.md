@@ -31,7 +31,7 @@ Click the book cover to visit the Kyobookstore site!
 - **Publisher**: Golden Rabbit  
 - **Release Date**: July 8, 2022  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro
 

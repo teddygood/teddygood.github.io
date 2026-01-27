@@ -23,6 +23,9 @@ title: "\U0001F4D6A Developer's Guide to Writing  \n(Note: The phrase \"개발�
   version:  \n\n**\"A Developer's Guide to Writing\"**"
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

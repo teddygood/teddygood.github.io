@@ -33,7 +33,7 @@ Click the book image to visit the Kyobobook store!
 - Publisher: Hanbit Media  
 - Release Date: August 5, 2020  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro  
 

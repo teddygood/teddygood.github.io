@@ -29,7 +29,7 @@ Click the book image to go to the Kyobook website!
 - Publisher: Jpub  
 - Publication Date: April 22, 2022  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro  
 

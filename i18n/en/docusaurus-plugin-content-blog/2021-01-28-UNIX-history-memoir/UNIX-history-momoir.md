@@ -28,7 +28,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Hanbit Media
 - Release Date: August 3, 2020
 
-{/* truncate */}
+<!-- truncate -->
 
 ## 🎬 Intro
 

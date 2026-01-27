@@ -30,7 +30,7 @@ Click the book image to go to the Kyobook store!
 - **Publisher**: Hanbit Media  
 - **Release Date**: October 30, 2024  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Intro  
 

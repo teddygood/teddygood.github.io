@@ -35,7 +35,7 @@ title: "⌨️Markdown Summary  \n\nMarkdown is a lightweight markup language de
 
 Restarting my blog after a long time, I realized I’ve gotten rusty with Markdown, so I’m documenting and practicing it.
 
-<!--truncate-->
+<!-- truncate -->
 
 ## What is Markdown?
 

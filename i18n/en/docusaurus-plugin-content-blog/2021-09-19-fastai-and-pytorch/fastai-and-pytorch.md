@@ -33,7 +33,7 @@ Click the book image to visit the Kyobobook store page!
 - Publisher: Hanbit Media  
 - Release Date: August 10, 2021  
 
-{/* truncate */}
+<!-- truncate -->
 
 ## Book Review
 

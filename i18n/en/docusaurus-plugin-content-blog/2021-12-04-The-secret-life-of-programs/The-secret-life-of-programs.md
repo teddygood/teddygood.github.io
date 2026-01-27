@@ -20,6 +20,9 @@ title: "\U0001F4D6\"Computer Architecture and Programming in a Single Volume\"  
   on the provided Korean phrase."
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip
