@@ -11,13 +11,7 @@ keywords:
 slug: /The-secret-life-of-programs
 tags:
 - Book Review
-title: "\U0001F4D6\"Computer Architecture and Programming in a Single Volume\"  \n\n(Note:
-  A slightly more natural alternative could be *\"A Single Volume on Computer Architecture
-  and Programming\"* depending on the intended emphasis.)  \n\nSince the instruction
-  specifies to return **only** the translation, the above is the direct rendering.
-  The original title appears to be a Korean adaptation of *\"Computer Science from
-  the Bottom Up\"* or similar foundational texts, but the translation focuses strictly
-  on the provided Korean phrase."
+title: 📖Computer Architecture and Programming in a Single Volume
 ---
 
 <!-- truncate -->

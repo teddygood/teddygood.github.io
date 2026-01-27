@@ -7,19 +7,15 @@ keywords:
 - Documentation
 - Developer
 - Technical writer
-- "Technical Document  \n\n*(Note: The original text \"기술 문서\" is a simple phrase
-  meaning \"technical document.\" If this is a title or heading, it could also be
-  rendered as \"Technical Documentation\" depending on context. Since no additional
-  content was provided, only the direct translation is given.)*  \n\n**Return ONLY
-  the translation (per instruction):**  \nTechnical Document"
+- "Technical Document  \n\n*(Note: The original text \"기술 문서\" is a simple phrase\
+  \ meaning \"technical document.\" If this is a title or heading, it could also be\
+  \ rendered as \"Technical Documentation\" depending on context. Since no additional\
+  \ content was provided, only the direct translation is given.)*  \n\n**Return ONLY\
+  \ the translation (per instruction):**  \nTechnical Document"
 slug: /docs-for-developers
 tags:
 - Book Review
-title: "\U0001F4D6**Docs for Developers: The Complete Guide to Technical Documentation**
-  \ \n\n*(Note: This appears to be a title or heading. If you'd like a full translation
-  of the document's content, please provide the full text.)*  \n\nSince the original
-  input seems to be a title, the translation above reflects a natural English equivalent.
-  Let me know if you need further assistance!"
+title: '📖Docs for Developers: The Complete Guide to Technical Documentation'
 ---
 
 :::info  

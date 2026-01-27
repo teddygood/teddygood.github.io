@@ -10,15 +10,7 @@ keywords:
 slug: /exploring-YOLO
 tags:
 - Paper Review
-title: "\U0001F4C4\"YOLO So Far\"  \n\n(Note: The original Korean phrase \"지금까지의 YOLO\"
-  is a bit ambiguous without additional context. \"YOLO\" is an acronym for \"You
-  Only Live Once,\" and the phrase could be interpreted in a few ways depending on
-  the intended meaning. A more literal translation would be \"YOLO Until Now\" or
-  \"YOLO So Far,\" but the most natural English rendering would likely be \"YOLO So
-  Far\" as a standalone title or heading. If this is referencing a specific work,
-  project, or concept, additional context would help refine the translation.)  \n\nSince
-  you requested only the translation, here's the most natural-sounding version:  \n**\"YOLO
-  So Far\"**"
+title: YOLO So Far
 ---
 
 <!-- truncate -->

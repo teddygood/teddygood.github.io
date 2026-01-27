@@ -1,10 +1,10 @@
 ---
 authors: teddygood
 date: '2022-01-04'
-description: "\"Lessons on Designing Work and Life: A Korean Who Worked at Amazon
-  for 12 Years (vs. the Average Tenure of 1 Year) Realizes\"  \n\n*(Note: The translation
-  preserves the original's contrast between the average tenure and the individual's
-  experience while ensuring natural English flow.)*"
+description: "\"Lessons on Designing Work and Life: A Korean Who Worked at Amazon\
+  \ for 12 Years (vs. the Average Tenure of 1 Year) Realizes\"  \n\n*(Note: The translation\
+  \ preserves the original's contrast between the average tenure and the individual's\
+  \ experience while ensuring natural English flow.)*"
 draft: false
 keywords:
 - Amazon
@@ -13,17 +13,7 @@ keywords:
 slug: /I-went-to-the-future-on-Amazon
 tags:
 - Book Review
-title: "\U0001F4D6I worked at Amazon in the future.  \n\n(Note: The original Korean
-  phrase \"나는 아마존에서 미래를 다녔다\" is somewhat ambiguous. A more literal translation would
-  be \"I attended the future at Amazon,\" which doesn't make complete sense in English.
-  The provided translation assumes the intended meaning was \"I worked at Amazon in
-  the future,\" though the original phrasing may contain a grammatical or conceptual
-  error. If the intended meaning was different, additional context would be needed
-  for a more accurate translation.)  \n\nSince the instruction specifies to return
-  **ONLY** the translation, here is the most natural interpretation:  \n**I worked
-  at Amazon in the future.**  \n\n(Alternatively, if the phrase meant \"I experienced
-  the future at Amazon,\" that could also work, but the verb \"다녔다\" typically implies
-  attending or commuting to a place, not experiencing it.)"
+title: I worked at Amazon in the future.
 ---
 
 <!-- truncate -->

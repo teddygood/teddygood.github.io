@@ -10,13 +10,7 @@ keywords:
 slug: /SICP-JavaScript
 tags:
 - Book Review
-title: "\U0001F4D6JavaScript for the SICP (Structure and Interpretation of Computer
-  Programs)  \n*(Note: A more natural phrasing could be \"Learning SICP with JavaScript\"
-  or \"SICP in JavaScript,\" but the direct translation is provided above.)*  \n\nSince
-  the instruction specifies \"return ONLY the translation,\" here's the strict translation:
-  \ \n**\"JavaScript Learning SICP\"**  \n\nHowever, for clarity in English contexts,
-  the idiomatic version would be:  \n**\"Learning SICP with JavaScript\"**  \n\n*(Final
-  answer adhering strictly to the instruction:)*  \n**JavaScript Learning SICP**"
+title: JavaScript for the SICP (Structure and Interpretation of Computer Programs)
 ---
 
 :::info  

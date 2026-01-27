@@ -6,21 +6,16 @@ draft: false
 keywords:
 - Computer Architecture
 - Operating System
-- "Self-study  \n(Note: \"혼공\" is a Korean abbreviation for \"혼자 공부,\" which literally
-  means \"studying alone\" or \"self-study.\")  \n\nIf you'd like a more natural phrasing
-  in context, it could also be:  \n- \"Independent study\"  \n- \"Solo study\"  \n-
-  \"Studying on one's own\"  \n\nLet me know if you'd like a specific nuance!"
+- "Self-study  \n(Note: \"혼공\" is a Korean abbreviation for \"혼자 공부,\" which literally\
+  \ means \"studying alone\" or \"self-study.\")  \n\nIf you'd like a more natural\
+  \ phrasing in context, it could also be:  \n- \"Independent study\"  \n- \"Solo\
+  \ study\"  \n- \"Studying on one's own\"  \n\nLet me know if you'd like a specific\
+  \ nuance!"
 - Studying alone
 slug: /computer-structure-and-OS-to-study-alone
 tags:
 - Book Review
-title: "\U0001F4D6\"Computer Architecture + Operating Systems: Self-Study Edition\"
-  \ \n\n(Note: This is a natural English rendering of the Korean title, which appears
-  to be a textbook or study guide for self-learners covering both computer architecture
-  and operating systems.)  \n\nSince the original title uses a \"+\" symbol and lacks
-  articles (like \"a\" or \"the\"), the translation maintains that concise style while
-  ensuring readability in English. The phrase \"혼자 공부하는\" is best captured as \"Self-Study
-  Edition\" to reflect its purpose as a self-guided resource."
+title: 'Computer Architecture + Operating Systems: Self-Study Edition'
 ---
 
 :::info  

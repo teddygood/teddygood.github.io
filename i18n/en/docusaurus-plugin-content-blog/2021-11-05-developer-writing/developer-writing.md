@@ -7,20 +7,15 @@ draft: false
 keywords:
 - Developer
 - Writing
-- "Technical Document  \n\n(Note: Since the input was only \"기술 문서\" which directly
-  translates to \"Technical Document,\" the output is a simple translation. If you
-  need a more detailed or context-specific translation, please provide additional
-  text or clarify the request.)  \n\n*Returning only the translation as requested*"
+- "Technical Document  \n\n(Note: Since the input was only \"기술 문서\" which directly\
+  \ translates to \"Technical Document,\" the output is a simple translation. If you\
+  \ need a more detailed or context-specific translation, please provide additional\
+  \ text or clarify the request.)  \n\n*Returning only the translation as requested*"
 - Blog
 slug: /developer-writing
 tags:
 - Book Review
-title: "\U0001F4D6A Developer's Guide to Writing  \n(Note: The phrase \"개발자의 글쓰기\"
-  is concise and context-dependent. A more literal translation would be \"A Developer's
-  Writing\" or \"Writing for Developers,\" but the expanded version above captures
-  the likely intent as a guide or resource.)  \n\nSince the instruction specifies
-  to return **only** the translation, here is the most natural and contextually appropriate
-  version:  \n\n**\"A Developer's Guide to Writing\"**"
+title: A Developer's Guide to Writing
 ---
 
 <!-- truncate -->

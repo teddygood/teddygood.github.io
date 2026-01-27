@@ -10,10 +10,7 @@ keywords:
 slug: /kubeflow-operations-guide
 tags:
 - Book Review
-title: "\U0001F4D6Kubeflow Operations Guide  \n\n*(Note: Since the original text is
-  a title, the translation is provided as-is without additional context. If this is
-  part of a larger document, further details may be needed for a more precise or expanded
-  translation.)*  \n\n**Return ONLY the translation:**  \nKubeflow Operations Guide"
+title: Kubeflow Operations Guide
 ---
 
 :::info  

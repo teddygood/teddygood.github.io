@@ -1,13 +1,13 @@
 ---
 authors: teddygood
 date: '2024-11-24'
-description: "Troubleshooting Issues When Deploying a Python Backend with Docker  \n(Note:
-  The original Korean text was a title/heading, so the translation reflects that structure.
-  If you need elaboration on specific problems/solutions, additional context would
-  be required.)  \n\n**Alternative (if intended as a sentence):**  \n\"I encountered
-  and resolved issues while attempting to deploy a Python backend using Docker.\"
-  \ \n\nLet me know if you'd like a detailed troubleshooting guide or specific problem-solution
-  pairs!"
+description: "Troubleshooting Issues When Deploying a Python Backend with Docker \
+  \ \n(Note: The original Korean text was a title/heading, so the translation reflects\
+  \ that structure. If you need elaboration on specific problems/solutions, additional\
+  \ context would be required.)  \n\n**Alternative (if intended as a sentence):**\
+  \  \n\"I encountered and resolved issues while attempting to deploy a Python backend\
+  \ using Docker.\"  \n\nLet me know if you'd like a detailed troubleshooting guide\
+  \ or specific problem-solution pairs!"
 draft: false
 keywords:
 - Docker
@@ -16,8 +16,8 @@ keywords:
 slug: /python-alpine-linux
 tags:
 - Troubleshooting
-title: "\U0001F40BWhy Alpine Linux Should Be Avoided When Choosing a Docker Base Image
-  for Python Projects"
+title: Why Alpine Linux Should Be Avoided When Choosing a Docker Base Image for Python
+  Projects
 ---
 
 <!-- truncate -->
