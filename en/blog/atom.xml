@@ -8,15 +8,7 @@
     <subtitle>Chanho Lee Blog</subtitle>
     <icon>https://teddygood.github.io/en/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[🤔Linked lists are used in scenarios where frequent insertions or deletions are required, dynamic memory allocation is needed, or efficient cache utilization is less critical. Common applications include:  
-1. **Implementation of dynamic data structures** (e.g., stacks, queues, graphs).  
-2. **Memory management** (e.g., free store/malloc implementation).  
-3. **Undo/Redo functionality** in applications (e.g., text editors).  
-4. **Hash tables** with chaining for collision resolution.  
-5. **Real-time systems** where predictable memory allocation is essential.  
-6. **Large data sets** where contiguous memory allocation (e.g., arrays) is impractical.  
-
-They are also useful when the size of the data structure is unknown or changes frequently. However, they are less efficient for random access or cache-friendly operations compared to arrays.]]></title>
+        <title type="html"><![CDATA[Linked lists are used in scenarios where frequent insertions or deletions are required, dynamic memory allocation is needed, or efficient cache utilization is less critical.]]></title>
         <id>https://teddygood.github.io/en/blog/Linked-List</id>
         <link href="https://teddygood.github.io/en/blog/Linked-List"/>
         <updated>2025-11-14T16:11:00.000Z</updated>
@@ -394,15 +386,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
         <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[✨2024 Reflection  
-(Note: Since 2024 is ongoing, this appears to be a title or placeholder for a future retrospective.)  
-
-If this is a title or heading, a more natural phrasing could be:  
-**"Looking Back on 2024"**  
-or  
-**"2024 Year in Review"**  
-
-Let me know if you'd like a full translation of a longer text!]]></title>
+        <title type="html"><![CDATA[✨2024 Reflection]]></title>
         <id>https://teddygood.github.io/en/blog/2024-Recap</id>
         <link href="https://teddygood.github.io/en/blog/2024-Recap"/>
         <updated>2025-01-18T00:00:00.000Z</updated>
@@ -454,11 +438,7 @@ Let me know if you'd like to develop this further!]]></summary>
         <category label="Recap" term="Recap"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[✨November Reflection  
-(Note: The phrase "11월 회고" is a title or heading, so a slightly more natural English equivalent would be "November Reflection" or "November Review." If this is meant to be a standalone sentence, it could also be translated as "Reflecting on November" or "November Retrospective.")  
-
-Since the instruction asks for **only the translation**, the most direct and natural equivalent is:  
-**"November Reflection"**]]></title>
+        <title type="html"><![CDATA[✨November Reflection]]></title>
         <id>https://teddygood.github.io/en/blog/Nov-Recap</id>
         <link href="https://teddygood.github.io/en/blog/Nov-Recap"/>
         <updated>2024-12-02T00:00:00.000Z</updated>
@@ -540,7 +520,7 @@ Since the instruction asks for **only the translation**, the most direct and nat
         <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[🐋Why Alpine Linux Should Be Avoided When Choosing a Docker Base Image for Python Projects]]></title>
+        <title type="html"><![CDATA[Why Alpine Linux Should Be Avoided When Choosing a Docker Base Image for Python Projects]]></title>
         <id>https://teddygood.github.io/en/blog/python-alpine-linux</id>
         <link href="https://teddygood.github.io/en/blog/python-alpine-linux"/>
         <updated>2024-11-24T00:00:00.000Z</updated>
@@ -610,10 +590,7 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
         <category label="Troubleshooting" term="Troubleshooting"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[✨October Reflection  
-*(Note: The original text "10월 회고" is a title or heading, so the translation is concise. If this is part of a longer document, additional context could refine the phrasing, e.g., "October Retrospective" or "October Review.")*  
-
-Since the instruction specifies returning **only** the translation, the above is the final output. Let me know if you'd like adjustments!]]></title>
+        <title type="html"><![CDATA[✨October Reflection]]></title>
         <id>https://teddygood.github.io/en/blog/Oct-Recap</id>
         <link href="https://teddygood.github.io/en/blog/Oct-Recap"/>
         <updated>2024-11-09T00:00:00.000Z</updated>
@@ -890,12 +867,7 @@ Since the instruction specifies returning **only** the translation, the above is
         <category label="Book Review" term="Book Review"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[🗺️"The Map of Life"  
-
-*(Note: The phrase "삶의 지도" is literally translated as "The Map of Life," but depending on context, it could also be rendered as "Life's Map" or "A Map to Life." If this is a title or part of a larger work, additional context might refine the translation.)*  
-
-Since the instruction specifies returning **ONLY** the translation, the core answer is:  
-**"The Map of Life"**]]></title>
+        <title type="html"><![CDATA[The Map of Life]]></title>
         <id>https://teddygood.github.io/en/blog/Life-Map</id>
         <link href="https://teddygood.github.io/en/blog/Life-Map"/>
         <updated>2024-09-22T00:00:00.000Z</updated>

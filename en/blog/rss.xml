@@ -9,15 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[🤔Linked lists are used in scenarios where frequent insertions or deletions are required, dynamic memory allocation is needed, or efficient cache utilization is less critical. Common applications include:  
-1. **Implementation of dynamic data structures** (e.g., stacks, queues, graphs).  
-2. **Memory management** (e.g., free store/malloc implementation).  
-3. **Undo/Redo functionality** in applications (e.g., text editors).  
-4. **Hash tables** with chaining for collision resolution.  
-5. **Real-time systems** where predictable memory allocation is essential.  
-6. **Large data sets** where contiguous memory allocation (e.g., arrays) is impractical.  
-
-They are also useful when the size of the data structure is unknown or changes frequently. However, they are less efficient for random access or cache-friendly operations compared to arrays.]]></title>
+            <title><![CDATA[Linked lists are used in scenarios where frequent insertions or deletions are required, dynamic memory allocation is needed, or efficient cache utilization is less critical.]]></title>
             <link>https://teddygood.github.io/en/blog/Linked-List</link>
             <guid>https://teddygood.github.io/en/blog/Linked-List</guid>
             <pubDate>Fri, 14 Nov 2025 16:11:00 GMT</pubDate>
@@ -367,15 +359,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
             <category>Book Review</category>
         </item>
         <item>
-            <title><![CDATA[✨2024 Reflection  
-(Note: Since 2024 is ongoing, this appears to be a title or placeholder for a future retrospective.)  
-
-If this is a title or heading, a more natural phrasing could be:  
-**"Looking Back on 2024"**  
-or  
-**"2024 Year in Review"**  
-
-Let me know if you'd like a full translation of a longer text!]]></title>
+            <title><![CDATA[✨2024 Reflection]]></title>
             <link>https://teddygood.github.io/en/blog/2024-Recap</link>
             <guid>https://teddygood.github.io/en/blog/2024-Recap</guid>
             <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
@@ -423,11 +407,7 @@ Let me know if you'd like to develop this further!]]></description>
             <category>Recap</category>
         </item>
         <item>
-            <title><![CDATA[✨November Reflection  
-(Note: The phrase "11월 회고" is a title or heading, so a slightly more natural English equivalent would be "November Reflection" or "November Review." If this is meant to be a standalone sentence, it could also be translated as "Reflecting on November" or "November Retrospective.")  
-
-Since the instruction asks for **only the translation**, the most direct and natural equivalent is:  
-**"November Reflection"**]]></title>
+            <title><![CDATA[✨November Reflection]]></title>
             <link>https://teddygood.github.io/en/blog/Nov-Recap</link>
             <guid>https://teddygood.github.io/en/blog/Nov-Recap</guid>
             <pubDate>Mon, 02 Dec 2024 00:00:00 GMT</pubDate>
@@ -501,7 +481,7 @@ Since the instruction asks for **only the translation**, the most direct and nat
             <category>Book Review</category>
         </item>
         <item>
-            <title><![CDATA[🐋Why Alpine Linux Should Be Avoided When Choosing a Docker Base Image for Python Projects]]></title>
+            <title><![CDATA[Why Alpine Linux Should Be Avoided When Choosing a Docker Base Image for Python Projects]]></title>
             <link>https://teddygood.github.io/en/blog/python-alpine-linux</link>
             <guid>https://teddygood.github.io/en/blog/python-alpine-linux</guid>
             <pubDate>Sun, 24 Nov 2024 00:00:00 GMT</pubDate>
@@ -567,10 +547,7 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
             <category>Troubleshooting</category>
         </item>
         <item>
-            <title><![CDATA[✨October Reflection  
-*(Note: The original text "10월 회고" is a title or heading, so the translation is concise. If this is part of a longer document, additional context could refine the phrasing, e.g., "October Retrospective" or "October Review.")*  
-
-Since the instruction specifies returning **only** the translation, the above is the final output. Let me know if you'd like adjustments!]]></title>
+            <title><![CDATA[✨October Reflection]]></title>
             <link>https://teddygood.github.io/en/blog/Oct-Recap</link>
             <guid>https://teddygood.github.io/en/blog/Oct-Recap</guid>
             <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
@@ -831,12 +808,7 @@ Since the instruction specifies returning **only** the translation, the above is
             <category>Book Review</category>
         </item>
         <item>
-            <title><![CDATA[🗺️"The Map of Life"  
-
-*(Note: The phrase "삶의 지도" is literally translated as "The Map of Life," but depending on context, it could also be rendered as "Life's Map" or "A Map to Life." If this is a title or part of a larger work, additional context might refine the translation.)*  
-
-Since the instruction specifies returning **ONLY** the translation, the core answer is:  
-**"The Map of Life"**]]></title>
+            <title><![CDATA[The Map of Life]]></title>
             <link>https://teddygood.github.io/en/blog/Life-Map</link>
             <guid>https://teddygood.github.io/en/blog/Life-Map</guid>
             <pubDate>Sun, 22 Sep 2024 00:00:00 GMT</pubDate>
