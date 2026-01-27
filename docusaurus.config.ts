@@ -133,7 +133,10 @@ const config: Config = {
 
 
         {
-          to: '/blog/archive',
+          to: '/projects',
+          label: 'Projects',
+          position: 'left',
+        },
           label: 'Archive',
           position: 'left',
         },
