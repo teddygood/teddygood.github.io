@@ -121,7 +121,7 @@ const config: Config = {
       title: 'Chanho Lee',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.jpg',
+        src: 'img/logo-new.png',
       },
       items: [
         {
@@ -137,6 +137,8 @@ const config: Config = {
           label: 'Projects',
           position: 'left',
         },
+        {
+          to: '/blog/archive',
           label: 'Archive',
           position: 'left',
         },

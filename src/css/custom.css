@@ -202,3 +202,8 @@ figcaption {
 .theme-code-block code {
     font-variant-ligatures: none;
 }
+
+/* Custom logo size */
+.navbar__logo {
+  height: 44px;
+}
