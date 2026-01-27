@@ -199,7 +199,7 @@ Link with URL in description: [Google](https://www.google.com/)
 Link to header in the same file: [Blockquotes](#blockquotes)  
 ```
 
-<https://www.google.com/>  
+[https://www.google.com/](https://www.google.com/)  
 [Google](https://www.google.com/)  
 [Blockquotes](#blockquotes)  
 
