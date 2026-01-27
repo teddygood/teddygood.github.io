@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://teddygood.github.io/projects</id>
+    <title>Chanho Lee Projects</title>
+    <updated>2026-01-27T04:46:26.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://teddygood.github.io/projects"/>
+    <subtitle>A showcase of my projects</subtitle>
+    <icon>https://teddygood.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Serverless Code Review Assistant on AWS]]></title>
+        <id>https://teddygood.github.io/projects/serverless-code-review</id>
+        <link href="https://teddygood.github.io/projects/serverless-code-review"/>
+        <updated>2026-01-27T04:46:26.000Z</updated>
+        <summary type="html"><![CDATA[Automated code review bot powered by AWS Serverless architecture and Bedrock.]]></summary>
+    </entry>
+</feed>

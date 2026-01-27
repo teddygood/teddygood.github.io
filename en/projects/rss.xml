@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Chanho Lee Projects</title>
+        <link>https://teddygood.github.io/en/projects</link>
+        <description>A showcase of my projects</description>
+        <lastBuildDate>Tue, 27 Jan 2026 04:46:26 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Serverless Code Review Assistant on AWS]]></title>
+            <link>https://teddygood.github.io/en/projects/serverless-code-review</link>
+            <guid>https://teddygood.github.io/en/projects/serverless-code-review</guid>
+            <pubDate>Tue, 27 Jan 2026 04:46:26 GMT</pubDate>
+            <description><![CDATA[Automated code review bot powered by AWS Serverless architecture and Bedrock.]]></description>
+        </item>
+    </channel>
+</rss>
