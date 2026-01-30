@@ -117,6 +117,8 @@ const config: Config = {
           title: 'Chanho Lee Projects',
           description: 'A showcase of my projects',
         },
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [remarkKatex],
       },
     ],
   ],
