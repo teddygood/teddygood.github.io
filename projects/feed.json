@@ -5,12 +5,21 @@
     "description": "A showcase of my projects",
     "items": [
         {
+            "id": "https://teddygood.github.io/projects/optiver-kaggle",
+            "content_html": null,
+            "url": "https://teddygood.github.io/projects/optiver-kaggle",
+            "title": "Optiver \"Trading at the Close\" 대회",
+            "summary": "Kaggle Optiver - Trading at the Close 대회 회고 (Bronze Medal, Top 30%)",
+            "date_modified": "2026-01-30T02:24:42.000Z",
+            "tags": []
+        },
+        {
             "id": "https://teddygood.github.io/projects/serverless-code-review",
             "content_html": null,
             "url": "https://teddygood.github.io/projects/serverless-code-review",
             "title": "Serverless Code Review Assistant on AWS",
             "summary": "Automated code review bot powered by AWS Serverless architecture and Bedrock.",
-            "date_modified": "2026-01-27T09:10:23.000Z",
+            "date_modified": "2026-01-30T02:24:42.000Z",
             "tags": []
         }
     ]
