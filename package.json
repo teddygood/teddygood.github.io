@@ -5,6 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start:poll": "docusaurus start --poll 1000",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -33,8 +34,10 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",
     "@docusaurus/tsconfig": "^3.9.2",
+    "baseline-browser-mapping": "^2.9.19",
     "prettier": "3.2.5",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "yarn": "^1.22.22"
   },
   "browserslist": {
     "production": [
