@@ -11,7 +11,7 @@ keywords:
 slug: /Artificial-Intelligence-in-Finance
 tags:
 - Book Review
-title: "\U0001F4D6Python-based financial artificial intelligence"
+title: Python-based Financial Artificial Intelligence
 ---
 
 :::info  

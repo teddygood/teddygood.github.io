@@ -14,23 +14,7 @@ keywords:
 slug: /markdown
 tags:
 - Blog
-title: "⌨️Markdown Summary  \n\nMarkdown is a lightweight markup language designed
-  for easy readability and writing. It allows users to format text using simple syntax,
-  which can then be converted to HTML or other formats. Below is a concise guide to
-  common Markdown elements:  \n\n### **Basic Syntax**  \n- **Headings**: `#` to `######`
-  (e.g., `# Heading 1`)  \n- **Bold**: `**text**` or `__text__`  \n- *Italic*: `*text*`
-  or `_text_`  \n- **Lists**:  \n  - Unordered: `-`, `+`, or `*` followed by a space
-  \ \n  - Ordered: Numbers + `.` (e.g., `1. Item`)  \n- **Links**: `[text](URL)`  \n-
-  **Images**: `![alt text](image.jpg)`  \n- **Blockquotes**: `> quoted text`  \n-
-  **Code**:  \n  - Inline: `` `code` ``  \n  - Blocks: Triple backticks (```) with
-  optional language (e.g., ```python)  \n\n### **Advanced Features**  \n- **Tables**:
-  \ \n  ```markdown\n  | Column 1 | Column 2 |\n  |----------|----------|\n  | Cell
-  1   | Cell 2   |\n  ```  \n- **Horizontal Rule**: `---` or `***`  \n- **Task Lists**:
-  \ \n  ```markdown\n  - [x] Completed task\n  - [ ] Pending task\n  ```  \n- **Footnotes**:
-  \ \n  ```markdown\n  Here's a footnote reference[^1].\n\n  [^1]: Footnote definition.\n
-  \ ```  \n\n### **Notes**  \n- Most platforms (GitHub, Notion, etc.) support extended
-  Markdown with additional features.  \n- Consistency in formatting improves readability.
-  \ \n\nFor deeper use, refer to platform-specific extensions or tools like [CommonMark](https://commonmark.org/)."
+title: Markdown Summary
 ---
 
 Restarting my blog after a long time, I realized I’ve gotten rusty with Markdown, so I’m documenting and practicing it.

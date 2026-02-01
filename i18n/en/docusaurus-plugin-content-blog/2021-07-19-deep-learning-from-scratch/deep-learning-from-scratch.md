@@ -10,7 +10,7 @@ keywords:
 slug: /deep-learning-from-scratch
 tags:
 - Book Review
-title: "\U0001F4D6From the Ground Up Deep Learning"
+title: Deep Learning from Scratch
 ---
 
 ## Book Info

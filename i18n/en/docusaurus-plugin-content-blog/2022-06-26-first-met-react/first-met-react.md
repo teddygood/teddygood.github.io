@@ -9,7 +9,7 @@ keywords:
 slug: /first-met-react
 tags:
 - Book Review
-title: "\U0001F4D6The Famous Lecture: Sofl's First Encounter with React"
+title: First Encounter with React
 ---
 
 :::info  

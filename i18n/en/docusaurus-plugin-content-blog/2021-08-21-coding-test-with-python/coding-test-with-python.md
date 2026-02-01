@@ -11,7 +11,7 @@ keywords:
 slug: /coding-test-with-python
 tags:
 - Book Review
-title: "\U0001F4D6This is a coding test for employment with Python."
+title: Python for Coding Tests
 ---
 
 :::info  

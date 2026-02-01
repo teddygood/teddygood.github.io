@@ -11,8 +11,7 @@ keywords:
 slug: /Hands-on-generative-AI-dev-with-AWS-Bedrock
 tags:
 - Book Review
-title: "\U0001F4D6Getting Started with Practical Generative AI Development Using Amazon
-  Bedrock"
+title: Hands-on Generative AI Development with Amazon Bedrock
 ---
 
 ## Book Info
