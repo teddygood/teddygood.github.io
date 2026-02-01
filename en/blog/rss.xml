@@ -9,12 +9,13 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
-            <title><![CDATA[Linked lists are used in scenarios where frequent insertions or deletions are required, dynamic memory allocation is needed, or efficient cache utilization is less critical.]]></title>
+            <title><![CDATA[Why Linked Lists Are Rarely Used in Python]]></title>
             <link>https://teddygood.github.io/en/blog/Linked-List</link>
             <guid>https://teddygood.github.io/en/blog/Linked-List</guid>
             <pubDate>Fri, 14 Nov 2025 16:11:00 GMT</pubDate>
             <description><![CDATA[Things I looked up while studying linked lists out of curiosity]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://teddygood.github.io/en/blog/Linked-List#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://teddygood.github.io/en/blog/Linked-List#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
 <p>When studying data structures and algorithms, one inevitably learns about linked lists. However, in my development experience or when solving practical problems, I rarely had to implement or use linked lists directly. After learning the basic concepts long ago, I had almost no practical use cases for them. Even while preparing for coding tests recently, I rarely encountered problems that required linked lists. When I did, I mostly solved them using Python's <code>deque</code>, and my understanding was limited to the superficial knowledge that "linked lists are inefficient in Python."</p>
 <p>This led me to revisit linked lists and ask a fundamental question: "Why are linked lists not used often?" Simply attributing it to "inefficiency in Python" felt insufficient, so I wanted to investigate and organize the actual reasons. This post summarizes my research and reflections on the topic.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-linked-lists-are-rarely-used-in-python">Why Linked Lists Are Rarely Used in Python<a href="https://teddygood.github.io/en/blog/Linked-List#why-linked-lists-are-rarely-used-in-python" class="hash-link" aria-label="Direct link to Why Linked Lists Are Rarely Used in Python" title="Direct link to Why Linked Lists Are Rarely Used in Python" translate="no">​</a></h2>
@@ -162,6 +163,7 @@
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: September 10, 2025</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/ai-engineering#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>It’s been a long time since I last read a book in bits and pieces. Lately, my days have been flying by with open-source contributions and job preparation, leaving no time to fully immerse myself in a book. Honestly, I considered skipping this month’s "I am a Reviewer" activity due to my busy schedule. But when I heard that Seongyun Byun had translated a new book from Hanbit Media, I decided to apply and read it.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/ai-engineering#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -208,6 +210,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
 <li class=""><strong>Publisher:</strong> Hanbit Media</li>
 <li class=""><strong>Release Date:</strong> June 10, 2025</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/hands-on-llm#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>Large Language Models (LLMs) are now essential knowledge not just for developers, but also for researchers, students, planners, and many other fields. While I’ve studied LLM principles and applications over time, I’ve struggled to solidify my fundamentals amid the flood of new tools and techniques. <em>Hands-On LLM</em> gave me the chance to systematically review core concepts and practice hands-on exercises—all in one place.</p>
 <p>I picked up this book wanting to revisit LLMs in a structured way, and I’m genuinely satisfied with the result. Studying LLMs feels like an endless journey—new models, tools, and approaches keep emerging. That’s why this book’s emphasis on <strong>fundamentals</strong> resonated deeply with me.</p>
@@ -250,6 +253,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: April 7, 2025</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>It’s been a while since I last applied for a book review. My internship is almost over, and I’ve been thinking about my next steps—when I saw this book on technical interviews, I knew I had to apply. Written by a 20-year veteran interviewer from Kakao, it’s essentially a guide for landing or switching jobs at big tech companies. Reading it gave me a clear picture of what technical interviews entail and how to prepare.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/Technical-Interview-Notes-for-Developers#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -279,7 +283,8 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
             <guid>https://teddygood.github.io/en/blog/geultto-Recap</guid>
             <pubDate>Sun, 30 Mar 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[A truly wonderful and warm community]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="geulddo-season-10">Geulddo Season 10<a href="https://teddygood.github.io/en/blog/geultto-Recap#geulddo-season-10" class="hash-link" aria-label="Direct link to Geulddo Season 10" title="Direct link to Geulddo Season 10" translate="no">​</a></h2>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="geulddo-season-10">Geulddo Season 10<a href="https://teddygood.github.io/en/blog/geultto-Recap#geulddo-season-10" class="hash-link" aria-label="Direct link to Geulddo Season 10" title="Direct link to Geulddo Season 10" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="wrap-up">Wrap-Up<a href="https://teddygood.github.io/en/blog/geultto-Recap#wrap-up" class="hash-link" aria-label="Direct link to Wrap-Up" title="Direct link to Wrap-Up" translate="no">​</a></h3>
 <p>It’s hard to believe that Geulddo Season 10 is already over. Time really flies—it’s been six months since I started Geulddo. Before writing this post, I revisited my <a href="https://teddygood.github.io/blog/starting-geulddo" target="_blank" rel="noopener noreferrer" class="">first and last Geulddo start post</a> after a long time. It was a glimpse into my past self, filled with unreasonable goals and grand resolutions. I wonder how I ever thought I could tackle all of that. I guess I just set big goals, even if I knew I’d fail some.</p>
 <p>While drafting this, I briefly considered using headings like "What I Did in Geulddo, What I Gained from Geulddo," but I didn’t want to make it too formal. Looking back, I didn’t participate as actively as I’d hoped. I failed to meet my goal of writing without skipping days, and my aim to have coffee chats with diverse people also fell short by my own standards. The small group activities didn’t involve skiing or sledding—just casual hangouts. I wanted to explore more through Geulddo, and it’s a bit regrettable that I couldn’t.</p>
@@ -311,6 +316,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: January 24, 2025</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/deep-learning-from-scratch-remastered#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>Once again, I’m grateful to participate in Hanbit Media’s "I am a Reviewer" program in 2025. It’s truly a privilege to read books, write reviews, and access Hanbit Media’s publications more easily than others. This time, I read <em>Deep Learning from Scratch 1 (Remastered Edition)</em>. Originally published in January 2017, this book has played a significant role in deep learning education in Korea. It’s a book that has genuinely helped many people take their first steps into deep learning. The remastered edition makes it even more reader-friendly.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/deep-learning-from-scratch-remastered#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -330,7 +336,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
             <category>Book Review</category>
         </item>
         <item>
-            <title><![CDATA[📖Getting Started with Practical Generative AI Development Using Amazon Bedrock]]></title>
+            <title><![CDATA[Hands-on Generative AI Development with Amazon Bedrock]]></title>
             <link>https://teddygood.github.io/en/blog/Hands-on-generative-AI-dev-with-AWS-Bedrock</link>
             <guid>https://teddygood.github.io/en/blog/Hands-on-generative-AI-dev-with-AWS-Bedrock</guid>
             <pubDate>Sun, 02 Feb 2025 00:00:00 GMT</pubDate>
@@ -344,6 +350,7 @@ From prompt engineering to embeddings, semantic search, and fine-tuning: Practic
 <li class="">Publisher: Digital Books</li>
 <li class="">Release Date: 2025-01-10</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Hands-on-generative-AI-dev-with-AWS-Bedrock#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>Recently, I had to use AWS Bedrock at work, so I was studying the official documentation. While browsing LinkedIn, I found out this book was published and decided to buy and read it. Microsoft and Google are dominating the generative AI space, but Amazon recently unveiled the Nova model and seems to be pushing harder with Bedrock. Though a bit late, I think it’s a positive move. AWS Bedrock is a platform for using generative AI models, and I wanted to learn how to apply it in real-world scenarios through this book.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="-book-review">## Book Review<a href="https://teddygood.github.io/en/blog/Hands-on-generative-AI-dev-with-AWS-Bedrock#-book-review" class="hash-link" aria-label="Direct link to ## Book Review" title="Direct link to ## Book Review" translate="no">​</a></h2>
@@ -370,7 +377,8 @@ Since you requested only the translation, here is the direct rendering:
 **"Looking back on 2024"**  
 
 Let me know if you'd like to develop this further!]]></description>
-            <content:encoded><![CDATA[<p>It's hard to believe how quickly time has passed. The year has flown by so fast. This year was filled with significant changes and growth for me. In this post, I want to reflect on the transformations and progress I’ve experienced in 2024.</p>
+            <content:encoded><![CDATA[
+<p>It's hard to believe how quickly time has passed. The year has flown by so fast. This year was filled with significant changes and growth for me. In this post, I want to reflect on the transformations and progress I’ve experienced in 2024.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="graduation-project">Graduation Project<a href="https://teddygood.github.io/en/blog/2024-Recap#graduation-project" class="hash-link" aria-label="Direct link to Graduation Project" title="Direct link to Graduation Project" translate="no">​</a></h2>
 <p>I’ve been gradually training myself to read papers while studying ML, and now I realize it was all preparation for this graduation project. I don’t think I’ve ever read as many papers as I did this year. Although I didn’t follow the latest papers, I’ve read most of the seminal works in Computer Vision, such as GANs and NeRF.</p>
 <p>Still, I chose not to pursue a research career. While learning new technologies was fun, I doubted my ability to write groundbreaking papers that would impact the world. If I ever wanted to go to grad school, I thought working first and then attending a part-time or overseas program could be a good option. So, I decided to become an engineer—studying, implementing, and creating value through technology.</p>
@@ -412,7 +420,8 @@ Let me know if you'd like to develop this further!]]></description>
             <guid>https://teddygood.github.io/en/blog/Nov-Recap</guid>
             <pubDate>Mon, 02 Dec 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Reflecting on a busy November filled with graduation projects and job preparation.]]></description>
-            <content:encoded><![CDATA[<p>The reason retrospectives are always scary might be because they force me to face my past self from the previous month. Just like October, I didn’t live up to my own expectations in November, and I’m afraid to write this reflection—but I’m trying anyway.</p>
+            <content:encoded><![CDATA[
+<p>The reason retrospectives are always scary might be because they force me to face my past self from the previous month. Just like October, I didn’t live up to my own expectations in November, and I’m afraid to write this reflection—but I’m trying anyway.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reading">Reading<a href="https://teddygood.github.io/en/blog/Nov-Recap#reading" class="hash-link" aria-label="Direct link to Reading" title="Direct link to Reading" translate="no">​</a></h2>
 <ul>
 <li class=""><strong>Software Engineer Guidebook</strong></li>
@@ -468,6 +477,7 @@ Let me know if you'd like to develop this further!]]></description>
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: October 30, 2024</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/The-SE-guidebook#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>I’ve been swamped with job preparation lately. Still, I want to give myself credit for squeezing in time to read this book little by little. I almost didn’t get to finish the parts I needed, but after securing an internship, I finally had time to sit down with it at home. The phrase “From Junior to Leader” made me wonder, <em>“Is this even a book for someone like me who hasn’t landed a job yet?”</em> But curiosity got the better of me, and I dove in.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/The-SE-guidebook#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -492,7 +502,8 @@ Let me know if you'd like to develop this further!]]></description>
 "I encountered and resolved issues while attempting to deploy a Python backend using Docker."  
 
 Let me know if you'd like a detailed troubleshooting guide or specific problem-solution pairs!]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://teddygood.github.io/en/blog/python-alpine-linux#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="introduction">Introduction<a href="https://teddygood.github.io/en/blog/python-alpine-linux#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction" translate="no">​</a></h2>
 <p>I encountered several errors while moving a Django blog project to Docker. This post shares the knowledge I gained while resolving these issues.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="first-problem">First Problem<a href="https://teddygood.github.io/en/blog/python-alpine-linux#first-problem" class="hash-link" aria-label="Direct link to First Problem" title="Direct link to First Problem" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="compatibility-issue-between-alpine-linux-and-cryptography">Compatibility Issue Between Alpine Linux and cryptography<a href="https://teddygood.github.io/en/blog/python-alpine-linux#compatibility-issue-between-alpine-linux-and-cryptography" class="hash-link" aria-label="Direct link to Compatibility Issue Between Alpine Linux and cryptography" title="Direct link to Compatibility Issue Between Alpine Linux and cryptography" translate="no">​</a></h3>
@@ -552,7 +563,8 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
             <guid>https://teddygood.github.io/en/blog/Oct-Recap</guid>
             <pubDate>Sat, 09 Nov 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Looking back on a busy October filled with graduation projects and job preparation.]]></description>
-            <content:encoded><![CDATA[<p>In my previous post, I wrote about my <a href="https://teddygood.github.io/blog/starting-geulddo#10%EC%9B%94-%EB%AA%A9%ED%91%9C" target="_blank" rel="noopener noreferrer" class="">October Goals</a>. I’m writing this to check if I achieved them. I’m a bit scared to write this because I didn’t live up to October, but I’ll try anyway.</p>
+            <content:encoded><![CDATA[
+<p>In my previous post, I wrote about my <a href="https://teddygood.github.io/blog/starting-geulddo#10%EC%9B%94-%EB%AA%A9%ED%91%9C" target="_blank" rel="noopener noreferrer" class="">October Goals</a>. I’m writing this to check if I achieved them. I’m a bit scared to write this because I didn’t live up to October, but I’ll try anyway.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="reading">Reading<a href="https://teddygood.github.io/en/blog/Oct-Recap#reading" class="hash-link" aria-label="Direct link to Reading" title="Direct link to Reading" translate="no">​</a></h2>
 <ul>
 <li class=""><em>Flow: The Psychology of Optimal Experience</em> (몰입의 즐거움)</li>
@@ -624,6 +636,7 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: September 30, 2024</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/open#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>When I think back to the first time I learned about open source, it was during middle school. I had just decided to become a programmer and was reading <strong>How to Be a Programmer</strong> (published by Hanbit Media). The book featured interviews with legendary programmers like Linus Torvalds and Richard Stallman, and that’s where I first encountered the term <strong>open source</strong>. (As a side note, I highly recommend reading it if you get the chance—it includes interviews with the creators of Java, C++, email, and Apple computers, among others. Though I didn’t grasp much at the time, the term became unavoidable once I entered computer science.) I even took a course where contributing to open source was a goal. Today, I still follow open-source news through various communities and social media. That’s why I was curious about this book and decided to apply as a reviewer.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/open#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -656,7 +669,8 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
             <guid>https://teddygood.github.io/en/blog/starting-geultto</guid>
             <pubDate>Sat, 05 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[A truly wonderful and warm community.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="글또-10th-season">글또 10th Season<a href="https://teddygood.github.io/en/blog/starting-geultto#%EA%B8%80%EB%98%90-10th-season" class="hash-link" aria-label="Direct link to 글또 10th Season" title="Direct link to 글또 10th Season" translate="no">​</a></h2>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="글또-10th-season">글또 10th Season<a href="https://teddygood.github.io/en/blog/starting-geultto#%EA%B8%80%EB%98%90-10th-season" class="hash-link" aria-label="Direct link to 글또 10th Season" title="Direct link to 글또 10th Season" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="application">Application<a href="https://teddygood.github.io/en/blog/starting-geultto#application" class="hash-link" aria-label="Direct link to Application" title="Direct link to Application" translate="no">​</a></h3>
 <p>This time, I got the chance to join the 글또 community. Every season, I wanted to participate, but sometimes I missed out because I was busy or forgot to check. Other times, reflecting on myself while writing the application felt burdensome. This time too, writing the application wasn’t easy, but it was a great experience to look back on what I’ve done and how I’ve lived. And above all, since this is the last season of 글또, I really wanted to be part of it.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="goals-for-글또">Goals for 글또<a href="https://teddygood.github.io/en/blog/starting-geultto#goals-for-%EA%B8%80%EB%98%90" class="hash-link" aria-label="Direct link to Goals for 글또" title="Direct link to Goals for 글또" translate="no">​</a></h3>
@@ -772,6 +786,7 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
 <li class="">Publisher: <strong>Hanbit Media</strong></li>
 <li class="">Release Date: <strong>August 20, 2024</strong></li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/AI-Truth#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>This is my fourth technical book of 2024. With job preparation, online courses, and various projects, I’ve been struggling to finish reading technical books. Still, I applied for the "I am a Reviewer" program because I wanted to read this book. I’m a fan of the author, and my interest in AI made it an easy choice.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/AI-Truth#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -816,7 +831,8 @@ Let me know if you'd like a detailed troubleshooting guide or specific problem-s
 (Note: "글또" is transliterated as "Glott" since it appears to be a proper noun or specific program name without an official English equivalent.)  
 
 If "글또" has an official English name (e.g., "Gleat" or another term), please provide it for a more accurate translation. Otherwise, "Glott" is a phonetic rendering.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="my-life-map">My Life Map<a href="https://teddygood.github.io/en/blog/Life-Map#my-life-map" class="hash-link" aria-label="Direct link to My Life Map" title="Direct link to My Life Map" translate="no">​</a></h2>
+            <content:encoded><![CDATA[
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="my-life-map">My Life Map<a href="https://teddygood.github.io/en/blog/Life-Map#my-life-map" class="hash-link" aria-label="Direct link to My Life Map" title="Direct link to My Life Map" translate="no">​</a></h2>
 <p>Applying to Geultto gave me a chance to reflect on the journey I’ve been through. So much has happened, and I’ve had the opportunity to look back at how I’ve changed along the way. While I’ve done short-term retrospectives before, this is one of the rare times I’ve reflected on my entire life. In this post, I’ll try to summarize my growth so far. I’m grateful to Geultto for giving me this opportunity, and to anyone reading this out of curiosity about my not-so-special life.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-kid-who-just-loved-computers">The Kid Who Just Loved Computers<a href="https://teddygood.github.io/en/blog/Life-Map#the-kid-who-just-loved-computers" class="hash-link" aria-label="Direct link to The Kid Who Just Loved Computers" title="Direct link to The Kid Who Just Loved Computers" translate="no">​</a></h3>
 <p>From a young age, I was a kid who loved computers. I signed up for after-school classes to prepare for certifications like PowerPoint, Excel, Internet, and Word Processor in the computer lab, which naturally made me close with computers. I gradually became interested in games, but since I wasn’t good at playing them, I wanted to become a programmer who creates games rather than a player. Or maybe a white-hat hacker who prevents hacking—just because it sounded fun and cool.</p>
@@ -854,6 +870,7 @@ If "글또" has an official English name (e.g., "Gleat" or another term), please
 <li class="">Publisher: Gilbut</li>
 <li class="">Published: 2024-02-27</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>LLMs (Large Language Models) are <em>so</em> trendy these days that even during exam season, I carved out some time to study them. As someone studying AI, I already knew the basics of what LLMs are and how to use them. But I picked up this book for a refresher—and honestly, because it was super thin. Plus, the author works at Microsoft, so I figured there might be some exclusive tips!</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/Developing-AI-services-with-LangChain#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -882,6 +899,7 @@ If "글또" has an official English name (e.g., "Gleat" or another term), please
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: April 30, 2024</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>This is my second technical book of 2024. Lately, I’ve been juggling multiple projects and reading various books, which has made it hard to finish them all. Still, I picked this one up because it seemed approachable, and I was curious: <em>What more should I do to become a better programmer?</em></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/Becoming-a-Better-Programmer#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -912,6 +930,7 @@ If "글또" has an official English name (e.g., "Gleat" or another term), please
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Publication Date</strong>: February 2, 2024</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Fundamentals-of-DL#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>It’s already 2024. Studying deep learning has been challenging so far—and it’s still tough. This year, I’ll keep pushing to learn more about machine learning. There are so many books I want to read. Thanks to Hanbit Media’s <em>I am a Reviewer</em> program, my first IT book of 2024 is <em>Fundamentals of Deep Learning</em>.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/Fundamentals-of-DL#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
@@ -949,6 +968,7 @@ If "글또" has an official English name (e.g., "Gleat" or another term), please
 <li class=""><strong>Publisher</strong>: Hanbit Media</li>
 <li class=""><strong>Release Date</strong>: September 15, 2023</li>
 </ul>
+<!-- -->
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="intro">Intro<a href="https://teddygood.github.io/en/blog/Generative-Deep-Learning#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
 <p>I believe generative AI is currently the hottest field in AI. From OpenAI’s GPT-4 to the recent DALL·E 3, it’s advancing rapidly. Beyond OpenAI, many other companies are also creating groundbreaking products. AI is increasingly becoming a part of our daily lives, making them more convenient. This curiosity about generative AI led me to read this book. It feels like just yesterday I was studying GANs, and now the field has evolved so quickly. While I’m sometimes scared of how far AI will go, I’m determined to keep learning as long as I can.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="book-review">Book Review<a href="https://teddygood.github.io/en/blog/Generative-Deep-Learning#book-review" class="hash-link" aria-label="Direct link to Book Review" title="Direct link to Book Review" translate="no">​</a></h2>
