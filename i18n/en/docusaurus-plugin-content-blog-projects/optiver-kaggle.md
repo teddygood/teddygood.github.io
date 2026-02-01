@@ -9,6 +9,9 @@ image: /img/projects/optiver-kaggle-header.png
 hide_table_of_contents: false
 ---
 
+<!-- truncate -->
+
+
 # Optiver "Trading at the Close" Competition Retrospective
 
 ## Motivation
