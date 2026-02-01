@@ -13,6 +13,9 @@ keywords:
   - 공부
 ---
 
+<!-- truncate -->
+
+
 ## Intro
 
 ### 우아한Tech

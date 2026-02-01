@@ -13,6 +13,9 @@ keywords:
   - 성장
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

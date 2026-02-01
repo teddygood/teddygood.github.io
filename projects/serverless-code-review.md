@@ -9,6 +9,9 @@ image: /img/docusaurus.png
 hide_table_of_contents: true
 ---
 
+<!-- truncate -->
+
+
 ## Overview
 The **Serverless Code Review Assistant** is an automated tool designed to streamline the code review process. By leveraging **AWS Serverless** services and **Generative AI** (Amazon Bedrock), it automatically analyzes Pull Requests, detects potential bugs, and suggests refactoring improvements directly in GitHub comments.
 

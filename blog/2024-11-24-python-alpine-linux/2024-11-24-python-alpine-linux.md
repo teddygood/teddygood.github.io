@@ -12,6 +12,9 @@ keywords:
   - Alpine Linux
 ---
 
+<!-- truncate -->
+
+
 ## Introduction
 
 Django를 활용하여 블로그를 만들어보는 프로젝트를 진행하다가 docker로 환경을 옮기는 도중 여러 에러들을 만났다. 이 글은 문제를 해결하면서 얻은 지식을 공유하고자 작성한 글이다.

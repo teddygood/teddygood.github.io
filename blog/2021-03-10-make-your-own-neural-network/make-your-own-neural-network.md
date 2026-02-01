@@ -13,6 +13,9 @@ keywords:
   - 뉴럴 네트워크
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

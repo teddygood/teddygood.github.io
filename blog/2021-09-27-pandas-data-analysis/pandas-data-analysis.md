@@ -13,6 +13,9 @@ keywords:
   - Data Analysis
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

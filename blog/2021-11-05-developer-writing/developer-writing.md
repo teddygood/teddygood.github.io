@@ -14,6 +14,9 @@ keywords:
   - 블로그
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

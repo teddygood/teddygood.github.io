@@ -13,6 +13,9 @@ keywords:
   - 회고
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip

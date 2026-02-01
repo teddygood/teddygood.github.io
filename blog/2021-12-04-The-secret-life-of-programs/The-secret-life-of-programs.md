@@ -13,6 +13,9 @@ keywords:
   - 하드웨어
 ---
 
+<!-- truncate -->
+
+
 ## Book Info
 
 :::tip
