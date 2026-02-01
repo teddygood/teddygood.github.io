@@ -13,7 +13,7 @@ keywords:
   - 공부
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Intro

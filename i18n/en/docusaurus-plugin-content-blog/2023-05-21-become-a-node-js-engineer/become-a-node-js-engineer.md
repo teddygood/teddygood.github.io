@@ -32,7 +32,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Golden Rabbit
 - Release Date: April 15, 2023
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro
 

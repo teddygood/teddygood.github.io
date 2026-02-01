@@ -32,7 +32,7 @@ Click the book image to visit the Kyobobook site!
 - **Publisher**: Jpub  
 - **Release Date**: June 9, 2022  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro  
 

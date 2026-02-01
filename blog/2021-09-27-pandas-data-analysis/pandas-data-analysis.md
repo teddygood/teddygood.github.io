@@ -13,7 +13,7 @@ keywords:
   - Data Analysis
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

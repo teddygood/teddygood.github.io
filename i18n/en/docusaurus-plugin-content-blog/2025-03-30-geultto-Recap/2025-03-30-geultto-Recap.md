@@ -13,7 +13,7 @@ tags:
 title: "\U0001F3ACThe first and final post. The end."
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Geulddo Season 10

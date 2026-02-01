@@ -9,7 +9,7 @@ image: /img/docusaurus.png
 hide_table_of_contents: true
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Overview

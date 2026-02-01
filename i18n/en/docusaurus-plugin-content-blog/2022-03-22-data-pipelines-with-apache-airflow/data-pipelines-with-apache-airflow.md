@@ -33,7 +33,7 @@ Click the book image to go to the Kyobook store!
 - **Publisher**: Jpub  
 - **Publication Date**: March 16, 2022  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Book Review
 

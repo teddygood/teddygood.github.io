@@ -13,7 +13,7 @@ keywords:
   - 하드웨어
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

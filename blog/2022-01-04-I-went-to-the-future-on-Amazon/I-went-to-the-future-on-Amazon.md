@@ -13,7 +13,7 @@ keywords:
   - 회고
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

@@ -28,7 +28,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Jeongbo Media
 - Publication Date: 2019-02-10
 
-<!-- truncate -->
+{/* truncate */}
 
 ## 🎬 Intro
 

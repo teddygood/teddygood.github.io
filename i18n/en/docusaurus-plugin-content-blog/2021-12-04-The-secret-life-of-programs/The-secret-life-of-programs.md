@@ -14,7 +14,7 @@ tags:
 title: 📖Computer Architecture and Programming in a Single Volume
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

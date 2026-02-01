@@ -12,7 +12,7 @@ keywords:
   - Object Detection
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## You Only Look Once

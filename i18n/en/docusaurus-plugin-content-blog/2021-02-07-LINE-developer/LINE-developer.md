@@ -35,7 +35,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Hanbit Media  
 - Release Date: 2019-08-23  
 
-<!-- truncate -->  
+{/* truncate */}  
 
 ## Why Did I Read It?  
 

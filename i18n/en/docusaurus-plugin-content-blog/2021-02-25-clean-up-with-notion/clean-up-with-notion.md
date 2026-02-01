@@ -35,7 +35,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: 제이펍 (Jpub)
 - Release Date: 2020-10-16
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Why I Read It
 

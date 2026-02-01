@@ -18,7 +18,7 @@ tags:
 title: A Developer's Guide to Writing
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

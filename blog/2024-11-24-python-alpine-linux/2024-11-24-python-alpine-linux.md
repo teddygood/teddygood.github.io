@@ -12,7 +12,7 @@ keywords:
   - Alpine Linux
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Introduction

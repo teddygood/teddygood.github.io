@@ -14,7 +14,7 @@ tags:
 title: "\U0001F4D6CS Major Knowledge Notes for Interviews"
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 :::info  

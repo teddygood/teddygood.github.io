@@ -33,7 +33,7 @@ Click the book image to visit the [Kyobobook](https://www.kyobobook.co.kr) site!
 - **Publisher**: Hanbit Media  
 - **Release Date**: October 11, 2021  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Book Overview
 

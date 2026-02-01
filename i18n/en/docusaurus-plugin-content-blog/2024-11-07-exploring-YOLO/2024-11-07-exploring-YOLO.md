@@ -13,7 +13,7 @@ tags:
 title: YOLO So Far
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## You Only Look Once

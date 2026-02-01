@@ -33,7 +33,7 @@ Click the book image to go to the Kyobook website!
 - Publisher: Gilbut  
 - Release Date: March 31, 2021  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro
 

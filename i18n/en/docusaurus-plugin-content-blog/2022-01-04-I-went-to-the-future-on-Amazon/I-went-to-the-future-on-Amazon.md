@@ -16,7 +16,7 @@ tags:
 title: I worked at Amazon in the future.
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

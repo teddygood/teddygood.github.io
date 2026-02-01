@@ -9,7 +9,7 @@ tags:
 title: Why Linked Lists Are Rarely Used in Python
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Introduction

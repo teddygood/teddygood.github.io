@@ -9,7 +9,7 @@ image: /img/projects/optiver-kaggle-header.png
 hide_table_of_contents: false
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 # Optiver "Trading at the Close" 대회

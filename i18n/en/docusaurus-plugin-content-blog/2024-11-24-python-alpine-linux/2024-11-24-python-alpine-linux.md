@@ -20,7 +20,7 @@ title: Why Alpine Linux Should Be Avoided When Choosing a Docker Base Image for 
   Projects
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Introduction

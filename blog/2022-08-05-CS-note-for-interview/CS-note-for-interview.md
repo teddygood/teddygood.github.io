@@ -13,7 +13,7 @@ keywords:
   - 취업 준비
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 :::info

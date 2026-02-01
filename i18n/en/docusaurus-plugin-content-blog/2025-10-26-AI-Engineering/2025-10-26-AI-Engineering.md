@@ -30,7 +30,7 @@ Click the book image to visit the Kyobobook store!
 - **Publisher**: Hanbit Media  
 - **Release Date**: September 10, 2025  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro  
 

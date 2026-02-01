@@ -13,7 +13,7 @@ keywords:
   - 뉴럴 네트워크
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

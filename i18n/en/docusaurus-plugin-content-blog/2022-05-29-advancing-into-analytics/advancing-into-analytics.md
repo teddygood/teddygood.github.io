@@ -38,7 +38,7 @@ Click the book image to go to the Kyobobook store!
 - Publisher: Hanbit Media  
 - Publication Date: April 29, 2022  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro  
 

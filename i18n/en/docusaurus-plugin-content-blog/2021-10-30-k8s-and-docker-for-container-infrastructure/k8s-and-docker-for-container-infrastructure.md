@@ -30,7 +30,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Gilbut  
 - Publication Date: June 7, 2021  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Book Review
 

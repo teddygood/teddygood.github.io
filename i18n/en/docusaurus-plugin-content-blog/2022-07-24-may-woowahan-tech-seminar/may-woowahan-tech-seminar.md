@@ -13,7 +13,7 @@ tags:
 title: "\U0001F3CD️May Woowahan Tech Seminar"
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Intro

@@ -28,7 +28,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Roadbook
 - Publication Date: 2018-09-10
 
-<!-- truncate -->
+{/* truncate */}
 
 ## 🎬 Intro
 

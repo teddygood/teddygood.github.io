@@ -18,7 +18,7 @@ tags:
 title: "\U0001F3ACFirst and Last Glottal Start"
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## 글또 10th Season

@@ -27,7 +27,7 @@ Click the book cover to visit the Kyobobook store!
 - Publisher: Hanbit Media
 - Release Date: 2017-01-03
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro
 

@@ -35,7 +35,7 @@ Click the book cover to visit the [Kyobobook](http://www.kyobobook.co.kr) page!
 - **Publisher**: Hanbit Media  
 - **Release Date**: May 1, 2021  
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro  
 

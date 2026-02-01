@@ -28,7 +28,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Easys Publishing
 - Release Date: 2021-01-18
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Intro

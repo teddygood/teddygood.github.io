@@ -27,7 +27,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: Gilbut
 - Published: 2024-02-27
 
-<!-- truncate -->
+{/* truncate */}
 
 ## Intro
 

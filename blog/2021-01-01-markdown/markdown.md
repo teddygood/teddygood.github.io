@@ -12,12 +12,12 @@ keywords:
   - Blog
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 오랜만에 블로그를 다시 시작하다 보니 마크다운에 익숙하지 않은 모습이 보여 문서화 하면서 연습한다.
 
-<!--truncate-->
+{/* truncate */}
 
 ## Markdown이란?
 

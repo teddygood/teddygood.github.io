@@ -14,7 +14,7 @@ keywords:
   - 블로그
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## Book Info

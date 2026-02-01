@@ -36,7 +36,7 @@ image.png
 - **Publisher:** Hanbit Media  
 - **Release Date:** June 10, 2025  
 
-<!-- truncate -->  
+{/* truncate */}  
 
 ## Intro  
 

@@ -34,7 +34,7 @@ Click the book image to go to the Kyobobook site!
 - **Publisher**: Hanbit Media  
 - **Release Date**: 2021-01-18  
 
-<!-- truncate -->  
+{/* truncate */}  
 
 ## I am Reviewer 2021  
 

@@ -13,7 +13,7 @@ keywords:
   - 성장
 ---
 
-<!-- truncate -->
+{/* truncate */}
 
 
 ## 글또 10기

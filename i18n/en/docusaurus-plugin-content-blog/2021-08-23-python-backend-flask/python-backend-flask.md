@@ -33,7 +33,7 @@ Click the book image to go to the Kyobobook site!
 - Publisher: BJ Public
 - Release Date: 2019-01-25
 
-<!-- truncate -->
+{/* truncate */}
 
 ## 🎬 Intro
 
