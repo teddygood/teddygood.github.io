@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 
-import styles from './index.module.css';
+import styles from '../../../src/pages/index.module.css';
 import blogPostList from '@generated/docusaurus-plugin-content-blog/default/blog-post-list-prop-default.json';
 
 type Highlight = {
