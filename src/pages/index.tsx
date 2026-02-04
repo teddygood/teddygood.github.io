@@ -20,11 +20,14 @@ type BlogPostModule = {
   date: string;
 };
 
+// Korean summary lines
 const summaryLines = [
-  'I focus on strengthening my fundamentals by learning and writing every day.',
-  'I love experimenting with new technologies through open source and side projects.',
-  'I aim to grow with my team and community by sharing everything I learn.',
+  '매일 배우고 기록하며 기본기를 다지는 데 집중합니다.',
+  '오픈소스와 사이드 프로젝트를 통해 새로운 기술을 공부하는 것을 좋아합니다.',
+  '배운 모든 것을 공유하며 팀, 커뮤니티와 함께 성장하는 것을 목표로 합니다.',
 ];
+
+// ... (blog post modules logic remains same)
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const blogPostModulesContext = (require as any).context(
@@ -45,20 +48,20 @@ const recentPosts: Highlight[] = (blogPostList.items ?? []).slice(0, 3).map((ite
     title: details?.title ?? item.title,
     description:
       details?.description ??
-      `Published on ${new Date(item.date).toLocaleDateString(undefined, {
+      `Published on ${new Date(item.date).toLocaleDateString('ko-KR', {
         year: 'numeric',
-        month: 'short',
+        month: 'long',
         day: 'numeric',
       })}`,
     href: item.permalink,
   };
 });
 
-function HighlightCard({item, delay}: {item: Highlight; delay: string}) {
+function HighlightCard({ item, delay }: { item: Highlight; delay: string }) {
   return (
     <Link
       className={clsx(styles.card, styles.cardReveal)}
-      style={{animationDelay: delay}}
+      style={{ animationDelay: delay }}
       to={item.href}>
       <div className={styles.cardTitle}>{item.title} ↗</div>
       <p className={styles.cardDesc}>{item.description}</p>
@@ -67,13 +70,13 @@ function HighlightCard({item, delay}: {item: Highlight; delay: string}) {
 }
 
 function HomepageHero() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={styles.hero}>
       <div className={clsx(styles.heroContent, styles.slideUp)}>
         {/* <p className={styles.kicker}>Hi, I&apos;m {siteConfig.title}</p> */}
-        <h1 className={styles.title}>Hi, I&apos;m {siteConfig.title}</h1>
-        <p className={styles.lead}>I am a software engineer.</p>
+        <h1 className={styles.title}>안녕하세요, 이찬호입니다.</h1>
+        <p className={styles.lead}>소프트웨어 엔지니어입니다.</p>
         <ul className={styles.summary}>
           {summaryLines.map((line, idx) => (
             <li key={idx}>{line}</li>
@@ -81,25 +84,25 @@ function HomepageHero() {
         </ul>
         <div className={styles.actions}>
           <Link className="button button--primary button--lg" to="/blog">
-            Read the blog
+            블로그 읽기
           </Link>
           <Link className={styles.ghostButton} to="/wiki/introduction">
-            Browse the wiki
+            위키 둘러보기
           </Link>
         </div>
       </div>
       <div
         className={clsx(styles.heroImage, styles.slideUp)}
-        style={{animationDelay: '0.15s'}}>
+        style={{ animationDelay: '0.15s' }}>
         <img src="img/profile.jpg" alt="Chanho Lee avatar" />
-        <span className={styles.caption}>Captured while working at Amazon Web Services(AWS)</span>
+        <span className={styles.caption}>Amazon Web Services(AWS) 근무 중 촬영</span>
       </div>
     </header>
   );
 }
 
 export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout title={`${siteConfig.title}`} description={siteConfig.tagline}>
