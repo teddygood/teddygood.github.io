@@ -38,7 +38,7 @@ function ProjectCard({item}: {item: any}) {
             src={image} 
             alt={fm.title} 
             style={{
-              objectFit: 'cover', 
+              objectFit: 'contain', 
               width: '100%', 
               height: '220px', 
               borderRadius: '8px',
