@@ -4,7 +4,7 @@
         <title>Chanho Lee Projects</title>
         <link>https://teddygood.github.io/en/projects</link>
         <description>A showcase of my projects</description>
-        <lastBuildDate>Sat, 07 Feb 2026 03:00:18 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 07 Feb 2026 04:00:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,21 +12,21 @@
             <title><![CDATA[Pyodide]]></title>
             <link>https://teddygood.github.io/en/projects/open-source-contribution</link>
             <guid>https://teddygood.github.io/en/projects/open-source-contribution</guid>
-            <pubDate>Sat, 07 Feb 2026 03:00:18 GMT</pubDate>
+            <pubDate>Sat, 07 Feb 2026 04:00:30 GMT</pubDate>
             <description><![CDATA[Implemented `pyodide clean recipes` CLI and enabled WASM SIMD support for OpenBLAS.]]></description>
         </item>
         <item>
             <title><![CDATA[Optiver "Trading at the Close" Competition Retrospective]]></title>
             <link>https://teddygood.github.io/en/projects/optiver-kaggle</link>
             <guid>https://teddygood.github.io/en/projects/optiver-kaggle</guid>
-            <pubDate>Sat, 07 Feb 2026 03:00:18 GMT</pubDate>
+            <pubDate>Sat, 07 Feb 2026 04:00:30 GMT</pubDate>
             <description><![CDATA[Kaggle Optiver - Trading at the Close Retrospective (Bronze Medal, Top 30%)]]></description>
         </item>
         <item>
             <title><![CDATA[Serverless Code Review Assistant on AWS]]></title>
             <link>https://teddygood.github.io/en/projects/serverless-code-review</link>
             <guid>https://teddygood.github.io/en/projects/serverless-code-review</guid>
-            <pubDate>Sat, 07 Feb 2026 03:00:18 GMT</pubDate>
+            <pubDate>Sat, 07 Feb 2026 04:00:30 GMT</pubDate>
             <description><![CDATA[Automated code review bot powered by AWS Serverless architecture and Bedrock.]]></description>
         </item>
     </channel>
