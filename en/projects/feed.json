@@ -10,7 +10,7 @@
             "url": "https://teddygood.github.io/en/projects/open-source-contribution",
             "title": "Pyodide",
             "summary": "Implemented `pyodide clean recipes` CLI and enabled WASM SIMD support for OpenBLAS.",
-            "date_modified": "2026-02-07T08:01:13.000Z",
+            "date_modified": "2026-02-07T09:01:26.000Z",
             "tags": []
         },
         {
@@ -19,7 +19,7 @@
             "url": "https://teddygood.github.io/en/projects/optiver-kaggle",
             "title": "Optiver \"Trading at the Close\" Competition Retrospective",
             "summary": "Kaggle Optiver - Trading at the Close Retrospective (Bronze Medal, Top 30%)",
-            "date_modified": "2026-02-07T08:01:13.000Z",
+            "date_modified": "2026-02-07T09:01:26.000Z",
             "tags": []
         },
         {
@@ -28,7 +28,7 @@
             "url": "https://teddygood.github.io/en/projects/serverless-code-review",
             "title": "Serverless Code Review Assistant on AWS",
             "summary": "Automated code review bot powered by AWS Serverless architecture and Bedrock.",
-            "date_modified": "2026-02-07T08:01:13.000Z",
+            "date_modified": "2026-02-07T09:01:26.000Z",
             "tags": []
         }
     ]
