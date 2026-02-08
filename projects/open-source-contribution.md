@@ -1,6 +1,6 @@
 ---
 title: 'Pyodide'
-description: '`pyodide clean recipes` CLI 구현 및 OpenBLAS의 WASM SIMD 지원 활성화.'
+description: Open Source Contribution Academy
 role: 'Contributor'
 timeline: 'Ongoing'
 stack: []
@@ -13,7 +13,7 @@ hide_table_of_contents: false
 
 # Pyodide
 
-Pyodide 빌드 시스템 개선과 WASM SIMD를 통한 성능 최적화에 대한 기여 내용입니다.
+Pyodide 빌드 커맨드 개선과 WASM SIMD를 통한 성능 최적화에 대한 기여 내용입니다.
 
 ## 빌드 시스템 개선: `pyodide clean recipes`
 
