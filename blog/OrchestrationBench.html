@@ -18,7 +18,7 @@
 <link rel="alternate" type="application/atom+xml" href="/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
 <link rel="alternate" type="application/json" href="/projects/feed.json" title="Chanho Lee Projects JSON Feed">
 <link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.73e7d64c.css">
-<script src="/assets/js/runtime~main.14e59de9.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.fc3d5260.js" defer="defer"></script>
 <script src="/assets/js/main.a4af9dbe.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -29,8 +29,8 @@
 <p>ICLR 2026. [<a href="https://openreview.net/forum?id=Oljnxmf4pc&amp;noteId=NyL52JeO4j" target="_blank" rel="noopener noreferrer" class="">Paper</a>] [<a href="https://github.com/kakao/OrchestrationBench" target="_blank" rel="noopener noreferrer" class="">Github</a>]</p>
 </blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="들어가며">들어가며<a href="#들어가며" class="hash-link" aria-label="들어가며에 대한 직접 링크" title="들어가며에 대한 직접 링크" translate="no">​</a></h2>
-<p>최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="간단-요약">간단 요약<a href="#간단-요약" class="hash-link" aria-label="간단 요약에 대한 직접 링크" title="간단 요약에 대한 직접 링크" translate="no">​</a></h2>
+<p>최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다. 이 논문은 카카오에서 낸 논문이다. 내 리뷰보다 더 쉬운 설명은 <a href="https://www.kakaocorp.com/page/detail/11919" target="_blank" rel="noopener noreferrer" class="">카카오, 자체 개발 LLM 오케스트레이션 능력 평가 벤치마크 ‘ICLR 2026’ 논문 채택... 깃허브에 오픈소스로 공개</a> 에 있다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="간단-요약">간단 요약<a href="#간단-요약" class="hash-link" aria-label=" 간단 요약에 대한 직접 링크" title="간단 요약에 대한 직접 링크" translate="no">​</a></h2>
 <ol>
 <li class="">실제 multi-domain 환경에서 LLM 오케스트레이션을 평가하기 위한 이중 언어(한국어, 영어) 벤치마크를 소개한다.</li>
 <li class="">workflow planning과 tool execution으로 분리하고 Graph Edit Distance(GED)와 같은 structured metric을 사용한다.</li>
@@ -51,19 +51,19 @@
 <p><strong>Tool Safety Benchmarks</strong><br>
 <!-- -->ToolEmu, R-Judge, SafeToolBench는 위험한 요청을 거부하는 능력을 평가한다. 더 자세히 설명하면 ToolEmu는 single agent, R-Judge, SafeToolBench는 multi-turn agent의 경우이다. 여기서 ToolEmu는 복잡한 다단계 계획 수행 능력보다는 emulate된 환경 내 개별 tool call의 safety alignment에 초점을 맞춘다고 한다. 그러나 OrchestrationBench는 main LLM이 사용 가능한 sub-LLM의 functional descriptions과 constraints를 올바르게 이해함으로써 실행 불가능한 요청을 거부할 수 있는지 테스트하고, safety과는 다른 차원의 functional feasibility에 대한 평가를 다룬다.</p>
 <p><strong>Agentic Planning Benchmarks</strong><br>
-<!-- -->다양한 추상화 수준에서 계획 및 조정 능력을 평가하는 벤치마크이다. PlanBench, MultiAgentBench, REALM-Bench 등 다양한 벤치마크가 있다. 이런 벤치마크들이 에이전트의 plan이나 tool calling 능력을 테스트하지만 OrchestrationBench는 main LLM이 natural language capability description에 기반하여 전문화된 서브 LLM을 동적으로 조정하  는 오케스트레이터 역할을 하는 계층적인 LLM-to-LLM 오케스트레이션 과제를 제시한다. workflow planning을 constraint-aware execution과 분리하는 diagnostic evaluation를 제공하여 상용 챗봇 배포에 필요한 오케스트레이션 기능에 대한 유니크한 평가를 제공한다.</p>
+<!-- -->다양한 추상화 수준에서 계획 및 조정   능력을 평가하는 벤치마크이다. PlanBench, MultiAgentBench, REALM-Bench 등 다양한 벤치마크가 있다. 이런 벤치마크들이 에이전트의 plan이나 tool calling 능력을 테스트하지만 OrchestrationBench는 main LLM이 natural language capability description에 기반하여 전문화된 서브 LLM을 동적으로 조정하는 오케스트레이터 역할을 하는 계층적인 LLM-to-LLM 오케스트레이션 과제를 제시한다. workflow planning을 constraint-aware execution과 분리하는 diagnostic evaluation를 제공하여 상용 챗봇 배포에 필요한 오케스트레이션 기능에 대한 유니크한 평가를 제공한다.</p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="/assets/images/02-related-work-7a35f3696610d9073962318e3264a417.png" width="1848" height="578" class="centered_bfhO img_ev3q"></p>
 <p>OrchestrationBench는 이 모든 평가를 만족하는 유일한 벤치마크라고 한다.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="the-orchestrationbench-framework">The OrchestrationBench Framework<a href="#the-orchestrationbench-framework" class="hash-link" aria-label="The OrchestrationBench Framework에 대한 직접 링크" title="The OrchestrationBench Framework에 대한 직접 링크" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-the-complexity-of-evaluating-llms-in-real-world-environments">1. The Complexity of Evaluating LLMs in Real-World Environments<a href="#1-the-complexity-of-evaluating-llms-in-real-world-environments" class="hash-link" aria-label="1. The Complexity of Evaluating LLMs in Real-World Environments에 대한 직접 링크" title="1. The Complexity of Evaluating LLMs in Real-World Environments에 대한 직접 링크" translate="no">​</a></h3>
 <p>실제 서비스 환경에서 LLM 평가는 단순한 QA를 넘어서는 복잡한 도전이다. 다음 사용자 요청을 생각해보자.</p>
 <blockquote>
-<p>&quot;서울행 항공편 예약하고, COEX 근처 호텔 찾아서, 일정을 팀에게 공유해줘.&quot;</p>
+<p>&quot;서울행 항공편 예약하고, COEX 근처 호텔 찾아  서, 일정을 팀에게 공유해줘.&quot;</p>
 </blockquote>
 <p>이 요청을 처리하려면 아래와 같은</p>
 <ol>
 <li class=""><strong>multi-steep planning</strong>: 일정 공유는 예약 완료 후에만 가능</li>
-<li class=""><strong>dynamic adaptation</strong>: 사용자가 &quot;아침 비행기로 바꿔줘&quot;라고 수정 요청 시  대응</li>
+<li class=""><strong>dynamic adaptation</strong>: 사용자가 &quot;아침 비행기로 바꿔줘&quot;라고 수정 요청 시 대응</li>
 <li class=""><strong>constraint validation</strong>: &quot;4시 10분에 치과 예약&quot;에 대해 시스템 제약(정시/30분 단위만 가능)을 인지하고 대안 제시</li>
 </ol>
 <p>이런 시나리오는 기존의 정적인 벤치마크가 잡지 못하는 planning, adaptation, constraint-aware execution의 복잡하게 얽힌 과제를 강조한다.</p>
@@ -81,11 +81,11 @@
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="22-comprehensive-tool-use">2.2. Comprehensive Tool Use<a href="#22-comprehensive-tool-use" class="hash-link" aria-label="2.2. Comprehensive Tool Use에 대한 직접 링크" title="2.2. Comprehensive Tool Use에 대한 직접 링크" translate="no">​</a></h4>
 <p>tool execution 평가는 단순히 tool call 정확도를 검증하는 수준을 넘어, 서비스 수준 상호작용 과정 전체를 포괄한다.
 이는 모델이 tool을 올바르게 invoke하는지 뿐만 아니라, 언제 tool use가 필요한지, 언제는 추가 tool 없이 직접 정보를 제공할 수 있는지, 그리고 사용자 입력이 불충분하거나 모호한 경우를 인지하여 능동적으로 추가 설명을 요청할 수 있는지를 평가한다. 이러한 행동은 <code>AWAIT_FOR_USER_INPUT</code> 신호로 표현된다.</p>
-<p>syntatic correctness를 넘어서서 실제 서비스는 도메인별 비즈니스 규칙을 엄격하게 준수해야 한다. tool을 실제로 invoke하기 전에, 모델은 pre-execution 검증을 수행하며, 필요한 제약 조건이 충족되지 않았을 경우 <code>TOOL_CONSTRAINT_VIOLATION</code>을 발생시킨다.</p>
+<p>syntatic correctness를 넘어서서 실제 서비스는 도메인별 비즈니스 규칙을 엄 격하게 준수해야 한다. tool을 실제로 invoke하기 전에, 모델은 pre-execution 검증을 수행하며, 필요한 제약 조건이 충족되지 않았을 경우 <code>TOOL_CONSTRAINT_VIOLATION</code>을 발생시킨다.</p>
 <ul>
 <li class="">논리적 일관성 유지<!-- -->
 <ul>
-<li class="">사용자의 요청 내용이 현실적으로   말이 되거나 논리적으로 모순되지 않는지 확인하는 과정</li>
+<li class="">사용자의 요청 내용이 현실적으로 말이 되거나 논리적으로 모순되지 않는지 확인하는 과정</li>
 <li class="">e.g., 항공권 예약 시 귀국일이 출발일보다 빠른 것</li>
 </ul>
 </li>
@@ -101,7 +101,7 @@
 <h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="23-multi-domain-tool-environments">2.3. Multi-Domain Tool Environments<a href="#23-multi-domain-tool-environments" class="hash-link" aria-label="2.3. Multi-Domain Tool Environments에 대한 직접 링크" title="2.3. Multi-Domain Tool Environments에 대한 직접 링크" translate="no">​</a></h4>
 <p>이 벤치마크는 특정 서비스 종속성과는 독립적으로 유지하면서 실제 애플리케이션으로 확장 가능한 17개의 대표적인 서비스 도메인을 정의한다. 각 도메인은 모델의 고유한 오케스트레이션 및 명령어 수행 능력을 평가할 수 있도록 현실적이면서도 일반화된 시나리오를 중심으로 구축된다.</p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="/assets/images/04-multi-domain-tools-341eec496f80d6671ee5a8ceb6d6fa2d.png" width="1548" height="1646" class="centered_bfhO img_ev3q"></p>
-<p>영어 97개, 한국어 99개의 tool이 있다. 한국어에는 주소 로마  자 변환, 사주 정보 등과 같은 특수 tool이 추가되어 있다. 단순화된 tool 추상화를 사용한 이전 벤치마크들과는 달리 OrchestrationBench는 도메인별 제약 조건과 현실적인 동작을 통합하여 다양한 task에 대한 세밀한 커버리지를 제공하고 실제 서비스 환경을 충실하게 시뮬레이션한다.</p>
+<p>영어 97개, 한국어 99개의 tool이 있다. 한국어에는 주소 로마자 변환, 사주 정보 등과 같은 특수 tool이 추가되어 있다. 단순화된 tool 추상화를 사용한 이전 벤치마크들과는 달리 OrchestrationBench는 도메인별 제약 조건과 현실적인 동작을 통합하여 다양한 task에 대한 세밀한 커버리지를 제공하고 실제 서비스 환경을 충실하게 시뮬레이션한다.</p>
 <p>이런 domain들은 집합적으로 세 가지 일반적인 사용자 workflow 유형을 나타낸다. 이런 분류는 이 벤치마크가 주로 일상적인 소비자 서비스를 반영하는 동시에 유틸리티 및 생산성 맥락으로 확장 가능함을 강조한다.</p>
 <ol>
 <li class="">문의 및 정보 task(e.g., 날씨 확인, 장소 찾기, 뉴스 읽기)</li>
@@ -117,7 +117,7 @@
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="4-dataset-scale-and-distribution">4. Dataset Scale and Distribution<a href="#4-dataset-scale-and-distribution" class="hash-link" aria-label="4. Dataset Scale and Distribution에 대한 직접 링크" title="4. Dataset Scale and Distribution에 대한 직접 링크" translate="no">​</a></h3>
 <p><img decoding="async" loading="lazy" alt="alt text" src="/assets/images/07-dataset-scale-079b5467c508641d73dc4df84879991c.png" width="888" height="228" class="centered_bfhO img_ev3q"></p>
 <p><img decoding="async" loading="lazy" alt="alt text" src="/assets/images/08-dataset-distribution-ea6733044191206ba0ebe814c0a555b5.png" width="1436" height="1436" class="centered_bfhO img_ev3q"></p>
-<p>이 데이터셋은 영어와 한국어 서브셋을 모두 포함하며 규모 면에서 유사하다. 두 데이터셋 모두 17개의 대표적인 서비스 도메인에 걸쳐 있고, 의도적으로 비대칭적인 tool 분포를 보여준다. Places 또는 Entertainment와 같은 넓은 domain은 많은 tool을 포함하지만, Weather나 News 같은 좁은 domain은 현실적인 사용 빈도를 반영하기 위해 간결하게 구성되어 있다.</p>
+<p>이 데이터셋은 영어와 한국어 서브셋을 모두 포함하며 규모 면에서 유사하다. 두 데이터셋 모두 17개의 대표적인 서비  스 도메인에 걸쳐 있고, 의도적으로 비대칭적인 tool 분포를 보여준다. Places 또는 Entertainment와 같은 넓은 domain은 많은 tool을 포함하지만, Weather나 News 같은 좁은 domain은 현실적인 사용 빈도를 반영하기 위해 간결하게 구성되어 있다.</p>
 <p>workflow 수준에서 대부분의 세션은 2<del>3개의 workflow와 2</del>3개의 domain을 포함하지만 일부는 최대 7 step까지 확장되거나 4개 이상의 domain에 걸친다. 이는 single session이 일반적으로 여러 차례의 planning을 필요로 하며 일부는 최대 7 planning step을 포함하는 걸 보여준다. 또한, 두 개 이상의 domain이 자주 포함되는 것은 사용자가 heterogeneous 서비스 간에 전환하는 현실적인 다중 도메인 시나리오를 반영한다. tool invocation 측면에서 이 데이터셋은 single isolated call보다는 sequential and parallel call 구조가 지배적이어서 실제 task을 완료하는 데 오케스트레이션이 복잡한 걸 확인할 수 있다.</p>
 <p>이런 분포들은 종합적으로 OrchestrationBench가 광범위한 실제 오케스트레이션 패턴을 다루며, 모델 planning, tool invocation 그리고 adaptive reasoning capabilities에 대한 세밀한 평가를 가능하게 함을 보여준다. 이는 벤치마크가 고립된 질의응답 또는 단순한 tool calling을 넘어 현실적이고 constaint-aware 서비스 환경에서의 오케스트레이션 성능 평가를 가능하게 함을 강조한다.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="evaluation">Evaluation<a href="#evaluation" class="hash-link" aria-label="Evaluation에 대한 직접 링크" title="Evaluation에 대한 직접 링크" translate="no">​</a></h2>

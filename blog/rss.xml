@@ -18,8 +18,8 @@
 <p>ICLR 2026. [<a href="https://openreview.net/forum?id=Oljnxmf4pc&amp;noteId=NyL52JeO4j" target="_blank" rel="noopener noreferrer" class="">Paper</a>] [<a href="https://github.com/kakao/OrchestrationBench" target="_blank" rel="noopener noreferrer" class="">Github</a>]</p>
 </blockquote>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="들어가며">들어가며<a href="https://teddygood.github.io/blog/OrchestrationBench#%EB%93%A4%EC%96%B4%EA%B0%80%EB%A9%B0" class="hash-link" aria-label="들어가며에 대한 직접 링크" title="들어가며에 대한 직접 링크" translate="no">​</a></h2>
-<p>최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다.</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="간단-요약">간단 요약<a href="https://teddygood.github.io/blog/OrchestrationBench#%EA%B0%84%EB%8B%A8-%EC%9A%94%EC%95%BD" class="hash-link" aria-label="간단 요약에 대한 직접 링크" title="간단 요약에 대한 직접 링크" translate="no">​</a></h2>
+<p>최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다. 이 논문은 카카오에서 낸 논문이다. 내 리뷰보다 더 쉬운 설명은 <a href="https://www.kakaocorp.com/page/detail/11919" target="_blank" rel="noopener noreferrer" class="">카카오, 자체 개발 LLM 오케스트레이션 능력 평가 벤치마크 ‘ICLR 2026’ 논문 채택... 깃허브에 오픈소스로 공개</a> 에 있다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="간단-요약">간단 요약<a href="https://teddygood.github.io/blog/OrchestrationBench#%EA%B0%84%EB%8B%A8-%EC%9A%94%EC%95%BD" class="hash-link" aria-label="�간단 요약에 대한 직접 링크" title="간단 요약에 대한 직접 링크" translate="no">​</a></h2>
 <ol>
 <li class="">실제 multi-domain 환경에서 LLM 오케스트레이션을 평가하기 위한 이중 언어(한국어, 영어) 벤치마크를 소개한다.</li>
 <li class="">workflow planning과 tool execution으로 분리하고 Graph Edit Distance(GED)와 같은 structured metric을 사용한다.</li>
