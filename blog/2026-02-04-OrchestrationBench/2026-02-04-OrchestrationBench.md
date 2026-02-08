@@ -18,7 +18,7 @@ keywords:
 
 ## 들어가며
 
-최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다.
+최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다. 이 논문은 카카오에서 낸 논문이다. 내 리뷰보다 더 쉬운 설명은 [카카오, 자체 개발 LLM 오케스트레이션 능력 평가 벤치마크 ‘ICLR 2026’ 논문 채택... 깃허브에 오픈소스로 공개](https://www.kakaocorp.com/page/detail/11919) 에 있다. 
 
 ## 간단 요약
 
