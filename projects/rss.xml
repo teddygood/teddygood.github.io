@@ -4,7 +4,7 @@
         <title>Chanho Lee Projects</title>
         <link>https://teddygood.github.io/projects</link>
         <description>A showcase of my projects</description>
-        <lastBuildDate>Sun, 08 Feb 2026 23:20:36 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 09 Feb 2026 02:21:07 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>ko</language>
@@ -12,21 +12,21 @@
             <title><![CDATA[Pyodide]]></title>
             <link>https://teddygood.github.io/projects/open-source-contribution</link>
             <guid>https://teddygood.github.io/projects/open-source-contribution</guid>
-            <pubDate>Sun, 08 Feb 2026 23:20:36 GMT</pubDate>
+            <pubDate>Mon, 09 Feb 2026 02:21:07 GMT</pubDate>
             <description><![CDATA[Open Source Contribution Academy]]></description>
         </item>
         <item>
             <title><![CDATA[Optiver "Trading at the Close" 대회]]></title>
             <link>https://teddygood.github.io/projects/optiver-kaggle</link>
             <guid>https://teddygood.github.io/projects/optiver-kaggle</guid>
-            <pubDate>Sun, 08 Feb 2026 23:20:36 GMT</pubDate>
+            <pubDate>Mon, 09 Feb 2026 02:21:07 GMT</pubDate>
             <description><![CDATA[Kaggle Optiver - Trading at the Close 대회 (Top 30%)]]></description>
         </item>
         <item>
             <title><![CDATA[Serverless Code Review Assistant on AWS]]></title>
             <link>https://teddygood.github.io/projects/serverless-code-review</link>
             <guid>https://teddygood.github.io/projects/serverless-code-review</guid>
-            <pubDate>Sun, 08 Feb 2026 23:20:36 GMT</pubDate>
+            <pubDate>Mon, 09 Feb 2026 02:21:07 GMT</pubDate>
             <description><![CDATA[Automated code review bot powered by AWS Serverless architecture and Bedrock.]]></description>
         </item>
     </channel>
