@@ -5,7 +5,7 @@ role: Data Scientist
 timeline: Oct 2023 - Dec 2023
 stack: [Python, LightGBM, Numba, Pandas]
 category: Kaggle Competition
-image: /img/projects/optiver-kaggle-header-aspect.png
+image: /img/projects/optiver-kaggle-header-aspect-v2.png
 hide_table_of_contents: false
 ---
 
