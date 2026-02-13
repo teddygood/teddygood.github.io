@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="plugin-blog plugin-id-projects" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Doc-to-RAG Benchmark @ Chanho Lee</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://teddygood.github.io/en/projects/doc-to-rag-benchmark"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ko_KR"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Doc-to-RAG Benchmark @ Chanho Lee"><meta data-rh="true" name="description" content="Doc-to-Text에서 평가 가능한 RAG 데이터까지 | Meta Llama Academy 워크숍에서 진행한 PDF 기반 Doc-to-RAG Benchmark 구축 프로젝트 회고"><meta data-rh="true" property="og:description" content="Doc-to-Text에서 평가 가능한 RAG 데이터까지 | Meta Llama Academy 워크숍에서 진행한 PDF 기반 Doc-to-RAG Benchmark 구축 프로젝트 회고"><link data-rh="true" rel="icon" href="/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://teddygood.github.io/en/projects/doc-to-rag-benchmark"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/doc-to-rag-benchmark" hreflang="ko-KR"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/en/projects/doc-to-rag-benchmark" hreflang="en"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/doc-to-rag-benchmark" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://3GO7VFCZS7-dsn.algolia.net" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/en/blog/rss.xml" title="Chanho Lee RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/en/blog/atom.xml" title="Chanho Lee Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFT0SBFJCH"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EFT0SBFJCH",{})</script>
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="Chanho Lee" href="/en/opensearch.xml">
+<link rel="alternate" type="application/rss+xml" href="/en/projects/rss.xml" title="Chanho Lee Projects RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/en/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
+<link rel="alternate" type="application/json" href="/en/projects/feed.json" title="Chanho Lee Projects JSON Feed">
+<link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/en/assets/css/styles.8fb09425.css">
+<script src="/en/assets/js/runtime~main.f3b886d6.js" defer="defer"></script>
+<script src="/en/assets/js/main.2c52ec55.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="/en/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/en/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Chanho Lee</b></a><a class="navbar__item navbar__link" href="/en/wiki/introduction">Wiki</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/en/projects">Projects</a><a class="navbar__item navbar__link" href="/en/blog/archive">Archive</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/projects/doc-to-rag-benchmark" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ko-KR">한국어</a></li><li><a href="/en/projects/doc-to-rag-benchmark" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><a href="https://github.com/teddygood" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><a href="https://www.linkedin.com/in/teddygood/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-linkedin-link" aria-label="LinkedIn Account"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><div class="col col--8 col--offset-2"><div style="max-width:800px;margin:0 auto"><h1 style="font-size:3rem;margin-bottom:2rem">Doc-to-RAG Benchmark</h1><div class="row margin-bottom--lg"><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Role</h4><p style="font-weight:bold;font-size:1.1rem">AI Engineer</p></div><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Timeline</h4><p style="font-weight:bold;font-size:1.1rem">Sep 2025 - Oct 2025</p></div><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Skill</h4><div style="display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge--secondary">LangGraph</span><span class="badge badge--secondary">Upstage API</span><span class="badge badge--secondary">Solar Pro 2</span><span class="badge badge--secondary">Llama 3.2</span><span class="badge badge--secondary">PDF Parsing</span><span class="badge badge--secondary">QLoRA</span></div></div></div><hr style="margin-bottom:2rem">
+<h2 id="왜-이-프로젝트를-시작했는가">왜 이 프로젝트를 시작했는가</h2>
+<p>워크숍 초반에 가장 크게 느낀 문제는 단순했다. RAG 성능 비교를 하려면 먼저 &quot;비교 가능한 데이터&quot;가 있어야 하는데, PDF 문서는 파서마다 결과가 달라서 같은 질문에도 기준이 흔들렸다.</p>
+<p>내가 팀에서 합의한 방향은 &quot;모델 자랑&quot;이 아니라 &quot;평가 기준 고정&quot;이었다. 문서 추출부터 QA 생성, Judge 검증, 데이터셋 저장까지 한 흐름으로 묶어야 재현 가능한 실험이 된다고 봤다.</p>
+<h2 id="팀-구성과-역할">팀 구성과 역할</h2>
+<p>팀은 아래처럼 나눠서 일했다.</p>
+<ol>
+<li>프로젝트 총괄 리더: 방향성, 우선순위, 일정 관리</li>
+<li>프론트엔드 + 백엔드: 데모 및 서비스 연결</li>
+<li>멀티 에이전트 구현: 파싱/정제 그래프 설계</li>
+<li>데이터/평가 파이프라인: 추출 텍스트 기반 벤치마크 + LLM Judge + Hugging Face 업로드</li>
+<li>나: QLoRA 기반 파인튜닝 실험 설계 및 운영</li>
+</ol>
+<p>내가 맡은 비  중은 5번이 가장 컸다. 프로젝트 전체 성능에서 파인튜닝이 실제로 의미 있는 개선을 내는지, 그리고 그 결과를 운영 가능한 형태로 남기는 데 집중했다.</p>
+<h2 id="내가-맡은-핵심-파인튜닝-실험-설계와-운영">내가 맡은 핵심: 파인튜닝 실험 설계와 운영</h2>
+<h3 id="1-학습-루프를-먼저-고정했다">1) 학습 루프를 먼저 고정했다</h3>
+<p>내가 처음 한 일은 &quot;한 번 돌아가면 끝&quot;인 스크립트가 아니라, 반복 가능한 실험 루프를 만드는 것이었다.</p>
+<ol>
+<li>베이스 모델: <code>meta-llama/Llama-3.2-1B-Instruct</code></li>
+<li>데이터: KorQuAD v1 정규화 + validation 샘플링</li>
+<li>방법: QLoRA(4bit NF4)</li>
+<li>비교: 베이스 vs 튜닝 모델 동시 추론</li>
+<li>평가: EM/F1 중심으로 고정</li>
+<li>배포 검증: 병합 후 GGUF 변환 + <code>llama.cpp</code> 추론</li>
+</ol>
+<h3 id="2-좋은-실험보다-지속-가능한-실험에-집중했다">2) &quot;좋은 실험&quot;보다 &quot;지속 가능한 실험&quot;에 집중했다</h3>
+<p>성능 숫자만 모으면 다음 실험에서 다시 무너지는 경우가 많아서, 운영 지표를 같이 남겼다.</p>
+<ol>
+<li><code>TimeBudgetCallback</code>으로 학습 시간 상한 관리</li>
+<li>step 단위 wall time/CUDA time/메모리 사용량 CSV 기록</li>
+<li>학습 종료 후 LoRA 병합까지 스크립트 한 번으로 처리</li>
+</ol>
+<p>이렇게 해두니 &quot;성능이 올랐다&quot;가 아니라 &quot;왜 올랐는지&quot;를 다음 실험에서 다시 검증할 수 있었다.</p>
+<h3 id="3-파인튜닝-목표를-좁게-잡았다">3) 파인튜닝 목표를 좁게 잡았다</h3>
+<p>목표는 범용 대화 성능이 아니라, 문서 기반 QA에서 답변 일관성과 근거 회수율을 높이는 것이었다. 그래서 데이터 포맷, 프롬프트 템플릿, 평가 루틴을 바꾸지 않고 유지했다.</p>
+<h2 id="파인튜닝과-전체-파이프라인을-어떻게-연결했는가">파인튜닝과 전체 파이프라인을 어떻게 연결했는가</h2>
+<p>내가 본 핵심은 이거였다. RAG는 한 컴포넌트만 좋아져도 전체가 좋아지지 않는다.</p>
+<ol>
+<li>파싱 품질이 낮으면 검색이 흔들린다.</li>
+<li>검색이 흔들리면 생성 모델이 좋아도 환각이 늘어난다.</li>
+<li>그래서 파인튜닝은 &quot;마지막 단계 보정&quot; 역할로 두고, 앞단 품질 기준과 같이 운영해야 한다.</li>
+</ol>
+<p>결론적으로 파인튜닝은 단독 해법이 아니라, 파싱/평가 기준이 정돈된 상태에서 최종 응답 품질을 안정화하는 축이었다.</p>
+<h2 id="서비스-흐름발표-자료">서비스 흐름(발표 자료)</h2>
+<h3 id="ocr파싱-전략-선택-흐름">OCR/파싱 전략 선택 흐름</h3>
+<p><img alt="OCR/파싱 전략 선택 흐름" src="/en/assets/images/slide07_img04-07138d697d14705f538b0e975c5fdbec.png" width="1868" height="1562"></p>
+<p>이 흐름에서 중요한 건 Fail 페이지에만 폴백을 태우는 설계였다. 전 페이지에 무거운 처리를 걸지 않고, 필요한 페이지에만 <code>custom_split</code>, <code>layout_reorder</code>, <code>table_enhancement</code>를 적용해 비용을 제어했다.</p>
+<h3 id="문서-정제refine-흐름">문서 정제(Refine) 흐름</h3>
+<p><img alt="문서 정제(Refine) 흐름" src="/en/assets/images/slide08_img04-ab64e840e35424c478d0e6789cb65eb2.png" width="1332" height="1442"></p>
+<p>정제도 같은 원칙을 적용했다. On-device로 먼저 판정하고, <code>Need Refine</code>만 Solar로 넘겨서 품질을 올렸다. 이 구조 덕분에 정제 비용이 문서 길이에 비례해 폭증하는 문제를 피할 수 있었다.</p>
+<h2 id="프로젝트를-하면서-확인한-점">프로젝트를 하면서 확인한 점</h2>
+<p>이 프로젝트에서 얻은 가장 큰 확인은 명확했다. &quot;좋은 모델 하나&quot;보다 &quot;좋은 평가 데이터와 선택 기준&quot;이 RAG 성능을 더 안정적으로 끌어올린다.</p>
+<p>내 역할 관점에서는, 파인튜닝 성능 자체보다 실험 루프를 고정하고 결과를 재현 가능하게 남긴 것이 이후 개선 속도를 더 크게 만들었다.</p>
+<h2 id="다음에-바로-개선하고-싶은-것">다음에 바로 개선하고 싶은 것</h2>
+<ol>
+<li>도메인별 Judge 프롬프트 자동 선택</li>
+<li>벤치마크 산출물을 Hugging Face 포맷으로 일관 출력</li>
+<li>파싱 실패/정제 역효과 케이스를 회귀 테스트로 상시 관리</li>
+</ol>
+<h2 id="참고-레포">참고 레포</h2>
+<ol>
+<li><a href="https://github.com/JeongminCheon/llamacpp">JeongminCheon/llamacpp</a></li>
+<li><a href="https://github.com/Gayeon6423/Project/tree/main/Doc-to-RAG-Benchmark">Gayeon6423/Project/tree/main/Doc-to-RAG-Benchmark</a></li>
+<li><a href="https://github.com/P-oong/Doc-to-text_Parsing_Agent">P-oong/Doc-to-text_Parsing_Agent</a></li>
+</ol></div></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#왜-이-프로젝트를-시작했는가" class="table-of-contents__link toc-highlight">왜 이 프로젝트를 시작했는가</a></li><li><a href="#팀-구성과-역할" class="table-of-contents__link toc-highlight">팀 구성과 역할</a></li><li><a href="#내가-맡은-핵심-파인튜닝-실험-설계와-운영" class="table-of-contents__link toc-highlight">내가 맡은 핵심: 파인튜닝 실험 설계와 운영</a><ul><li><a href="#1-학습-루프를-먼저-고정했다" class="table-of-contents__link toc-highlight">1) 학습 루프를 먼저 고정했다</a></li><li><a href="#2-좋은-실험보다-지속-가능한-실험에-집중했다" class="table-of-contents__link toc-highlight">2) &quot;좋은 실험&quot;보다 &quot;지속 가능한 실험&quot;에 집중했다</a></li><li><a href="#3-파인튜닝-목표를-좁게-잡았다" class="table-of-contents__link toc-highlight">3) 파인튜닝 목표를 좁게 잡았다</a></li></ul></li><li><a href="#파인 튜닝과-전체-파이프라인을-어떻게-연결했는가" class="table-of-contents__link toc-highlight">파인튜닝과 전체 파이프라인을 어떻게 연결했는가</a></li><li><a href="#서비스-흐름발표-자료" class="table-of-contents__link toc-highlight">서비스 흐름(발표 자료)</a><ul><li><a href="#ocr파싱-전략-선택-흐름" class="table-of-contents__link toc-highlight">OCR/파싱 전략 선택 흐름</a></li><li><a href="#문서-정제refine-흐름" class="table-of-contents__link toc-highlight">문서 정제(Refine) 흐름</a></li></ul></li><li><a href="#프로젝트를-하면서-확인한-점" class="table-of-contents__link toc-highlight">프로젝트를 하면서 확인한 점</a></li><li><a href="#다음에-바로-개선하고-싶은-것" class="table-of-contents__link toc-highlight">다음에 바로 개선하고 싶은 것</a></li><li><a href="#참고-레포" class="table-of-contents__link toc-highlight">참고 레포</a></li></ul></div></div></div></div></div></div>
+</body>
+</html>
