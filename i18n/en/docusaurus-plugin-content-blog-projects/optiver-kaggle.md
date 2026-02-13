@@ -5,7 +5,7 @@ role: Data Scientist
 timeline: Oct 2023 - Dec 2023
 stack: [Python, LightGBM, Numba, Pandas]
 category: Kaggle Competition
-image: /img/projects/optiver-kaggle-header-aspect-v2.png
+image: /img/projects/optiver-kaggle/optiver-kaggle-header-aspect-v2.png
 hide_table_of_contents: false
 ---
 
@@ -30,7 +30,7 @@ The **Nasdaq Closing Cross** takes place daily during the last 10 minutes of the
 
 ### Schedule and Prize
 
-![Competition Timeline](/img/projects/optiver-timeline.png)
+![Competition Timeline](/img/projects/optiver-kaggle/optiver-timeline.png)
 
 This is a forecasting competition with an active training phase and a second period where models will be run against real market data.
 

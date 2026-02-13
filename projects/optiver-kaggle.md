@@ -5,7 +5,7 @@ role: Data Scientist
 timeline: Oct 2023 - Dec 2023
 stack: [Python, LightGBM, Numba, Pandas]
 category: Kaggle Competition
-image: /img/projects/optiver-kaggle-header-aspect-v2.png
+image: /img/projects/optiver-kaggle/optiver-kaggle-header-aspect-v2.png
 hide_table_of_contents: false
 ---
 
@@ -30,7 +30,7 @@ Optiver는 글로벌 전자 마켓메이커다. 파생상품, 주식, ETF, 채�
 
 ### 대회 일정
 
-![대회 일정](/img/projects/optiver-timeline.png)
+![대회 일정](/img/projects/optiver-kaggle/optiver-timeline.png)
 
 이 대회는 모델을 먼저 제출하고(Active Training Phase), 이후 실제 시장 데이터로 평가받는(Forecasting Phase) 방식으로 진행되었다.
 
