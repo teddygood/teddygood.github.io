@@ -5,7 +5,7 @@ role: 'Contributor'
 timeline: 'Ongoing'
 stack: ['Python', 'WebAssembly', 'C++']
 category: 'Open Source'
-image: /img/logo-pyodide-repositioned.png
+image: /img/projects/pyodide/logo-pyodide-repositioned.png
 hide_table_of_contents: false
 ---
 
