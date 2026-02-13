@@ -18,7 +18,7 @@
 <link rel="alternate" type="application/atom+xml" href="/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
 <link rel="alternate" type="application/json" href="/projects/feed.json" title="Chanho Lee Projects JSON Feed">
 <link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.73e7d64c.css">
-<script src="/assets/js/runtime~main.c01f38f5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0c2aa11f.js" defer="defer"></script>
 <script src="/assets/js/main.b12ecafd.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -68,16 +68,39 @@
 <li>그래서 파인튜닝은 &quot;마지막 단계 보정&quot; 역할로 두고, 앞단 품질 기준과 같이 운영해야 한다.</li>
 </ol>
 <p>결론적으로 파인튜닝은 단독 해법이 아니라, 파싱/평가 기준이 정돈된 상태에서 최종 응답 품질을 안정화하는 축이었다.</p>
-<h2 id="서비스-흐름발표-자료">서비스 흐름(발표 자료)</h2>
-<h3 id="ocr파싱-전략-선택-흐름">OCR/파싱 전략 선택 흐름</h3>
-<p><img alt="OCR/파싱 전략 선택 흐름" src="/assets/images/slide07_img04-07138d697d14705f538b0e975c5fdbec.png" width="1868" height="1562"></p>
-<p>이 흐름에서 중요한 건 Fail 페이지에만 폴백을 태우는 설계였다. 전 페이지에 무거운 처리를 걸지 않고, 필요한 페이지에만 <code>custom_split</code>, <code>layout_reorder</code>, <code>table_enhancement</code>를 적용해 비용을 제어했다.</p>
-<h3 id="문서-정제refine-흐름">문서 정제(Refine) 흐름</h3>
-<p><img alt="문서 정제(Refine) 흐름" src="/assets/images/slide08_img04-ab64e840e35424c478d0e6789cb65eb2.png" width="1332" height="1442"></p>
-<p>정제도 같은 원칙을 적용했다. On-device로 먼저 판정하고, <code>Need Refine</code>만 Solar로 넘겨서 품질을 올렸다. 이 구조 덕분에 정제 비용이 문서 길이에 비례해 폭증하는 문제를 피할 수 있었다.</p>
+<h2 id="서비스-흐름readme-기준">서비스 흐름(README 기준)</h2>
+<h3 id="전체-구조">전체 구조</h3>
+<img src="/img/projects/doc-to-rag-benchmark/doc1-left.png" alt="Doc-to-RAG 전체 개요 (1)" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<img src="/img/projects/doc-to-rag-benchmark/doc1-right.png" alt="Doc-to-RAG 전체 개요 (2)" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<p>이 그림을 기준으로 팀 내부에서 역할 경계를 먼저 정했다. 문서 파싱 최적화와 벤치마크 자동화를 분리된 작업이 아니라 하나의 파이프라인으로 다루는 것이 목표였다.</p>
+<h3 id="문제-정의와-접근-방향">문제 정의와 접근 방향</h3>
+<p><img alt="문제 정의" src="/assets/images/doc2-f2ba2ea2803ffee6bd34804f0921131c.png" width="659" height="404"></p>
+<p>핵심은 &quot;문서마다 다른 구조&quot; 때문에 같은 질문에서도 추출 품질이 크게 흔들린다는 점이었다. 그래서 단일 파서 고정이 아니라, 문서 특성을 보고 전략을 선택하는 구조로 설계했다.</p>
+<h3 id="ocr파싱-전략-선택-시스템">OCR/파싱 전략 선택 시스템</h3>
+<p><img alt="OCR/파싱 전략 선택" src="/assets/images/doc3-00e1f20c44d721aaba55832316ce899b.png" width="1140" height="1082"></p>
+<p>여기서 중 요한 운영 원칙은 페이지 단위 폴백이었다. Fail 페이지에만 후처리를 태워서 품질을 보정하고, 전 페이지에 무거운 처리를 거는 방식은 피했다.</p>
+<h3 id="문서-정제refine-시스템">문서 정제(Refine) 시스템</h3>
+<p><img alt="문서 정제(Refine)" src="/assets/images/doc4-392700c2c8c161db0d2c4c48933394bf.png" width="999" height="1082"></p>
+<p>정제도 같은 원칙으로 비용을 통제했다. On-device로 먼저 판정하고, <code>Need Refine</code>만 Solar로 넘겨 정제했다.</p>
+<h3 id="end-to-end-파이프라인">End-to-End 파이프라인</h3>
+<img src="/img/projects/doc-to-rag-benchmark/doc5.png" alt="End-to-End 파이프라인" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<p>추출 결과와 평가 결과를 같은 기준으로 누적해서, &quot;이번 실험&quot;이 아니라 &quot;다음 실험에 재사용 가능한 데이터&quot;로 남기는 데 집중했다.</p>
+<h3 id="평가-관점과-결과-정리">평가 관점과 결과 정리</h3>
+<img src="/img/projects/doc-to-rag-benchmark/doc6.png" alt="평가 관점 1" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<img src="/img/projects/doc-to-rag-benchmark/doc7.png" alt="평가 관점 2" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<p>점수 하나로 결론내지 않고, 품질/속도/비용을 같이 봤다. 이 기준을 고정해두니 파인튜닝 결과를 해석할 때도 팀 내 합의가 빨라졌다.</p>
+<h2 id="데모-화면">데모 화면</h2>
+<img src="/img/projects/doc-to-rag-benchmark/domo1.png" alt="데모 화면 1" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<img src="/img/projects/doc-to-rag-benchmark/domo2.png" alt="데모 화면 2" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<img src="/img/projects/doc-to-rag-benchmark/domo3.png" alt="데모 화면 3" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<img src="/img/projects/doc-to-rag-benchmark/domo4.png" alt="데모 화면 4" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<p><img alt="데모 화면 5" src="/assets/images/domo5-bdc46c8ba42e850a9bc1e99826cf4e41.png" width="1157" height="1344"></p>
+<p>데모 구간은 &quot;선택 -&gt; 검증 -&gt; 정제 -&gt; 평가&quot;가 실제로 어떻게 보이는지를 보여주는 용도로 정리했다. 발표에서 모델 성능 수치만 보여주지 않고, 운영 흐름이 어떻게 재현되는지 설명하는 데 유용했다.</p>
+<h3 id="the-experience">The Experience</h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px;align-items:start"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-01.jpeg" alt="The experience 1" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-02.jpeg" alt="The experience 2" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-03.jpeg" alt="The experience 3" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-04.jpeg" alt="The experience 4" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-05.jpeg" alt="The experience 5" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-06.jpeg" alt="The experience 6" style="width:100%;height:auto;display:block;border-radius:8px"></div>
 <h2 id="프로젝트를-하면서-확인한-점">프로젝트를 하면서 확인한 점</h2>
-<p>이 프로젝트에서 얻은 가장 큰 확인은 명확했다. &quot;좋은 모델 하나&quot;보다 &quot;좋은 평가 데이터와 선택 기준&quot;이 RAG 성능을 더 안정적으로 끌어올린다.</p>
-<p>  내 역할 관점에서는, 파인튜닝 성능 자체보다 실험 루프를 고정하고 결과를 재현 가능하게 남긴 것이 이후 개선 속도를 더 크게 만들었다.</p>
+<p>이 프로젝트에서 얻은 가장 큰 확인은 명확했다. &quot;좋은 모델 하나&quot;보다 &quot;좋은 평가 데이터와 선택 기준&quot;이 RAG 성능을 더 안정적으로  끌어올린다.</p>
+<p>내 역할 관점에서는, 파인튜닝 성능 자체보다 실험 루프를 고정하고 결과를 재현 가능하게 남긴 것이 이후 개선 속도를 더 크게 만들었다.</p>
 <h2 id="다음에-바로-개선하고-싶은-것">다음에 바로 개선하고 싶은 것</h2>
 <ol>
 <li>도메인별 Judge 프롬프트 자동 선택</li>
@@ -89,6 +112,6 @@
 <li><a href="https://github.com/JeongminCheon/llamacpp">JeongminCheon/llamacpp</a></li>
 <li><a href="https://github.com/Gayeon6423/Project/tree/main/Doc-to-RAG-Benchmark">Gayeon6423/Project/tree/main/Doc-to-RAG-Benchmark</a></li>
 <li><a href="https://github.com/P-oong/Doc-to-text_Parsing_Agent">P-oong/Doc-to-text_Parsing_Agent</a></li>
-</ol></div></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#왜-이-프로젝트를-시작했는가" class="table-of-contents__link toc-highlight">왜 이 프로젝트를 시작했는가</a></li><li><a href="#팀-구성과-역할" class="table-of-contents__link toc-highlight">팀 구성과 역할</a></li><li><a href="#내가-맡은-핵심-파인튜닝-실험-설계와-운영" class="table-of-contents__link toc-highlight">내가 맡은 핵심: 파인튜닝 실험 설계와 운영</a><ul><li><a href="#1-학습-루프를-먼저-고정했다" class="table-of-contents__link toc-highlight">1) 학습 루프를 먼저 고정했다</a></li><li><a href="#2-좋은-실험보다-지속-가능한-실험에-집중했다" class="table-of-contents__link toc-highlight">2) &quot;좋은 실험&quot;보다 &quot;지속 가능한 실험&quot;에 집중했다</a></li><li><a href="#3-파인튜닝-목표를-좁게-잡았다" class="table-of-contents__link toc-highlight">3) 파인튜닝 목표를 좁게 잡았다</a></li></ul></li><li><a href="#파인튜  닝과-전체-파이프라인을-어떻게-연결했는가" class="table-of-contents__link toc-highlight">파인튜닝과 전체 파이프라인을 어떻게 연결했는가</a></li><li><a href="#서비스-흐름발표-자료" class="table-of-contents__link toc-highlight">서비스 흐름(발표 자료)</a><ul><li><a href="#ocr파싱-전략-선택-흐름" class="table-of-contents__link toc-highlight">OCR/파싱 전략 선택 흐름</a></li><li><a href="#문서-정제refine-흐름" class="table-of-contents__link toc-highlight">문서 정제(Refine) 흐름</a></li></ul></li><li><a href="#프로젝트를-하면서-확인한-점" class="table-of-contents__link toc-highlight">프로젝트를 하면서 확인한 점</a></li><li><a href="#다음에-바로-개선하고-싶은-것" class="table-of-contents__link toc-highlight">다음에 바로 개선하고 싶은 것</a></li><li><a href="#참고-레포" class="table-of-contents__link toc-highlight">참고 레포</a></li></ul></div></div></div></div></div></div>
+</ol></div></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#왜-이-프로젝트를-시작했는가" class="table-of-contents__link toc-highlight">왜 이 프로젝트를 시작했는가</a></li><li><a href="#팀-구성과-역할" class="table-of-contents__link toc-highlight">팀 구성과 역할</a></li><li><a href="#내가-맡은-핵심-파인튜닝-실험-설계와-운영" class="table-of-contents__link toc-highlight">내가 맡은 핵심: 파인튜닝 실험 설계와 운영</a><ul><li><a href="#1-학습-루프를-먼저-고정했다" class="table-of-contents__link toc-highlight">1) 학습 루프를 먼저 고정했다</a></li><li><a href="#2-좋은-실험보다-지속-가능한-실험에-집중했다" class="table-of-contents__link toc-highlight">2) &quot;좋은 실험&quot;보다 &quot;지속 가능한 실험&quot;에 집중했다</a></li><li><a href="#3-파인튜닝-목표를-좁게-잡았다" class="table-of-contents__link toc-highlight">3) 파인튜닝 목표를 좁게 잡았다</a></li></ul></li><li><a href="#파인튜닝과-전체-파이프라인을-어떻게-연결했는가" class="table-of-contents__link toc-highlight">파인튜닝과 전체 파이프라인을 어떻게 연결했는가</a></li><li><a href="#서비스-흐름readme-기준" class="table-of-contents__link toc-highlight">서비스 흐름(README 기준)</a><ul><li><a href="#전체-구조" class="table-of-contents__link toc-highlight">전체 구조</a></li><li><a href="#문제-정의와-접근-방향" class="table-of-contents__link toc-highlight">문제 정의와 접근 방향</a></li><li><a href="#ocr파싱-전략-선택-시스템" class="table-of-contents__link toc-highlight">OCR/파싱 전략 선택 시스템</a></li><li><a href="#문서-정제refine-시스템" class="table-of-contents__link toc-highlight">문서 정제(Refine) 시스템</a></li><li><a href="#end-to-end-파이프라인" class="table-of-contents__link toc-highlight">End-to-End 파이프라인</a></li><li><a href="#평가-관점과-결과-정리" class="table-of-contents__link toc-highlight">평가 관점과 결과 정리</a></li></ul></li><li><a href="#데모-화면" class="table-of-contents__link toc-highlight">데모 화면</a><ul><li><a href="#the-experience" class="table-of-contents__link toc-highlight">The Experience</a></li></ul></li><li><a href="#프로젝트를-하면서-확인한-점" class="table-of-contents__link toc-highlight">프로젝트를 하면서 확인한 점</a></li><li><a href="#다음에-바로-개선하고-싶은-것" class="table-of-contents__link toc-highlight">다음에 바로 개선하고 싶은 것</a></li><li><a href="#참고-레포" class="table-of-contents__link toc-highlight">참고 레포</a></li></ul></div></div></div></div></div></div>
 </body>
 </html>
