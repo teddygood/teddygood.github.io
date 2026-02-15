@@ -7,6 +7,7 @@
     "start": "docusaurus start",
     "start:poll": "docusaurus start --poll 1000",
     "build": "docusaurus build",
+    "check:no-obsidian-links": "node ./utils/check-no-obsidian-links.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
