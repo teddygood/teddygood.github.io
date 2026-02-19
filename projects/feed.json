@@ -10,7 +10,7 @@
             "url": "https://teddygood.github.io/projects/doc-to-rag-benchmark",
             "title": "Doc-to-RAG Benchmark",
             "summary": "Doc-to-Text에서 평가 가능한 RAG 데이터까지 | Meta Llama Academy 워크숍에서 진행한 PDF 기반 Doc-to-RAG Benchmark 구축 프로젝트 회고",
-            "date_modified": "2026-02-19T08:35:48.000Z",
+            "date_modified": "2026-02-19T08:36:23.000Z",
             "tags": []
         },
         {
@@ -19,7 +19,7 @@
             "url": "https://teddygood.github.io/projects/optiver-kaggle",
             "title": "Optiver \"Trading at the Close\" 대회",
             "summary": "Kaggle Optiver - Trading at the Close 대회 (Top 30%)",
-            "date_modified": "2026-02-19T08:35:48.000Z",
+            "date_modified": "2026-02-19T08:36:23.000Z",
             "tags": []
         },
         {
@@ -28,7 +28,7 @@
             "url": "https://teddygood.github.io/projects/pyodide",
             "title": "Pyodide",
             "summary": "Open Source Contribution Academy",
-            "date_modified": "2026-02-19T08:35:48.000Z",
+            "date_modified": "2026-02-19T08:36:23.000Z",
             "tags": []
         },
         {
@@ -37,7 +37,7 @@
             "url": "https://teddygood.github.io/projects/serverless-code-review",
             "title": "Serverless Code Review Assistant on AWS",
             "summary": "Automated code review bot powered by AWS Serverless architecture and Bedrock.",
-            "date_modified": "2026-02-19T08:35:48.000Z",
+            "date_modified": "2026-02-19T08:36:23.000Z",
             "tags": []
         }
     ]
