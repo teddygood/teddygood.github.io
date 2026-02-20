@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
-<title data-rh="true">Doc-to-RAG Benchmark @ Chanho Lee</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://teddygood.github.io/en/projects/doc-to-rag-benchmark"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ko_KR"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Doc-to-RAG Benchmark @ Chanho Lee"><meta data-rh="true" name="description" content="Doc-to-Text에서 평가 가능한 RAG 데이터까지 | Meta Llama Academy 워크숍에서 진행한 PDF 기반 Doc-to-RAG Benchmark 구축 프로젝트 회고"><meta data-rh="true" property="og:description" content="Doc-to-Text에서 평가 가능한 RAG 데이터까지 | Meta Llama Academy 워크숍에서 진행한 PDF 기반 Doc-to-RAG Benchmark 구축 프로젝트 회고"><link data-rh="true" rel="icon" href="/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://teddygood.github.io/en/projects/doc-to-rag-benchmark"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/doc-to-rag-benchmark" hreflang="ko-KR"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/en/projects/doc-to-rag-benchmark" hreflang="en"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/doc-to-rag-benchmark" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://3GO7VFCZS7-dsn.algolia.net" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/en/blog/rss.xml" title="Chanho Lee RSS Feed">
+<title data-rh="true">Doc-to-RAG Benchmark @ Chanho Lee</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://teddygood.github.io/en/projects/doc-to-rag-benchmark"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ko_KR"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Doc-to-RAG Benchmark @ Chanho Lee"><meta data-rh="true" name="description" content="From Doc-to-Text to evaluable RAG data | Retrospective on a PDF-based Doc-to-RAG Benchmark project from the Meta Llama Academy workshop"><meta data-rh="true" property="og:description" content="From Doc-to-Text to evaluable RAG data | Retrospective on a PDF-based Doc-to-RAG Benchmark project from the Meta Llama Academy workshop"><link data-rh="true" rel="icon" href="/en/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://teddygood.github.io/en/projects/doc-to-rag-benchmark"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/doc-to-rag-benchmark" hreflang="ko-KR"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/en/projects/doc-to-rag-benchmark" hreflang="en"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/doc-to-rag-benchmark" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://3GO7VFCZS7-dsn.algolia.net" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/en/blog/rss.xml" title="Chanho Lee RSS Feed">
 <link rel="alternate" type="application/atom+xml" href="/en/blog/atom.xml" title="Chanho Lee Atom Feed">
 
 <link rel="preconnect" href="https://www.google-analytics.com">
@@ -18,97 +18,97 @@
 <link rel="alternate" type="application/atom+xml" href="/en/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
 <link rel="alternate" type="application/json" href="/en/projects/feed.json" title="Chanho Lee Projects JSON Feed">
 <link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/en/assets/css/styles.8fb09425.css">
-<script src="/en/assets/js/runtime~main.faf3628f.js" defer="defer"></script>
-<script src="/en/assets/js/main.b1af8369.js" defer="defer"></script>
+<script src="/en/assets/js/runtime~main.2c85c73a.js" defer="defer"></script>
+<script src="/en/assets/js/main.bfc616b7.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
 <symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
 </defs></svg>
 <script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/en/"><div class="navbar__logo"><img src="/en/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/en/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Chanho Lee</b></a><a class="navbar__item navbar__link" href="/en/wiki/introduction">Wiki</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/en/projects">Projects</a><a class="navbar__item navbar__link" href="/en/blog/archive">Archive</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>English</a><ul class="dropdown__menu"><li><a href="/projects/doc-to-rag-benchmark" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="ko-KR">한국어</a></li><li><a href="/en/projects/doc-to-rag-benchmark" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="en">English</a></li></ul></div><a href="https://github.com/teddygood" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><a href="https://www.linkedin.com/in/teddygood/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-linkedin-link" aria-label="LinkedIn Account"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><div class="col col--8 col--offset-2"><div style="max-width:800px;margin:0 auto"><h1 style="font-size:3rem;margin-bottom:2rem">Doc-to-RAG Benchmark</h1><div class="row margin-bottom--lg"><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Role</h4><p style="font-weight:bold;font-size:1.1rem">AI Engineer</p></div><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Timeline</h4><p style="font-weight:bold;font-size:1.1rem">Sep 2025 - Oct 2025</p></div><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Skill</h4><div style="display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge--secondary">LangGraph</span><span class="badge badge--secondary">Upstage API</span><span class="badge badge--secondary">Solar Pro 2</span><span class="badge badge--secondary">Llama 3.2</span><span class="badge badge--secondary">PDF Parsing</span><span class="badge badge--secondary">QLoRA</span></div></div></div><hr style="margin-bottom:2rem">
-<h2 id="왜-이-프로젝트를-시작했는가">왜 이 프로젝트를 시작했는가</h2>
-<p>워크숍 초반에 가장 크게 느낀 문제는 단순했다. RAG 성능 비교를 하려면 먼저 &quot;비교 가능한 데이터&quot;가 있어야 하는데, PDF 문서는 파서마다 결과가 달라서 같은 질문에도 기준이 흔들렸다.</p>
-<p>내가 팀에서 합의한 방향은 &quot;모델 자랑&quot;이 아니라 &quot;평가 기준 고정&quot;이었다. 문서 추출부터 QA 생성, Judge 검증, 데이터셋 저장까지 한 흐름으로 묶어야 재현 가능한 실험이 된다고 봤다.</p>
-<h2 id="팀-구성과-역할">팀 구성과 역할</h2>
-<p>팀은 아래처럼 나눠서 일했다.</p>
+<h2 id="why-we-started-this-project">Why We Started This Project</h2>
+<p>Early in the workshop, the biggest problem became obvious. To compare RAG performance, we first needed &quot;comparable data.&quot; But for PDF documents, each parser produced different outputs, so even the same question had unstable evaluation baselines.</p>
+<p>Within the team, we aligned on one direction: not &quot;showing off a model,&quot; but &quot;fixing the evaluation baseline.&quot; We believed the pipeline had to connect document extraction, QA generation, judge validation, and dataset storage end-to-end to make experiments reproducible.</p>
+<h2 id="team-structure-and-roles">Team Structure and Roles</h2>
+<p>The team was organized as follows:</p>
 <ol>
-<li>프로젝트 총괄 리더: 방향성, 우선순위, 일정 관리</li>
-<li>프론트엔드 + 백엔드: 데모 및 서비스 연결</li>
-<li>멀티 에이전트 구현: 파싱/정제 그래프 설계</li>
-<li>데이터/평가 파이프라인: 추출 텍스트 기반 벤치마크 + LLM Judge + Hugging Face 업로드</li>
-<li>나: QLoRA 기반 파인튜닝 실험 설계 및 운영</li>
+<li>Project lead: direction, priorities, and schedule management</li>
+<li>Frontend + backend: demo and service integration</li>
+<li>Multi-agent implementation: parsing/refinement graph design</li>
+<li>Data/evaluation pipeline: extraction-text benchmark + LLM Judge + Hugging Face upload</li>
+<li>Me: QLoRA-based fine-tuning experiment design and operation</li>
 </ol>
-<p>내가 맡은 비  중은 5번이 가장 컸다. 프로젝트 전체 성능에서 파인튜닝이 실제로 의미 있는 개선을 내는지, 그리고 그 결과를 운영 가능한 형태로 남기는 데 집중했다.</p>
-<h2 id="팀-역할별-상세-설명내-역할-외">팀 역할별 상세 설명(내 역할 외)</h2>
-<p>초기 문서에서 강조했던 것처럼, 이 프로젝트는 한 사람의 모델 실험으로 완성된 게 아니라 각 축이 맞물려서 돌아간 결과였다. 그래서 내 역할 외의 축도 구현 관점으로 정리해 두는 게 맞다.</p>
-<h3 id="1-프로젝트-총괄-리더-방향성과-의사결정-프레임-고정">1) 프로젝트 총괄 리더: 방향성과 의사결정 프레임 고정</h3>
-<p>총괄 리더는 단순 일정 관리가 아니라, 우리가 &quot;무엇을 성공으로 볼지&quot;를 먼저 고정했다.</p>
+<p>My biggest focus was role #5. I concentrated on whether fine-tuning produced meaningful gains for the overall project and how to keep those results in an operationally usable form.</p>
+<h2 id="detailed-role-breakdown-beyond-my-own-role">Detailed Role Breakdown (Beyond My Own Role)</h2>
+<p>As emphasized in our initial draft, this project was not completed by one person&#x27;s model experiments. It worked because multiple axes were integrated. So it is important to summarize non-my-role contributions from an implementation point of view too.</p>
+<h3 id="1-project-lead-fixing-direction-and-decision-framework">1) Project Lead: Fixing Direction and Decision Framework</h3>
+<p>The project lead did more than schedule management. They fixed what &quot;success&quot; meant.</p>
 <ol>
-<li>목표를 &quot;최고 성능 모델 찾기&quot;가 아니라 &quot;재현 가능한 Doc-to-RAG 파이프라인 구축&quot;으로 정렬</li>
-<li>우선순위를 기능 나열이 아니라 병목 해소 순서(추출 -&gt; 검증 -&gt; 정제 -&gt; 평가)로 설정</li>
-<li>발표/데모 메시지를 수치 과시보다 운영 가능성(비용/속도/품질 균형) 중심으로 통일</li>
+<li>Defined the goal as &quot;building a reproducible Doc-to-RAG pipeline,&quot; not &quot;finding the highest-score model&quot;</li>
+<li>Set priorities by bottleneck order (extraction -&gt; validation -&gt; refinement -&gt; evaluation), not feature listing</li>
+<li>Unified demo messaging around operational viability (balance of cost/speed/quality), not just benchmark numbers</li>
 </ol>
-<p>이 정렬 덕분에 팀이 각자 다른 모듈을 개발해도 최종 산출물이 한 방향으로 수렴했다.</p>
-<h3 id="2-프론트엔드--백엔드-데모를-실제-동작-흐름으로-연결">2) 프론트엔드 + 백엔드: 데모를 &quot;실제 동작 흐름&quot;으로 연결</h3>
-<p>프론트/백엔드 담당자는 파이프라인 단계를 화면에서 끊김 없이 확인할 수 있게 묶었다.</p>
+<p>Because of this alignment, even though each member built different modules, final outputs converged toward one direction.</p>
+<h3 id="2-frontend--backend-connecting-the-demo-into-a-real-execution-flow">2) Frontend + Backend: Connecting the Demo into a Real Execution Flow</h3>
+<p>The frontend/backend owner tied each pipeline stage into one visible flow.</p>
 <ol>
-<li>입력 문서부터 추출 결과, 검증 상태, 정제 결과, 최종 선택 결과까지 단계별로 시각화</li>
-<li>백엔드에서 각 단계 산출물(JSON/로그)을 프론트에서 재사용 가능한 포맷으로 전달</li>
-<li>데모 시나리오 기준으로 실패 케이스와 성공 케이스를 같은 흐름에서 비교 가능하게 구성</li>
+<li>Visualized each stage from input document to extraction output, validation status, refinement result, and final selection result</li>
+<li>Delivered backend artifacts (JSON/logs) in reusable formats for frontend rendering</li>
+<li>Built the demo so failure and success cases could be compared in the same scenario flow</li>
 </ol>
-<p>결과적으로 발표 때 &quot;모델이 좋다&quot;가 아니라 &quot;시스템이 어떻게 의사결정하는지&quot;를 보여줄 수 있었다.</p>
-<h3 id="3-멀티-에이전트-구현-파싱정제-그래프를-운영-가능한-구조로-구현">3) 멀티 에이전트 구현: 파싱/정제 그래프를 운영 가능한 구조로 구현</h3>
-<p>멀티 에이전트 담당자는 LangGraph 기반으로 두 축을 분리했다.</p>
+<p>As a result, our presentation could show not &quot;this model is good,&quot; but &quot;how the system makes decisions.&quot;</p>
+<h3 id="3-multi-agent-implementation-making-the-parsingrefinement-graph-operable">3) Multi-Agent Implementation: Making the Parsing/Refinement Graph Operable</h3>
+<p>The multi-agent owner split the system into two LangGraph-based axes:</p>
 <ol>
-<li>OCR/파싱 전략 선택 그래프: 기본 추출 -&gt; 유효성 검증 -&gt; Judge -&gt; 최종 선택</li>
-<li>Refine 그래프: 정제 필요 여부 판단 -&gt; 필요한 페이지만 정제 -&gt; 재검증</li>
+<li>OCR/parsing strategy-selection graph: base extraction -&gt; validation -&gt; judge -&gt; final selection</li>
+<li>Refine graph: determine if refinement is needed -&gt; refine only necessary pages -&gt; re-validate</li>
 </ol>
-<p>핵심 구현 포인트는 페이지 단위 폴백과 조기 중단이었다.</p>
+<p>Key implementation points were page-level fallback and early stop.</p>
 <ol>
-<li>전체 문서가 아니라 Fail 페이지에만 후처리를 적용</li>
-<li>개선이 없으면 다음 단계로 넘어가지 않고 중단</li>
-<li>품질 점수와 처리 속도를 함께 반영한 복합 점수로 최종 선택</li>
+<li>Apply post-processing only to failed pages, not to the entire document</li>
+<li>Stop early if there is no improvement</li>
+<li>Use a composite score that includes both quality and throughput for final selection</li>
 </ol>
-<p>이 설계가 없으면 정확도는 오를 수 있어도 비용과 지연시간이 급격히 커진다.</p>
-<h3 id="4-데이터평가-파이프라인-벤치마크를-재사용-가능한-자산으로-전환">4) 데이터/평가 파이프라인: 벤치마크를 재사용 가능한 자산으로 전환</h3>
-<p>데이터/평가 담당자는 추출 텍스트를 &quot;한 번 쓰고 버리는 결과&quot;가 아니라 &quot;반복 실험용 데이터셋&quot;으로 바꿨다.</p>
+<p>Without this design, accuracy might improve, but costs and latency would rise sharply.</p>
+<h3 id="4-dataevaluation-pipeline-turning-benchmarking-into-a-reusable-asset">4) Data/Evaluation Pipeline: Turning Benchmarking into a Reusable Asset</h3>
+<p>The data/evaluation owner converted extraction outputs from &quot;one-off results&quot; into &quot;reusable experimental assets.&quot;</p>
 <ol>
-<li>추출 텍스트 기반 QA 생성 파이프라인 구축</li>
-<li>LLM Judge를 검증 단계와 평가 단계로 분리해 역할 혼선을 줄임</li>
-<li>결과를 CSV/JSON/데이터셋 형태로 저장해 다음 실험에서 바로 재사용 가능하게 구성</li>
-<li>Hugging Face 업로드까지 연결해 팀 외부에서도 동일 포맷으로 재현 가능하게 정리</li>
+<li>Built a QA generation pipeline on top of extracted text</li>
+<li>Separated LLM Judge usage between validation and evaluation stages to reduce role confusion</li>
+<li>Stored outputs in CSV/JSON/dataset formats for direct reuse in future experiments</li>
+<li>Connected to Hugging Face upload so others could reproduce with the same format</li>
 </ol>
-<p>이 축이 있었기 때문에 파인튜닝 결과도 단발성 실험이 아니라, 고정된 기준 위에서 비교 할 수 있었다.</p>
-<h2 id="프로젝트-설명-전체-흐름을-어떻게-설계했는가">프로젝트 설명: 전체 흐름을 어떻게 설계했는가</h2>
-<p>처음에는 &quot;파서 하나를 잘 고르면 된다&quot;라고 생각했는데, 실제로는 그보다 훨씬 복합적이었다.<br>
-<!-- -->문서 추출 품질이 흔들리면 QA 생성이 흔들리고, QA 품질이 흔들리면 LLM Judge 결과도 흔들린다.<br>
-<!-- -->그래서 이 프로젝트는 기능 단위가 아니라 &quot;파이프라인 단위&quot;로 설계했다.</p>
-<h3 id="1-코드베이스를-세-갈래로-분리한-이유">1) 코드베이스를 세 갈래로 분리한 이유</h3>
-<p>실험 속도와 운영 안정성을 같이 잡기 위해 역할별로 레포를 나눴다.</p>
+<p>Because of this axis, even fine-tuning results could be compared on a fixed baseline instead of being one-shot outcomes.</p>
+<h2 id="project-design-how-we-structured-the-end-to-end-flow">Project Design: How We Structured the End-to-End Flow</h2>
+<p>At first we thought, &quot;Picking one good parser is enough,&quot; but in practice it was more complex.<br>
+<!-- -->When extraction quality fluctuates, QA generation fluctuates. When QA quality fluctuates, LLM Judge outcomes also fluctuate.<br>
+<!-- -->So we designed this project by pipeline units, not by isolated features.</p>
+<h3 id="1-why-we-split-the-codebase-into-three-repositories">1) Why We Split the Codebase into Three Repositories</h3>
+<p>To balance experiment speed and operational stability, we separated repositories by role:</p>
 <ol>
-<li><code>llamacpp</code>: 파인튜닝/추론/평가 루프를 빠르게 반복하기 위한 실험 축</li>
-<li><code>Doc-to-RAG-Benchmark</code>: 제품 관점의 흐름 정리, 발표/데모 구성, 평가 기준 정리 축</li>
-<li><code>Doc-to-text_Parsing_Agent</code>: OCR/파싱 전략 선택 + Refine 정제를 실제로 돌리는 구현 축</li>
+<li><code>llamacpp</code>: experimentation axis for rapid fine-tuning/inference/evaluation loops</li>
+<li><code>Doc-to-RAG-Benchmark</code>: product-facing flow, demo narrative, and evaluation standard axis</li>
+<li><code>Doc-to-text_Parsing_Agent</code>: implementation axis for OCR/parsing strategy selection + refine processing</li>
 </ol>
-<p>이렇게 분리하니, 모델 실험을 바꿔도 서비스/에이전트 코드와 충돌이 적고, 반대로 파싱 로직을 고쳐도 파인튜닝 루프를 깨지 않고 독립적으로 검증할 수 있었다.</p>
-<h3 id="2-파싱정제-시스템에서-중요한-설계-포인트">2) 파싱/정제 시스템에서 중요한 설계 포인트</h3>
-<p>핵심은 &quot;전 문서 고비용 처리&quot;를 피하는 것이었다.</p>
+<p>This separation reduced conflicts between model experiments and service/agent code. Likewise, parser logic changes could be validated independently without breaking the fine-tuning loop.</p>
+<h3 id="2-key-design-points-in-parsingrefinement">2) Key Design Points in Parsing/Refinement</h3>
+<p>The core was to avoid expensive full-document processing.</p>
 <ol>
-<li>기본 추출 단계에서는 여러 파서를 병렬로 돌려 후보를 만든다.</li>
-<li>검증 단계에서 Pass/Fail을 판단한다.</li>
-<li>Fail인 페이지에만 폴백/정제를 적용한다.</li>
-<li>다시 검증해 개선 없으면 중단한다.</li>
+<li>Run multiple parsers in parallel at base extraction to produce candidates</li>
+<li>Determine pass/fail in validation</li>
+<li>Apply fallback/refinement only to failed pages</li>
+<li>Re-validate and stop if no improvement is observed</li>
 </ol>
-<p>이 방식 덕분에 품질을 올리면서도 API 비용과 처리 시간을 통제할 수 있었다.</p>
-<h3 id="3-평가를-점수-하나로-끝내지-않은-이유">3) 평가를 &quot;점수 하나&quot;로 끝내지 않은 이유</h3>
-<p>이 프로젝트에서 평가는 단순 리더보드용이 아니라, 다음 실험의 기준점을 만드는 일이었다.</p>
+<p>This approach improved quality while controlling API cost and processing time.</p>
+<h3 id="3-why-evaluation-was-not-just-one-score">3) Why Evaluation Was Not Just One Score</h3>
+<p>In this project, evaluation was not just for leaderboard ranking. It was for defining a baseline for the next experiment.</p>
 <ol>
-<li>품질: 추출 정확도, 답변 일관성, 노이즈/표/문장 구조 보존</li>
-<li>속도: 문서 단위 처리 시간, 병목 구간</li>
-<li>비용: 외부 LLM 호출 빈도와 페이지 단위 비용</li>
+<li>Quality: extraction accuracy, answer consistency, preservation of noise/table/sentence structure</li>
+<li>Speed: per-document processing time and bottleneck zones</li>
+<li>Cost: external LLM call frequency and per-page cost</li>
 </ol>
-<p>즉, &quot;이번에 잘 나왔다&quot;가 아니라 &quot;다음에도 재현 가능한가&quot;를 기준으로 봤다.</p>
-<p>실제 평가 운영에서는 LLM Judge 5축 가중치를 아래처럼 고정해서 사용했다.</p>
+<p>In other words, the criterion was not &quot;did this run look good,&quot; but &quot;is this reproducible next time.&quot;</p>
+<p>For production evaluation, we fixed LLM Judge weights as follows:</p>
 <ol>
 <li><code>S_read</code> 25%</li>
 <li><code>S_sent</code> 25%</li>
@@ -116,78 +116,81 @@
 <li><code>S_table</code> 25%</li>
 <li><code>S_fig</code> 10%</li>
 </ol>
-<p>최종 선택 단계에서는 품질 점수 80%와 처리 속도 20%를 합산해 의사결정했다.</p>
-<h2 id="내가-맡은-핵심-파인튜닝-실험-설계와-운영">내가 맡은 핵심: 파인튜닝 실험 설계와 운영</h2>
-<h3 id="1-학습-루프를-먼저-고정했다">1) 학습 루프를 먼저 고정했다</h3>
-<p>내가 처음 한 일은 &quot;한 번 돌아가면 끝&quot;인 스크립트가 아니라, 반복 가능한 실험 루프를 만드는 것이었다.</p>
+<p>In final selection, we used 80% quality score + 20% processing speed for decision-making.</p>
+<h2 id="my-core-contribution-fine-tuning-experiment-design-and-operation">My Core Contribution: Fine-Tuning Experiment Design and Operation</h2>
+<h3 id="1-i-fixed-the-training-loop-first">1) I Fixed the Training Loop First</h3>
+<p>The first thing I built was not a one-shot script, but a repeatable experiment loop.</p>
 <ol>
-<li>베이스 모델: <code>meta-llama/Llama-3.2-1B-Instruct</code></li>
-<li>비교 모델: <code>meta-llama/Llama-3.2-3B-Instruct</code></li>
-<li>데이터: KorQuAD v1 정규화 + validation 샘플링</li>
-<li>방법: QLoRA(4bit NF4)</li>
-<li>비교: 베이스 vs 튜닝 모델 동시 추론</li>
-<li>평가: EM/F1 중심으로 고정</li>
-<li>배포 검증: 병합 후 GGUF 변환 + <code>llama.cpp</code> 추론</li>
+<li>Base model: <code>meta-llama/Llama-3.2-1B-Instruct</code></li>
+<li>Comparison model: <code>meta-llama/Llama-3.2-3B-Instruct</code></li>
+<li>Data: KorQuAD v1 normalization + validation sampling</li>
+<li>Method: QLoRA (4bit NF4)</li>
+<li>Comparison: side-by-side inference between base and fine-tuned model</li>
+<li>Evaluation: fixed on EM/F1</li>
+<li>Deployment validation: merged LoRA -&gt; GGUF conversion -&gt; <code>llama.cpp</code> inference</li>
 </ol>
-<p>프로젝트를 진행하면서 1B와 3B를 병행해 실험했다.<br>
-<!-- -->1B는 빠른 반복 실험과 파라미터 탐색에 유리했고, 3B는 품질 상한과 개선 폭을 확인하는 비교 축으로 사용했다.<br>
-<!-- -->최종적으로는 품질만이 아니라 처리 시간과 리소스 비용까지 같이 보고, 운영 환경에서 사용할 구성을 판단했다.</p>
-<h3 id="2-좋은-실험보다-지속-가능한-실험에-집중했다">2) &quot;좋은 실험&quot;보다 &quot;지속 가능한 실험&quot;에 집중했다</h3>
-<p>성능 숫자만 모으면 다음 실험에서 다시 무너지는 경우가 많아서, 운영 지표를 같이 남겼다.</p>
+<p>During the project, I ran both 1B and 3B tracks in parallel.<br>
+<!-- -->1B was useful for quick iteration and parameter exploration, while 3B was used as a comparison axis to check quality ceilings and improvement gaps.<br>
+<!-- -->In the final phase, we decided configurations not only by quality but also by processing time and resource cost.</p>
+<h3 id="2-i-prioritized-sustainable-experiments-over-one-good-run">2) I Prioritized &quot;Sustainable Experiments&quot; Over &quot;One Good Run&quot;</h3>
+<p>Performance numbers alone often collapse in the next iteration, so I kept operational metrics together.</p>
 <ol>
-<li><code>TimeBudgetCallback</code>으로 학습 시간 상한 관리</li>
-<li>step 단위 wall time/CUDA time/메모리 사용량 CSV 기록</li>
-<li>학습 종료 후 LoRA 병합까지 스크립트 한 번으로 처리</li>
+<li>Controlled training-time ceiling with <code>TimeBudgetCallback</code></li>
+<li>Logged step-level wall time/CUDA time/memory usage as CSV</li>
+<li>Automated LoRA merge at training completion in one script</li>
 </ol>
-<p>이렇게 해두니 &quot;성능이 올랐다&quot;가 아니라 &quot;왜 올랐는지&quot;를 다음 실험에서 다시 검증할 수 있었다.</p>
-<h3 id="3-파인튜닝-목표를-좁게-잡았다">3) 파인튜닝 목표를 좁게 잡았다</h3>
-<p>목표는 범용 대화 성능이 아니라, 문서 기반 QA에서 답변 일관성과 근거 회수율을 높이는 것이었다. 그래서 데이터 포맷, 프롬프트 템플릿, 평가 루틴을 바꾸지 않고 유지했다.</p>
-<h2 id="파인튜닝과-전체-파이프라인을-어떻게-연결했는가">파인튜닝과 전체 파이프라인을 어떻게 연결했는가</h2>
-<p>내가 본 핵심은 이거였다. RAG는 한 컴포넌트만 좋아져도 전체가 좋아지지 않는다.</p>
+<p>This made it possible to verify not only &quot;performance improved,&quot; but also &quot;why it improved&quot; in later runs.</p>
+<h3 id="3-i-kept-the-fine-tuning-target-narrow">3) I Kept the Fine-Tuning Target Narrow</h3>
+<p>The goal was not generic conversational quality. It was to improve answer consistency and evidence retrieval in document-grounded QA.<br>
+<!-- -->So we kept data format, prompt template, and evaluation routine stable.</p>
+<h2 id="how-fine-tuning-connected-to-the-full-pipeline">How Fine-Tuning Connected to the Full Pipeline</h2>
+<p>My key takeaway was simple: in RAG, improving one component alone does not guarantee end-to-end improvement.</p>
 <ol>
-<li>파싱 품질이 낮으면 검색이 흔들린다.</li>
-<li>검색이 흔들리면 생성 모델이 좋아도 환각이 늘어난다.</li>
-<li>그래서 파인튜닝은 &quot;마지막 단계 보정&quot; 역할로 두고, 앞단 품질 기준과 같이 운영해야 한다.</li>
+<li>If parsing quality is low, retrieval becomes unstable.</li>
+<li>If retrieval is unstable, hallucinations increase even with a stronger generator.</li>
+<li>So fine-tuning should be treated as a final-stage stabilizer and operated together with upstream quality standards.</li>
 </ol>
-<p>결론적으로 파인튜닝은 단독 해법이 아니라, 파싱/평가 기준이 정돈된 상태에서 최종 응답 품질을 안정화하는 축이었다.</p>
-<h2 id="서비스-흐름readme-기준">서비스 흐름(README 기준)</h2>
-<h3 id="전체-구조">전체 구조</h3>
-<img src="/img/projects/doc-to-rag-benchmark/doc1-left.png" alt="Doc-to-RAG 전체 개요 (1)" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
-<img src="/img/projects/doc-to-rag-benchmark/doc1-right.png" alt="Doc-to-RAG 전체 개요 (2)" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
-<p>이 그림을 기준으로 팀 내부에서 역할 경계를 먼저 정했다. 문서 파싱 최적화와 벤치마크 자동화를 분리된 작업이 아니라 하나의 파이프라인으로 다루는 것이 목표였다.</p>
-<h3 id="문제-정의와-접근-방향">문제 정의와 접근 방향</h3>
-<p><img alt="문제 정의" src="/en/assets/images/doc2-f2ba2ea2803ffee6bd34804f0921131c.png" width="659" height="404"></p>
-<p>핵심은 &quot;문서마다 다른 구조&quot; 때문에 같은 질문에서도 추출 품질이 크게 흔들린다는 점이었다. 그래서 단일 파서 고정이 아니라, 문서 특성을 보고 전략을 선택하는 구조로 설계했다.</p>
-<h3 id="ocr파싱-전략-선택-시스템">OCR/파싱 전략 선택 시스템</h3>
-<p><img alt="OCR/파싱 전략 선택" src="/en/assets/images/doc3-00e1f20c44d721aaba55832316ce899b.png" width="1140" height="1082"></p>
-<p>여기서 중요한 운영 원칙은 페이지 단위 폴백이었다. Fail 페이지에만 후처리를 태워서 품질을 보정하고, 전 페이지에 무거운 처리를 거는 방식은 피했다.</p>
-<h3 id="문서-정제refine-시스템">문서 정제(Refine) 시스템</h3>
-<p><img alt="문서 정제(Refine)" src="/en/assets/images/doc4-392700c2c8c161db0d2c4c48933394bf.png" width="999" height="1082"></p>
-<p>정제도 같은 원칙으로 비용을 통제했다. On-device로 먼저 판정하고, <code>Need Refine</code>만 Solar로 넘겨 정제했다.</p>
-<h3 id="end-to-end-파이프라인">End-to-End 파이프라인</h3>
-<img src="/img/projects/doc-to-rag-benchmark/doc5.png" alt="End-to-End 파이프라인" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
-<p>추출 결과와 평가 결과를   같은 기준으로 누적해서, &quot;이번 실험&quot;이 아니라 &quot;다음 실험에 재사용 가능한 데이터&quot;로 남기는 데 집중했다.</p>
-<h3 id="평가-관점과-결과-정리">평가 관점과 결과 정리</h3>
-<img src="/img/projects/doc-to-rag-benchmark/doc6.png" alt="평가 관점 1" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
-<img src="/img/projects/doc-to-rag-benchmark/doc7.png" alt="평가 관점 2" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
-<p>점수 하나로 결론내지 않고, 품질/속도/비용을 같이 봤다. 이 기준을 고정해두니 파인튜닝 결과를 해석할 때도 팀 내 합의가 빨라졌다.</p>
-<h2 id="데모-화면">데모 화면</h2>
-<img src="/img/projects/doc-to-rag-benchmark/domo1.png" alt="데모 화면 1" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
-<img src="/img/projects/doc-to-rag-benchmark/domo2.png" alt="데모 화면 2" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
-<img src="/img/projects/doc-to-rag-benchmark/domo3.png" alt="데모 화면 3" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
-<img src="/img/projects/doc-to-rag-benchmark/domo4.png" alt="데모 화면 4" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
-<p><img alt="데모 화면 5" src="/en/assets/images/domo5-bdc46c8ba42e850a9bc1e99826cf4e41.png" width="1157" height="1344"></p>
-<p>데모 구간은 &quot;선택 -&gt; 검증 -&gt; 정제 -&gt; 평가&quot;가 실제로 어떻게 보이는지를 보여주는 용도로 정리했다. 발표에서 모델 성능 수치만 보여주지 않고, 운영 흐름이 어떻게 재현되는지 설명하는 데 유용했다.</p>
+<p>In short, fine-tuning was not a standalone solution. It served to stabilize final response quality once parsing/evaluation baselines were already organized.</p>
+<h2 id="service-flow-based-on-readme">Service Flow (Based on README)</h2>
+<h3 id="overall-architecture">Overall Architecture</h3>
+<img src="/img/projects/doc-to-rag-benchmark/doc1-left.png" alt="Doc-to-RAG Overview (1)" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<img src="/img/projects/doc-to-rag-benchmark/doc1-right.png" alt="Doc-to-RAG Overview (2)" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<p>Using this diagram, we first fixed role boundaries within the team. The goal was to treat document parsing optimization and benchmark automation as one pipeline, not disconnected tasks.</p>
+<h3 id="problem-definition-and-approach">Problem Definition and Approach</h3>
+<p><img alt="Problem Definition" src="/en/assets/images/doc2-f2ba2ea2803ffee6bd34804f0921131c.png" width="659" height="404"></p>
+<p>The key issue was that each document had different structure, which caused large extraction-quality variance even for the same question.<br>
+<!-- -->So instead of fixing one parser, we designed a strategy-selection architecture based on document characteristics.</p>
+<h3 id="ocrparsing-strategy-selection-system">OCR/Parsing Strategy Selection System</h3>
+<p><img alt="OCR/Parsing Strategy Selection" src="/en/assets/images/doc3-00e1f20c44d721aaba55832316ce899b.png" width="1140" height="1082"></p>
+<p>The critical operational principle here was page-level fallback. We corrected quality by applying post-processing only to failed pages and avoided heavy processing across all pages.</p>
+<h3 id="document-refinement-refine-system">Document Refinement (Refine) System</h3>
+<p><img alt="Document Refinement (Refine)" src="/en/assets/images/doc4-392700c2c8c161db0d2c4c48933394bf.png" width="999" height="1082"></p>
+<p>We controlled costs with the same principle in refinement. We first judged on-device, then sent only <code>Need Refine</code> cases to Solar.</p>
+<h3 id="end-to-end-pipeline">End-to-End Pipeline</h3>
+<img src="/img/projects/doc-to-rag-benchmark/doc5.png" alt="End-to-End Pipeline" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<p>We accumulated extraction and evaluation outputs on the same baseline, so results became reusable assets for future experiments, not one-time outputs.</p>
+<h3 id="evaluation-perspectives-and-result-summary">Evaluation Perspectives and Result Summary</h3>
+<img src="/img/projects/doc-to-rag-benchmark/doc6.png" alt="Evaluation Perspective 1" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<img src="/img/projects/doc-to-rag-benchmark/doc7.png" alt="Evaluation Perspective 2" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<p>Instead of concluding from one score, we looked at quality, speed, and cost together. Fixing this criterion helped the team align quickly when interpreting fine-tuning outcomes.</p>
+<h2 id="demo-screens">Demo Screens</h2>
+<img src="/img/projects/doc-to-rag-benchmark/domo1.png" alt="Demo Screen 1" style="width:100%;max-width:1100px;height:auto;display:block;margin:0 auto">
+<img src="/img/projects/doc-to-rag-benchmark/domo2.png" alt="Demo Screen 2" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<img src="/img/projects/doc-to-rag-benchmark/domo3.png" alt="Demo Screen 3" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<img src="/img/projects/doc-to-rag-benchmark/domo4.png" alt="Demo Screen 4" style="width:100%;max-width:1100px;height:auto;display:block;margin:16px auto 0">
+<p><img alt="Demo Screen 5" src="/en/assets/images/domo5-bdc46c8ba42e850a9bc1e99826cf4e41.png" width="1157" height="1344"></p>
+<p>The demo section was designed to show how &quot;selection -&gt; validation -&gt; refinement -&gt; evaluation&quot; actually appears in operation.<br>
+<!-- -->In presentation, it was useful for explaining reproducible operational flow, not only model performance numbers.</p>
 <h3 id="the-experience">The Experience</h3>
 <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px;align-items:start"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-01.jpeg" alt="The experience 1" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-02.jpeg" alt="The experience 2" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-03.jpeg" alt="The experience 3" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-04.jpeg" alt="The experience 4" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-05.jpeg" alt="The experience 5" style="width:100%;height:auto;display:block;border-radius:8px"><img src="/img/projects/doc-to-rag-benchmark/experience/experience-06.jpeg" alt="The experience 6" style="width:100%;height:auto;display:block;border-radius:8px"></div>
-<h2 id="프로젝트를-하면서-확인한-점">프로젝트를 하면서 확인한 점</h2>
-<p>이 프로젝트에서 얻은 가장 큰 확인은 명확했다. &quot;좋은 모델 하나&quot;보다 &quot;좋은 평가 데이터와 선택 기준&quot;이 RAG 성능을 더 안정적으로 끌어올린다.</p>
-<p>내 역할 관점에서는, 파인튜닝 성능 자체보다 실험 루프를 고정하고 결과를 재현 가능하게 남긴 것이 이후 개선 속도를 더 크게 만들었다.</p>
-<h2 id="다음에-바로-개선하고-싶은-것">다음에 바로 개선하고 싶은 것</h2>
+<h2 id="what-we-confirmed-through-this-project">What We Confirmed Through This Project</h2>
+<p>The clearest takeaway was this: in RAG systems, &quot;good evaluation data and selection criteria&quot; improves stability more reliably than &quot;one strong model.&quot;</p>
+<p>From my role&#x27;s perspective, fixing the experiment loop and preserving reproducible outputs mattered more for long-term iteration speed than raw fine-tuning gains alone.</p>
+<h2 id="what-i-want-to-improve-next">What I Want to Improve Next</h2>
 <ol>
-<li>도메인별 Judge 프롬프트 자동 선택</li>
-<li>벤치마크 산출물을 Hugging Face 포맷으로 일관 출력</li>
-<li>파싱 실패/정제 역효과 케이스를 회귀 테스트로 상시 관리</li>
-</ol></div></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#왜-이-프로젝트를-시작했는가" class="table-of-contents__link toc-highlight">왜 이 프로젝트를 시작했는 가</a></li><li><a href="#팀-구성과-역할" class="table-of-contents__link toc-highlight">팀 구성과 역할</a></li><li><a href="#팀-역할별-상세-설명내-역할-외" class="table-of-contents__link toc-highlight">팀 역할별 상세 설명(내 역할 외)</a><ul><li><a href="#1-프로젝트-총괄-리더-방향성과-의사결정-프레임-고정" class="table-of-contents__link toc-highlight">1) 프로젝트 총괄 리더: 방향성과 의사결정 프레임 고정</a></li><li><a href="#2-프론트엔드--백엔드-데모를-실제-동작-흐름으로-연결" class="table-of-contents__link toc-highlight">2) 프론트엔드 + 백엔드: 데모를 &quot;실제 동작 흐름&quot;으로 연결</a></li><li><a href="#3-멀티-에이전트-구현-파싱정제-그래프를-운영-가능한-구조로-구현" class="table-of-contents__link toc-highlight">3) 멀티 에이전트 구현: 파싱/정제 그래프를 운영 가능한 구조로 구현</a></li><li><a href="#4-데이터평가-파이프라인-벤치마크를-재사용-가능한-자산으로-전환" class="table-of-contents__link toc-highlight">4) 데이터/평가 파이프라인: 벤치마크를 재사용 가능한 자산으로 전환</a></li></ul></li><li><a href="#프로젝트-설명-전체-흐름을-어떻게-설계했는가" class="table-of-contents__link toc-highlight">프로젝트 설명: 전체 흐름을 어떻게 설계했는가</a><ul><li><a href="#1-코드베이스를-세-갈래로-분리한-이유" class="table-of-contents__link toc-highlight">1) 코드베이스를 세 갈래로 분리한 이유</a></li><li><a href="#2-파싱정제-시스템에서-중요한-설계-포인트" class="table-of-contents__link toc-highlight">2) 파싱/정제 시스템에서 중요한 설계 포인트</a></li><li><a href="#3-평가를-점수-하나로-끝내지-않은-이유" class="table-of-contents__link toc-highlight">3) 평가를 &quot;점수 하나&quot;로 끝내지 않은 이유</a></li></ul></li><li><a href="#내가-맡은-핵심-파인튜닝-실험-설  계와-운영" class="table-of-contents__link toc-highlight">내가 맡은 핵심: 파인튜닝 실험 설계와 운영</a><ul><li><a href="#1-학습-루프를-먼저-고정했다" class="table-of-contents__link toc-highlight">1) 학습 루프를 먼저 고정했다</a></li><li><a href="#2-좋은-실험보다-지속-가능한-실험에-집중했다" class="table-of-contents__link toc-highlight">2) &quot;좋은 실험&quot;보다 &quot;지속 가능한 실험&quot;에 집중했다</a></li><li><a href="#3-파인튜닝-목표를-좁게-잡았다" class="table-of-contents__link toc-highlight">3) 파인튜닝 목표를 좁게 잡았다</a></li></ul></li><li><a href="#파인튜닝과-전체-파이프라인을-어떻게-연결했는가" class="table-of-contents__link toc-highlight">파인튜닝과 전체 파이프라인을 어떻게 연결했는가</a></li><li><a href="#서비스-흐름readme-기준" class="table-of-contents__link toc-highlight">서비스 흐름(README 기준)</a><ul><li><a href="#전체-구조" class="table-of-contents__link toc-highlight">전체 구조</a></li><li><a href="#문제-정의와-접근-방향" class="table-of-contents__link toc-highlight">문제 정의와 접근 방향</a></li><li><a href="#ocr파싱-전략-선택-시스템" class="table-of-contents__link toc-highlight">OCR/파싱 전략 선택 시스템</a></li><li><a href="#문서-정제refine-시스템" class="table-of-contents__link toc-highlight">문서 정제(Refine) 시스템</a></li><li><a href="#end-to-end-파이프라인" class="table-of-contents__link toc-highlight">End-to-End 파이프라인</a></li><li><a href="#평가-관점과-결과-정리" class="table-of-contents__link toc-highlight">평가 관점과 결과 정리</a></li></ul></li><li><a href="#데모-화면" class="table-of-contents__link toc-highlight">데모 화면</a><ul><li><a href="#the-experience" class="table-of-contents__link toc-highlight">The Experience</a></li></ul></li><li><a href="#프로젝트를-하면서-확인한-점" class="table-of-contents__link toc-highlight">프로젝트를 하면서 확인한 점</a></li><li><a href="#다음에-바로-개선하고-싶은-것" class="table-of-contents__link toc-highlight">다음에 바로 개선하고 싶은 것</a></li></ul></div></div></div></div></div></div>
+<li>Automatic selection of domain-specific judge prompts</li>
+<li>Consistent benchmark output in Hugging Face-compatible format</li>
+<li>Continuous regression tests for parsing failures and refinement side effects</li>
+</ol></div></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#why-we-started-this-project" class="table-of-contents__link toc-highlight">Why We Started This Project</a></li><li><a href="#team-structure-and-roles" class="table-of-contents__link toc-highlight">Team Structure and Roles</a></li><li><a href="#detailed-role-breakdown-beyond-my-own-role" class="table-of-contents__link toc-highlight">Detailed Role Breakdown (Beyond My Own Role)</a><ul><li><a href="#1-project-lead-fixing-direction-and-decision-framework" class="table-of-contents__link toc-highlight">1) Project Lead: Fixing Direction and Decision Framework</a></li><li><a href="#2-frontend--backend-connecting-the-demo-into-a-real-execution-flow" class="table-of-contents__link toc-highlight">2) Frontend + Backend: Connecting the Demo into a Real Execution Flow</a></li><li><a href="#3-multi-agent-implementation-making-the-parsingrefinement-graph-operable" class="table-of-contents__link toc-highlight">3) Multi-Agent Implementation: Making the Parsing/Refinement Graph Operable</a></li><li><a href="#4-dataevaluation-pipeline-turning-benchmarking-into-a-reusable-asset" class="table-of-contents__link toc-highlight">4) Data/Evaluation Pipeline: Turning Benchmarking into a Reusable Asset</a></li></ul></li><li><a href="#project-design-how-we-structured-the-end-to-end-flow" class="table-of-contents__link toc-highlight">Project Design: How We Structured the End-to-End Flow</a><ul><li><a href="#1-why-we-split-the-codebase-into-three-repositories" class="table-of-contents__link toc-highlight">1) Why We Split the Codebase into Three Repositories</a></li><li><a href="#2-key-design-points-in-parsingrefinement" class="table-of-contents__link toc-highlight">2) Key Design Points in Parsing/Refinement</a></li><li><a href="#3-why-evaluation-was-not-just-one-score" class="table-of-contents__link toc-highlight">3) Why Evaluation Was Not Just One Score</a></li></ul></li><li><a href="#my-core-contribution-fine-tuning-experiment-design-and-operation" class="table-of-contents__link toc-highlight">My Core Contribution: Fine-Tuning Experiment Design and Operation</a><ul><li><a href="#1-i-fixed-the-training-loop-first" class="table-of-contents__link toc-highlight">1) I Fixed the Training Loop First</a></li><li><a href="#2-i-prioritized-sustainable-experiments-over-one-good-run" class="table-of-contents__link toc-highlight">2) I Prioritized &quot;Sustainable Experiments&quot; Over &quot;One Good Run&quot;</a></li><li><a href="#3-i-kept-the-fine-tuning-target-narrow" class="table-of-contents__link toc-highlight">3) I Kept the Fine-Tuning Target Narrow</a></li></ul></li><li><a href="#how-fine-tuning-connected-to-the-full-pipeline" class="table-of-contents__link toc-highlight">How Fine-Tuning Connected to the Full Pipeline</a></li><li><a href="#service-flow-based-on-readme" class="table-of-contents__link toc-highlight">Service Flow (Based on README)</a><ul><li><a href="#overall-architecture" class="table-of-contents__link toc-highlight">Overall Architecture</a></li><li><a href="#problem-definition-and-approach" class="table-of-contents__link toc-highlight">Problem Definition and Approach</a></li><li><a href="#ocrparsing-strategy-selection-system" class="table-of-contents__link toc-highlight">OCR/Parsing Strategy Selection System</a></li><li><a href="#document-refinement-refine-system" class="table-of-contents__link toc-highlight">Document Refinement (Refine) System</a></li><li><a href="#end-to-end-pipeline" class="table-of-contents__link toc-highlight">End-to-End Pipeline</a></li><li><a href="#evaluation-perspectives-and-result-summary" class="table-of-contents__link toc-highlight">Evaluation Perspectives and Result Summary</a></li></ul></li><li><a href="#demo-screens" class="table-of-contents__link toc-highlight">Demo Screens</a><ul><li><a href="#the-experience" class="table-of-contents__link toc-highlight">The Experience</a></li></ul></li><li><a href="#what-we-confirmed-through-this-project" class="table-of-contents__link toc-highlight">What We Confirmed Through This Project</a></li><li><a href="#what-i-want-to-improve-next" class="table-of-contents__link toc-highlight">What I Want to Improve Next</a></li></ul></div></div></div></div></div></div>
 </body>
 </html>
