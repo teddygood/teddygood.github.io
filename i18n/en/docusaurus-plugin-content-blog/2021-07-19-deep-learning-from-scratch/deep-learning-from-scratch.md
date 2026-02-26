@@ -31,7 +31,7 @@ Click the book cover to visit the Kyobobook store!
 
 ## Intro
 
-It’s been 4 years since this book was first published. I discovered it when I started learning Python as a freshman in college. Deep learning was booming at the time, and I wanted to study AI because I thought I could create something like AlphaGo. But I was too busy with schoolwork and club activities, and since I’d never studied linear algebra, I gave up on reading it. After finishing my third year (the "death year"), I finally had the time to pick it up.
+It's been 4 years since this book was first published. I discovered it when I started learning Python as a freshman in college. Deep learning was booming at the time, and I wanted to study AI because I thought I could create something like AlphaGo. But I was too busy with schoolwork and club activities, and since I'd never studied linear algebra, I gave up on reading it. After finishing my third year (the "death year"), I finally had the time to pick it up.
 
 ## Book Review
 
@@ -45,12 +45,12 @@ Another standout feature is its use of Python scripts instead of Jupyter Noteboo
 
 ### References
 
-The references are neatly organized like academic papers. I found this a huge advantage, though it might frustrate readers who prefer spoon-fed explanations. Many want books to meticulously detail every concept, but this one expects you to dive into the references for deeper dives. If you’re unfamiliar with research papers, it might slow your progress. For me, though, it felt like a roadmap for further study.
+The references are neatly organized like academic papers. I found this a huge advantage, though it might frustrate readers who prefer spoon-fed explanations. Many want books to meticulously detail every concept, but this one expects you to dive into the references for deeper dives. If you're unfamiliar with research papers, it might slow your progress. For me, though, it felt like a roadmap for further study.
 
 ### Future Studies
 
-Chapter 8 doesn’t include implementations—it provides a broad overview of deep learning and suggests keywords for future exploration. Without this guidance, readers might struggle to decide which areas to focus on next. It’s incredibly helpful, covering most keywords you’d encounter in deep learning. I highly recommend googling these terms after reading.
+Chapter 8 doesn't include implementations—it provides a broad overview of deep learning and suggests keywords for future exploration. Without this guidance, readers might struggle to decide which areas to focus on next. It's incredibly helpful, covering most keywords you'd encounter in deep learning. I highly recommend googling these terms after reading.
 
 ## Recommended Readers
 
-I’d recommend this book to anyone curious about deep learning. It offers hands-on implementations from the ground up and lays a solid foundation for computer vision. It’s excellent for beginners—though don’t stick to easy reads forever; challenge yourself! While older books are often skipped, this one remains a gem despite its age.
+I'd recommend this book to anyone curious about deep learning. It offers hands-on implementations from the ground up and lays a solid foundation for computer vision. It's excellent for beginners—though don't stick to easy reads forever; challenge yourself! While older books are often skipped, this one remains a gem despite its age.

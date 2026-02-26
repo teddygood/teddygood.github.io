@@ -39,19 +39,19 @@ Click the book image to go to the Kyobobook site!
 
 ## Why I Read It
 
-I was already using Notion with interest and had gotten somewhat used to it, but I wasn’t satisfied with myself because I was only using templates others had made. I was thinking about creating my own templates when I found this book at the library and decided to read it.
+I was already using Notion with interest and had gotten somewhat used to it, but I wasn't satisfied with myself because I was only using templates others had made. I was thinking about creating my own templates when I found this book at the library and decided to read it.
 
-Also, since I run a blog, I thought I was familiar with Markdown syntax and using Notion well—but I wasn’t utilizing Notion’s unique features like shortcuts or databases. I wanted to study those aspects, which is why I picked up this book.
+Also, since I run a blog, I thought I was familiar with Markdown syntax and using Notion well—but I wasn't utilizing Notion's unique features like shortcuts or databases. I wanted to study those aspects, which is why I picked up this book.
 
 ## Notion
 
-It’s an app so productive that even Evernote users switch to it. Most companies use Notion for documentation, and you’ll often see job postings formatted as Notion documents.
+It's an app so productive that even Evernote users switch to it. Most companies use Notion for documentation, and you'll often see job postings formatted as Notion documents.
 
-Somehow, it’s become a *de facto* essential tool for those in IT. And one of the biggest reasons people use it is because it’s visually appealing—the clean design plays a big role.
+Somehow, it's become a *de facto* essential tool for those in IT. And one of the biggest reasons people use it is because it's visually appealing—the clean design plays a big role.
 
 It also offers various features, supports widgets, allows easy sharing, and makes documentation straightforward. Recently, a Korean version was launched, and plenty of templates are available for those who find the features challenging.
 
-While there’s a Pro plan, all basic features are free. That’s a huge draw. College students can also switch to an Education account for Pro Plan access. With these advantages, there’s no reason not to use it.
+While there's a Pro plan, all basic features are free. That's a huge draw. College students can also switch to an Education account for Pro Plan access. With these advantages, there's no reason not to use it.
 
 Of course, Notion can be confusing at first—you might not know where to start. But if you have a clear purpose, it becomes a powerful tool.
 
@@ -63,7 +63,7 @@ For those unfamiliar with tools like PowerPoint or Excel, there might be a learn
 
 ## The Book
 
-I recommend this book to anyone unsure how to use Notion effectively. It provides various use cases and explains Notion’s features in detail—almost like a manual for those struggling with the tool. It’s beginner-friendly.
+I recommend this book to anyone unsure how to use Notion effectively. It provides various use cases and explains Notion's features in detail—almost like a manual for those struggling with the tool. It's beginner-friendly.
 
 I found **Chapter 03** and **Chapter 04** especially helpful, which covered databases. This part can be challenging for beginners, but once you grasp it, using Notion becomes much easier.
 
@@ -71,7 +71,7 @@ I found **Chapter 03** and **Chapter 04** especially helpful, which covered data
 
 I use Notion for diaries, book logs, and organizing study notes. On YouTube or other platforms, I see people using it more creatively and aesthetically—there are lots of fun templates to inspire you.
 
-You can also check out how others use Notion in the [Notion.so Korean User Group](https://www.facebook.com/groups/notion.so). The group shares community pages and template sites, so it’s worth exploring.
+You can also check out how others use Notion in the [Notion.so Korean User Group](https://www.facebook.com/groups/notion.so). The group shares community pages and template sites, so it's worth exploring.
 
 ## Final Thoughts
 

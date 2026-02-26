@@ -51,14 +51,14 @@ Chapter 8 introduces KFServing, a core model management component of Kubeflow. I
 
 ### Building Kubeflow in the Cloud
 
-The book briefly describes GCP, AWS, and Azure services and how to set up Kubeflow in each. While helpful for those struggling with deployment, the lack of practical usage examples was disappointing. If you want to try Kubeflow after setup, I recommend following the [MNIST image classification](https://www.kubeflow.org/docs/started/kubeflow-examples/) example from the Kubeflow documentation. Note that this requires prior knowledge of cloud SDKs like AWS’s boto3 or GCP’s Cloud SDK, so general cloud familiarity is essential.
+The book briefly describes GCP, AWS, and Azure services and how to set up Kubeflow in each. While helpful for those struggling with deployment, the lack of practical usage examples was disappointing. If you want to try Kubeflow after setup, I recommend following the [MNIST image classification](https://www.kubeflow.org/docs/started/kubeflow-examples/) example from the Kubeflow documentation. Note that this requires prior knowledge of cloud SDKs like AWS's boto3 or GCP's Cloud SDK, so general cloud familiarity is essential.
 
 ### Additional Resources
 
-Beyond the book’s content, there are many Kubeflow-related resources. Since a single book can’t cover everything, the authors provide footnotes with further guidance—something I found helpful for future study.
+Beyond the book's content, there are many Kubeflow-related resources. Since a single book can't cover everything, the authors provide footnotes with further guidance—something I found helpful for future study.
 
 ## Target Audience
 
-This book was quite challenging for me, and it made me realize why MLOps intern or entry-level positions are rare. It’s a reminder to keep studying!  
+This book was quite challenging for me, and it made me realize why MLOps intern or entry-level positions are rare. It's a reminder to keep studying!  
 
 I recommend this book for engineers interested in MLOps who already have a solid understanding of Kubernetes and ML. It would be especially useful for DevOps engineers, ML engineers, and data engineers.

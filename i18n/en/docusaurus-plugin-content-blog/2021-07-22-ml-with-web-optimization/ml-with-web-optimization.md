@@ -38,15 +38,15 @@ Click the book image to visit the Kyobobook store!
 
 ## Intro  
 
-I believe *probability and statistics* are essential mathematical foundations for machine learning. That’s why I took a university course on the subject and studied independently with books to deepen my understanding. I felt confident I could tackle this book.  
+I believe *probability and statistics* are essential mathematical foundations for machine learning. That's why I took a university course on the subject and studied independently with books to deepen my understanding. I felt confident I could tackle this book.  
 
-The subtitle also mentions *A/B testing*—a topic I’ve been eager to explore in detail as I study web backend development and data analysis. Additionally, the idea of applying machine learning concepts I’ve learned to web optimization intrigued me, making this book a compelling choice.  
+The subtitle also mentions *A/B testing*—a topic I've been eager to explore in detail as I study web backend development and data analysis. Additionally, the idea of applying machine learning concepts I've learned to web optimization intrigued me, making this book a compelling choice.  
 
 ## Book Review  
 
 ### Web Optimization  
 
-Through my machine learning studies, I’ve built a foundation in probability, statistics, and optimization theory. This book shows how to apply those concepts practically, focusing on *how machine learning can be used for web optimization*. It uses examples like A/B testing and demonstrates how Bayesian inference can determine whether option A or B performs better. While the focus is on application, it doesn’t skip essential theory—key algorithms and statistical concepts are well explained. Chapter 7 on *Bayesian optimization* was particularly challenging yet fascinating.  
+Through my machine learning studies, I've built a foundation in probability, statistics, and optimization theory. This book shows how to apply those concepts practically, focusing on *how machine learning can be used for web optimization*. It uses examples like A/B testing and demonstrates how Bayesian inference can determine whether option A or B performs better. While the focus is on application, it doesn't skip essential theory—key algorithms and statistical concepts are well explained. Chapter 7 on *Bayesian optimization* was particularly challenging yet fascinating.  
 
 ### Appendix  
 
@@ -62,4 +62,4 @@ The code is provided as Jupyter Notebooks and assumes execution on Google Colab�
 - Web marketing professionals or marketers  
 - Those fascinated by machine learning applications, especially human-computer interaction  
 
-While the book specifies its target audience, I’d emphasize that it’s not an introductory text. Topics like multi-armed bandits, Bayesian inference, and regression require prior knowledge in statistics or machine learning. The title itself—*Machine Learning for Web Optimization*—implies it’s about *applying* machine learning, not learning it from scratch. I strongly recommend this book for readers with foundational ML experience.
+While the book specifies its target audience, I'd emphasize that it's not an introductory text. Topics like multi-armed bandits, Bayesian inference, and regression require prior knowledge in statistics or machine learning. The title itself—*Machine Learning for Web Optimization*—implies it's about *applying* machine learning, not learning it from scratch. I strongly recommend this book for readers with foundational ML experience.

@@ -36,17 +36,17 @@ Click the book image to visit the Kyobobook site!
 
 ## Intro  
 
-Lately, I’ve been receiving emails from Amazon Web Services promoting various training programs. Through these, I learned AWS offers cloud fundamentals courses. If I’d known about these earlier, I might not have picked up this book.  
+Lately, I've been receiving emails from Amazon Web Services promoting various training programs. Through these, I learned AWS offers cloud fundamentals courses. If I'd known about these earlier, I might not have picked up this book.  
 
-I think such training is hard to access unless you’re already interested in AWS. I first learned AWS through Opentutorials (생활코딩) and gradually explored web service deployment via other books. While Opentutorials taught me well, I wanted deeper knowledge—so I turned to this book.  
+I think such training is hard to access unless you're already interested in AWS. I first learned AWS through Opentutorials (생활코딩) and gradually explored web service deployment via other books. While Opentutorials taught me well, I wanted deeper knowledge—so I turned to this book.  
 
 ## Book Review  
 
 ### Beyond Just AWS Services  
 
-This book isn’t just about AWS—it’s written from a **CS (Computer Science) perspective**, making it accessible even for those with limited foundational knowledge. That was me. Though I took networking courses as a major, this book revealed how much I’d forgotten. Computer science majors should find it manageable.  
+This book isn't just about AWS—it's written from a **CS (Computer Science) perspective**, making it accessible even for those with limited foundational knowledge. That was me. Though I took networking courses as a major, this book revealed how much I'd forgotten. Computer science majors should find it manageable.  
 
-True to its title, the book focuses on **building infrastructure**—not just listing AWS services. You’ll learn about jump servers, cache servers, and more. It’s perfect for those who want to gradually assemble a real-world infrastructure.  
+True to its title, the book focuses on **building infrastructure**—not just listing AWS services. You'll learn about jump servers, cache servers, and more. It's perfect for those who want to gradually assemble a real-world infrastructure.  
 
 ### Visual Resource Diagrams  
 

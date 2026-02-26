@@ -18,7 +18,7 @@ keywords:
 
 ## 들어가며
 
-최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다. 이 논문은 카카오에서 낸 논문이다. 내 리뷰보다 더 쉬운 설명은 [카카오, 자체 개발 LLM 오케스트레이션 능력 평가 벤치마크 ‘ICLR 2026’ 논문 채택... 깃허브에 오픈소스로 공개](https://www.kakaocorp.com/page/detail/11919) 에 있다. 
+최근 moltbot(현 openclaw), oh-my-opencode와 같은 서비스가 핫해지면서 읽으면 재밌을 것 같다는 생각에 읽고 리뷰를 해본다. 이 논문은 카카오에서 낸 논문이다. 내 리뷰보다 더 쉬운 설명은 [카카오, 자체 개발 LLM 오케스트레이션 능력 평가 벤치마크 'ICLR 2026' 논문 채택... 깃허브에 오픈소스로 공개](https://www.kakaocorp.com/page/detail/11919) 에 있다. 
 
 ## 간단 요약
 
@@ -212,7 +212,7 @@ function calling 파라미터 검증은 3단계 접근법을 사용한다.
 
 모델 bias를 줄이기 위해, 우리는 세 개의 LLM judges — GPT-4.1, Claude Sonnet 4, Gemini 2.5 Flash — 로 구성된 앙상블(ensemble)을 사용하며, temperature는 0.3으로 설정하고 arithmetic mean을 통해 점수를 집계한다.
 
-LLM judge는 true/false positives and negatives을 분류하며, 이러한 판정 결과는 F1 계산에 통합된다. 평가의 신뢰성을 추가로 확보하기 위해, annotator와 LLM judge 간의 judge 간 일치도(inter-rater agreement)를 측정하였고, 그 결과 Cohen’s Kappa 점수 0.63을 얻었으며, 이는 상당한 수준의 일치를 의미한다. function calling training과의 호환성, 즉 JSON 출력 형식을 유지하기 위해 call rejection과 information requests를 XML 출력 형식으로 구현한다.
+LLM judge는 true/false positives and negatives을 분류하며, 이러한 판정 결과는 F1 계산에 통합된다. 평가의 신뢰성을 추가로 확보하기 위해, annotator와 LLM judge 간의 judge 간 일치도(inter-rater agreement)를 측정하였고, 그 결과 Cohen's Kappa 점수 0.63을 얻었으며, 이는 상당한 수준의 일치를 의미한다. function calling training과의 호환성, 즉 JSON 출력 형식을 유지하기 위해 call rejection과 information requests를 XML 출력 형식으로 구현한다.
 
 ### 2. Evaluation Results
 

@@ -34,24 +34,24 @@ Click the book image to go to the Kyobobook site!
 
 ## Book Review
 
-I’ve always wanted to read this book since its release because working at Amazon—known for its high turnover rate—for 12 years is rare. While browsing *Millie’s Library* for something to read, I stumbled upon it and decided to give it a try.  
+I've always wanted to read this book since its release because working at Amazon—known for its high turnover rate—for 12 years is rare. While browsing *Millie's Library* for something to read, I stumbled upon it and decided to give it a try.  
 
-The author started as a developer at Amazon but changed departments and even job roles multiple times within the company, experiencing Amazon as a whole. Switching departments is one thing, but changing job roles is another challenge entirely—it’s impressive how they managed it.  
+The author started as a developer at Amazon but changed departments and even job roles multiple times within the company, experiencing Amazon as a whole. Switching departments is one thing, but changing job roles is another challenge entirely—it's impressive how they managed it.  
 
-The book traces Amazon’s growth from a small company during the author’s early years to the global retail giant it is today. It also shows how the author adapted, thrived, and grew alongside the company.  
+The book traces Amazon's growth from a small company during the author's early years to the global retail giant it is today. It also shows how the author adapted, thrived, and grew alongside the company.  
 
-Staying at one company for 12 years is remarkable, but the book also reveals the author’s struggles and dilemmas. Amazon is notoriously tough to work at, and the author shares how they overcame difficulties by aligning with Amazon’s core principles. It felt like watching a documentary about one person’s journey.  
+Staying at one company for 12 years is remarkable, but the book also reveals the author's struggles and dilemmas. Amazon is notoriously tough to work at, and the author shares how they overcame difficulties by aligning with Amazon's core principles. It felt like watching a documentary about one person's journey.  
 
-Though some of Amazon’s values didn’t resonate with me, I found the book compelling enough to revisit.  
+Though some of Amazon's values didn't resonate with me, I found the book compelling enough to revisit.  
 
 ### 6-Pager  
 
-Amazon doesn’t use PowerPoint. Instead, they use the *6-pager*—a method to convey information quickly and effectively. This made me rethink PowerPoint’s limitations. Creating visually engaging slides is hard, and fitting all key points into them feels impossible. I often wondered, *"Does this help people understand? Can they grasp the message?"*  
+Amazon doesn't use PowerPoint. Instead, they use the *6-pager*—a method to convey information quickly and effectively. This made me rethink PowerPoint's limitations. Creating visually engaging slides is hard, and fitting all key points into them feels impossible. I often wondered, *"Does this help people understand? Can they grasp the message?"*  
 
 The 6-pager format, however, is written in plain language on six A4 pages, designed for anyone—even without prior knowledge—to read and understand without extra explanation. During meetings, everyone gets a copy, reads it silently, and only then begins discussion. While challenging for presenters, I found this more effective than a PPT followed by Q&A—it feels like a collaborative discussion rather than a one-way presentation.  
 
 ## Career Transition  
 
-Amazon embodied the Silicon Valley and American culture I’d imagined: fearless questioning, no beating around the bush—it felt refreshingly different from Korea. The company also encourages internal job changes.  
+Amazon embodied the Silicon Valley and American culture I'd imagined: fearless questioning, no beating around the bush—it felt refreshingly different from Korea. The company also encourages internal job changes.  
 
-However, the idea of hiring top talent, fostering competition within Amazon, and rewarding based purely on merit sounded intensely challenging. While working with elite peers could be exciting, the pressure must be overwhelming. It’s logical, yet daunting.
+However, the idea of hiring top talent, fostering competition within Amazon, and rewarding based purely on merit sounded intensely challenging. While working with elite peers could be exciting, the pressure must be overwhelming. It's logical, yet daunting.

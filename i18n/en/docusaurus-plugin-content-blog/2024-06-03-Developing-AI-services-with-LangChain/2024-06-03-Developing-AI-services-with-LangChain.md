@@ -37,10 +37,10 @@ LLMs (Large Language Models) are *so* trendy these days that even during exam se
 
 ### Great for Developers *Not* in ML
 
-I’d recommend this book to developers without a machine learning background. It covers general AI concepts and isn’t too code-heavy, making it a light read. It even walks you through setting up Conda, getting an OpenAI API key, and obtaining a Hugging Face token—so it’s a solid introductory guide.
+I'd recommend this book to developers without a machine learning background. It covers general AI concepts and isn't too code-heavy, making it a light read. It even walks you through setting up Conda, getting an OpenAI API key, and obtaining a Hugging Face token—so it's a solid introductory guide.
 
-For me, the RAG section was a helpful refresher, and I got to try LangChain for the first time (it’s not bad!). The book also lists LangChain projects you can explore later—definitely worth checking out. This read inspired me to brainstorm how to integrate LangChain and LLMs into my own projects. Time to start a LangChain project soon!
+For me, the RAG section was a helpful refresher, and I got to try LangChain for the first time (it's not bad!). The book also lists LangChain projects you can explore later—definitely worth checking out. This read inspired me to brainstorm how to integrate LangChain and LLMs into my own projects. Time to start a LangChain project soon!
 
 ## Recommended For
 
-If you’re curious about LLMs and want a quick yet practical intro, this book is for you. 🚀
+If you're curious about LLMs and want a quick yet practical intro, this book is for you. 🚀

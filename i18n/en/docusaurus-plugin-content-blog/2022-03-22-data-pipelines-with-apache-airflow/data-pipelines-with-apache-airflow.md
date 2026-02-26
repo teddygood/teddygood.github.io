@@ -40,19 +40,19 @@ Click the book image to go to the Kyobook store!
 ### Structure
 
 The book is divided into four main parts: *Basics*, *Intermediate*, *Practice*, and *Using Airflow in the Cloud*.  
-The *Basics* section covers data pipeline concepts, defining Airflow DAGs (Directed Acyclic Graphs), scheduling, and dependency management. Here, you’ll work with the Taskflow API introduced in Airflow 2.x.  
+The *Basics* section covers data pipeline concepts, defining Airflow DAGs (Directed Acyclic Graphs), scheduling, and dependency management. Here, you'll work with the Taskflow API introduced in Airflow 2.x.  
 The *Intermediate* part teaches how to run tasks in external systems, testing, and building pipelines with containers. The use of examples to explain concepts was particularly impressive.  
-In *Practice*, the focus shifts to building efficient, maintainable pipelines and considerations for deploying Airflow in production. It’s not just theoretical—detailed explanations make this a great reference for future use.  
-*Using Airflow in the Cloud* walks through designing architectures for deploying Airflow on AWS, Azure, and GCP. It’s not just about *how*—the inclusion of examples makes this section stand out.
+In *Practice*, the focus shifts to building efficient, maintainable pipelines and considerations for deploying Airflow in production. It's not just theoretical—detailed explanations make this a great reference for future use.  
+*Using Airflow in the Cloud* walks through designing architectures for deploying Airflow on AWS, Azure, and GCP. It's not just about *how*—the inclusion of examples makes this section stand out.
 
 ### Docker Environment
 
-Almost every chapter includes a *docker-compose.yml* file, allowing you to run the code easily in a Docker environment. This is the book’s strongest feature. I tried setting up the environment locally and also with Docker, and Docker was undeniably more convenient. If you’re reading this book, definitely take advantage of the Docker setup.
+Almost every chapter includes a *docker-compose.yml* file, allowing you to run the code easily in a Docker environment. This is the book's strongest feature. I tried setting up the environment locally and also with Docker, and Docker was undeniably more convenient. If you're reading this book, definitely take advantage of the Docker setup.
 
 ### Appendices
 
-The appendices are also packed with useful information. For example, *Appendix A: Example Code Execution* briefly explains the code structure and provides commands to run examples using Docker. Even if you’ve never used Docker before, this appendix makes it easy to set up the environment. *Appendix B: Airflow 2 Package Structure* compares the package differences between Airflow 1 and 2. These thoughtful additions were a nice touch.
+The appendices are also packed with useful information. For example, *Appendix A: Example Code Execution* briefly explains the code structure and provides commands to run examples using Docker. Even if you've never used Docker before, this appendix makes it easy to set up the environment. *Appendix B: Airflow 2 Package Structure* compares the package differences between Airflow 1 and 2. These thoughtful additions were a nice touch.
 
 ## Intended Audience
 
-As stated in the introduction, this book is aimed at DevOps engineers, data engineers, and machine learning engineers with intermediate or advanced Python skills. If you’re just starting in data engineering or lack foundational CS knowledge, it might be challenging. However, this is currently the only Korean IT book dedicated to Airflow, making it a worthwhile read if you’re interested in pipelines or Airflow. While it’s a bit difficult, the abundance of situational examples makes it highly recommended for anyone planning to use Airflow.
+As stated in the introduction, this book is aimed at DevOps engineers, data engineers, and machine learning engineers with intermediate or advanced Python skills. If you're just starting in data engineering or lack foundational CS knowledge, it might be challenging. However, this is currently the only Korean IT book dedicated to Airflow, making it a worthwhile read if you're interested in pipelines or Airflow. While it's a bit difficult, the abundance of situational examples makes it highly recommended for anyone planning to use Airflow.

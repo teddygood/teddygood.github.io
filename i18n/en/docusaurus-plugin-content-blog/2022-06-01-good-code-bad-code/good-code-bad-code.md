@@ -39,20 +39,20 @@ Click the book cover to visit the Kyobobook store!
 
 ## Intro
 
-When I first saw the title of this book, I reflected on whether *I’m writing good code*. Back when I had to code in team projects, I only cared about finishing quickly—partly because I assumed I’d never look at that code again. But later, when I had to revisit my old code, I struggled with poor comments and messy logic, ending up rewriting everything from scratch. That’s why I picked up this book—to avoid repeating that mistake.  
+When I first saw the title of this book, I reflected on whether *I'm writing good code*. Back when I had to code in team projects, I only cared about finishing quickly—partly because I assumed I'd never look at that code again. But later, when I had to revisit my old code, I struggled with poor comments and messy logic, ending up rewriting everything from scratch. That's why I picked up this book—to avoid repeating that mistake.  
 
 ## Book Review
 
 ### A Book Worth Studying with Others  
 
-What makes this book engaging is its structure: most chapters start with problematic examples or code snippets, then present solutions. It’s like a guide showing both good and bad practices. Of course, these are subjective—even the author notes that context matters. I’d love to run a study group where we discuss not just the book’s examples but also brainstorm additional scenarios with peers.  
+What makes this book engaging is its structure: most chapters start with problematic examples or code snippets, then present solutions. It's like a guide showing both good and bad practices. Of course, these are subjective—even the author notes that context matters. I'd love to run a study group where we discuss not just the book's examples but also brainstorm additional scenarios with peers.  
 
 ### Effort from Both Author and Translator  
 
-Reading this, I felt the author had a lot to share. The book goes beyond coding practices to touch on unit testing and even introduces TDD philosophies. Honestly, the testing content isn’t essential to the core message, but it adds value for those interested.  
+Reading this, I felt the author had a lot to share. The book goes beyond coding practices to touch on unit testing and even introduces TDD philosophies. Honestly, the testing content isn't essential to the core message, but it adds value for those interested.  
 
-The translator’s work also stood out. Like in *The Programmer’s Brain*, the footnotes and smooth flow showed careful consideration for readability. I hope more technical books get such dedicated translators—it makes complex ideas much more accessible.  
+The translator's work also stood out. Like in *The Programmer's Brain*, the footnotes and smooth flow showed careful consideration for readability. I hope more technical books get such dedicated translators—it makes complex ideas much more accessible.  
 
 ## Recommended Audience  
 
-This isn’t ideal for beginners who’ve just learned a language’s syntax. While the pseudocode resembles Java or C#, it’s best for those with experience in object-oriented languages. I’d recommend it more to working engineers than job-seekers—the tips are practical but might overwhelm those still mastering basics. If you collaborate on code, this book will be especially useful.
+This isn't ideal for beginners who've just learned a language's syntax. While the pseudocode resembles Java or C#, it's best for those with experience in object-oriented languages. I'd recommend it more to working engineers than job-seekers—the tips are practical but might overwhelm those still mastering basics. If you collaborate on code, this book will be especially useful.

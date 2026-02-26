@@ -32,19 +32,19 @@ Click the book cover to visit the Kyobobook store!
 
 ## Intro  
 
-It’s been a while since I last applied for a book review. My internship is almost over, and I’ve been thinking about my next steps—when I saw this book on technical interviews, I knew I had to apply. Written by a 20-year veteran interviewer from Kakao, it’s essentially a guide for landing or switching jobs at big tech companies. Reading it gave me a clear picture of what technical interviews entail and how to prepare.  
+It's been a while since I last applied for a book review. My internship is almost over, and I've been thinking about my next steps—when I saw this book on technical interviews, I knew I had to apply. Written by a 20-year veteran interviewer from Kakao, it's essentially a guide for landing or switching jobs at big tech companies. Reading it gave me a clear picture of what technical interviews entail and how to prepare.  
 
 ## Book Review  
 
-### A Technical Interview Guide from an Intern’s Perspective  
+### A Technical Interview Guide from an Intern's Perspective  
 
-Lately, I’ve heard a lot about how tough the developer job market is. Even as an intern, I know that whether I aim for full-time conversion or apply elsewhere, coding tests and technical interviews are unavoidable.  
+Lately, I've heard a lot about how tough the developer job market is. Even as an intern, I know that whether I aim for full-time conversion or apply elsewhere, coding tests and technical interviews are unavoidable.  
 
-While I’m slowly getting the hang of real-world work, I still felt lost about how to write a resume or what to study for technical interviews. Then I found this book—and it turned out to be a surprisingly practical guide.  
+While I'm slowly getting the hang of real-world work, I still felt lost about how to write a resume or what to study for technical interviews. Then I found this book—and it turned out to be a surprisingly practical guide.  
 
 ### Gaining Direction in an Overwhelming Job Search  
 
-The book smoothly outlines the entire hiring process: resume preparation → coding tests/technical interviews → post-interview steps. It’s not just another algorithm problem book; it also covers how to analyze job postings, resume-writing tips, and frequently asked interview questions.  
+The book smoothly outlines the entire hiring process: resume preparation → coding tests/technical interviews → post-interview steps. It's not just another algorithm problem book; it also covers how to analyze job postings, resume-writing tips, and frequently asked interview questions.  
 
 My favorite parts were:  
 
@@ -57,10 +57,10 @@ My favorite parts were:
 
 As an intern, keeping up with real work is already hectic, and preparing for full-time conversion feels rushed. But this book made me realize that starting now—even gradually—will make the process much less daunting later.  
 
-Technical interviews require a surprisingly broad and deep knowledge base. Balancing prep with work isn’t easy, but at least having a roadmap gives me peace of mind.  
+Technical interviews require a surprisingly broad and deep knowledge base. Balancing prep with work isn't easy, but at least having a roadmap gives me peace of mind.  
 
-What I loved most is that the book goes beyond technical skills—it also discusses the mindset needed for growth and work. It’s packed with insights for building a sustainable career.  
+What I loved most is that the book goes beyond technical skills—it also discusses the mindset needed for growth and work. It's packed with insights for building a sustainable career.  
 
 ## Recommended Audience  
 
-I’d recommend this to **any junior developer**. In fact, anyone below senior level would benefit—it covers everything from resumes and portfolios to technical and behavioral interviews, offering practical tips for the entire hiring process.
+I'd recommend this to **any junior developer**. In fact, anyone below senior level would benefit—it covers everything from resumes and portfolios to technical and behavioral interviews, offering practical tips for the entire hiring process.

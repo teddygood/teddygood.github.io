@@ -39,7 +39,7 @@ Click the book image to visit the Kyobobook store page!
 
 ### Full-Color Printing
 
-As you’ll see in other reviews, this book is in full color. It might seem minor, but encountering translated technical books in full color always feels refreshing. Additionally, the publisher deserves credit for printing such a thick 720-page book in full color. It made the visual experience much more comfortable.
+As you'll see in other reviews, this book is in full color. It might seem minor, but encountering translated technical books in full color always feels refreshing. Additionally, the publisher deserves credit for printing such a thick 720-page book in full color. It made the visual experience much more comfortable.
 
 ### TIP Sections
 
@@ -47,11 +47,11 @@ Alongside the two main authors, Alexis Gallagher provides **TIP** sections aimed
 
 ### Top-Down Approach
 
-Unlike typical ML/DL books that build from the ground up, this one takes a **top-down (하향식)** approach. If you’re familiar with DL, this style will feel intuitive. However, the initial chapters focus on *using* models rather than *understanding* them deeply. The goal here is to spark interest first; technical details follow later.
+Unlike typical ML/DL books that build from the ground up, this one takes a **top-down (하향식)** approach. If you're familiar with DL, this style will feel intuitive. However, the initial chapters focus on *using* models rather than *understanding* them deeply. The goal here is to spark interest first; technical details follow later.
 
 ### Development Environment
 
-The book uses **Jupyter Notebooks**, but doesn’t cover setup details. You’ll need to configure your environment independently. Since my GPU isn’t powerful, I used Google’s [Colab](https://colab.research.google.com/). Even with Colab Pro, though, I’m unsure why my runtime was slower than the authors’ examples.  
+The book uses **Jupyter Notebooks**, but doesn't cover setup details. You'll need to configure your environment independently. Since my GPU isn't powerful, I used Google's [Colab](https://colab.research.google.com/). Even with Colab Pro, though, I'm unsure why my runtime was slower than the authors' examples.  
 
 For those with limited hardware, the [fast.ai course](https://course.fast.ai/start_colab) explains how to use Colab effectively—definitely worth checking out.
 
@@ -61,7 +61,7 @@ Each chapter ends with a **questionnaire**, which I found uniquely helpful. You 
 - Read them *before* a chapter to focus your study.  
 - Use them *after* to test your understanding.  
 
-Most answers are solvable if you’ve read carefully, but if stuck, solutions are available on the [fast.ai forum](https://forums.fast.ai/t/fastbook-questionnaire-solutions-megathread/76955). I plan to share my own answers on my blog someday!
+Most answers are solvable if you've read carefully, but if stuck, solutions are available on the [fast.ai forum](https://forums.fast.ai/t/fastbook-questionnaire-solutions-megathread/76955). I plan to share my own answers on my blog someday!
 
 ## Recommended Audience
 
@@ -71,4 +71,4 @@ The book targets readers with:
 
 However, I recommend having **Python, PyTorch, and basic DL knowledge** beforehand for smoother reading.  
 
-In my experience, DL is challenging due to its *overload of concepts and prerequisites*. Even with detailed explanations, encountering too many new ideas at once can be overwhelming. If your foundational knowledge is shaky, progress slowly and revisit confusing sections. This isn’t a race—take your time!
+In my experience, DL is challenging due to its *overload of concepts and prerequisites*. Even with detailed explanations, encountering too many new ideas at once can be overwhelming. If your foundational knowledge is shaky, progress slowly and revisit confusing sections. This isn't a race—take your time!

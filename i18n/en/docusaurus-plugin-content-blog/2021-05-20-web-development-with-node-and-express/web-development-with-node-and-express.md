@@ -39,7 +39,7 @@ Click the book cover to visit the [Kyobobook](http://www.kyobobook.co.kr) page!
 
 ## Intro  
 
-I read this book as part of Hanbit Media’s "I am a Reviewer 2021" program. Every month, the books provided for this activity are always excellent. This time, the May review candidates were all topics I wanted to study, making the selection process really tough. I ultimately chose *Statistics for Data Science (2nd Edition)*, *High-Performance Python (2nd Edition)*, and *Web Development with Node and Express (2nd Edition)*. If I get the chance, I’ll also review the other books on the list here.  
+I read this book as part of Hanbit Media's "I am a Reviewer 2021" program. Every month, the books provided for this activity are always excellent. This time, the May review candidates were all topics I wanted to study, making the selection process really tough. I ultimately chose *Statistics for Data Science (2nd Edition)*, *High-Performance Python (2nd Edition)*, and *Web Development with Node and Express (2nd Edition)*. If I get the chance, I'll also review the other books on the list here.  
 
 ## Book Review  
 
@@ -49,10 +49,10 @@ The book goes beyond just building websites, guiding you through deployment proc
 
 The book efficiently delivers core concepts without diving too deeply into every detail. While this might appeal to experienced Node.js developers, I found it challenging as a beginner with only basic JavaScript knowledge.  
 
-To save pages, the book includes only essential code snippets. For the full project structure, refer to the author’s [GitHub repository](https://github.com/EthanRBrown/web-development-with-node-and-express-2e).  
+To save pages, the book includes only essential code snippets. For the full project structure, refer to the author's [GitHub repository](https://github.com/EthanRBrown/web-development-with-node-and-express-2e).  
 
 ## Target Audience  
 
-I had no prior Node.js experience and only a little JavaScript knowledge. If you’re in a similar situation, this book might be tough without additional resources. The publisher’s review also notes that readers should have **intermediate JavaScript** and **beginner-level Node & Express** skills.  
+I had no prior Node.js experience and only a little JavaScript knowledge. If you're in a similar situation, this book might be tough without additional resources. The publisher's review also notes that readers should have **intermediate JavaScript** and **beginner-level Node & Express** skills.  
 
 Of course, you can still tackle it with extra effort—Google searches, other courses, or supplementary books. This book is best suited for those who understand Node.js concepts but lack project experience, especially if you want to practice deploying a full web application.

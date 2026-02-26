@@ -25,7 +25,7 @@ Click the book image to go to the Kyobobook site!
 
 [![Book](../assets/review/the-programmers-brain.jpg)](https://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791191600650&orderClick=LEa&Kc=)
 
-- **Title**: *The Programmer’s Brain*  
+- **Title**: *The Programmer's Brain*  
 - **Author**: Felienne Hermans  
 - **Translator**: Gunhwi Cha  
 - **Publisher**: Jpub  
@@ -41,7 +41,7 @@ The introduction included some unfamiliar terms and cognitive science concepts, 
 
 ### Learning  
 
-This book reinforced the idea that simply reading something once or looking it up doesn’t mean you truly understand it—whether it’s programming, a book, or any other subject. It explains how the brain processes code and how to read it more efficiently. These insights aren’t just for coding; they apply to learning in general. Reflecting on my past study habits, I found this section both eye-opening and engaging.  
+This book reinforced the idea that simply reading something once or looking it up doesn't mean you truly understand it—whether it's programming, a book, or any other subject. It explains how the brain processes code and how to read it more efficiently. These insights aren't just for coding; they apply to learning in general. Reflecting on my past study habits, I found this section both eye-opening and engaging.  
 
 ### Scientific Approach  
 
@@ -49,10 +49,10 @@ As mentioned in the intro, the book bridges programming with cognitive science. 
 
 ### Code Examples  
 
-I’ve read other books that explain "good code vs. bad code" with examples, but this one stood out by connecting those principles to cognitive science. While it does use examples, the deeper dive into *why* certain patterns aid comprehension was particularly insightful.  
+I've read other books that explain "good code vs. bad code" with examples, but this one stood out by connecting those principles to cognitive science. While it does use examples, the deeper dive into *why* certain patterns aid comprehension was particularly insightful.  
 
 ## Recommended Readers  
 
 This book explores programming through the lens of cognitive science, making it ideal for developers curious about the mental processes behind their daily work.  
 
-Some sections were slightly confusing for me, so I’d recommend it more to those with practical coding experience—though it’s not a strict requirement. If you can read Java or Python and have some coding background (like a university student with moderate experience), you’ll find it accessible. It’s also great for anyone interested in boosting productivity, as the book offers science-backed tips for improving coding efficiency.
+Some sections were slightly confusing for me, so I'd recommend it more to those with practical coding experience—though it's not a strict requirement. If you can read Java or Python and have some coding background (like a university student with moderate experience), you'll find it accessible. It's also great for anyone interested in boosting productivity, as the book offers science-backed tips for improving coding efficiency.

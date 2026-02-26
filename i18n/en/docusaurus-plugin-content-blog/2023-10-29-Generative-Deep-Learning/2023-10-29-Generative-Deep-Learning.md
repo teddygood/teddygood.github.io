@@ -37,7 +37,7 @@ Click the book image to visit the Kyobobook store!
 
 ## Intro  
 
-I believe generative AI is currently the hottest field in AI. From OpenAI’s GPT-4 to the recent DALL·E 3, it’s advancing rapidly. Beyond OpenAI, many other companies are also creating groundbreaking products. AI is increasingly becoming a part of our daily lives, making them more convenient. This curiosity about generative AI led me to read this book. It feels like just yesterday I was studying GANs, and now the field has evolved so quickly. While I’m sometimes scared of how far AI will go, I’m determined to keep learning as long as I can.  
+I believe generative AI is currently the hottest field in AI. From OpenAI's GPT-4 to the recent DALL·E 3, it's advancing rapidly. Beyond OpenAI, many other companies are also creating groundbreaking products. AI is increasingly becoming a part of our daily lives, making them more convenient. This curiosity about generative AI led me to read this book. It feels like just yesterday I was studying GANs, and now the field has evolved so quickly. While I'm sometimes scared of how far AI will go, I'm determined to keep learning as long as I can.  
 
 ## Book Review  
 
@@ -55,4 +55,4 @@ The most enjoyable sections were the final chapters, which covered cutting-edge 
 
 ## Recommended Readers  
 
-While this book is accessible to beginners in generative AI, it’s best suited for those who already understand basic deep learning concepts and are interested in the latest advancements. It’s also ideal for anyone looking to dive deeper into generative AI.
+While this book is accessible to beginners in generative AI, it's best suited for those who already understand basic deep learning concepts and are interested in the latest advancements. It's also ideal for anyone looking to dive deeper into generative AI.

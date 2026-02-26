@@ -42,13 +42,13 @@ Click the book image to go to the Kyobobook store!
 
 ## Intro  
 
-When I first saw the cover and table of contents, I thought the topic was quite interesting. I’m not new to data analysis, but I’ve always used Python—never Excel. I know Excel *can* be used for analysis, but as someone who’s always relied on programming languages, I never considered it. Plus, the chance to revisit R, which I’d given up on years ago, made me excited to dive in.
+When I first saw the cover and table of contents, I thought the topic was quite interesting. I'm not new to data analysis, but I've always used Python—never Excel. I know Excel *can* be used for analysis, but as someone who's always relied on programming languages, I never considered it. Plus, the chance to revisit R, which I'd given up on years ago, made me excited to dive in.
 
 ## Book Review  
 
 ### A Book for Data Analysis Beginners  
 
-I believe this book is especially useful for those new to data analysis—especially if they’re familiar with Excel. It’s a smooth transition into programming languages like Python and R. Since the book is written for readers with no prior knowledge of R or Python, even beginners can follow along easily. It’s also helpful for developers who know how to code but aren’t sure where to start with data analysis. The book covers both foundational concepts (like statistics) and practical coding exercises. Statistical terms are explained with examples, making them approachable.  
+I believe this book is especially useful for those new to data analysis—especially if they're familiar with Excel. It's a smooth transition into programming languages like Python and R. Since the book is written for readers with no prior knowledge of R or Python, even beginners can follow along easily. It's also helpful for developers who know how to code but aren't sure where to start with data analysis. The book covers both foundational concepts (like statistics) and practical coding exercises. Statistical terms are explained with examples, making them approachable.  
 
 ### A Reader-Friendly Approach  
 
@@ -58,4 +58,4 @@ The book also includes practice exercises with solutions available on [GitHub](h
 
 ## Recommended Audience  
 
-This book is perfect for anyone starting their data analysis journey—even if you’ve never coded before. However, if you’ve never studied probability or statistics, some parts might feel challenging. The book does include statistical concepts, so a basic understanding (or willingness to learn) will help you enjoy it more. If you’re up for the challenge, give it a try!
+This book is perfect for anyone starting their data analysis journey—even if you've never coded before. However, if you've never studied probability or statistics, some parts might feel challenging. The book does include statistical concepts, so a basic understanding (or willingness to learn) will help you enjoy it more. If you're up for the challenge, give it a try!

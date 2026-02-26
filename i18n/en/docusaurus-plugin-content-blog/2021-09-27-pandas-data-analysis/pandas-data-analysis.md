@@ -40,11 +40,11 @@ Click the book image to go to the Kyobobook site!
 
 I usually check sales rankings when choosing books. While Kyobobook listed other books higher in sales, on YES24 it ranked first for "pandas" searches with a sales index of 10,524. Jeongbo Publishing is only my second book from them, but the high sales made me curious. 
 
-I’ve always studied pandas by checking official docs or YouTube lectures when needed. Since my learning was fragmented, I wanted a structured book study. This one covered pandas, matplotlib, seaborn, and more—so I picked it. Other great books like *Data Science School* and *Python for Data Analysis* are also on my reading list.
+I've always studied pandas by checking official docs or YouTube lectures when needed. Since my learning was fragmented, I wanted a structured book study. This one covered pandas, matplotlib, seaborn, and more—so I picked it. Other great books like *Data Science School* and *Python for Data Analysis* are also on my reading list.
 
 ### Plenty of Examples
 
-The book has many examples, making it beginner-friendly. My only regret was that the code wasn’t formatted for Jupyter Notebook—it used standard Python files. While it works, step-by-step Jupyter-style examples might have been more intuitive.
+The book has many examples, making it beginner-friendly. My only regret was that the code wasn't formatted for Jupyter Notebook—it used standard Python files. While it works, step-by-step Jupyter-style examples might have been more intuitive.
 
 ### Visualization Libraries
 
@@ -56,4 +56,4 @@ The ML model-building section effectively demonstrated pandas and visualization 
 
 ## Recommended Audience
 
-Ideal for those who know Python but feel overwhelmed about starting data analysis. At 392 pages, it’s less daunting than other data analysis books. While not exclusively about pandas, it’s great for hands-on learners. For focused pandas study, try the [10-Minute Pandas Tutorial](https://dataitgirls2.github.io/10minutes2pandas/).
+Ideal for those who know Python but feel overwhelmed about starting data analysis. At 392 pages, it's less daunting than other data analysis books. While not exclusively about pandas, it's great for hands-on learners. For focused pandas study, try the [10-Minute Pandas Tutorial](https://dataitgirls2.github.io/10minutes2pandas/).

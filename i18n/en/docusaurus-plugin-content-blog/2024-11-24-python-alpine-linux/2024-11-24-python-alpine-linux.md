@@ -92,9 +92,9 @@ But why did this happen? Let's explore the reasons.
 
 ## Why Alpine Linux Is Not Ideal for Python Environments
 
-I initially chose Alpine Linux because it’s smaller and faster to build compared to Ubuntu. However, it’s not well-suited for Python environments.
+I initially chose Alpine Linux because it's smaller and faster to build compared to Ubuntu. However, it's not well-suited for Python environments.
 
-The key difference lies in the C standard libraries used. Most Linux distributions use **GNU C Library (glibc)** for C programs, including Python. However, Alpine Linux uses **musl libc** for lightweight optimization. Since musl doesn’t support `Wheel binaries` compiled with glibc, it downloads `.tar.gz` files instead of `.whl` files. This means **all Python packages with C extensions must be compiled from source**, leading to longer build times and larger image sizes.
+The key difference lies in the C standard libraries used. Most Linux distributions use **GNU C Library (glibc)** for C programs, including Python. However, Alpine Linux uses **musl libc** for lightweight optimization. Since musl doesn't support `Wheel binaries` compiled with glibc, it downloads `.tar.gz` files instead of `.whl` files. This means **all Python packages with C extensions must be compiled from source**, leading to longer build times and larger image sizes.
 
 Most modern Python packages include precompiled Wheel binaries on PyPI, which are essentially ZIP archives with a `.whl` extension. These speed up installations significantly. However, Alpine Linux bypasses this optimization.
 

@@ -39,7 +39,7 @@ Click the book image to visit the [Kyobobook](https://www.kyobobook.co.kr) site!
 
 ### Prerequisites: ML & Cloud Knowledge
 
-Before diving into designing machine learning pipelines, you’ll need foundational ML knowledge. Consider whether you’re comfortable reading TensorFlow and Keras code before starting this book. Proficiency in Python is also essential! If you’re considering this book, I assume you already meet these criteria.  
+Before diving into designing machine learning pipelines, you'll need foundational ML knowledge. Consider whether you're comfortable reading TensorFlow and Keras code before starting this book. Proficiency in Python is also essential! If you're considering this book, I assume you already meet these criteria.  
 
 While not strictly required, prior experience with cloud platforms will make this book more accessible. Familiarity with **GCP (Google Cloud Platform)** or **AWS (Amazon Web Services)**—even just basic usage—will help, as the book discusses optimizing pipelines with cloud services.  
 
@@ -54,7 +54,7 @@ The final chapters explore orchestration tools for pipeline execution. While I f
 
 ### Appendix Highlights
 
-The appendix introduces **Docker** and **Kubernetes**—essential infrastructure tools for ML—and walks you through setting up a Kubernetes cluster on Google Cloud. Even if you’re new to these technologies, the appendix provides a hands-on introduction.  
+The appendix introduces **Docker** and **Kubernetes**—essential infrastructure tools for ML—and walks you through setting up a Kubernetes cluster on Google Cloud. Even if you're new to these technologies, the appendix provides a hands-on introduction.  
 
 ## Recommended Audience
 
@@ -63,4 +63,4 @@ This book is ideal for:
 - **ML Enthusiasts** interested in the TensorFlow ecosystem.  
 - **DevOps Engineers** exploring **MLOps** and looking to understand pipeline orchestration.  
 
-Whether you’re building production-ready systems or curious about end-to-end ML workflows, this book offers valuable insights.
+Whether you're building production-ready systems or curious about end-to-end ML workflows, this book offers valuable insights.

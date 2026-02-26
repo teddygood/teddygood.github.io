@@ -32,7 +32,7 @@ After v4, multiple teams released their own improvements, so version numbers no 
 
 Object Detection is a field of computer vision that identifies the presence, location, and type of specific objects in images or videos. To elaborate, it recognizes multiple objects of varying sizes and positions, marking their locations with bounding boxes and identifying their categories.
 
-Since this article doesn’t delve deeply into Object Detection itself, refer to the papers below if interested.
+Since this article doesn't delve deeply into Object Detection itself, refer to the papers below if interested.
 
 ![img.png](../assets/paper/object-detection-paper-list.png)
 

@@ -30,7 +30,7 @@ Click the book image to go to the Kyobobook site!
 
 ## Intro  
 
-Recently, I had to use AWS Bedrock at work, so I was studying the official documentation. While browsing LinkedIn, I found out this book was published and decided to buy and read it. Microsoft and Google are dominating the generative AI space, but Amazon recently unveiled the Nova model and seems to be pushing harder with Bedrock. Though a bit late, I think it’s a positive move. AWS Bedrock is a platform for using generative AI models, and I wanted to learn how to apply it in real-world scenarios through this book.  
+Recently, I had to use AWS Bedrock at work, so I was studying the official documentation. While browsing LinkedIn, I found out this book was published and decided to buy and read it. Microsoft and Google are dominating the generative AI space, but Amazon recently unveiled the Nova model and seems to be pushing harder with Bedrock. Though a bit late, I think it's a positive move. AWS Bedrock is a platform for using generative AI models, and I wanted to learn how to apply it in real-world scenarios through this book.  
 
 ## ## Book Review  
 
@@ -42,12 +42,12 @@ Bedrock is a fully managed generative AI platform provided by AWS. It collaborat
 
 The book is organized into 9 chapters. Uniquely, it starts with Chapter 0—a rare sight outside appendices, which I found amusing and very "developer-like." Chapter 0 kindly guides readers through AWS sign-up, IAM (which can be daunting for beginners), and setting up the AWS CLI for coding. Even those new to AWS should find this book accessible.  
 
-Chapter 1 briefly explains what generative AI is and how Bedrock differs from SageMaker. Chapter 2 introduces the Bedrock website’s playground for testing models, model overviews, and simple coding exercises. Chapter 3 covers prompt engineering, while Chapter 4 explains how to implement RAG (Retrieval-Augmented Generation) with Bedrock, including its Knowledge Bases feature. This section also integrates additional AWS services.  
+Chapter 1 briefly explains what generative AI is and how Bedrock differs from SageMaker. Chapter 2 introduces the Bedrock website's playground for testing models, model overviews, and simple coding exercises. Chapter 3 covers prompt engineering, while Chapter 4 explains how to implement RAG (Retrieval-Augmented Generation) with Bedrock, including its Knowledge Bases feature. This section also integrates additional AWS services.  
 
-Chapter 5 discusses building Agents with Bedrock, and Chapter 6 explores model training—impressively, Bedrock supports Fine-Tuning and Continued Pre-Training. I recall doing this with SageMaker before, but now it’s unnecessary. The book also explains importing external models for training.  
+Chapter 5 discusses building Agents with Bedrock, and Chapter 6 explores model training—impressively, Bedrock supports Fine-Tuning and Continued Pre-Training. I recall doing this with SageMaker before, but now it's unnecessary. The book also explains importing external models for training.  
 
-Chapter 7 covers operational features, including Guardrails for detecting hallucinations—a surprising and useful tool. Model evaluation features are also highlighted, showing Bedrock’s robustness. Finally, Chapter 8 briefly introduces the latest Bedrock updates.  
+Chapter 7 covers operational features, including Guardrails for detecting hallucinations—a surprising and useful tool. Model evaluation features are also highlighted, showing Bedrock's robustness. Finally, Chapter 8 briefly introduces the latest Bedrock updates.  
 
 ## Target Audience  
 
-If you’re interested in generative AI—especially RAG, Agents, or practical applications—this book is a great read. Even without AWS experience, you’ll find it approachable. Generative AI costs scale with usage, so experimenting with models isn’t prohibitively expensive. Dive into this book to explore various models hands-on!
+If you're interested in generative AI—especially RAG, Agents, or practical applications—this book is a great read. Even without AWS experience, you'll find it approachable. Generative AI costs scale with usage, so experimenting with models isn't prohibitively expensive. Dive into this book to explore various models hands-on!

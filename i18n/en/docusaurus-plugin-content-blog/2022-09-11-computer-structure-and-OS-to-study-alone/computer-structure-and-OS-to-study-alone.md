@@ -41,15 +41,15 @@ Click the book image to visit the Kyobobook store!
 
 ## 🎬 Intro  
 
-After reading books on C, Python, and Java, this is my fourth book from the "Self-Study" series. Despite being a computer science major who took courses on computer architecture and operating systems, I felt there were gaps in my understanding—which is why I picked up this book. I applied for the reviewer program, but even if I hadn’t been selected, I would have bought it anyway.  
+After reading books on C, Python, and Java, this is my fourth book from the "Self-Study" series. Despite being a computer science major who took courses on computer architecture and operating systems, I felt there were gaps in my understanding—which is why I picked up this book. I applied for the reviewer program, but even if I hadn't been selected, I would have bought it anyway.  
 
-Honestly, I used to dismiss the "Self-Study" series as too simple. But after reading a few, I realized there’s no better entry point for beginners. When non-major friends ask me how to start coding, I always recommend this series.  
+Honestly, I used to dismiss the "Self-Study" series as too simple. But after reading a few, I realized there's no better entry point for beginners. When non-major friends ask me how to start coding, I always recommend this series.  
 
 ## Book Review  
 
 ### Easy to Read  
 
-This book avoids diving into advanced topics like ARM or RISC-V architectures, which is perfect for beginners. It doesn’t aim to be an exhaustive deep dive—if it did, it would be twice as thick. Instead, it focuses on **core concepts** without unnecessary detours. That’s why I found it so readable.  
+This book avoids diving into advanced topics like ARM or RISC-V architectures, which is perfect for beginners. It doesn't aim to be an exhaustive deep dive—if it did, it would be twice as thick. Instead, it focuses on **core concepts** without unnecessary detours. That's why I found it so readable.  
 
 ### Clear Visual Explanations  
 
@@ -57,12 +57,12 @@ The diagrams are exceptionally helpful for beginners. Computer architecture can 
 
 ### Designed for Self-Learners  
 
-Studying alone makes it hard to gauge how well you’ve absorbed the material. This book solves that with **chapter summaries** and **review questions** at the end of each section—one of the series’ strongest features.  
+Studying alone makes it hard to gauge how well you've absorbed the material. This book solves that with **chapter summaries** and **review questions** at the end of each section—one of the series' strongest features.  
 
-The appendix also includes a "Self-Study Glossary," a small but thoughtful touch showing the publisher’s effort to support independent learners. It might seem minor, but it’s both fun and genuinely useful.  
+The appendix also includes a "Self-Study Glossary," a small but thoughtful touch showing the publisher's effort to support independent learners. It might seem minor, but it's both fun and genuinely useful.  
 
 ## Recommended Audience  
 
-I’d recommend this book to **second-year CS majors** looking to get a head start on computer architecture and operating systems. I wish this had been available when I took those courses—I would’ve started with this book before diving into lectures.  
+I'd recommend this book to **second-year CS majors** looking to get a head start on computer architecture and operating systems. I wish this had been available when I took those courses—I would've started with this book before diving into lectures.  
 
-Many non-majors now learn coding through bootcamps or training programs, but these often skim over CS fundamentals. If you’re in one of those programs, **supplement your learning with this book**—it’ll fill in critical gaps. Next time someone asks for a recommendation, this will be my go-to for mastering these topics.
+Many non-majors now learn coding through bootcamps or training programs, but these often skim over CS fundamentals. If you're in one of those programs, **supplement your learning with this book**—it'll fill in critical gaps. Next time someone asks for a recommendation, this will be my go-to for mastering these topics.

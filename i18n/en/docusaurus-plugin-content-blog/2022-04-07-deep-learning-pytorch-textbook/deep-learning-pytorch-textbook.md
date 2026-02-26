@@ -33,7 +33,7 @@ Click the book image to go to the Kyobook website!
 
 ## Intro  
 
-Lately, I’ve been studying PyTorch by reading books and referring to resources like the [PyTorch Tutorials](https://tutorials.pytorch.kr/) and [Introduction to Deep Learning with PyTorch](https://wikidocs.net/book/2788) whenever needed. But as I expect to use PyTorch more frequently, I wanted to systematically organize the core concepts and get comfortable with them. While those online resources are well-documented, I found it challenging to consolidate the basics neatly, which led me to pick up this book.  
+Lately, I've been studying PyTorch by reading books and referring to resources like the [PyTorch Tutorials](https://tutorials.pytorch.kr/) and [Introduction to Deep Learning with PyTorch](https://wikidocs.net/book/2788) whenever needed. But as I expect to use PyTorch more frequently, I wanted to systematically organize the core concepts and get comfortable with them. While those online resources are well-documented, I found it challenging to consolidate the basics neatly, which led me to pick up this book.  
 
 ## Book Review  
 
@@ -45,14 +45,14 @@ This book truly lives up to its title. From my experience, textbooks rarely expl
 
 At 750 pages, this book comprehensively covers *PyTorch-based deep learning basics*. It includes CNN, time-series analysis, natural language processing, and even foundational machine learning concepts before diving into deep learning. While not every topic is implemented in PyTorch, the book effectively introduces the breadth of techniques, aiding in technical awareness.  
 
-I particularly appreciated the **two dedicated chapters on CNNs**, which showcased the author’s effort to explain them thoroughly. However, some might find the coverage of RNNs, embeddings, and generative models slightly less detailed in terms of implementation.  
+I particularly appreciated the **two dedicated chapters on CNNs**, which showcased the author's effort to explain them thoroughly. However, some might find the coverage of RNNs, embeddings, and generative models slightly less detailed in terms of implementation.  
 
 ### Visuals  
 
-One of the book’s strongest points is its **illustrations**. Complex concepts are clarified with diagrams, and the use of **color visuals** made understanding significantly easier. The visual explanations are clean and intuitive.  
+One of the book's strongest points is its **illustrations**. Complex concepts are clarified with diagrams, and the use of **color visuals** made understanding significantly easier. The visual explanations are clean and intuitive.  
 
 ## Recommended Readers  
 
-This book is ideal for **beginners with some prior experience**—those who’ve tried basic implementations and now seek to solidify their PyTorch skills. If you’ve built simple models from scratch, this book will smoothly transition you into the PyTorch framework.  
+This book is ideal for **beginners with some prior experience**—those who've tried basic implementations and now seek to solidify their PyTorch skills. If you've built simple models from scratch, this book will smoothly transition you into the PyTorch framework.  
 
-It’s also great for **theory-focused learners** who struggle with practical implementation. The book’s hands-on approach will bridge that gap effectively.
+It's also great for **theory-focused learners** who struggle with practical implementation. The book's hands-on approach will bridge that gap effectively.

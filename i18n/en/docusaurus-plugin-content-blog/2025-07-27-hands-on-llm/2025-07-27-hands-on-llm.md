@@ -40,39 +40,39 @@ image.png
 
 ## Intro  
 
-Large Language Models (LLMs) are now essential knowledge not just for developers, but also for researchers, students, planners, and many other fields. While I’ve studied LLM principles and applications over time, I’ve struggled to solidify my fundamentals amid the flood of new tools and techniques. *Hands-On LLM* gave me the chance to systematically review core concepts and practice hands-on exercises—all in one place.  
+Large Language Models (LLMs) are now essential knowledge not just for developers, but also for researchers, students, planners, and many other fields. While I've studied LLM principles and applications over time, I've struggled to solidify my fundamentals amid the flood of new tools and techniques. *Hands-On LLM* gave me the chance to systematically review core concepts and practice hands-on exercises—all in one place.  
 
-I picked up this book wanting to revisit LLMs in a structured way, and I’m genuinely satisfied with the result. Studying LLMs feels like an endless journey—new models, tools, and approaches keep emerging. That’s why this book’s emphasis on **fundamentals** resonated deeply with me.  
+I picked up this book wanting to revisit LLMs in a structured way, and I'm genuinely satisfied with the result. Studying LLMs feels like an endless journey—new models, tools, and approaches keep emerging. That's why this book's emphasis on **fundamentals** resonated deeply with me.  
 
 ## Book Review  
 
-### The Best Choice for “Relearning” LLMs  
+### The Best Choice for "Relearning" LLMs  
 
-This isn’t just an introductory guide for LLM beginners. Even if you already know concepts like Transformers, Fine-Tuning, or Embeddings, this book excels as a guide to connect those dots cohesively.  
+This isn't just an introductory guide for LLM beginners. Even if you already know concepts like Transformers, Fine-Tuning, or Embeddings, this book excels as a guide to connect those dots cohesively.  
 
-Previously scattered ideas from blogs and papers finally clicked when I read **Chapter 3** (on Transformer architecture). The intuitive visuals and seamless integration of hands-on exercises made me repeatedly think, *“Oh, that’s how it works!”*  
+Previously scattered ideas from blogs and papers finally clicked when I read **Chapter 3** (on Transformer architecture). The intuitive visuals and seamless integration of hands-on exercises made me repeatedly think, *"Oh, that's how it works!"*  
 
 ### Visual Explanations + Hands-On Practice  
 
-The book’s strongest points are its **visualizations** and **practical exercises**.  
+The book's strongest points are its **visualizations** and **practical exercises**.  
 
 Each chapter includes dozens of color diagrams, example illustrations, and code output images, making even complex concepts easy to grasp.  
 
 With setups for Hugging Face, Colab, and other tools, you can jump straight into practice without extra environment setup. Real-world examples like prompt engineering, clustering, and RAG pipeline construction helped me build practical skills.  
 
-Personally, **Chapter 5** (BERTopic), **Chapter 7** (LangChain’s ReAct), and **Chapter 12** (Fine-Tuning Generative Models) stood out as especially insightful.  
+Personally, **Chapter 5** (BERTopic), **Chapter 7** (LangChain's ReAct), and **Chapter 12** (Fine-Tuning Generative Models) stood out as especially insightful.  
 
 ### Not a Shortcoming, but a Clear Audience Prerequisite  
 
-This book isn’t for complete beginners. As the authors note in the preface, some Python and machine learning background is necessary for smooth reading.  
+This book isn't for complete beginners. As the authors note in the preface, some Python and machine learning background is necessary for smooth reading.  
 
-Additionally, it doesn’t cover infrastructure, cost optimization, or deployment for production—so readers seeking real-world application details may need supplementary resources.  
+Additionally, it doesn't cover infrastructure, cost optimization, or deployment for production—so readers seeking real-world application details may need supplementary resources.  
 
-However, the book’s focus is clear: **“Understand LLMs deeply and learn to work with them hands-on.”** And it delivers on that promise admirably.  
+However, the book's focus is clear: **"Understand LLMs deeply and learn to work with them hands-on."** And it delivers on that promise admirably.  
 
 ## Target Audience  
 
 - Anyone who wants to revisit LLM principles and key concepts through **visual explanations and practical exercises**  
-- Readers who’ve pieced together knowledge from blogs or papers and want a **structured, comprehensive review**  
+- Readers who've pieced together knowledge from blogs or papers and want a **structured, comprehensive review**  
 - Those looking to systematically learn LLM applications like chatbots, embedding-based search, and prompt optimization  
 - Learners who want to follow recent LLM trends (LangChain, RAG, LoRA) through **hands-on practice**

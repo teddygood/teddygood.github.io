@@ -44,15 +44,15 @@ MLOps has been a hot topic since machine learning gained traction. These days, i
 
 ### Is It Beginner-Friendly?
 
-I wouldn’t say it’s super easy, but if you’re interested in MLOps and have at least some experience with it, this book is worth recommending. As the title suggests, it’s a practical guide—more focused on hands-on exercises than theory. However, the theoretical parts are well-explained, so if you’re familiar with command-line environments, Python, containers, etc., you’ll find it easier to follow. If you’re curious about MLOps, this is a must-read.
+I wouldn't say it's super easy, but if you're interested in MLOps and have at least some experience with it, this book is worth recommending. As the title suggests, it's a practical guide—more focused on hands-on exercises than theory. However, the theoretical parts are well-explained, so if you're familiar with command-line environments, Python, containers, etc., you'll find it easier to follow. If you're curious about MLOps, this is a must-read.
 
 ### Hands-On Guide
 
-As mentioned earlier, this book is essentially a practical guide. It subtly tells you what you need to know if you want to learn MLOps. Since MLOps is a field that requires knowledge of many tools and concepts, the authors prioritize breadth over depth. After reading this book, you’ll know what areas to focus on next. A fun feature is the "Try It Out" and "Think About It" sections at the end of each chapter. The former challenges you with practical tasks, while the latter encourages theoretical reflection. Working through these exercises will deepen your understanding of MLOps. I found the explanations and translation to be clear and well-executed. It even made me want to dive deeper into MLOps if I ever get the chance.
+As mentioned earlier, this book is essentially a practical guide. It subtly tells you what you need to know if you want to learn MLOps. Since MLOps is a field that requires knowledge of many tools and concepts, the authors prioritize breadth over depth. After reading this book, you'll know what areas to focus on next. A fun feature is the "Try It Out" and "Think About It" sections at the end of each chapter. The former challenges you with practical tasks, while the latter encourages theoretical reflection. Working through these exercises will deepen your understanding of MLOps. I found the explanations and translation to be clear and well-executed. It even made me want to dive deeper into MLOps if I ever get the chance.
 
 ### If It Had Been Translated in 2021...
 
-One minor drawback is the use of **Flask**. While it’s still widely used, the industry seems to be shifting toward **FastAPI**. If given the chance, converting the Flask code to FastAPI would be an interesting exercise.  
+One minor drawback is the use of **Flask**. While it's still widely used, the industry seems to be shifting toward **FastAPI**. If given the chance, converting the Flask code to FastAPI would be an interesting exercise.  
 
 Since technology evolves so quickly, this is a common issue. The original book was published in 2021, so if the Korean translation had come out the same year, it might have been even more popular.  
 
@@ -60,4 +60,4 @@ Some code examples from 2021 might not work in 2023, so the translators likely f
 
 ## Target Audience
 
-I recommend this book to anyone working in or interested in MLOps. It’s also great for those who want hands-on experience. Prior knowledge of containers, command-line tools, backend systems, and cloud platforms will make reading this book much smoother.
+I recommend this book to anyone working in or interested in MLOps. It's also great for those who want hands-on experience. Prior knowledge of containers, command-line tools, backend systems, and cloud platforms will make reading this book much smoother.

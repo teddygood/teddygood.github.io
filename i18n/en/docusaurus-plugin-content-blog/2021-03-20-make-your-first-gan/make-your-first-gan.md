@@ -38,19 +38,19 @@ Click the book image to visit the Kyobobook store!
 
 ## Intro  
 
-I read this book as part of Hanbit Media’s "I am a Reviewer 2021" program. There were many great books to choose from for the March reviews, and I selected *Satoshi’s Whitepaper*, *GAN 첫걸음*, and *Refactoring 2nd Edition*. I’ll skip explaining why I excluded the others this time.  
+I read this book as part of Hanbit Media's "I am a Reviewer 2021" program. There were many great books to choose from for the March reviews, and I selected *Satoshi's Whitepaper*, *GAN 첫걸음*, and *Refactoring 2nd Edition*. I'll skip explaining why I excluded the others this time.  
 
-While studying deep learning, I stumbled upon GANs and tried to learn more, but got stuck due to the math and complex concepts. That’s when I came across this book and decided to give it a shot.  
+While studying deep learning, I stumbled upon GANs and tried to learn more, but got stuck due to the math and complex concepts. That's when I came across this book and decided to give it a shot.  
 
 ## Book Overview  
 
-This book focuses on the essentials of GANs—it doesn’t cover every aspect but provides a solid foundation. That’s why it was especially helpful for me.  
+This book focuses on the essentials of GANs—it doesn't cover every aspect but provides a solid foundation. That's why it was especially helpful for me.  
 
-It doesn’t just explain concepts—it walks you through implementing them step-by-step using PyTorch. You can find example codes on the [author’s GitHub](https://github.com/makeyourownneuralnetwork) to build your own GAN neural network.  
+It doesn't just explain concepts—it walks you through implementing them step-by-step using PyTorch. You can find example codes on the [author's GitHub](https://github.com/makeyourownneuralnetwork) to build your own GAN neural network.  
 
 Familiarity with Colab and basic PyTorch usage will make reading this book smoother. Since the focus is on GANs, the book only covers the necessary parts of Colab and PyTorch, not every detail.  
 
-Also, reading the author’s previous book, *신경망 첫걸음* (*Make Your Own Neural Network*), before this one is highly recommended. While this book briefly covers neural networks, the earlier work explains them in greater detail. When I learned this was a sequel, I borrowed *신경망 첫걸음* from the library and read it first.  
+Also, reading the author's previous book, *신경망 첫걸음* (*Make Your Own Neural Network*), before this one is highly recommended. While this book briefly covers neural networks, the earlier work explains them in greater detail. When I learned this was a sequel, I borrowed *신경망 첫걸음* from the library and read it first.  
 
 The book is divided into three main parts:  
 - **Part 1**: Basic concepts and foundations for implementing GANs.  
@@ -61,9 +61,9 @@ The natural progression makes it easy for beginners to follow.
 
 ## Recommended Readers  
 
-This book is great for those who are interested in deep learning or machine learning but find some concepts too challenging. Since I fit this category, I can confidently say it’s accessible. The explanations are simple and friendly, with plenty of visuals, making it beginner-friendly.  
+This book is great for those who are interested in deep learning or machine learning but find some concepts too challenging. Since I fit this category, I can confidently say it's accessible. The explanations are simple and friendly, with plenty of visuals, making it beginner-friendly.  
 
-Think of it as an introductory guide to AI. While it doesn’t cover every GAN variant, it lays a strong foundation for deeper, more specialized study later.  
+Think of it as an introductory guide to AI. While it doesn't cover every GAN variant, it lays a strong foundation for deeper, more specialized study later.  
 
 ## Summary  
 

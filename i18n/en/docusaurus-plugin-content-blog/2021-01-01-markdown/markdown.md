@@ -17,13 +17,13 @@ tags:
 title: Markdown Summary
 ---
 
-Restarting my blog after a long time, I realized I’ve gotten rusty with Markdown, so I’m documenting and practicing it.
+Restarting my blog after a long time, I realized I've gotten rusty with Markdown, so I'm documenting and practicing it.
 
 {/* truncate */}
 
 ## What is Markdown?
 
-Markdown is a syntax for editing the formatting of plain text documents. It’s used in GitHub README files, online documentation, or when editing documents with plain text editors. Documents written in Markdown can be easily converted into other formats like HTML. In short, it’s a language that helps developers document things easily.
+Markdown is a syntax for editing the formatting of plain text documents. It's used in GitHub README files, online documentation, or when editing documents with plain text editors. Documents written in Markdown can be easily converted into other formats like HTML. In short, it's a language that helps developers document things easily.
 
 ## When You Want to Show the Syntax Itself
 
@@ -92,7 +92,7 @@ You can indicate heading sizes from `h1` to `h6` using `#` to `######`.
 
 ######## This is a h7 → Not supported.  
 
-You might notice a horizontal line under `h2`—this is defined in the SCSS of the minimal-mistakes theme. I’m still deciding whether to keep or modify this.
+You might notice a horizontal line under `h2`—this is defined in the SCSS of the minimal-mistakes theme. I'm still deciding whether to keep or modify this.
 
 ## Lists
 
@@ -141,7 +141,7 @@ I want to eat
 
 ## Horizontal Lines
 
-This is equivalent to `<hr>` in HTML. It’s often used to separate sections—like a page break. It can be written as `---`, `***`, etc., and some irregular syntax seems to be accepted too.
+This is equivalent to `<hr>` in HTML. It's often used to separate sections—like a page break. It can be written as `---`, `***`, etc., and some irregular syntax seems to be accepted too.
 
 ```
 * * *  
@@ -229,7 +229,7 @@ You can create tables using a combination of `|` and `-`.
 
 ## When You Forget or Want to Apply Markdown
 
-In such cases, you can mix Markdown with HTML/CSS. For example, if line breaks aren’t working, you can use the `<br>` tag. If you want to change text color or add underlines, use HTML and CSS.
+In such cases, you can mix Markdown with HTML/CSS. For example, if line breaks aren't working, you can use the `<br>` tag. If you want to change text color or add underlines, use HTML and CSS.
 
 ## References
 
