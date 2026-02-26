@@ -30,7 +30,7 @@ Let me know if you&#x27;d like a detailed troubleshooting guide or specific prob
 <link rel="alternate" type="application/atom+xml" href="/en/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
 <link rel="alternate" type="application/json" href="/en/projects/feed.json" title="Chanho Lee Projects JSON Feed">
 <link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/en/assets/css/styles.8fb09425.css">
-<script src="/en/assets/js/runtime~main.2c85c73a.js" defer="defer"></script>
+<script src="/en/assets/js/runtime~main.92c56d29.js" defer="defer"></script>
 <script src="/en/assets/js/main.bfc616b7.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -71,8 +71,8 @@ Let me know if you&#x27;d like a detailed troubleshooting guide or specific prob
 <div class="language-Dockerfile language-dockerfile codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-dockerfile codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">FROM python:3.8-slim-buster</span><br></span></code></pre></div></div>
 <p>But why did this happen? Let&#x27;s explore the reasons.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="why-alpine-linux-is-not-ideal-for-python-environments">Why Alpine Linux Is Not Ideal for Python Environments<a href="#why-alpine-linux-is-not-ideal-for-python-environments" class="hash-link" aria-label="Direct link to Why Alpine Linux Is Not Ideal for Python Environments" title="Direct link to Why Alpine Linux Is Not Ideal for Python Environments" translate="no">​</a></h2>
-<p>I initially chose Alpine Linux because it’s smaller and faster to build compared to Ubuntu. However, it’s not well-suited for Python environments.</p>
-<p>The key difference lies in the C standard libraries used. Most Linux distributions use <strong>GNU C Library (glibc)</strong> for C programs, including Python. However, Alpine Linux uses <strong>musl libc</strong> for lightweight optimization. Since musl doesn’t support <code>Wheel binaries</code> compiled with glibc, it downloads <code>.tar.gz</code> files instead of <code>.whl</code> files. This means <strong>all Python packages with C extensions must be compiled from source</strong>, leading to longer build times and larger image sizes.</p>
+<p>I initially chose Alpine Linux because it&#x27;s smaller and faster to build compared to Ubuntu. However, it&#x27;s not well-suited for Python environments.</p>
+<p>The key difference lies in the C standard libraries used. Most Linux distributions use <strong>GNU C Library (glibc)</strong> for C programs, including Python. However, Alpine Linux uses <strong>musl libc</strong> for lightweight optimization. Since musl doesn&#x27;t support <code>Wheel binaries</code> compiled with glibc, it downloads <code>.tar.gz</code> files instead of <code>.whl</code> files. This means <strong>all Python packages with C extensions must be compiled from source</strong>, leading to longer build times and larger image sizes.</p>
 <p>Most modern Python packages include precompiled Wheel binaries on PyPI, which are essentially ZIP archives with a <code>.whl</code> extension. These speed up installations significantly. However, Alpine Linux bypasses this optimization.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="drawbacks-of-using-alpine-linux-for-python">Drawbacks of Using Alpine Linux for Python:<a href="#drawbacks-of-using-alpine-linux-for-python" class="hash-link" aria-label="Direct link to Drawbacks of Using Alpine Linux for Python:" title="Direct link to Drawbacks of Using Alpine Linux for Python:" translate="no">​</a></h3>
 <ol>
