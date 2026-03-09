@@ -66,8 +66,7 @@ sudo do-release-upgrade
 
 ## ⚠️ 삽질 포인트
 
-예전 이슈를 보면 `genie`, `unshare/nsenter`, upgrader 파이썬 임시 파일 수정 같은 우회 방법이 많이 나오는데,
-요즘에는 이런 방식보다 **systemd를 정식으로 켜는 방식이 훨씬 안전**하다.
+예전 이슈를 보면 `genie`, `unshare/nsenter`, upgrader 파이썬 임시 파일 수정 같은 우회 방법이 많이 나오는데, 요즘에는 이런 방식보다 **systemd를 정식으로 켜는 방식이 훨씬 안전**하다.
 
 특히 임시 해킹은 다음 문제가 있었다.
 
