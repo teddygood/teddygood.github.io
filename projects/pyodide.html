@@ -18,8 +18,8 @@
 <link rel="alternate" type="application/atom+xml" href="/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
 <link rel="alternate" type="application/json" href="/projects/feed.json" title="Chanho Lee Projects JSON Feed">
 <link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.73e7d64c.css">
-<script src="/assets/js/runtime~main.a143d817.js" defer="defer"></script>
-<script src="/assets/js/main.76ef56bf.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.32ecee49.js" defer="defer"></script>
+<script src="/assets/js/main.3611d72a.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -32,7 +32,7 @@
 <p>이를 해결하기 위해 (<a href="https://github.com/pyodide/pyodide-build/issues/218">Issue #218</a>), 두 단계에 걸쳐 포괄적인 정리 솔루션을 구현했다:</p>
 <ol>
 <li><strong>핵심 로직 구현 (<a href="https://github.com/pyodide/pyodide-build/pull/223">PR #223</a>)</strong>: <code>pyodide-build</code>에 정리 로직을 구현하여 소스 레이아웃과 빌드 디렉토리를 지능적으로 제거하면서 기본적으로 빌드된 휠이 있는 <code>dist</code> 폴더는 보존하도록 했다.</li>
-<li><strong>CLI 통합 (<a href="https://github.com/pyodide/pyodide-build/pull/254">PR #254</a>)</strong>: 새로운 CLI 명령인 <code>pyodide clean recipes</code>를 통해 이 기능을 제공했다. 이를 통해 사용자는 간단한 플래그로 특정 패키지나 전체 작업  공간을 정리할 수 있게 되어 패키지 유지 관리자의 개발자 경험이 크게 향상되었다.</li>
+<li><strong>CLI 명령어 추가 (<a href="https://github.com/pyodide/pyodide-build/pull/254">PR #254</a>)</strong>: 새로운 CLI 명령인 <code>pyodide clean recipes</code>를 통해 이 기능을 제공했다. 이를 통해 사용자는 간단한 플래그로 특정 패키지나 전  체 작업 공간을 정리할 수 있게 되어 패키지 유지 관리자의 개발자 경험이 크게 향상되었다.</li>
 </ol>
 <h2 id="성능-최적화-wasm-simd-활성화">성능 최적화: WASM SIMD 활성화</h2>
 <p>Pyodide의 성능은 브라우저 데이터 과학의 핵심 요소다. Emscripten은 C/C++ 코드를 벡터화하여 성능을 최적화하는 WebAssembly SIMD(Single Instruction, Multiple Data)를 지원하지만, Pyodide 내에서 이 생태계가 바로 사용 가능한지는 불분명했다. 나는 SIMD 지원을 검증하고 활성화하는 이니셔티브를 주도했다 (<a href="https://github.com/pyodide/pyodide/issues/5855">Issue #5855</a>).</p>
@@ -44,7 +44,7 @@
 </ul>
 <h3 id="2단계-openblas-최적화-pr-5960">2단계: OpenBLAS 최적화 (<a href="https://github.com/pyodide/pyodide/pull/5960">PR #5960</a>)</h3>
 <p>검증이 완료된 후, NumPy와 SciPy의 기반 라이브러리인 <strong>OpenBLAS</strong>라는 실제 사용 사례로 넘어갔다. 기존 OpenBLAS 빌드가 SIMD를 활용하지 못하고 있음을 확인했다 (<a href="https://github.com/pyodide/pyodide/issues/5948">Issue #5948</a>).</p>
-<p><code>-msimd128</code>로 컴파일하는 새로운 빌드 레시피인 <code>libopenblas-simd</code>를 구현했다. 영향을 정량화하기 위해, Dot Product(<code>sdot</code>) 및 Matrix Multiplication(<code>sgemm</code>)과 같은 주요 연산에 대해 스칼라 대 SIMD 성능을 비교하는 벤치마킹 제품군(<code>test-openblas-simd</code>)을 작성했다. 이 작업을 통해 웹에서의 과학 컴퓨팅 성능 향상에 기여할 수 있었다.</p>
+<p><code>-msimd128</code>로 컴파일하는 새로운 빌드 레시피인 <code>libopenblas-simd</code>를 구현했다. 영향을 정량화하기 위해, Dot Product(<code>sdot</code>) 및 Matrix Multiplication(<code>sgemm</code>)과 같은 주요 연산에 대해 SIMD 성능을 비교하는 벤치마크 레시피(<code>test-openblas-simd</code>)를 작성했다. 이 작업을 통해 웹에서의 과학 컴퓨팅 성능 향상에 기여할 수 있었다.</p>
 <h2 id="영향-및-성과">영향 및 성과</h2>
 <h3 id="pyodide">Pyodide</h3>
 <h4 id="release-029">Release 0.29</h4>
