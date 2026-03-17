@@ -1,5 +1,5 @@
 ---
-title: "What is a Recommender System?"
+title: "추천 시스템이란?"
 sidebar_position: 1
 ---
 

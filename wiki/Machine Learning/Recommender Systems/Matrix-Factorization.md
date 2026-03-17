@@ -1,5 +1,5 @@
 ---
-title: "Matrix Factorization"
+title: "행렬 분해"
 sidebar_position: 7
 ---
 
