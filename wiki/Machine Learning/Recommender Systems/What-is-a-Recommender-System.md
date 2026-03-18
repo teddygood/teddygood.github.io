@@ -1,6 +1,6 @@
 ---
-title: "추천 시스템이란?"
+title: "추천 시스템"
 sidebar_position: 1
 ---
 
-작성 예정.
+## 추천 시스템

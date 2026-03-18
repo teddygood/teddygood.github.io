@@ -1,5 +1,5 @@
 ---
-title: "WSL VHD 압축은 왜 주기적으로 하게 될까?"
+title: "WSL VHD 압축은 왜 주기적으로 해야 할까?"
 date: '2026-03-18'
 draft: false
 ---
