@@ -4,7 +4,7 @@ date: '2021-06-02'
 draft: false
 ---
 
-## 🤔 문제
+## 문제
 
 PyJWT를 활용하여 JWT(JSON Web Token)를 만들고 있었는데 에러가 떴다.
 
@@ -20,7 +20,7 @@ AttributeError: 'str' object has no attribute 'decode'
 
 "책의 코드와 똑같이 썼는데 뭐지?"라고 생각하면서 일단 코드를 잘못 썼을 수도 있으니 책에서 주어진 코드를 복붙했다. 그래도 에러는 다시 나타났다.
 
-## 🚩 해결
+## 해결
 
 에러가 다시 나타나니 방법은 구글링 밖에 없었다. 바로 stackoverflow가 뜨길래 해결은 깔끔하게 됐다.
 

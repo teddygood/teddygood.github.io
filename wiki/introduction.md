@@ -1,5 +1,5 @@
 ---
-title: '👋🏻'
+title: 'Hello, World!'
 # slug: '/'
 sidebar_position: 0
 ---
@@ -13,4 +13,3 @@ sidebar_position: 0
 :::note
 다양한 강의, 책, 각종 문서 등을 참고하여 문서를 적습니다.
 :::
-

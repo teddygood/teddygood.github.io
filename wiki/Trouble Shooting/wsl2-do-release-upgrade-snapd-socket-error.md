@@ -4,7 +4,7 @@ date: '2026-02-14'
 draft: false
 ---
 
-## 🤔 문제
+## 문제
 
 WSL2 Ubuntu에서 `sudo do-release-upgrade`를 실행했는데 초반에 바로 중단됐다.
 
@@ -17,7 +17,7 @@ subprocess.CalledProcessError: Command '['snap', 'list']' returned non-zero exit
 
 처음에는 "WSL2인데 왜 snap이 안 되지?"라고 생각했는데, 결론적으로는 **WSL2 자체 문제가 아니라 systemd가 꺼져 있어서 snapd가 못 뜬 상태**였다.
 
-## 🚩 해결
+## 해결
 
 ### 1) systemd 활성화
 

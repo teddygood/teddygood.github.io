@@ -1,5 +1,5 @@
 ---
-title: '👋🏻'
+title: 'Hello, World!'
 sidebar_position: 0
 ---
 

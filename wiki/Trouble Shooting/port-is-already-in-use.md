@@ -4,7 +4,7 @@ date: '2022-03-07'
 draft: false
 ---
 
-## 🤔 실수 때문에 생긴 에러
+## 실수 때문에 생긴 에러
 
 django를 시작하고 종료할 때 `Ctrl-C`를 사용해서 꺼야 했는데 `Ctrl-Z`를 사용했다.
 종료가 제대로 된 줄 알았지만, 프로세스가 중단된 것이었다.
@@ -13,7 +13,7 @@ django를 시작하고 종료할 때 `Ctrl-C`를 사용해서 꺼야 했는데 `
 
 결국 위의 `Error: That port is already in use.`라는 에러가 발생했다.
 
-## 🚩 해결
+## 해결
 
 ![ps](../assets/python-ps.jpg)  
 

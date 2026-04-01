@@ -4,7 +4,7 @@ date: '2024-08-18'
 draft: false
 ---
 
-## 🤔 문제
+## 문제
 
 ### Pycharm gateway jupyter notebook 문제
 
@@ -32,7 +32,7 @@ draft: false
 
 구글 검색이 GPT 이후로 악성 링크가 매우 많아졌지만 아직 구글링을 버릴 수는 없다고 느낀다. 그리고 너무 GPT에만 의존하지 말자. 얘가 대부분의 문제는 해결해줄 수 있겠지만 해결해줄 수 없는 문제도 있다. 
 
-## 🚩 해결
+## 해결
 
 해결 방법은 아직 없다. 얼른 Jetbrains가 Remote 환경에서 Jupyter Notebook을 지원해주길 바란다. 그 전에는 vscode를 사용하거나 Jupyter Lab을 사용하자.
 
