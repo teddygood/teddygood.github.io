@@ -40,12 +40,12 @@ return jsonify({'access_token': token})
 
 역시나 내 예상은 맞았다. v2.0.0으로 바뀌면서 `jwt.encode(...)`의 return type이 바뀌었다는 것. 예전에는 토큰의 타입을 byte string으로 return했었던 것 같다. 현재는 str 타입으로 return되고 파이썬에서 모든 문자열은 UTF-8이므로 딱히 저걸 decode할 필요가 없다는 의미이다.
 
-## 🏴 간단한 고찰
+## 간단한 고찰
 
 역시 책을 읽으면서 공부하는 방법도 장점만 있는 것이 아니다. 얼마나 오래 됐느냐에 따라서 레거시 코드가 존재할 수도 있다. 책으로 공부하려면 가장 최근에 나온 책을 먼저 읽어보는 것이 좋을듯하다.
 
 
-## 🌐 References
+## References
 
 - [Python AttributeError: 'str' object has no attribute 'decode'](https://stackoverflow.com/questions/50979667/python-attributeerror-str-object-has-no-attribute-decode) 
 - [AttributeError: 'str' object has no attribute 'decode' python error](https://stackoverflow.com/questions/65798281/attributeerror-str-object-has-no-attribute-decode-python-error/)

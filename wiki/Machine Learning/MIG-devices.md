@@ -32,6 +32,6 @@ GPU의 메모리를 분할해 뒀다는 사실이 너무 신기했다. 당연히
 
 이걸 보니 내가 직접 이 기술로 메모리를 나눠 보고 싶다는 생각밖에 들지 않는다. 나중에 회사 가면 언젠가 하지 않을까.
 
-## 🌐 References
+## References
 
 - [NVIDIA Multi-Instance GPU User Guide](https://docs.nvidia.com/datacenter/tesla/mig-user-guide/index.html)

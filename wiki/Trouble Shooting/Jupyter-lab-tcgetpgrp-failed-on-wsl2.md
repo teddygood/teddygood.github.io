@@ -46,7 +46,7 @@ jupyter lab --no-browser
 
 그럼 위와 같이 제대로 사이트에 접속할 수 있게 된다.
 
-## ✔️ Appendix
+## Appendix
 
 ![주피터 랩](../assets/github-issue-jupyter.png)
 
@@ -60,7 +60,7 @@ GitHub에 있는 [jupyter lab Repo의 issue](https://github.com/jupyterlab/jupyt
 
 어쨌든 나는 1번 방법은 귀찮으니 WSL에서 Jupyter를 사용할 경우에는 아마 2번 방법을 사용하지 않을까 싶다.
 
-## 🌐 References
+## References
 
 - [https://stackoverflow.com/questions/50882266/using-jupyter-with-windows-subsystem-for-linux](https://stackoverflow.com/questions/50882266/using-jupyter-with-windows-subsystem-for-linux)
 - [Jupyter Lab hangs on startup and then 'tcgetpgrp failed: Not a tty' appears (in WSL2)](https://github.com/jupyterlab/jupyterlab/issues/10413)

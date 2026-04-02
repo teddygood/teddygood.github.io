@@ -73,6 +73,6 @@ def create_book(request):
 
 위의 코드에서 `create_book`은 클라이언트로부터 받은 JSON 데이터를 Book 인스턴스로 변환하고 데이터베이스에 저장한다.
 
-## 🌐 References
+## References
 
 - [DRF Serializers](https://www.django-rest-framework.org/api-guide/serializers/)

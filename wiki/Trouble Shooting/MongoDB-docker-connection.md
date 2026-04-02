@@ -20,7 +20,7 @@ docker ps
 
 위 명령어를 통해 현재 사용중인 컨테이너의 이름을 확인 후 `.env` 파일의 `DATABASE_URL`을 `DATABASE_URL=mongodb://CONTAINER_NAME`처럼 수정해주면 된다.
 
-## 🌐 References
+## References
 
 - [Docker and MongoDB](https://www.mongodb.com/compatibility/docker)
 - [Connecting to mongo docker container from host](https://stackoverflow.com/questions/33336773/connecting-to-mongo-docker-container-from-host)

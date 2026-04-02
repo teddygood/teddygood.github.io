@@ -64,7 +64,7 @@ sudo apt autoremove -y
 sudo do-release-upgrade
 ```
 
-## ⚠️ 삽질 포인트
+## 삽질 포인트
 
 예전 이슈를 보면 `genie`, `unshare/nsenter`, upgrader 파이썬 임시 파일 수정 같은 우회 방법이 많이 나오는데, 요즘에는 이런 방식보다 **systemd를 정식으로 켜는 방식이 훨씬 안전**하다.
 
@@ -76,12 +76,12 @@ sudo do-release-upgrade
 
 즉, 지금 기준으로는 "해킹으로 통과"보다 "환경을 정상 상태로 맞춘 뒤 업그레이드"가 정답에 가깝다.
 
-## ✅ 요약
+## 요약
 
 이번 케이스는 `do-release-upgrade` 버그라기보다, 업그레이더가 호출한 `snap list`가 실패한 상황이었다.
 핵심은 `snapd.socket`을 살리는 것이고, 그 전제 조건이 `systemd=true + wsl --shutdown`이다.
 
-## 🌐 References
+## References
 
 - [Use systemd to manage Linux services with WSL](https://learn.microsoft.com/en-us/windows/wsl/systemd)
 - [[WSL1] Upgrade to Ubuntu 24.04 from 22.04 fails with missing snap. Possible to work around?](https://github.com/microsoft/WSL/issues/11982)

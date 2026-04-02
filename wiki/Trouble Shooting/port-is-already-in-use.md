@@ -37,7 +37,7 @@ sudo lsof -t -i tcp:8000 | xargs kill -9
 
 명령어는 우분투 환경에서 사용했지만, 맥에서도 돌아간다고 한다.
 
-## 🌐 References
+## References
 
 - [Django Server Error: port is already in use - stackoverflow](https://stackoverflow.com/questions/20239232/django-server-error-port-is-already-in-use) 
 - [Ubuntu 프로세스 강제 종료시키기](https://ghostweb.tistory.com/828)

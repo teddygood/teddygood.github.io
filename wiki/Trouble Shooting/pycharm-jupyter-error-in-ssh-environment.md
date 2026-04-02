@@ -36,6 +36,6 @@ draft: false
 
 해결 방법은 아직 없다. 얼른 Jetbrains가 Remote 환경에서 Jupyter Notebook을 지원해주길 바란다. 그 전에는 vscode를 사용하거나 Jupyter Lab을 사용하자.
 
-## 🌐References
+## References
 
 - [Remote Development: Jupyter Notebook not rendered](https://youtrack.jetbrains.com/issue/PY-71195/Remote-Development-Jupyter-Notebook-not-rendered)
