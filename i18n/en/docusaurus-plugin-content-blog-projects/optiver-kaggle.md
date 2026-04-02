@@ -46,7 +46,7 @@ All deadlines are at 11:59 PM UTC.
 Selected notebooks are run against real market data with leaderboard updates every two weeks.
 
 - **Mar 20, 2024** - Competition End Date
-- **Total Prize**: $100,000 (1st Place $25,000)
+- **Total Prize**: \$100,000 (1st Place: \$25,000)
 
 Unlike typical Kaggle competitions, this was a **forecasting competition** where models were evaluated on actual market data for about 3 months after submission. The leaderboard was updated every two weeks, and the previous day's answers were released daily via `revealed_targets`.
 
@@ -58,9 +58,9 @@ The task was to predict price movements 60 seconds into the future during the cl
 
 The target is the change in the WAP (Weighted Average Price) of an individual stock minus the change in the Index WAP, expressed in basis points (bp, 0.01%):
 
-$$
+```math
 Target = \left( \frac{StockWAP_{t+60}}{StockWAP_t} - \frac{IndexWAP_{t+60}}{IndexWAP_t} \right) \times 10000
-$$
+```
 
 In other words, it is a problem of predicting the "relative" price change of an individual stock with the overall market movement removed.
 
@@ -68,15 +68,15 @@ In other words, it is a problem of predicting the "relative" price change of an 
 
 Mean Absolute Error (MAE):
 
-$$
+```math
 MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - x_i|
-$$
+```
 
 Where:
 
 - $n$ is the total number of data points.
-- $y_i$ is the predicted value for data point i.
-- $x_i$ is the observed value for data point i.
+- $y_i$ is the predicted value for data point $i$.
+- $x_i$ is the observed value for data point $i$.
 
 ### Data Structure
 
@@ -92,7 +92,7 @@ The training data consists of closing auction snapshots for about 200 stocks ove
 - `far_price` / `near_price`: Optimal execution price (Auction only / Including continuous orders)
 - `bid_price` / `ask_price`: Best bid/ask price in non-auction order book
 - `bid_size` / `ask_size`: Volume of best bid/ask (USD)
-- `wap`: Weighted average price of non-auction order book ($BidP \times AskS + AskP \times BidS) / (BidS + AskS)$
+- `wap`: Weighted average price of non-auction order book, calculated as $\left(BidP \times AskS + AskP \times BidS\right) / \left(BidS + AskS\right)$
 
 ---
 

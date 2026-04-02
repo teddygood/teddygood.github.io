@@ -49,7 +49,7 @@ The book starts with concise yet essential explanations of linear algebra and pr
 If I were a translator, I'd probably hate translating this book. The sentences are dense and technically challenging. The authors clearly tried to simplify complex math concepts, and the translators must have worked hard to preserve that clarity in Korean. The presence of two editors likely helped polish the text.  
 
 ### Korean Terminology  
-Since I studied machine learning in English, the heavy use of Korean terms felt awkward at times. However, English equivalents were always provided (e.g., 고유벡터$^{eigenvectors}$, 사후확률$^{posterior \ probability}$, L2 규제화$^{regularization}$). Most terms were translated, while untranslatable ones like *dropout* remained in English. This is unavoidable in translations, but it was a bit disappointing.  
+Since I studied machine learning in English, the heavy use of Korean terms felt awkward at times. However, English equivalents were always provided (e.g., 고유벡터 (eigenvectors), 사후확률 (posterior probability), L2 규제화 (regularization)). Most terms were translated, while untranslatable ones like *dropout* remained in English. This is unavoidable in translations, but it was a bit disappointing.  
 
 ### What Sets This Book Apart  
 You'll notice many footnotes throughout the book—this is a key difference from other deep learning texts. Whenever a key concept appears, the footnotes cite the original research papers. The book feels like a curated summary of foundational papers, explained by the authors. While some details felt like TMI (Too Much Information), the academic tone was engaging. It made sense why the title is *Fundamentals of Deep Learning*.  
