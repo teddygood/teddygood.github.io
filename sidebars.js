@@ -81,6 +81,7 @@ const sidebars = {
       collapsed: false,
       items: [
         docsFromDir('Algorithm', 'Algorithm'),
+        docsFromDir('OS', 'OS'),
         docsFromDir('Software Engineering', 'Software'),
       ],
     },
