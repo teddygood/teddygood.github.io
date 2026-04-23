@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="ko-KR" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-Computer Architecture/SIMD" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">SIMD @ Chanho Lee</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://teddygood.github.io/wiki/Computer Architecture/SIMD"><meta data-rh="true" property="og:locale" content="ko_KR"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ko"><meta data-rh="true" name="docsearch:language" content="ko"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="SIMD @ Chanho Lee"><meta data-rh="true" name="description" content="SIMD는 Single Instruction, Multiple Data의 약자다. 같은 명령 하나를 여러 데이터에 동시에 적용하는 방식이다. 현대 CPU와 WebAssembly 같은 런타임에서 벡터 연산을 빠르게 처리하는 핵심 개념이다."><meta data-rh="true" property="og:description" content="SIMD는 Single Instruction, Multiple Data의 약자다. 같은 명령 하나를 여러 데이터에 동시에 적용하는 방식이다. 현대 CPU와 WebAssembly 같은 런타임에서 벡터 연산을 빠르게 처리하는 핵심 개념이다."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://teddygood.github.io/wiki/Computer Architecture/SIMD"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/wiki/Computer Architecture/SIMD" hreflang="ko-KR"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/en/wiki/Computer Architecture/SIMD" hreflang="en"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/wiki/Computer Architecture/SIMD" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://3GO7VFCZS7-dsn.algolia.net" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Chanho Lee RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Chanho Lee Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFT0SBFJCH"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EFT0SBFJCH",{})</script>
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="Chanho Lee" href="/opensearch.xml">
+<link rel="alternate" type="application/rss+xml" href="/projects/rss.xml" title="Chanho Lee Projects RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
+<link rel="alternate" type="application/json" href="/projects/feed.json" title="Chanho Lee Projects JSON Feed">
+<link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.73e7d64c.css">
+<script src="/assets/js/runtime~main.be6fc8a7.js" defer="defer"></script>
+<script src="/assets/js/main.21478919.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="본문으로 건너뛰기"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">본문으로 건너뛰기</a></div><nav aria-label="메인" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="사이드바 펼치거나 접기" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Chanho Lee</b></a><a class="navbar__item navbar__link" href="/wiki/introduction">Wiki</a><a class="navbar__item navbar__link" href="/projects">Projects</a><a class="navbar__item navbar__link" href="/blog/archive">Archive</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>한국어</a><ul class="dropdown__menu"><li><a href="/wiki/Computer Architecture/SIMD" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="ko-KR">한국어</a></li><li><a href="/en/wiki/Computer Architecture/SIMD" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li></ul></div><a href="https://github.com/teddygood" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><a href="https://www.linkedin.com/in/teddygood/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-linkedin-link" aria-label="LinkedIn Account"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="어두운 모드와 밝은 모드 전환하기 (현재 system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="검색 (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">검색</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="맨 위로 스크롤하기" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">이 페이지에서</button></div><div class="theme-doc-markdown markdown"><header><h1>SIMD</h1></header><p>SIMD는 Single Instruction, Multiple Data의 약자다. 같은 명령 하나를 여러 데이터에 동시에 적용하는 방식이다. 현대 CPU와 WebAssembly 같은 런타임에서 벡터 연산을 빠르게 처리하는 핵심 개념이다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="왜-필요한가">왜 필요한가<a href="#왜-필요한가" class="hash-link" aria-label="왜 필요한가에 대한 직접 링크" title="왜 필요한가에 대한 직접 링크" translate="no">​</a></h2>
+<p>벡터나 행렬 계산은 같은 연산을 연속된 데이터에 반복하는 경우가 많다. 예를 들어 다음 네 개의 곱셈은 구조가 같다.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">a0 * b0</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">a1 * b1</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">a2 * b2</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">a3 * b3</span><br></span></code></pre></div></div>
+<p>SIMD는 이런 연산을 하나씩 처리하지 않고, 여러 원소를 벡터 레지스터에 넣어서 한 번에 계산한다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="lane이란-무엇인가">lane이란 무엇인가<a href="#lane이란-무엇인가" class="hash-link" aria-label="lane이란   무엇인가에 대한 직접 링크" title="lane이란 무엇인가에 대한 직접 링크" translate="no">​</a></h2>
+<p>SIMD 벡터 안에 들어가는 각 원소 자리를 lane이라고 부른다.</p>
+<p>예를 들어 128비트 벡터에서:</p>
+<ul>
+<li class=""><code>f32x4</code>: 32비트 float 4개</li>
+<li class=""><code>f64x2</code>: 64비트 double 2개</li>
+</ul>
+<p>즉 같은 128비트 <code>width</code>라도 자료형에 따라 lane 수가 달라진다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="width란-무엇인가"><code>width</code>란 무엇인가<a href="#width란-무엇인가" class="hash-link" aria-label="width란-무엇인가에 대한 직접 링크" title="width란-무엇인가에 대한 직접 링크" translate="no">​</a></h2>
+<p>여기서 <code>width</code>는 벡터 전체 크기를 뜻한다. lane 하나의 크기가 아니라, 벡터 레지스터 하나가 몇 비트인지에 대한 말이다.</p>
+<p>예를 들어:</p>
+<ul>
+<li class="">128비트 <code>width</code> + 32비트 원소 = 4 lane</li>
+<li class="">128비트 <code>width</code> + 64비트 원소 = 2 lane</li>
+</ul>
+<p>즉 <code>width</code>와 lane은 같은 말이 아니다.</p>
+<ul>
+<li class=""><code>width</code>: 벡터 전체 크기</li>
+<li class="">lane: 벡터 안에 들어가는 각 원소 칸</li>
+</ul>
+<p>그래서 lane 수는 보통 <code>width / 원소 크기</code>로 이해하면 된다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="simd를-볼-때-같이-봐야-하는-것">SIMD를 볼 때 같이 봐야 하는 것<a href="#simd를-볼-때-같이-봐야-하는-것" class="hash-link" aria-label="SIMD를 볼 때 같이 봐야 하는 것에 대한 직접 링크" title="SIMD를 볼 때 같이 봐야 하는 것에 대한 직접 링크" translate="no">​</a></h2>
+<p>SIMD를 이해할 때는 보통 아래 요소를 함께 본다.</p>
+<ul>
+<li class="">벡터 <code>width</code></li>
+<li class="">lane 수</li>
+<li class="">load/store 패턴</li>
+<li class="">alignment</li>
+<li class="">tail 처리</li>
+<li class="">register pressure</li>
+</ul>
+<p>같은 SIMD라고 해도 이 조건이 맞지 않으면 기대만큼 이득이 나지 않는다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="대표적인-simd-확장">대표적인 SIMD 확장<a href="#대표적인-simd-확장" class="hash-link" aria-label="대표적인 SIMD 확장에 대한 직접 링크" title="대표적인 SIMD 확장에 대한 직접 링크" translate="no">​</a></h2>
+<p>SIMD는 하나의 특정 ISA 이름이 아니라, 여러 아키텍처에서 반복해서 등장하는 공통 아이디어다. 실제 CPU에서는 이 개념이 각 ISA 확장으로 구현된다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="x86의-sse와-avx">x86의 SSE와 AVX<a href="#x86의-sse와-avx" class="hash-link" aria-label="x86의 SSE와 AVX에 대한 직접 링크" title="x86의 SSE와 AVX에 대한 직접 링크" translate="no">​</a></h3>
+<p><code>SSE</code>와 <code>AVX</code>는 x86 계열 CPU의 대표적인 SIMD 확장이다. 둘 다 벡터 연산을 빠르게 처리하기 위한 ISA extension이지만, 세대와 <code>width</code>, 명령 형태가 다르다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sse">SSE<a href="#sse" class="hash-link" aria-label="SSE에 대한 직접 링크" title="SSE에 대한 직접 링크" translate="no">​</a></h4>
+<p>SSE는 Streaming SIMD Extensions의 약자다. x86에서 널리 쓰인 초기 SIMD 확장 계열로, 보통 128비트 XMM 레지스터를 사용한다.</p>
+<p>대표 특징:</p>
+<ul>
+<li class="">128비트 벡터</li>
+<li class=""><code>float32</code> 4개 또는 <code>float64</code> 2개 처리 가능</li>
+<li class="">x86 SIMD 확장의 초기 기반</li>
+</ul>
+<p>SSE 세대는 <code>SSE</code>, <code>SSE2</code>, <code>SSE3</code>, <code>SSSE3</code>, <code>SSE4</code> 등으로 확장되었다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="avx">AVX<a href="#avx" class="hash-link" aria-label="AVX에 대한 직접 링크" title="AVX에 대한 직접 링크" translate="no">​</a></h4>
+<p>AVX는 Advanced Vector Extensions의 약자다. SSE보다 더 넓은 벡터와 더 현대적인 명령 형식을 제공한다.</p>
+<p>대표 특징:</p>
+<ul>
+<li class="">AVX, AVX2: 256비트 YMM 레지스터</li>
+<li class="">AVX-512: 512비트 ZMM 레지스터</li>
+<li class="">세 operand 형식이 강화되어 register move 부담이 줄어듦</li>
+</ul>
+<p>예를 들어 AVX2에서는:</p>
+<ul>
+<li class=""><code>float32</code> 8개</li>
+<li class=""><code>float64</code> 4개</li>
+</ul>
+<p>를 한 번에 처리할 수 있다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sse와-avx를-같이-볼-때">SSE와 AVX를 같이 볼 때<a href="#sse와-avx를-같이-볼-때" class="hash-link" aria-label="SSE와 AVX를 같이 볼 때에 대한 직접 링크" title="SSE와 AVX를 같이 볼 때에 대한 직접 링크" translate="no">​</a></h4>
+<p>가장 단순하게 보면 다음 차이가 먼저 보인다.</p>
+<ul>
+<li class="">SSE: 128비트, 초기 x86 SIMD 기반</li>
+<li class="">AVX: 더 넓은 벡터와 더 현대적인 명령 체계</li>
+</ul>
+<p>다만 실제 차이는 벡터 <code>width</code>만으로 끝나지 않는다. FMA, 레지스터 수, load/store 대역폭, 스케줄링 같은 요소도 함께 본다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="arm의-neon과-sve">ARM의 NEON과 SVE<a href="#arm의-neon과-sve" class="hash-link" aria-label="ARM의 NEON과 SVE에 대한 직접 링크" title="ARM의 NEON과 SVE에 대한 직접 링크" translate="no">​</a></h3>
+<p>ARM에서는 <code>NEON</code>과 <code>SVE</code>가 자주 같이 언급된다. 둘 다 벡터 연산을 빠르게 처리하기 위한 확장이지만, 설계 철학은 다르다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="neon">NEON<a href="#neon" class="hash-link" aria-label="NEON에 대한 직접 링크" title="NEON에 대한 직접 링크" translate="no">​</a></h4>
+<p>NEON은 ARM에서 널리 사용되는 고정 <code>width</code> SIMD 확장이다. 보통 128비트 벡터를 사용한다.</p>
+<p>대표 특징:</p>
+<ul>
+<li class="">고정 <code>width</code> 128비트</li>
+<li class="">모바일과 서버 ARM에서 널리 보임</li>
+<li class="">전통적인 SIMD 확장에 가깝다</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="sve">SVE<a href="#sve" class="hash-link" aria-label="SVE에 대한 직접 링크" title="SVE에 대한 직접 링크" translate="no">​</a></h4>
+<p>SVE는 Scalable Vector Extension의 약자다. 이름 그대로 벡터 길이가 implementation-defined라는 점이 핵심이다.</p>
+<p>대표 특징:</p>
+<ul>
+<li class="">벡터 길이가 고정되지 않음</li>
+<li class="">구현에 따라 더 넓은 벡터 사용 가능</li>
+<li class="">predicate 기반 연산과 tail 처리에 강함</li>
+</ul>
+<p>즉 SVE는 &quot;항상 128비트&quot; 같은 고정 <code>width</code> 모델과 다르다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="neon과-sve를-같이-볼-때">NEON과 SVE를 같이 볼 때<a href="#neon과-sve를-같이-볼-때" class="hash-link" aria-label="NEON과 SVE를 같이 볼 때에 대한 직접 링크" title="NEON과 SVE를 같이 볼 때에 대한 직접 링크" translate="no">​</a></h4>
+<ul>
+<li class="">NEON: 고정 <code>width</code> SIMD</li>
+<li class="">SVE: scalable vector ISA</li>
+</ul>
+<p>둘 다 벡터 연산용이지만, 고정 <code>width</code>와 scalable vector라는 차이 때문에 커널 설계 방식도 달라진다.</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="risc-v의-rvv">RISC-V의 RVV<a href="#risc-v의-rvv" class="hash-link" aria-label="RISC-V의 RVV에 대한 직접 링크" title="RISC-V의 RVV에 대한 직접 링크" translate="no">​</a></h3>
+<p>RISC-V에서는 <code>RVV</code>가 벡터 확장 역할을 맡는다. RVV는 고정 <code>width</code> SIMD보다 벡터 길이 독립적인 모델 쪽에 더 가깝다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="rvv">RVV<a href="#rvv" class="hash-link" aria-label="RVV에 대한 직접 링크" title="RVV에 대한 직접 링크" translate="no">​</a></h4>
+<p>RVV는 RISC-V Vector Extension의 약자다. 중요한 특징은 SVE와 비슷하게 벡터 길이가 implementation-dependent라는 점이다. 즉 코드가 특정 고정 <code>width</code>만을 가정하지 않고, 실제 구현의 벡터 길이에 맞춰 동작할 수 있다.</p>
+<p>이 모델은 특히 다음 관점에서 눈에 띈다.</p>
+<ul>
+<li class="">벡터 길이에 따른 portability</li>
+<li class="">tail 처리</li>
+<li class="">다양한 implementation 대응</li>
+</ul>
+<p>즉 RVV는 &quot;128비트&quot;나 &quot;256비트&quot;처럼 폭을 먼저 고정하는 방식보다, 벡터 길이 독립적인 모델에 더 가깝다.</p>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="rvv를-같이-볼-때">RVV를 같이 볼 때<a href="#rvv를-같이-볼-때" class="hash-link" aria-label="RVV를 같이 볼 때에 대한 직접 링크" title="RVV를 같이 볼 때에 대한 직접 링크" translate="no">​</a></h4>
+<ul>
+<li class="">전통적인 SIMD는 고정 <code>width</code> 벡터를 전제로 하는 경우가 많다.</li>
+<li class="">RVV는 벡터 길이 독립적인 방식으로 코드를 구성할 수 있다.</li>
+</ul>
+<p>그래서 RVV는 넓게 보면 SIMD 계열이지만, 좁게 보면 고정 <code>width</code> SIMD보다 더 유연한 vector ISA 쪽에 놓인다.</p>
+<p>즉 SIMD라는 공통 개념 위에 x86의 SSE/AVX, ARM의 NEON/SVE, RISC-V의 RVV 같은 ISA가 각각 다른 방식으로 올라와 있다고 보면 된다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="simd에-잘-맞는-연산">SIMD에 잘 맞는 연산<a href="#simd에-잘-맞는-연산" class="hash-link" aria-label="SIMD에 잘 맞는 연산에 대한 직접 링크" title="SIMD에 잘 맞는 연산에 대한 직접 링크" translate="no">​</a></h2>
+<p>다음 연산은 SIMD 친화적이다.</p>
+<ul>
+<li class="">벡터 덧셈</li>
+<li class="">스케일링</li>
+<li class="">내적</li>
+<li class="">행렬 곱셈의 안쪽 multiply-add</li>
+</ul>
+<p>공통점은 계산 패턴이 규칙적이고 dependency가 약하다는 점이다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="simd에-덜-잘-맞는-연산">SIMD에 덜 잘 맞는 연산<a href="#simd에-덜-잘-맞는-연산" class="hash-link" aria-label="SIMD에 덜 잘 맞는 연산에 대한 직접 링크" title="SIMD에 덜 잘 맞는 연산에 대한 직접 링크" translate="no">​</a></h2>
+<p>다음 연산은 더 어렵다.</p>
+<ul>
+<li class="">triangular solve</li>
+<li class="">irregular memory access가 많은 연산</li>
+<li class="">분기와 dependency가 강한 알고리즘</li>
+</ul>
+<p>즉 SIMD는 항상 유리하지만, 연산 구조에 따라 얻을 수 있는 이득은 크게 달라진다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="width가-넓다고-항상-좋은가"><code>width</code>가 넓다고 항상 좋은가<a href="#width가-넓다고-항상-좋은가" class="hash-link" aria-label="width가-넓다고-항상-좋은가에 대한 직접 링크" title="width가-넓다고-항상-좋은가에 대한 직접 링크" translate="no">​</a></h2>
+<p>SIMD <code>width</code>가 넓으면 한 번에 처리하는 데이터 수는 늘어나지만, 그에 맞는 데이터 배치와 레지스터 운용이 같이 따라와야 한다. 그래서 <code>width</code>만 넓다고 바로 유리해지는 것은 아니다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="takeaway">Takeaway<a href="#takeaway" class="hash-link" aria-label="Takeaway에 대한 직접 링크" title="Takeaway에 대한 직접 링크" translate="no">​</a></h2>
+<p>SIMD는 같은 연산을 여러 데이터에 동시에 적용하는 방식이다. 이 개념은 x86의 SSE/AVX, ARM의 NEON/SVE, RISC-V의 RVV처럼 각 아키텍처에서 다른 이름의 ISA 확장으로 구현된다. 핵심은 단순히 벡터 <code>width</code>가 아니라, 연산 구조와 데이터 배치가 그 <code>width</code>와 잘 맞느냐에 있다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="선형대수-라이브러리에서-왜-자주-보이나">선형대수 라이브러리에서 왜 자주 보이나<a href="#선형대수-라이브러리에서-왜-자주-보이나" class="hash-link" aria-label="선형대수 라이브러리에서 왜 자주 보이나에 대한 직접 링크" title="선형대수 라이브러리에서 왜 자주 보이나에 대한 직접 링크" translate="no">​</a></h2>
+<p>SIMD는 수학 라이브러리나 선형대수 라이브러리에서 특히 자주 등장한다. 같은 multiply-add를 연속된 데이터에 반복하는 경우가 많기 때문이다.</p>
+<p>예를 들어 다음 연산은 SIMD 친화적인 편이다.</p>
+<ul>
+<li class=""><code>AXPY</code></li>
+<li class=""><code>DOT</code></li>
+<li class=""><code>SCAL</code></li>
+<li class=""><code>GEMM</code></li>
+</ul>
+<p>반대로 다음 연산은 구조적으로 더 까다롭다.</p>
+<ul>
+<li class=""><code>TRSM</code></li>
+<li class="">일부 <code>GEMV</code></li>
+<li class="">분기나 irregular access가 많은 연산</li>
+</ul>
+<p>즉 SIMD라는 개념 자체는 일반적이지만, 실제 라이브러리 최적화에서는 &quot;어떤 연산이 얼마나 잘 벡터화되는가&quot;가 더 중요해진다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="references">References<a href="#references" class="hash-link" aria-label="References에 대한 직접 링크" title="References에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="https://en.wikipedia.org/wiki/Single_instruction,_multiple_data" target="_blank" rel="noopener noreferrer" class="">Single instruction, multiple data</a></li>
+<li class=""><a href="https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html" target="_blank" rel="noopener noreferrer" class="">Intel Intrinsics Guide</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="link">Link<a href="#link" class="hash-link" aria-label="Link에 대한 직접 링크" title="Link에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class=""><a class="" href="/wiki/WebAssembly/WebAssembly SIMD.md">WebAssembly SIMD</a></li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/teddygood/teddygood.github.io/tree/main/wiki/Computer Architecture/SIMD.md" target="_blank" rel="noreferrer noopener" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>페이지 편집</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="문서 페이지"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#왜-필요한가" class="table-of-contents__link toc-highlight">왜 필요한가</a></li><li><a href="#lane이란-무엇인가" class="table-of-contents__link toc-highlight">lane이란 무엇인가</a></li><li><a href="#width란-무엇인가" class="table-of-contents__link toc-highlight"><code>width</code>란 무엇인가</a></li><li><a href="#simd를-볼-때-같이-봐야-하는-것" class="table-of-contents__link toc-highlight">SIMD를 볼 때 같이 봐야 하는 것</a></li><li><a href="#대표적인-simd-확장" class="table-of-contents__link toc-highlight">대표적인 SIMD 확장</a><ul><li><a href="#x86의-sse와-avx" class="table-of-contents__link toc-highlight">x86의 SSE와 AVX</a></li><li><a href="#arm의-neon과-sve" class="table-of-contents__link toc-highlight">ARM의 NEON과 SVE</a></li><li><a href="#risc-v의-rvv" class="table-of-contents__link toc-highlight">RISC-V의 RVV</a></li></ul></li><li><a href="#simd에-잘-맞는-연산" class="table-of-contents__link toc-highlight">SIMD에 잘 맞는 연산</a></li><li><a href="#simd에-덜-잘-맞는-연산" class="table-of-contents__link toc-highlight">SIMD에 덜 잘 맞는 연산</a></li><li><a href="#width가-넓다고-항상-좋은가" class="table-of-contents__link toc-highlight"><code>width</code>가 넓다고 항상 좋은가</a></li><li><a href="#takeaway" class="table-of-contents__link toc-highlight">Takeaway</a></li><li><a href="#선형대수-라이브러리에서-왜-자주-보이나" class="table-of-contents__link toc-highlight">선형대수 라이브러리에서 왜 자주 보이나</a></li><li><a href="#references" class="table-of-contents__link toc-highlight">References</a></li><li><a href="#link" class="table-of-contents__link toc-highlight">Link</a></li></ul></div></div></div></div></main></div></div></div></div>
+</body>
+</html>
