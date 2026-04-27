@@ -131,13 +131,13 @@ Chatbot workload에서도 vLLM은 Orca baseline보다 약 2배 높은 request ra
 
 논문은 ablation study에서 PagedAttention의 비용도 따로 확인한다. Block table을 따라 non-contiguous KV cache를 읽어야 하므로 attention kernel에는 추가 overhead가 생긴다. Figure 18a에서 PagedAttention kernel latency는 FasterTransformer의 최적화된 attention kernel보다 20-26% 높게 나타난다. 다만 이 overhead는 attention operator에만 영향을 주고, end-to-end serving에서는 더 큰 batch를 만들 수 있는 이득이 전체 성능을 더 크게 좌우한다.
 
-![[Pasted image 20260430161218.png]]
+![PagedAttention overhead](../assets/paper/PagedAttention/15-pagedattention-overhead.png)
 
 Block size도 중요한 설계 변수다. Block size가 너무 작으면 GPU parallelism을 충분히 활용하기 어렵고, 너무 크면 internal fragmentation이 커지고 sharing 가능성이 줄어든다. 논문은 ShareGPT와 Alpaca trace에서 block size를 비교한 뒤, 대부분의 workload에서 block size 16이 GPU 활용과 fragmentation 사이의 practical trade-off라고 정리한다.
 
 Preemption recovery에서는 recomputation과 swapping을 비교한다. 작은 block size에서는 swapping이 많은 작은 CPU-GPU transfer를 만들기 때문에 overhead가 커지고, recomputation은 block size와 무관하게 비교적 일정한 비용을 보인다. 논문은 중간 크기 block에서는 두 방법의 end-to-end 성능이 비슷하지만, 작은 block에서는 recomputation이 더 효율적이라고 보고한다.
 
-![[Pasted image 20260430161235.png]]
+![Preemption recovery](../assets/paper/PagedAttention/16-preemption-recovery.png)
 
 ## Discussion and Conclusion
 
