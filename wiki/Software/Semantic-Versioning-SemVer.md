@@ -142,10 +142,6 @@ SemVer 버전을 빠르게 읽는 기준은 아래와 같다.
 - `-alpha`, `-beta`, `-rc`는 불안정 버전 또는 release candidate 단계를 뜻한다.
 - `+build`는 추가 빌드 정보일 뿐, 버전 순서를 바꾸지는 않는다.
 
-## Takeaway
-
-SemVer는 겉으로는 단순하지만, "public API"가 명확하고 릴리스 규율이 지켜질 때만 의미가 있다. 진짜 가치는 `X.Y.Z`라는 모양 자체가 아니라, 사용자가 모든 커밋을 읽지 않아도 버전 번호만 보고 호환성 기대치를 추론할 수 있다는 데 있다.
-
 ## References
 
 - [Semantic Versioning 2.0.0](https://semver.org/)
