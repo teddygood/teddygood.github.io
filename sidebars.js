@@ -23,6 +23,9 @@ const sidebars = {
       label: '언어',
       collapsed: false,
       items: [
+        docsFromDir('Python', 'Python', {
+          key: 'language-python',
+        }),
         docsFromDir('Rust', 'Rust'),
         docsFromDir('멀티패러다임 프로그래밍', 'Multi-paradigm Programming'),
       ],
@@ -82,6 +85,9 @@ const sidebars = {
       collapsed: false,
       items: [
         docsFromDir('Algorithm', 'Algorithm'),
+        docsFromDir('Compiler', 'Compiler', {
+          key: 'cs-compiler',
+        }),
         docsFromDir('Computer Architecture', 'Computer Architecture'),
         {
           type: 'category',
