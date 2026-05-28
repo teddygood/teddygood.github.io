@@ -5,12 +5,23 @@ import { type Config } from '@docusaurus/types';
 import { type Preset, type ThemeConfig } from '@docusaurus/preset-classic';
 
 const CodeTheme = prismThemes.dracula;
+const siteUrl = 'https://teddygood.github.io';
+const isLocalI18nPreview = process.env.LOCAL_I18N_PREVIEW === '1';
+const localeUrls = isLocalI18nPreview
+  ? {
+      ko: 'http://127.0.0.1:3000',
+      en: 'http://127.0.0.1:3001',
+    }
+  : {
+      ko: siteUrl,
+      en: siteUrl,
+    };
 
 const config: Config = {
   title: 'Chanho Lee',
   tagline: 'Hi, I am Chanho Lee. I am a software engineer.',
   titleDelimiter: '@',
-  url: 'https://teddygood.github.io',
+  url: localeUrls.ko,
   baseUrl: '/',
   onBrokenLinks: 'warn',
   markdown: {
@@ -37,7 +48,7 @@ const config: Config = {
         label: '한국어',
         direction: 'ltr',
         htmlLang: 'ko-KR',
-        url: 'https://teddygood.github.io',
+        url: localeUrls.ko,
         baseUrl: '/',
         translate: false,
       },
@@ -45,7 +56,7 @@ const config: Config = {
         label: 'English',
         direction: 'ltr',
         htmlLang: 'en',
-        url: 'https://teddygood.github.io',
+        url: localeUrls.en,
         baseUrl: '/en/',
         translate: true,
       },
@@ -180,6 +191,12 @@ const config: Config = {
           position: 'right',
           className: 'header-linkedin-link',
           'aria-label': 'LinkedIn Account',
+        },
+        {
+          href: 'https://x.com/chanholxx',
+          position: 'right',
+          className: 'header-x-link',
+          'aria-label': 'X Account',
         },
       ],
     },

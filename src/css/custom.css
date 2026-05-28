@@ -165,6 +165,23 @@ figcaption {
   background: url(../../static/img/linkedin-dark.svg) no-repeat center;
 }
 
+.header-x-link:hover {
+  opacity: 0.6;
+}
+
+.header-x-link::before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  display: flex;
+  transition: opacity 0.2s ease-in-out;
+  background: url(../../static/img/x.svg) no-repeat center;
+}
+
+[data-theme='dark'] .header-x-link::before {
+  background: url(../../static/img/x-dark.svg) no-repeat center;
+}
+
 .navbar {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
