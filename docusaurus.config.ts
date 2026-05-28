@@ -173,7 +173,7 @@ const config: Config = {
         },
         {
           to: '/blog/archive',
-          label: 'Archive',
+          label: 'Blog',
           position: 'left',
         },
         {
