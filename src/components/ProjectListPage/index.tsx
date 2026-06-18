@@ -109,7 +109,7 @@ export default function ProjectListPage(props: Props): JSX.Element {
       title="Projects"
       description="A showcase of Chanho Lee's projects">
       <main className="container margin-vert--lg">
-        <div style={{maxWidth: '800px', margin: '0 auto'}}>
+        <div style={{maxWidth: '1200px', margin: '0 auto'}}>
           
           {/* Category Tabs */}
           <div className="margin-bottom--lg" style={{display: 'flex', gap: '1.5rem', borderBottom: '1px solid var(--ifm-color-emphasis-200)', paddingBottom: '0.5rem'}}>
@@ -136,7 +136,7 @@ export default function ProjectListPage(props: Props): JSX.Element {
 
           <div className="row">
             {filteredItems.map(({content: BlogPostContent}) => (
-              <div key={BlogPostContent.metadata.permalink} className="col col--6 margin-bottom--xl">
+              <div key={BlogPostContent.metadata.permalink} className="col col--4 margin-bottom--xl">
                 <ProjectCard item={BlogPostContent.metadata} />
               </div>
             ))}
