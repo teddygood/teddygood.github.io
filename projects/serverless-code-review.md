@@ -1,27 +1,135 @@
 ---
-title: Serverless Code Review Assistant on AWS
-description: Automated code review bot powered by AWS Serverless architecture and Bedrock.
+title: 'LLM PR Reviewer'
+description: GitHub PR diff를 수집하고 Amazon Bedrock으로 리뷰 코멘트를 생성하는 서버리스 PR 리뷰 워크플로
 role: Cloud Engineer
-timeline: Jan 2024 - Present
-stack: [AWS Lambda, API Gateway, DynamoDB, Bedrock]
-category: Personal Project
-image: /img/docusaurus.png
-hide_table_of_contents: true
+timeline: Jan 2025 - Feb 2025
+stack: [AWS Lambda, API Gateway, DynamoDB, DynamoDB Streams, EventBridge, SNS, Amazon S3, Amazon Bedrock Knowledge Bases, Amazon OpenSearch Serverless, Amazon Bedrock, Anthropic Claude 3.5 Sonnet v2, GitHub API]
+category: Work Project
+image: /img/projects/serverless-code-review/architecture.png
+hide_table_of_contents: false
 ---
 
 {/* truncate */}
 
+# LLM PR Reviewer
 
-## Overview
-The **Serverless Code Review Assistant** is an automated tool designed to streamline the code review process. By leveraging **AWS Serverless** services and **Generative AI** (Amazon Bedrock), it automatically analyzes Pull Requests, detects potential bugs, and suggests refactoring improvements directly in GitHub comments.
+## 왜 이 프로젝트를 만들었는가
 
-## Architecture
-- **Trigger**: GitHub Webhook triggers an event on PR creation/update.
-- **Compute**: **AWS Lambda** processes the payload and fetches code diffs.
-- **AI Model**: **Amazon Bedrock** (Claude 3) analyzes the code context.
-- **Storage**: **Amazon DynamoDB** stores review logs and user feedback.
+AWS 인턴십에서 ACC Korea 소속 대학생을 대상으로 생성형 AI와 서버리스 아키텍처를 함께 다루는 [핸즈온 워크숍](https://www.meetup.com/aws-sbg-at-sookmyung-women-university/events/306005836/)을 준비했다. 단순히 모델을 호출해보는 데모보다, 개발자에게 익숙한 흐름이 필요했다. 그래서 GitHub Pull Request를 만들면 변경 내용을 읽고 1차 리뷰 코멘트를 남기는 워크플로를 주제로 잡았다.
 
-## Key Features
-- **Automated Feedback**: Instant review comments on new PRs.
-- **Smart Suggestions**: Context-aware code improvements.
-- **Serverless**: Fully event-driven and cost-effective architecture.
+이 프로젝트의 목표는 "AI가 코드 리뷰를 대신한다"가 아니었다. PR 이벤트를 받고, 변경 파일과 diff를 정리하고, 리뷰 기준을 함께 넣어 Bedrock으로 리뷰 초안을 만든 뒤, GitHub에 다시 코멘트를 남기는 전체 흐름을 학생들이 직접 따라갈 수 있게 만드는 것이었다. 워크숍에서 쓰이는 시스템이었기 때문에 기능 구현뿐 아니라 실패 지점, 재처리 가능성, [문서화](https://acc.awskorea.kr/)까지 같이 봐야 했다.
+
+## 프로젝트 개요
+
+LLM PR Reviewer 프로젝트는 GitHub Webhook에서 시작되는 서버리스 코드 리뷰 워크플로다. GitHub 이벤트가 들어오면 API Gateway와 Lambda가 이벤트를 받고, Issue 이벤트와 Pull Request 이벤트를 나눠 처리한다. Issue가 생성된 경우에는 별도 Lambda가 SNS 알림을 보내고, PR이 생성된 경우에는 diff 원문이 아니라 PR을 다시 조회할 수 있는 정보를 DynamoDB에 저장한다. DynamoDB에는 PR 번호, 저장소 이름, PR URL, PR 작성자, 이벤트 종류, 액션, 생성 시각, 마지막 갱신 시각, diff URL을 남겼다. 이후 DynamoDB Streams에 연결된 Lambda가 PR 알림과 리뷰 생성을 담당한다. 이 Lambda는 DynamoDB에 저장된 PR 정보를 바탕으로 GitHub API에서 변경 파일과 patch를 조회해 리뷰 입력을 만들고, Bedrock Knowledge Bases에서 검색한 리뷰 기준 컨텍스트를 함께 붙여 Bedrock 프롬프트를 구성한다. 생성된 코멘트는 다시 GitHub API로 PR에 반영한다.
+
+전체 구조는 아래와 같다.
+
+<div className="project-architecture-frame">
+  <img
+    className="project-architecture-image"
+    src="/img/projects/serverless-code-review/architecture.png"
+    alt="LLM PR Reviewer architecture"
+  />
+</div>
+
+리뷰 생성에는 Amazon Bedrock의 Anthropic Claude 3.5 Sonnet v2를 사용했다. 워크숍 환경에서는 참가자들이 각자 AWS 계정에서 모델 접근 권한을 요청해야 했기 때문에, 모델 성능뿐 아니라 모델 사용 가능 여부와 API 할당량도 함께 고려해야 했다.
+
+내가 담당한 부분은 Bedrock과 연결되는 리뷰 생성 흐름, GitHub API를 통한 diff 수집, 프롬프트 개선, SNS 기반 알림, 그리고 워크숍 전 전체 흐름 테스트였다. 초기에는 코드가 실행되는지만 확인하면 된다고 생각하기 쉬웠지만, 실제로는 "모델이 어떤 입력을 보고 왜 그런 리뷰를 남겼는가"를 설명할 수 있어야 했다.
+
+## 문제 정의
+
+가장 큰 문제는 PR diff를 그대로 모델에 넣으면 리뷰 품질이 흔들린다는 점이었다. PR은 파일 하나만 바뀌는 경우도 있지만, 여러 파일이 동시에 바뀌거나 변경 규모가 큰 경우도 많다. 이때 diff를 단순히 이어 붙이면 모델이 중요한 변경을 놓치거나, 파일 간 관계를 보지 못한 채 일반적인 조언만 반복할 수 있다.
+
+두 번째 문제는 워크숍 실습 환경이었다. 하나의 공유 서비스에 참가자들이 접속하는 방식이 아니라, 참가자 각자가 자신의 AWS 계정에서 같은 아키텍처를 구성하는 방식이었다. 따라서 하나의 서비스를 크게 확장하는 것보다, 참가자가 자기 계정에서 어느 단계까지 성공했고 어디서 막혔는지 확인할 수 있게 만드는 것이 중요했다.
+
+세 번째 문제는 생성형 AI 기능의 품질을 어떻게 확인할지였다. 일반 API처럼 status code만 보면 충분하지 않았다. 리뷰가 실제 변경 내용과 관련 있는지, 한글 설명이 자연스러운지, 불필요하게 같은 말을 반복하지 않는지, 큰 PR에서도 핵심 변경을 놓치지 않는지를 따로 확인해야 했다.
+
+## 구현 과정
+
+### PR 이벤트와 상태를 먼저 분리했다
+
+GitHub Webhook에서 받은 이벤트를 바로 모델 호출까지 이어 붙이면 구현은 단순하지만, PR 이벤트 수신, diff 조회, Bedrock 호출, GitHub 코멘트 반영이 한 함수 안에 섞인다. 워크숍 실습에서는 각 참가자가 자기 AWS 계정에서 같은 흐름을 만들기 때문에, 먼저 "GitHub 이벤트가 제대로 들어왔는가"를 눈으로 확인할 수 있는 중간 상태가 필요했다. 그래서 API Gateway와 Lambda는 PR 이벤트를 받아 DynamoDB에 저장하고, 후속 처리는 DynamoDB Streams에 연결된 Lambda가 이어받도록 구성했다.
+
+이 구조 덕분에 Webhook 수신, diff 조회, Bedrock 호출, GitHub 코멘트 반영을 단계별로 볼 수 있었다. 워크숍 운영 관점에서도 "GitHub 이벤트가 들어오지 않은 문제"와 "모델 호출 이후 코멘트 작성이 실패한 문제"를 구분할 수 있었다.
+
+DynamoDB에 이벤트를 저장한 이유는 단순 로그 저장이 아니었다. Webhook payload는 한 번 들어오면 다시 받기 어렵고, 뒤쪽 Lambda가 GitHub API로 diff를 조회하거나 리뷰 입력을 만들려면 저장소 이름, PR 번호, diff URL 같은 기준 정보가 필요하다. 그래서 diff 원문을 DynamoDB에 넣은 것이 아니라, PR을 다시 확인할 수 있는 최소 기준 정보와 이벤트 수신 시각을 먼저 남겼다. 이 정보를 DynamoDB에 남겨두면 Bedrock 호출이나 GitHub 코멘트 작성이 실패했을 때도 원래 어떤 PR을 처리하던 중이었는지 다시 확인할 수 있다.
+
+DynamoDB에는 이벤트 ID, 이벤트 종류, 액션, 저장소 이름, 이벤트 발신자, 생성 시각과 마지막 갱신 시각처럼 공통으로 필요한 값을 먼저 저장했다. PR 이벤트에서는 여기에 PR 번호, 제목, URL, PR 작성자, GitHub organization 이름, diff URL을, Issue 이벤트에서는 이슈 번호, 제목, URL, 이슈 작성자를 저장했다. 다시 말해 DynamoDB는 diff 본문 저장소가 아니라, 후속 Lambda가 어떤 GitHub 이벤트를 다시 조회하고 처리해야 하는지 알려주는 중간 상태 저장소에 가까웠다.
+
+초기 설계에서는 GitHub Issue나 PR 이벤트가 발생할 때마다 바로 SNS SMS 알림을 보내는 흐름도 고려했다. 하지만 실제 테스트 과정에서 SNS SMS 할당량과 계정 설정 문제가 생길 수 있다는 점을 확인했고, 알림, 이벤트 저장, 리뷰 생성을 한 덩어리로 보지 않고 단계별로 나눠 확인하는 쪽으로 정리했다. 특히 아키텍처에서 왼쪽 Lambda는 Issue 생성 알림, DynamoDB Streams에 연결된 Lambda는 Pull Request 알림과 리뷰 작성을 담당하도록 역할을 나누었다. 이렇게 나누면 실습 참가자도 DynamoDB 테이블을 보면서 "이벤트 수신은 됐고, 그다음 처리 단계에서 문제가 생겼다"처럼 장애 위치를 나눠 볼 수 있었다.
+
+### diff를 리뷰 가능한 입력으로 바꿨다
+
+Bedrock이 변경 내용을 제대로 보게 하려면 먼저 GitHub API로 변경 파일 목록과 patch를 가져와야 했다. 여러 파일이 바뀐 PR에서는 파일 경로, 변경된 코드, 주변 코드 컨텍스트를 함께 정리하고, 모델에 전달하기 전에 리뷰 단위로 묶었다.
+
+큰 diff는 그대로 넣기보다 핵심 변경, 파일 경로, 확인해야 할 조건을 중심으로 줄였다. 이때 프롬프트에는 "무엇을 리뷰해야 하는지", "근거 없는 지적을 피해야 한다", "문제가 명확하지 않으면 억지로 코멘트를 만들지 않는다" 같은 기준을 넣었다. 단순히 리뷰 문장을 생성하는 것이 아니라, 모델이 리뷰할 책임 범위를 제한하는 작업이었다.
+
+### S3와 Knowledge Bases로 리뷰 기준을 검색했다
+
+처음에는 PR diff를 거의 그대로 Claude 3.5 Sonnet v2 프롬프트에 넣고 리뷰를 생성했다. 빠르게 동작을 확인하기에는 충분했지만, MLE 관점에서 보면 입력 설계가 너무 약했다. 모델이 어떤 기준으로 리뷰해야 하는지 명확하지 않으면, 같은 diff를 보고도 매번 다른 수준의 일반적인 조언을 만들 수 있다.
+
+그래서 코드 리뷰 기준, 실습 가이드, 출력 형식 규칙, 예시 코멘트처럼 모델이 참고해야 할 기준을 S3에 정리하고, Amazon Bedrock Knowledge Bases의 데이터 소스로 연결했다. Knowledge Bases는 이 데이터를 임베딩해 Amazon OpenSearch Serverless vector store에 저장하고, 리뷰 Lambda는 PR diff를 만든 뒤 현재 변경과 관련 있는 리뷰 기준을 검색했다.
+
+이 구조에서 S3는 리뷰 기준의 원본 저장소, Bedrock Knowledge Bases는 데이터 동기화와 검색 API, OpenSearch Serverless는 vector index 역할을 맡았다. OpenSearch를 직접 "정답 검색 엔진"처럼 쓴 것이 아니라, Knowledge Bases 뒤에서 검색 가능한 컨텍스트 저장소로 둔 것이다. PR diff만 넣으면 모델이 일반적인 코드 리뷰 문장을 만들기 쉽지만, 검색된 리뷰 기준 컨텍스트를 함께 넣으면 모델이 같은 변경을 더 일관된 기준으로 보게 된다.
+
+검색 단위는 긴 문서 전체가 아니라 리뷰 기준으로 쓸 수 있는 작은 컨텍스트 조각으로 두는 것이 적합했다. 예를 들어 "보안상 위험한 하드코딩", "예외 처리 누락", "불필요하게 넓은 책임 범위", "워크숍에서 설명해야 하는 출력 형식"처럼 리뷰 판단에 직접 영향을 주는 기준을 찾아 Bedrock 프롬프트에 넣었다. 이렇게 하면 모델이 diff를 읽고도 근거 없는 일반론을 쓰는 문제를 줄이고, 리뷰 코멘트가 어떤 기준에서 나온 것인지 설명하기 쉬워진다.
+
+MLE 관점에서 보면 이 작업은 모델 학습보다 검색과 프롬프트 입력 설계에 가까웠다. 모델 자체를 fine-tuning하지 않았기 때문에, 품질을 좌우하는 핵심은 "어떤 diff를 어떤 형태로 줄 것인가"와 "어떤 리뷰 기준을 함께 줄 것인가"였다. 그래서 Knowledge Bases를 연결한 뒤에는 생성 결과만 보는 것이 아니라, 검색된 컨텍스트가 실제 PR 변경과 관련 있는지도 같이 확인했다.
+
+### 실패 알림과 재처리 흐름을 고려했다
+
+워크숍에서는 참가자가 실습 중 막히면 바로 대응해야 한다. 그래서 Lambda 로그만 보는 것이 아니라, 실패 지점을 운영자가 확인할 수 있도록 SNS 알림과 상태 저장을 함께 고려했다. 예를 들어 Issue 생성 알림, GitHub API 호출 실패, Bedrock 호출 실패, 코멘트 반영 실패처럼 단계별로 실패 가능성이 다른 지점을 나눠 봤다.
+
+재처리는 같은 PR을 다시 조회해 이어 처리할 수 있어야 한다는 기준으로 설계했다. PR 번호, 저장소 이름, diff URL을 남겨두면 후속 단계에서 같은 PR을 다시 조회할 수 있다. 실제 운영 수준의 재시도 구조까지 완성한 것은 아니지만, 워크숍 환경에서 실패를 확인하고 다시 실행할 수 있는 구조를 갖추는 것이 중요했다. 이 흐름을 더 안정적으로 만들려면 이벤트 ID, commit SHA, 처리 단계, 실패 원인까지 함께 남겨 어느 단계부터 다시 실행해야 하는지 판단할 수 있어야 한다.
+
+## 검증
+
+이 프로젝트에서 가장 많이 한 일은 테스트 PR을 만드는 일이었다. 단일 파일 변경, 여러 파일 변경, 큰 diff, 리뷰할 내용이 거의 없는 변경, 명확한 버그가 있는 변경처럼 다양한 상황을 만들고 Bedrock의 응답을 확인했다. 테스트 PR은 100개 이상 만들었고, 그 과정에서 코멘트 품질과 프롬프트 조건을 반복해서 조정했다.
+
+검증은 정답 라벨이 있는 ML 벤치마크처럼 진행하기 어렵다. PR 리뷰는 "정답 문장 하나"가 있는 문제가 아니기 때문이다. 그래서 작은 평가 세트를 직접 만들고, 각 PR에 대해 검색 단계와 생성 단계를 나눠 확인했다.
+
+| 관점 | 확인한 내용 |
+|---|---|
+| 검색 관련성 | Knowledge Bases가 PR 변경과 관련 있는 리뷰 기준을 가져오는지 확인했다. |
+| Diff 커버리지 | 여러 파일 변경에서 특정 파일만 보고 끝나지 않는지 확인했다. |
+| 근거성 | 검색 컨텍스트나 diff에 없는 내용을 근거처럼 말하지 않는지 확인했다. |
+| 실행 가능성 | "개선이 필요합니다"가 아니라 어떤 파일과 변경에서 무엇을 고쳐야 하는지 드러나는지 확인했다. |
+| 오탐 | 리뷰할 내용이 거의 없는 PR에서 억지 코멘트를 만들지 않는지 확인했다. |
+| 한국어 가독성 | 워크숍 참가자가 이해할 수 있는 자연스러운 한글 리뷰인지 확인했다. |
+| 전체 흐름 | GitHub 이벤트 수신부터 PR 코멘트 반영까지 흐름이 끊기지 않는지 확인했다. |
+| 실패 진단 | 실패했을 때 DynamoDB 상태, Lambda 로그, SNS 알림으로 원인을 좁힐 수 있는지 확인했다. |
+
+이 기준으로 프롬프트를 여러 번 바꿨다. 특히 여러 파일이 바뀐 PR에서는 모델이 첫 번째 파일만 보고 리뷰를 끝내는 경우가 있었기 때문에, 변경 파일 목록과 각 patch를 분리해서 보여주고 "파일별로 확인하되 중복 코멘트는 줄이라"는 식으로 조건을 조정했다. 또한 리뷰가 너무 일반적이면 검색 컨텍스트를 늘리고, 반대로 리뷰가 장황해지면 출력 형식과 코멘트 개수를 제한했다.
+
+Knowledge Bases를 연결한 뒤에는 검색 결과 자체도 확인했다. 관련 없는 기준 문서가 프롬프트에 들어가면 모델 출력이 오히려 흔들릴 수 있기 때문이다. 그래서 테스트 PR별로 "이 변경에 필요한 기준이 검색됐는가", "검색 컨텍스트가 없어도 기본 리뷰 기준은 유지되는가", "검색 컨텍스트 때문에 엉뚱한 코멘트가 늘지 않는가"를 같이 봤다. 이 과정은 모델 성능 개선이라기보다, LLM 애플리케이션에서 검색 품질과 생성 품질을 따로 점검한 작업에 가까웠다.
+
+워크숍 전에는 실습 문서도 함께 정리했다. 기존 자료는 이미지 중심이라 AWS 콘솔에 익숙하지 않은 참가자가 중간에 길을 잃기 쉬웠다. 그래서 웹 문서 형태로 절차를 옮기고, 생략된 설정과 확인 지점을 단계별로 보완했다. 이 문서는 실습 중 참가자가 놓친 부분을 다시 따라가는 기준이 됐다.
+
+## 운영 중 문제 해결
+
+실제 워크숍 중에는 SNS SMS 전송이 되지 않는 문제가 발생했다. 팀원별 역할 분담에 따라 맡은 서비스와 확인 범위를 나누어 두었기 때문에, 문제를 한 번에 추측하지 않고 단계별로 좁혀 갔다. 처음에는 Lambda 코드나 전화번호 형식 문제라고 볼 수도 있었지만, CloudWatch 로그에서 Lambda 자체 에러가 보이지 않았고, 서비스 리전도 목표 리전인 us-west-2로 맞춰져 있었다. 그래서 문제를 SNS 쪽으로 좁혀 확인했다.
+
+원인은 워크숍 계정의 SNS Text Messaging 설정이었다. SMS Account spend limit이 0으로 설정되어 있어 코드가 정상이어도 문자 전송이 막히는 상태였다. 이 값을 조정한 뒤 SMS 전송이 정상 동작했고, 같은 문제가 다른 참가자에게도 반복될 수 있다고 판단해 발표자와 실습 지원자에게 즉시 공유했다.
+
+이 경험은 워크숍 운영에서 중요한 지점을 보여줬다. 서버리스 시스템에서는 코드가 맞아도 계정 설정, 리전, 서비스 할당량, 지출 한도 같은 운영 조건 때문에 실패할 수 있다. 그래서 단순히 Lambda 코드만 검증하는 것이 아니라, GitHub 이벤트, Lambda, DynamoDB, SNS처럼 팀원별 역할에 맞춰 확인 지점을 나누고, 실제 참가자 계정과 같은 조건에서 전체 흐름을 실행해봐야 했다.
+
+## 이 프로젝트를 어떻게 개선할 수 있을까
+
+이 프로젝트는 워크숍 실습을 목표로 했기 때문에, 참가자가 자기 AWS 계정에서 GitHub 이벤트 수신 여부와 후속 처리 단계를 눈으로 확인할 수 있는 구조를 우선했다. 그래서 DynamoDB를 중간 상태 확인 지점으로 두고, DynamoDB Streams로 다음 Lambda를 연결하는 방식이 실습 목적에 잘 맞았다.
+
+개선 방향은 DynamoDB의 책임을 더 분명하게 나누는 것이다. DynamoDB는 PR 리뷰 작업의 상태 저장소로 두고, 비동기 처리와 재시도는 SQS, EventBridge, Step Functions 같은 서비스로 분리하는 편이 더 운영하기 쉽다. Webhook 수신 Lambda는 GitHub 서명을 검증하고, 저장소 이름, PR 번호, commit SHA, 이벤트 ID, diff URL 같은 기준 정보를 저장한 뒤 SQS나 EventBridge로 후속 작업을 넘긴다. 이후 작업 Lambda나 Step Functions가 GitHub API로 변경 파일 목록과 patch를 조회하고, Knowledge Bases 컨텍스트 검색, Bedrock 호출, GitHub 코멘트 작성 단계를 순서대로 처리한다.
+
+또한 diff URL은 GitHub에서 현재 PR diff를 다시 가져오기 위한 참조 정보일 뿐, 리뷰 당시 입력을 그대로 보존하지는 않는다. PR에 추가 커밋이 들어오거나 force push가 발생하면 나중에 같은 URL을 조회했을 때 리뷰 당시와 다른 diff를 받을 수 있다. 그래서 리뷰에 실제 사용한 diff 스냅샷, 정리된 프롬프트 입력, Knowledge Bases 검색 결과, 생성된 리뷰 초안 같은 중간 산출물은 S3에 저장하고, DynamoDB에는 S3 key, 처리 단계, 재시도 횟수, 실패 원인, 최종 코멘트 ID 같은 메타데이터만 남기는 편이 더 적합하다. 이렇게 하면 DynamoDB 아이템 크기 제한을 피하면서도, 실패한 작업을 다시 실행할 때 어떤 입력으로 어느 단계에서 실패했는지 추적하기 쉽다.
+
+또 하나 필요한 개선은 멱등성과 관측성이다. GitHub Webhook은 같은 이벤트가 다시 들어올 수 있으므로 이벤트 ID, 저장소 이름, PR 번호, commit SHA를 기준으로 중복 처리를 막아야 한다. 실패한 작업은 Dead Letter Queue로 보내고, CloudWatch dashboard나 OpenTelemetry trace로 Webhook 수신, diff 조회, 검색, Bedrock 호출, GitHub 코멘트 작성 시간을 나눠 볼 수 있어야 한다.
+
+마지막으로 리뷰 품질 검증도 더 체계화할 수 있다. 워크숍에서는 100개 이상의 테스트 PR로 프롬프트와 출력 품질을 직접 확인했지만, 이후에는 재실행 가능한 평가 세트를 만들고 검색 관련성, 근거성, 오탐, 실행 가능성 같은 기준을 주기적으로 측정하는 편이 좋다. 여기에 LLM-as-judge를 보조 평가자로 붙이면 리뷰가 실제 diff에 근거하는지, 검색된 리뷰 기준을 반영했는지, 문제 지적이 실행 가능한지, 불필요한 오탐이 없는지를 항목별로 점검할 수 있다. 다만 평가자 모델의 결과만 신뢰하지 않고, 일부 샘플은 사람이 다시 확인해 평가 프롬프트와 점수 기준을 보정해야 한다. 이렇게 하면 모델이나 프롬프트를 바꿨을 때 리뷰 품질이 좋아졌는지, 단순히 문장이 자연스러워진 것인지 구분하기 쉬워진다.
+
+## 결과
+
+최종적으로 GitHub PR 생성부터 diff 수집, Bedrock 리뷰 생성, GitHub 코멘트 반영까지 이어지는 전체 흐름을 구성했다. 100개 이상의 테스트 PR로 리뷰 품질을 점검했고, 2025년 2월 19일 ACC Korea 소속 대학생 45명이 각자 AWS 계정에서 이 흐름을 따라 구성하는 워크숍을 진행했다.
+
+워크숍에서는 참가자들이 서버리스 서비스와 생성형 AI 호출 흐름을 직접 연결해볼 수 있었다. 결과적으로 모든 참가자가 실습을 마쳤고, 사후 설문에서 고객만족도 4.92/5를 기록했다.
+
+이 프로젝트를 통해 모델을 연결하는 것만으로는 생성형 AI 기능이 완성되지 않는다는 점을 배웠다. 실제로 쓸 수 있는 자동화가 되려면 입력 데이터를 어떻게 구조화할지, 실패를 어떻게 확인할지, 사용자가 어느 지점에서 막히는지까지 함께 설계해야 한다. LLM PR Reviewer는 그 점을 가장 직접적으로 경험한 프로젝트였다.

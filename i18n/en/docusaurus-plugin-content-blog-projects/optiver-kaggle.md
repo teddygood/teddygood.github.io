@@ -1,6 +1,6 @@
 ---
 title: "Optiver \"Trading at the Close\" Competition Retrospective"
-description: Kaggle Optiver - Trading at the Close Retrospective (Bronze Medal, Top 30%)
+description: Kaggle Optiver - Trading at the Close Retrospective (Top 30%)
 role: Data Scientist
 timeline: Oct 2023 - Dec 2023
 stack: [Python, LightGBM, Numba, Pandas]

@@ -110,6 +110,21 @@ img {
   width: auto;
 }
 
+.project-architecture-frame {
+  width: min(820px, 100%);
+  margin: 1.5rem auto;
+}
+
+.markdown .project-architecture-frame img.project-architecture-image,
+.project-architecture-frame img.project-architecture-image {
+  display: block;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none;
+  margin: 0 auto;
+}
+
 p {
   margin-bottom: 0.5em;
 }
