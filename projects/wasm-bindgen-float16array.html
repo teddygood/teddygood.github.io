@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko-KR" dir="ltr" class="plugin-blog plugin-id-projects" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">wasm-bindgen Float16Array 기여 @ Chanho Lee</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://teddygood.github.io/projects/wasm-bindgen-float16array"><meta data-rh="true" property="og:locale" content="ko_KR"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ko"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="ko"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="wasm-bindgen Float16Array 기여 @ Chanho Lee"><meta data-rh="true" name="description" content="js-sys에 Float16Array와 DataView float16 지원을 추가하며 Rust stable 제약 아래 public API 경계를 정리한 오픈소스 기여"><meta data-rh="true" property="og:description" content="js-sys에 Float16Array와 DataView float16 지원을 추가하며 Rust stable 제약 아래 public API 경계를 정리한 오픈소스 기여"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://teddygood.github.io/projects/wasm-bindgen-float16array"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/wasm-bindgen-float16array" hreflang="ko-KR"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/en/projects/wasm-bindgen-float16array" hreflang="en"><link data-rh="true" rel="alternate" href="https://teddygood.github.io/projects/wasm-bindgen-float16array" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://3GO7VFCZS7-dsn.algolia.net" crossorigin="anonymous"><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Chanho Lee RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Chanho Lee Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EFT0SBFJCH"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EFT0SBFJCH",{})</script>
+
+
+
+<link rel="search" type="application/opensearchdescription+xml" title="Chanho Lee" href="/opensearch.xml">
+<link rel="alternate" type="application/rss+xml" href="/projects/rss.xml" title="Chanho Lee Projects RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/projects/atom.xml" title="Chanho Lee Projects Atom Feed">
+<link rel="alternate" type="application/json" href="/projects/feed.json" title="Chanho Lee Projects JSON Feed">
+<link rel="stylesheet" href="/katex/katex.min.css"><link rel="stylesheet" href="/assets/css/styles.f39f6a14.css">
+<script src="/assets/js/runtime~main.217b6a5d.js" defer="defer"></script>
+<script src="/assets/js/main.82ead9a7.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="본문으로 건너뛰기"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">본문으로 건너뛰기</a></div><nav aria-label="메인" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="사이드바 펼치거나 접기" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo-new.png" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Chanho Lee</b></a><a class="navbar__item navbar__link" href="/wiki/introduction">Wiki</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/projects">Projects</a><a class="navbar__item navbar__link" href="/blog/archive">Blog</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="navbar__item dropdown dropdown--hoverable dropdown--right"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" class="iconLanguage_nlXk"><path fill="currentColor" d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>한국어</a><ul class="dropdown__menu"><li><a href="/projects/wasm-bindgen-float16array" target="_self" rel="noopener noreferrer" class="dropdown__link dropdown__link--active" lang="ko-KR">한국어</a></li><li><a href="/en/projects/wasm-bindgen-float16array" target="_self" rel="noopener noreferrer" class="dropdown__link" lang="en">English</a></li></ul></div><a href="https://github.com/teddygood" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><a href="https://www.linkedin.com/in/teddygood/" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-linkedin-link" aria-label="LinkedIn Account"></a><a href="https://x.com/chanholxx" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-x-link" aria-label="X Account"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="어두운 모드와 밝은 모드 전환하기 (현재 system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="검색 (Meta+k)" aria-keyshortcuts="Meta+k"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8" stroke="currentColor" fill="none" stroke-width="1.4"></circle><path d="m21 21-4.3-4.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">검색</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><div class="col col--8 col--offset-2"><div style="max-width:800px;margin:0 auto"><h1 style="font-size:3rem;margin-bottom:2rem">wasm-bindgen Float16Array 기여</h1><div class="row margin-bottom--lg"><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Role</h4><p style="font-weight:bold;font-size:1.1rem">Open Source Contributor</p></div><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Timeline</h4><p style="font-weight:bold;font-size:1.1rem">Mar 2026</p></div><div class="col col--4"><h4 class="text--uppercase" style="margin-bottom:0.25rem;color:var(--ifm-color-emphasis-600);font-size:0.8rem">Skill</h4><div style="display:flex;gap:0.5rem;flex-wrap:wrap"><span class="badge badge--secondary">Rust</span><span class="badge badge--secondary">WebAssembly</span><span class="badge badge--secondary">JavaScript</span><span class="badge badge--secondary">js-sys</span></div></div></div><hr style="margin-bottom:2rem">
+<h2 id="wasm-bindgen은-어떤-프로젝트인가">wasm-bindgen은 어떤 프로젝트인가</h2>
+<p><a href="https://github.com/wasm-bindgen/wasm-bindgen">wasm-bindgen</a>은 Rust로 만든 WebAssembly module과 JavaScript 사이의 binding을 만들어주는 프로젝트다. Rust에서 JavaScript API를 import하거나, Rust 함수를 JavaScript에서 호출할 수 있게 glue code와 type binding을 생성한다.</p>
+<p>이 프로젝트 안에서 <code>js-sys</code>는 JavaScript 표준 built-in object를 Rust에서 다룰 수 있게 노출하는 crate다. 예를 들어 <code>Array</code>, <code>Promise</code>, <code>DataView</code>, 여러 typed array 같은 JS API가 <code>js_sys::*</code> 타입과 메서드로 연결된다. 이번 작업은 그중 <code>js-sys</code>에 빠져 있던 <code>Float16Array</code>와 <code>DataView</code> float16 메서드를 추가한 기여였다.</p>
+<h2 id="왜-이-작업을-했는가">왜 이 작업을 했는가</h2>
+<p>마침 Rust를 공부하고 있었고, Rust와 WebAssembly가 JavaScript와 만나는 지점을 직접 만져보고 싶었다. 그러던 중 wasm-bindgen 저장소에서 <a href="https://github.com/wasm-bindgen/wasm-bindgen/issues/4984">Issue #4984</a>를 발견했다. 라벨도 <code>good first issue</code>, <code>js-sys</code>, <code>enhancement</code>였고, 설명만 보면 기존 typed array binding을 따라 추가하면 되는 작업처럼 보였다.</p>
+<p>이슈는 간단했다. <code>Float16Array</code>는 주요 브라우저에서 이미 지원되고 있었지만 <code>js-sys</code>에는 binding이 없었고, 기존 typed array 예시를 따라 <code>Float16Array</code>를 추가하면서 <code>DataView</code>의 새 float16 메서드도 추가하면 된다는 내용이었다.</p>
+<p>문제는 Rust stable에 아직 builtin <code>f16</code> 타입이 없다는 점이었다. JavaScript의 float16 값은 JS <code>Number</code>로 읽고 쓸 수 있지만, Rust 쪽 public API에 어떤 타입을 노출할지는 별개의 문제였다. <code>js-sys</code>는 raw JS binding에 가까운 crate이기 때문에, 단순히 외부 crate의 <code>half::f16</code>을 public API로 끌어오거나, 나중에 native <code>f16</code>이 생겼을 때 써야 할 이름을 지금 다른 타입에 써버리면 API가 오래 남는 문제가 생길 수 있다.</p>
+<p>그래서 이 작업의 핵심은 &quot;Float16Array를 추가한다&quot;가 아니라, Rust stable에 <code>f16</code>이 없는 상태에서 지금 열어도 되는 public API 경계를 정하는 것이었다.</p>
+<h2 id="이슈와-pr">이슈와 PR</h2>
+<ul>
+<li>Issue: <a href="https://github.com/wasm-bindgen/wasm-bindgen/issues/4984">Issue #4984</a></li>
+<li>PR: <a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5033">PR #5033</a></li>
+<li>후속 PR: <a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5067">PR #5067</a></li>
+<li>상태: 2026년 3월 29일 merge</li>
+<li>merge commit: <code>2c8fe69db</code></li>
+<li>범위: <code>js-sys</code> public API 추가, wasm test 추가, <code>CHANGELOG.md</code> 반영</li>
+</ul>
+<p>최종 merge는 5개 파일, 374 lines 추가였다.</p>
+<ul>
+<li><code>CHANGELOG.md</code></li>
+<li><code>crates/js-sys/Cargo.toml</code></li>
+<li><code>crates/js-sys/src/lib.rs</code></li>
+<li><code>crates/js-sys/tests/wasm/DataView.rs</code></li>
+<li><code>crates/js-sys/tests/wasm/TypedArray.rs</code></li>
+</ul>
+<p>초기에는 <code>half</code> 기반 변환과 <code>f64</code> accessor까지 검토했지만, 최종 방향은 더 명시적인 <code>f32</code> accessor와 raw <code>[u16]</code> helper였다.</p>
+<p>처음 <a href="https://github.com/wasm-bindgen/wasm-bindgen/issues/4984">Issue #4984</a>에서 확인한 방향은 raw binding을 기본으로 만들고, <code>half</code> crate 변환을 feature flag 뒤에 둘 수 있는지였다. 메인테이너는 당장은 <code>half</code>를 직접 의존하지 말고, <code>half</code>가 제공하는 <code>u16</code> bit conversion과 잘 맞도록 <code>new_from_u16_slice</code> 같은 helper를 두는 편이 낫다고 정리했다. 이때부터 raw binding, explicit helper, future <code>f16</code> 이름 보존이라는 방향이 잡혔다.</p>
+<p><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5033">PR #5033</a>에서는 이 방향이 리뷰를 거치며 더 다듬어졌다. <code>TypedArray</code>가 Atomics generic bound에도 쓰인다는 지적이 있었지만, 기존 float typed array와의 일관성을 위해 이 문제는 PR 범위 밖으로 뺐다. 이후 float16 값은 <code>f32</code>로 손실 없이 표현할 수 있으니 <code>*_as_f32</code>, <code>*_from_f32</code> suffix를 쓰자는 리뷰를 반영했다. 마지막에는 <code>half</code> 사용 예를 docs/tests에 추가하고 <code>CHANGELOG.md</code> entry를 넣은 뒤 merge됐다.</p>
+<h2 id="구현한-범위">구현한 범위</h2>
+<h3 id="float16array-raw-binding">Float16Array raw binding</h3>
+<p><code>js_sys::Float16Array</code> 타입과 기본 JS typed array 메서드를 추가했다. 생성자, buffer, subarray, slice, copyWithin, set, length, byte length, byte offset 같은 API를 기존 typed array 패턴에 맞춰 정리했다.</p>
+<p>숫자 값을 직접 받거나 반환하는 메서드는 모두 타입 의미가 드러나도록 이름을 붙였다.</p>
+<ul>
+<li><code>fill_with_f32</code></li>
+<li><code>for_each_as_f32</code></li>
+<li><code>try_for_each_as_f32</code></li>
+<li><code>at_as_f32</code></li>
+<li><code>get_index_as_f32</code></li>
+<li><code>set_index_from_f32</code></li>
+</ul>
+<p>unsuffixed 이름을 쓰지 않은 이유는 의도적이다. 예를 들어 <code>get_index</code>를 지금 <code>f32</code> 반환 API로 열어버리면, 나중에 Rust native <code>f16</code>이 안정화됐을 때 더 자연스러운 <code>f16</code> API 이름을 쓰기 어렵다.</p>
+<h3 id="dataview-float16-accessors">DataView float16 accessors</h3>
+<p>처음에는 numeric helper를 어떤 타입으로 둘지 여러 방향을 검토했다. 리뷰를 거치며 최종 방향은 <code>f32</code> 기반의 명시적 이름으로 정리됐다.</p>
+<ul>
+<li><code>get_float16_as_f32</code></li>
+<li><code>get_float16_endian_as_f32</code></li>
+<li><code>set_float16_from_f32</code></li>
+<li><code>set_float16_endian_from_f32</code></li>
+</ul>
+<p><code>f32</code>는 float16 값을 손실 없이 표현할 수 있고, WebAssembly에서도 native numeric type이다. 이 결정은 리뷰에서 나온 의견을 반영한 것이다. 처음 초안은 <code>f64</code> 쪽을 보고 있었지만, <code>f32</code>로 충분하다면 더 작은 타입을 명시하는 편이 낫고, 이름에도 <code>as_f32</code>, <code>from_f32</code>를 붙여 future native <code>f16</code> API와 충돌하지 않게 만들 수 있었다.</p>
+<h3 id="raw-u16-helper-api">Raw u16 helper API</h3>
+<p>float16의 binary16 bit pattern을 직접 다룰 수 있도록 <code>[u16]</code> helper도 추가했다.</p>
+<ul>
+<li><code>new_from_u16_slice</code></li>
+<li><code>copy_to_u16_slice</code></li>
+<li><code>copy_from_u16_slice</code></li>
+<li><code>to_u16_vec</code></li>
+</ul>
+<p>이 helper들은 <code>Float16Array</code>가 바라보는 <code>ArrayBuffer</code>, <code>byte_offset</code>, <code>length</code>를 그대로 사용해 내부적으로 <code>Uint16Array</code> view를 만든다. 그 다음 기존 <code>Uint16Array</code>의 <code>copy_to</code>, <code>copy_from</code>, <code>to_vec</code> 구현을 재사용한다.</p>
+<p>이 방식은 float16 값을 &quot;숫자 타입&quot;으로 가장하지 않고, 실제 저장 단위인 IEEE 754 binary16 bit pattern을 그대로 다룬다. <code>half</code> crate는 public API dependency로 강제하지 않았다. 대신 doc comment와 wasm test에서 <code>half::f16::to_bits</code>, <code>half::f16::from_bits</code> 예시를 보여 주는 방식으로 실제 사용 흐름을 설명했다.</p>
+<h2 id="해결해야-했던-문제들">해결해야 했던 문제들</h2>
+<h3 id="rust-stable에-f16이-없었다">Rust stable에 f16이 없었다</h3>
+<p>처음부터 가장 큰 제약은 Rust stable에 builtin <code>f16</code>이 없다는 점이었다. 그래서 <code>Float16Array</code>를 <code>Float32Array</code>나 <code>Float64Array</code>처럼 자연스럽게 Rust primitive type과 연결할 수 없었다.</p>
+<p>해결 방향은 세 층으로 나눴다.</p>
+<ul>
+<li>JS API 자체는 raw binding으로 추가한다.</li>
+<li>숫자로 읽고 쓰는 API는 <code>f32</code>임을 이름에 드러낸다.</li>
+<li>raw binary16 bit pattern은 <code>[u16]</code> helper로 다룬다.</li>
+</ul>
+<p>이렇게 하면 지금은 안정적인 Rust 타입만 사용하면서, 나중에 native <code>f16</code>이 안정화됐을 때 unsuffixed 이름을 새 API에 남겨둘 수 있다.</p>
+<h3 id="f64-초안에서-f32-api로-바뀌었다">f64 초안에서 f32 API로 바뀌었다</h3>
+<p>초기 PR 설명과 일부 중간 기록에는 <code>f64</code> accessor가 남아 있다. 당시에는 JS <code>Number</code> 모델과 기존 <code>DataView</code> float API를 의식해 <code>f64</code>를 검토했다. 하지만 리뷰에서 <code>f32</code>도 native Wasm type이고 float16을 손실 없이 표현하기에 충분하다는 피드백이 나왔다.</p>
+<p>그 결과 <code>DataView</code>와 <code>Float16Array</code>의 직접 numeric API를 전부 <code>f32</code> 기반으로 바꿨다. 동시에 이름도 <code>get_float16_as_f32</code>, <code>set_float16_from_f32</code>, <code>fill_with_f32</code>처럼 바꿨다. 타입을 바꾸는 것만으로는 부족했고, API 이름에도 &quot;이건 native <code>f16</code>이 아니라 <code>f32</code> 경유 API&quot;라는 의미가 남아야 했다.</p>
+<h3 id="half를-쓰지-않는다는-말의-의미가-정리됐다">half를 쓰지 않는다는 말의 의미가 정리됐다</h3>
+<p>처음 방향은 &quot;<code>half</code>를 hard dependency로 만들지 않는다&quot;였다. 여기서 헷갈릴 수 있는 부분은 &quot;아예 <code>half</code>를 언급하지 않는다&quot;가 아니라는 점이다.</p>
+<p>최종적으로 <code>half</code>는 normal dependency나 public API type으로 들어가지 않았다. 대신 <code>[u16]</code> helper의 대표 사용 방식이 <code>half::f16::to_bits</code>와 <code>half::f16::from_bits</code>가 될 가능성이 높기 때문에, doc comment와 test에서는 그 흐름을 보여줬다. 즉 사용자는 원하면 <code>half</code>를 자기 코드에서 쓸 수 있지만, <code>js-sys</code> API 자체가 <code>half</code>에 묶이지는 않는다.</p>
+<h3 id="typedarray와-atomics-trait-의미가-걸렸다">TypedArray와 Atomics trait 의미가 걸렸다</h3>
+<p>리뷰 중 <code>impl TypedArray for Float16Array {}</code>에 대한 지적이 있었다. 이 repo에서 <code>TypedArray</code>는 단순 marker처럼 보이지만, 실제로는 <code>Atomics::*</code> generic bound에도 쓰인다. <code>Float16Array</code>에 <code>TypedArray</code>를 구현하면, 원래 float16에는 맞지 않는 atomic API surface가 같이 열릴 수 있다는 문제였다.</p>
+<p>이 부분은 내가 처음 구현할 때 놓친 지점이었다. 기존 <code>Float32Array</code>, <code>Float64Array</code>도 같은 방식으로 들어가 있었기 때문에 패턴을 따라갔지만, 그 패턴 자체가 완전히 깨끗한 설계는 아니었다.</p>
+<p>최종 결정은 이번 PR에서 <code>Float16Array</code>만 다르게 고치지 않는 쪽이었다. RReverser는 기존 float typed array와 일관성을 유지하고, atomic bound 문제는 나중에 전체적으로 고치는 편이 낫다고 정리했다. 그래서 이 이슈는 <a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5033">PR #5033</a> 범위 밖으로 빼고, <code>Float16Array</code>는 기존 float typed array들과 같은 방향으로 merge됐다.</p>
+<h3 id="runtime-feature-detection이-필요했다">runtime feature detection이 필요했다</h3>
+<p><code>Float16Array</code>와 <code>DataView.getFloat16</code>은 모든 JS runtime에서 항상 있는 API가 아니다. 그래서 테스트를 그냥 추가하면, API를 아직 지원하지 않는 환경에서 전체 <code>js-sys</code> 테스트가 깨질 수 있다.</p>
+<p>이 문제는 테스트에 runtime guard를 넣어서 해결했다.</p>
+<ul>
+<li><code>TypedArray.rs</code>에는 <code>has_float16_array</code>를 두고 <code>globalThis.Float16Array</code> 존재 여부를 확인했다.</li>
+<li><code>DataView.rs</code>에는 <code>has_float16_methods</code>를 두고 <code>DataView.prototype.getFloat16</code>, <code>setFloat16</code> 존재 여부를 확인했다.</li>
+</ul>
+<p>이렇게 해서 API가 있는 환경에서는 실제 동작을 검증하고, 아직 지원하지 않는 환경에서는 관련 테스트만 건너뛰게 했다.</p>
+<h2 id="검증">검증</h2>
+<p>처음 WSL에서는 컴파일 검증부터 진행했다.</p>
+<pre><code class="language-bash">cargo test -p js-sys --target wasm32-unknown-unknown --no-run
+</code></pre>
+<p>이 단계는 통과했다. 문제는 전체 wasm 테스트였다. <code>cargo test -p js-sys --target wasm32-unknown-unknown</code>를 끝까지 돌리려면 <code>wasm-bindgen-test-runner</code>가 browser test까지 실행해야 하고, 이를 위해 WebDriver가 필요했다.</p>
+<p>WSL에서 바로 막힌 이유는 세 가지였다.</p>
+<ul>
+<li>WSL 내부에 <code>geckodriver</code>, <code>chromedriver</code>, <code>msedgedriver</code>  가 없었다.</li>
+<li>Windows Chrome/ChromeDriver를 WSL에서 붙이려 했지만 loopback과 WSL 네트워크 경계 때문에 안정적으로 연결되지 않았다.</li>
+<li>Linux용 Chrome for Testing과 ChromeDriver를 WSL 안에서 직접 띄우는 방식은 리소스 사용량이 커서 실행 중 강제 종료됐다.</li>
+</ul>
+<p>그래서 최종 검증은 Windows native 환경에서 진행했다. Windows Rust toolchain에 wasm target을 추가하고, ChromeDriver 경로를 환경변수로 지정한 뒤 같은 테스트를 다시 실행했다.</p>
+<pre><code class="language-powershell">rustup target add wasm32-unknown-unknown
+$env:CHROMEDRIVER = &quot;C:\Users\ChanhoLee\Tools\WebDriver\chromedriver.exe&quot;
+cd D:\code\wasm-bindgen
+cargo test -p js-sys --target wasm32-unknown-unknown
+</code></pre>
+<p>작업 보고서 기준 최종 결과는 아래와 같았다.</p>
+<ul>
+<li><code>tests/browser.rs</code> 통과</li>
+<li><code>tests/node.rs</code> 통과</li>
+<li><code>tests/wasm/main.rs</code> 통과</li>
+<li><code>700 passed</code></li>
+<li><code>0 failed</code></li>
+<li><code>5 ignored</code></li>
+</ul>
+<p>이번 변경과 직접 관련된 <code>TypedArray::float16array_basic_methods</code>, <code>TypedArray::float16array_u16_helpers</code>, <code>DataView::test</code>도 이 흐름 안에서 통과했다. 즉 최종 상태는 단순히 <code>--no-run</code> 컴파일만 된 것이 아니라, Windows native 환경에서 <code>js-sys</code> wasm 테스트를 실제로 실행한 상태였다.</p>
+<h2 id="진행-중-생긴-ci와-리뷰-이슈">진행 중 생긴 CI와 리뷰 이슈</h2>
+<p>PR 중간에 CodSpeed regression과 <code>wasm-bindgen-cli</code> reference test 실패도 확인했다. 조사 결과 <code>Float16Array</code> 변경이 <code>JsValue::from_str</code> hot path를 직접 건드린 것은 아니었고, reference test 실패는 <code>.wat</code> type section ordering 쪽의 snapshot fragility로 보는 쪽이 더 설득력 있었다.</p>
+<p>CodSpeed 쪽에서는 <code>bench_js_value_from_str</code>가 느려진 것으로 표시된 적이 있었다. 이때 PR 커밋과 merge commit을 다시 보고, 실제로 건드린 파일도 확인했다. 변경 범위는 <code>js-sys</code>의 <code>Float16Array</code>, <code>DataView</code>, test, changelog였고 <code>JsValue::from_str</code> 관련 hot path를 직접 수정하지 않았다. 그래서 확정 원인을 단정하지 않고, 이 PR 코드가 해당 benchmark를 직접 느리게 만들었다고 보기는 어렵다고 판단했다.</p>
+<p><code>wasm-bindgen-cli</code> reference test 실패는 <code>.wat</code> 출력의 <code>type (;N;)</code> 순서와 type index 번호 차이에 가까웠다. 로컬 조사에서는 runtime behavior 차이라기보다 snapshot ordering 문제로 보였다. <code>reference.rs</code>가 import order와 local function order는 안정화하지만 type section ordering까지 canonicalize하지는 않는다는 점도 확인했다. 비슷한 실패가 다른 open PR에서도 보였기 때문에, 이 문제는 이번 <code>Float16Array</code> 구현 버그라기보다 upstream reference snapshot fragility로 분리해서 봤다.</p>
+<p>리뷰 막바지에는 <code>CHANGELOG.md</code> entry도 추가했다. 단순 코드 변경만이 아니라 public API 추가가 release-facing 기록에도 남아야 했기 때문에, 최종 PR에는 changelog 반영까지 포함됐다.</p>
+<h2 id="merge-후-후속-수정">merge 후 후속 수정</h2>
+<p><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5033">PR #5033</a>이 merge된 뒤 <a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5067">PR #5067</a>에서 <code>Float16Array::fill_with_f32</code>에 빠진 <code>js_name = &quot;fill&quot;</code>이 보완됐다.</p>
+<p><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5067">PR #5067</a> 본문에는 원인이 명확히 적혀 있었다. <code>Float16Array::fill_with_f32</code>에 <code>js_name = &quot;fill&quot;</code>이 빠져 있어서, binding이 JavaScript 객체의 native <code>fill()</code>이  아니라 존재하지 않는 <code>fill_with_f32</code>라는 메서드를 호출하게 되는 버그였다. 이 문제는 앞선 <code>Float16Array</code> binding을 조사하던 중 발견됐고, Guy Bedford가 2026년 3월 30일에 한 줄 수정으로 merge했다.</p>
+<p>원인은 이름 변경 과정에 있었다. 처음에는 Rust 메서드 이름도 <code>fill</code>이었다가, 리뷰를 반영하면서 <code>fill_with_f32</code>로 바뀌었다. 그런데 <code>#[wasm_bindgen(method)]</code>만 남아 있으면 wasm-bindgen은 Rust 메서드 이름을 JS 메서드 이름으로 사용하려고 한다. JavaScript의 실제 메서드는 <code>fill</code>이므로, Rust 쪽 이름을 <code>fill_with_f32</code>로 바꿨다면 attribute에 <code>js_name = fill</code>을 명시해야 했다.</p>
+<p><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5067">PR #5067</a>의 수정은 한 줄이었다.</p>
+<pre><code class="language-rust">#[wasm_bindgen(method, js_name = fill)]
+pub fn fill_with_f32(this: &amp;Float16Array, value: f32, start: u32, end: u32) -&gt; Float16Array;
+</code></pre>
+<p>이 후속 수정까지 보면, 이번 작업에서 남은 실수는 &quot;API 이름을 Rust 쪽에서 명시적으로 바꾸는 과정에서 JS method mapping을 끝까지 같이 맞추지 못한 것&quot;이었다. 해결은 <code>wasm_bindgen</code> attribute에 실제 JS 이름을 명시하는 방식이었다.</p>
+<h2 id="결과">결과</h2>
+<p><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5033">PR #5033</a>은 2026년 3월 29일 merge됐다. 최종적으로 <code>js_sys::Float16Array</code>, <code>DataView</code> float16 accessor, <code>Float16Array</code>의 <code>f32</code> 기반 숫자 메서드, raw <code>[u16]</code> helper API가 들어갔다.</p>
+<p>이 작업에서 중요한 판단은 Rust stable에 없는 타입을 public API처럼 가장하지 않는 것이었다. JS binding은 추가하되, Rust 쪽 helper는 <code>f32</code>와 <code>u16</code>이라는 현재 안정적인 표현으로 제한했다. 동시에 이름에는 타입 의미를 남겨서, future native <code>f16</code> API가 들어올 자리를 비워뒀다.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://github.com/wasm-bindgen/wasm-bindgen">wasm-bindgen repository</a></li>
+<li><a href="https://wasm-bindgen.github.io/wasm-bindgen/">wasm-bindgen guide</a></li>
+<li><a href="https://github.com/wasm-bindgen/wasm-bindgen/issues/4984">Issue #4984: Float16Array bindings</a></li>
+<li><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5033">PR #5033: Add Float16Array bindings</a></li>
+<li><a href="https://github.com/wasm-bindgen/wasm-bindgen/pull/5067">PR #5067: fix(js-sys): add missing js_name = &quot;fill&quot; to Float16Array::fill_with_f32</a></li>
+</ul></div></div><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#wasm-bindgen은-어떤-프로젝트인가" class="table-of-contents__link toc-highlight">wasm-bindgen은 어떤 프로젝트인가</a></li><li><a href="#왜-이-작업을-했는가" class="table-of-contents__link toc-highlight">왜 이 작업을 했는가</a></li><li><a href="#이슈와-pr" class="table-of-contents__link toc-highlight">이슈와 PR</a></li><li><a href="#구현한-범위" class="table-of-contents__link toc-highlight">구현한 범위</a><ul><li><a href="#float16array-raw-binding" class="table-of-contents__link toc-highlight">Float16Array raw binding</a></li><li><a href="#dataview-float16-accessors" class="table-of-contents__link toc-highlight">DataView float16 accessors</a></li><li><a href="#raw-u16-helper-api" class="table-of-contents__link toc-highlight">Raw u16 helper API</a></li></ul></li><li><a href="#해결해야-했던-문제들" class="table-of-contents__link toc-highlight">해결해야 했던 문제들</a><ul><li><a href="#rust-stable에-f16이-없었다" class="table-of-contents__link toc-highlight">Rust stable에 f16이 없었다</a></li><li><a href="#f64-초안에서-f32-api  로-바뀌었다" class="table-of-contents__link toc-highlight">f64 초안에서 f32 API로 바뀌었다</a></li><li><a href="#half를-쓰지-않는다는-말의-의미가-정리됐다" class="table-of-contents__link toc-highlight">half를 쓰지 않는다는 말의 의미가 정리됐다</a></li><li><a href="#typedarray와-atomics-trait-의미가-걸렸다" class="table-of-contents__link toc-highlight">TypedArray와 Atomics trait 의미가 걸렸다</a></li><li><a href="#runtime-feature-detection이-필요했다" class="table-of-contents__link toc-highlight">runtime feature detection이 필요했다</a></li></ul></li><li><a href="#검증" class="table-of-contents__link toc-highlight">검증</a></li><li><a href="#진행-중-생긴-ci와-리뷰-이슈" class="table-of-contents__link toc-highlight">진행 중 생긴 CI와 리뷰 이슈</a></li><li><a href="#merge-후-후속-수정" class="table-of-contents__link toc-highlight">merge 후 후속 수정</a></li><li><a href="#결과" class="table-of-contents__link toc-highlight">결과</a></li><li><a href="#references" class="table-of-contents__link toc-highlight">References</a></li></ul></div></div></div></div></div></div>
+</body>
+</html>

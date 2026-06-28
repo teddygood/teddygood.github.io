@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://teddygood.github.io/projects</id>
     <title>Chanho Lee Projects</title>
-    <updated>2026-05-28T03:00:00.000Z</updated>
+    <updated>2026-06-28T23:16:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://teddygood.github.io/projects"/>
     <subtitle>A showcase of my projects</subtitle>
@@ -11,28 +11,49 @@
         <title type="html"><![CDATA[Doc-to-RAG Benchmark]]></title>
         <id>https://teddygood.github.io/projects/doc-to-rag-benchmark</id>
         <link href="https://teddygood.github.io/projects/doc-to-rag-benchmark"/>
-        <updated>2026-05-28T03:00:00.000Z</updated>
+        <updated>2026-06-28T23:16:00.000Z</updated>
         <summary type="html"><![CDATA[Doc-to-Text에서 평가 가능한 RAG 데이터까지 | Meta Llama Academy 워크숍에서 진행한 PDF 기반 Doc-to-RAG Benchmark 구축 프로젝트 회고]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[nano-vllm]]></title>
+        <id>https://teddygood.github.io/projects/nano-vllm</id>
+        <link href="https://teddygood.github.io/projects/nano-vllm"/>
+        <updated>2026-06-28T23:16:00.000Z</updated>
+        <summary type="html"><![CDATA[AER Labs에서 4명이 함께 진행한 C++ 기반 교육용 LLM inference engine 프로젝트로, continuous batching scheduler와 GPU benchmark 문서화를 구현한 팀 프로젝트]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Optiver "Trading at the Close" 대회]]></title>
         <id>https://teddygood.github.io/projects/optiver-kaggle</id>
         <link href="https://teddygood.github.io/projects/optiver-kaggle"/>
-        <updated>2026-05-28T03:00:00.000Z</updated>
+        <updated>2026-06-28T23:16:00.000Z</updated>
         <summary type="html"><![CDATA[Kaggle Optiver - Trading at the Close 대회 (Top 30%)]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Pyodide]]></title>
         <id>https://teddygood.github.io/projects/pyodide</id>
         <link href="https://teddygood.github.io/projects/pyodide"/>
-        <updated>2026-05-28T03:00:00.000Z</updated>
+        <updated>2026-06-28T23:16:00.000Z</updated>
         <summary type="html"><![CDATA[Pyodide 빌드 시스템 개선과 WASM SIMD 최적화 기여]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Serverless Code Review Assistant on AWS]]></title>
+        <title type="html"><![CDATA[RecSys 행동 이벤트 플랫폼]]></title>
+        <id>https://teddygood.github.io/projects/recs-behavior-platform</id>
+        <link href="https://teddygood.github.io/projects/recs-behavior-platform"/>
+        <updated>2026-06-28T23:16:00.000Z</updated>
+        <summary type="html"><![CDATA[Synerise RecSys 2025 행동 로그를 Java, Kafka, Flink, Elasticsearch 기반 event-to-feature pipeline으로 재해석한 백엔드 프로젝트]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[LLM PR Reviewer]]></title>
         <id>https://teddygood.github.io/projects/serverless-code-review</id>
         <link href="https://teddygood.github.io/projects/serverless-code-review"/>
-        <updated>2026-05-28T03:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Automated code review bot powered by AWS Serverless architecture and Bedrock.]]></summary>
+        <updated>2026-06-28T23:16:00.000Z</updated>
+        <summary type="html"><![CDATA[GitHub PR diff를 수집하고 Amazon Bedrock으로 리뷰 코멘트를 생성하는 서버리스 PR 리뷰 워크플로]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[wasm-bindgen Float16Array 기여]]></title>
+        <id>https://teddygood.github.io/projects/wasm-bindgen-float16array</id>
+        <link href="https://teddygood.github.io/projects/wasm-bindgen-float16array"/>
+        <updated>2026-06-28T23:16:00.000Z</updated>
+        <summary type="html"><![CDATA[js-sys에 Float16Array와 DataView float16 지원을 추가하며 Rust stable 제약 아래 public API 경계를 정리한 오픈소스 기여]]></summary>
     </entry>
 </feed>

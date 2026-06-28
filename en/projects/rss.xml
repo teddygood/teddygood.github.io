@@ -4,7 +4,7 @@
         <title>Chanho Lee Projects</title>
         <link>https://teddygood.github.io/en/projects</link>
         <description>A showcase of my projects</description>
-        <lastBuildDate>Thu, 28 May 2026 03:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 28 Jun 2026 23:16:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,29 +12,50 @@
             <title><![CDATA[Doc-to-RAG Benchmark]]></title>
             <link>https://teddygood.github.io/en/projects/doc-to-rag-benchmark</link>
             <guid>https://teddygood.github.io/en/projects/doc-to-rag-benchmark</guid>
-            <pubDate>Thu, 28 May 2026 03:00:00 GMT</pubDate>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
             <description><![CDATA[From Doc-to-Text to evaluable RAG data | Retrospective on a PDF-based Doc-to-RAG Benchmark project from the Meta Llama Academy workshop]]></description>
+        </item>
+        <item>
+            <title><![CDATA[nano-vllm]]></title>
+            <link>https://teddygood.github.io/en/projects/nano-vllm</link>
+            <guid>https://teddygood.github.io/en/projects/nano-vllm</guid>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
+            <description><![CDATA[AER Labs에서 4명이 함께 진행한 C++ 기반 교육용 LLM inference engine 프로젝트로, continuous batching scheduler와 GPU benchmark 문서화를 구현한 팀 프로젝트]]></description>
         </item>
         <item>
             <title><![CDATA[Optiver "Trading at the Close" Competition Retrospective]]></title>
             <link>https://teddygood.github.io/en/projects/optiver-kaggle</link>
             <guid>https://teddygood.github.io/en/projects/optiver-kaggle</guid>
-            <pubDate>Thu, 28 May 2026 03:00:00 GMT</pubDate>
-            <description><![CDATA[Kaggle Optiver - Trading at the Close Retrospective (Bronze Medal, Top 30%)]]></description>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
+            <description><![CDATA[Kaggle Optiver - Trading at the Close Retrospective (Top 30%)]]></description>
         </item>
         <item>
             <title><![CDATA[Pyodide]]></title>
             <link>https://teddygood.github.io/en/projects/pyodide</link>
             <guid>https://teddygood.github.io/en/projects/pyodide</guid>
-            <pubDate>Thu, 28 May 2026 03:00:00 GMT</pubDate>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
             <description><![CDATA[Contributions to Pyodide build tooling and WASM SIMD performance work.]]></description>
         </item>
         <item>
-            <title><![CDATA[Serverless Code Review Assistant on AWS]]></title>
+            <title><![CDATA[RecSys 행동 이벤트 플랫폼]]></title>
+            <link>https://teddygood.github.io/en/projects/recs-behavior-platform</link>
+            <guid>https://teddygood.github.io/en/projects/recs-behavior-platform</guid>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
+            <description><![CDATA[Synerise RecSys 2025 행동 로그를 Java, Kafka, Flink, Elasticsearch 기반 event-to-feature pipeline으로 재해석한 백엔드 프로젝트]]></description>
+        </item>
+        <item>
+            <title><![CDATA[LLM PR Reviewer]]></title>
             <link>https://teddygood.github.io/en/projects/serverless-code-review</link>
             <guid>https://teddygood.github.io/en/projects/serverless-code-review</guid>
-            <pubDate>Thu, 28 May 2026 03:00:00 GMT</pubDate>
-            <description><![CDATA[Automated code review bot powered by AWS Serverless architecture and Bedrock.]]></description>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
+            <description><![CDATA[GitHub PR diff를 수집하고 Amazon Bedrock으로 리뷰 코멘트를 생성하는 서버리스 PR 리뷰 워크플로]]></description>
+        </item>
+        <item>
+            <title><![CDATA[wasm-bindgen Float16Array 기여]]></title>
+            <link>https://teddygood.github.io/en/projects/wasm-bindgen-float16array</link>
+            <guid>https://teddygood.github.io/en/projects/wasm-bindgen-float16array</guid>
+            <pubDate>Sun, 28 Jun 2026 23:16:00 GMT</pubDate>
+            <description><![CDATA[js-sys에 Float16Array와 DataView float16 지원을 추가하며 Rust stable 제약 아래 public API 경계를 정리한 오픈소스 기여]]></description>
         </item>
     </channel>
 </rss>
